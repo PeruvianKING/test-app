@@ -1,12 +1,12 @@
 import React from 'react';
 import { AlertCircle, Play } from 'lucide-react';
+import { Link } from 'react-router-dom';
 
 const FolderView = ({
     cargando,
     errorCarga,
     subcarpetas,
-    todosLosTests,
-    onSelectFolder
+    todosLosTests
 }) => {
     return (
         <div className="fixed inset-0 bg-gradient-to-br from-blue-50 to-indigo-100 p-6 overflow-auto">
@@ -56,10 +56,10 @@ const FolderView = ({
                             const totalPreguntas = testsEnCarpeta.reduce((sum, t) => sum + t.numeroPreguntas, 0);
 
                             return (
-                                <div
+                                <Link
                                     key={carpeta}
-                                    onClick={() => onSelectFolder(carpeta)}
-                                    className="bg-white rounded-xl shadow-lg p-6 hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1 cursor-pointer"
+                                    to={`/${encodeURIComponent(carpeta)}`}
+                                    className="bg-white rounded-xl shadow-lg p-6 hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1 block text-left"
                                 >
                                     <div className="mb-4">
                                         <div className="w-16 h-16 bg-gradient-to-br from-blue-500 to-indigo-600 rounded-lg flex items-center justify-center mb-4 overflow-hidden">
@@ -87,11 +87,11 @@ const FolderView = ({
                                             <span>preguntas en total</span>
                                         </div>
                                     </div>
-                                    <button className="w-full bg-gradient-to-r from-blue-500 to-indigo-600 text-white py-3 rounded-lg font-semibold hover:from-blue-600 hover:to-indigo-700 transition flex items-center justify-center gap-2">
+                                    <div className="w-full bg-gradient-to-r from-blue-500 to-indigo-600 text-white py-3 rounded-lg font-semibold hover:from-blue-600 hover:to-indigo-700 transition flex items-center justify-center gap-2">
                                         <Play className="w-5 h-5" />
                                         Ver Tests
-                                    </button>
-                                </div>
+                                    </div>
+                                </Link>
                             );
                         })}
                     </div>

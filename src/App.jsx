@@ -1,4 +1,5 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
+import { Routes, Route, Navigate, useNavigate, useLocation } from 'react-router-dom';
 import FolderView from './components/FolderView';
 import TestListView from './components/TestListView';
 import AddTestView from './components/AddTestView';
@@ -8,24 +9,16 @@ import ResultsView from './components/ResultsView';
 const QuizSystem = () => {
   const [tests, setTests] = useState([]);
   const [subcarpetas, setSubcarpetas] = useState([]);
-  const [carpetaSeleccionada, setCarpetaSeleccionada] = useState(null);
   const [todosLosTests, setTodosLosTests] = useState([]);
-  const [vistaActual, setVistaActual] = useState('carpetas');
-  const [testSeleccionado, setTestSeleccionado] = useState(null);
-  const [preguntaActual, setPreguntaActual] = useState(0);
-  const [respuestas, setRespuestas] = useState({});
-  const [respuestaSeleccionada, setRespuestaSeleccionada] = useState(null);
-  const [mostrarExplicacion, setMostrarExplicacion] = useState(false);
 
-  // Estados movidos a componentes, se mantienen si se necesitan referencias globales
-  // const [jsonInput, setJsonInput] = useState('');
-  // const [errorJson, setErrorJson] = useState(null);
-
-  const [busqueda, setBusqueda] = useState('');
+  // Estados para búsqueda y carga
   const [cargando, setCargando] = useState(true);
   const [errorCarga, setErrorCarga] = useState(null);
 
-  React.useEffect(() => {
+  const navigate = useNavigate();
+  const location = useLocation();
+
+  useEffect(() => {
     const cargarTests = async () => {
       try {
         setCargando(true);
@@ -57,6 +50,9 @@ const QuizSystem = () => {
             .filter(Boolean)
             .filter((v, i, a) => a.indexOf(v) === i);
 
+          // Generar un ID único basado en la ruta o nombre
+          // Usamos btoa para codificar la ruta y hacerlo seguro para URL, aunque ruta tiene caracteres feos
+          // Mejor usar algo determinista simple si es posible, o slugify
           return {
             id: ruta,
             carpeta: carpeta,
@@ -87,152 +83,64 @@ const QuizSystem = () => {
     cargarTests();
   }, []);
 
-  const mezclarArray = (array) => {
-    return [...array].sort(() => Math.random() - 0.5);
-  };
-
-  const iniciarTest = (test) => {
-    const testConOpcionesMezcladas = {
-      ...test,
-      preguntas: test.preguntas.map(p => {
-        const opcionesArray = Object.entries(p.opciones).map(
-          ([letra, texto]) => ({ letra, texto })
-        );
-
-        return {
-          ...p,
-          opcionesMezcladas: mezclarArray(opcionesArray)
-        };
-      })
-    };
-
-    setTestSeleccionado(testConOpcionesMezcladas);
-    setPreguntaActual(0);
-    setRespuestas({});
-    setRespuestaSeleccionada(null);
-    setMostrarExplicacion(false);
-    setVistaActual('quiz');
-  };
-
-  const volverALista = () => {
-    if (carpetaSeleccionada) {
-      setVistaActual('lista');
-    } else {
-      setVistaActual('carpetas');
-    }
-    setTestSeleccionado(null);
-    setPreguntaActual(0);
-    setRespuestas({});
-    setRespuestaSeleccionada(null);
-    setMostrarExplicacion(false);
-    setBusqueda('');
-  };
-
-  const seleccionarCarpeta = (carpeta) => {
-    const testsFiltrados = todosLosTests.filter(test => test.carpeta === carpeta);
-    setTests(testsFiltrados);
-    setCarpetaSeleccionada(carpeta);
-    setVistaActual('lista');
-  };
-
-  const volverACarpetas = () => {
-    setVistaActual('carpetas');
-    setCarpetaSeleccionada(null);
-    setTests(todosLosTests);
-    setBusqueda('');
-  };
-
-  const handleRespuesta = (opcion) => {
-    setRespuestaSeleccionada(opcion);
-    setRespuestas({ ...respuestas, [preguntaActual]: opcion });
-    setMostrarExplicacion(true);
-  };
-
-  const siguientePregunta = () => {
-    if (preguntaActual < testSeleccionado.preguntas.length - 1) {
-      setPreguntaActual(preguntaActual + 1);
-      setRespuestaSeleccionada(respuestas[preguntaActual + 1] || null);
-      setMostrarExplicacion(!!respuestas[preguntaActual + 1]);
-    } else {
-      setVistaActual('resultados');
-    }
-  };
-
-  const preguntaAnterior = () => {
-    if (preguntaActual > 0) {
-      setPreguntaActual(preguntaActual - 1);
-      setRespuestaSeleccionada(respuestas[preguntaActual - 1] || null);
-      setMostrarExplicacion(!!respuestas[preguntaActual - 1]);
-    }
-  };
-
   const handleProcessJson = (nuevosTests) => {
-    setTests([...tests, ...nuevosTests]);
-    setTodosLosTests([...todosLosTests, ...nuevosTests]);
-    setVistaActual('lista');
+    setTests(prev => [...prev, ...nuevosTests]);
+    setTodosLosTests(prev => [...prev, ...nuevosTests]);
+    navigate(-1); // Volver atrás
   };
 
-  if (vistaActual === 'carpetas') {
-    return (
-      <FolderView
-        cargando={cargando}
-        errorCarga={errorCarga}
-        subcarpetas={subcarpetas}
-        todosLosTests={todosLosTests}
-        onSelectFolder={seleccionarCarpeta}
-      />
-    );
-  }
-
-  if (vistaActual === 'lista') {
-    return (
-      <TestListView
-        carpetaSeleccionada={carpetaSeleccionada}
-        tests={tests}
-        busqueda={busqueda}
-        setBusqueda={setBusqueda}
-        onBack={volverACarpetas}
-        onAddTest={() => setVistaActual('añadir')}
-        onSelectTest={iniciarTest}
-      />
-    );
-  }
-
-  if (vistaActual === 'añadir') {
-    return (
-      <AddTestView
-        onCancel={volverALista}
-        onProcessJson={handleProcessJson}
-        defaultFolder={carpetaSeleccionada}
-      />
-    );
-  }
-
-  if (vistaActual === 'resultados') {
-    return (
-      <ResultsView
-        test={testSeleccionado}
-        respuestas={respuestas}
-        onBack={volverALista}
-        onRetry={iniciarTest}
-      />
-    );
-  }
-
-  // Vista quiz
   return (
-    <QuizView
-      test={testSeleccionado}
-      preguntaActual={preguntaActual}
-      respuestas={respuestas}
-      respuestaSeleccionada={respuestaSeleccionada}
-      mostrarExplicacion={mostrarExplicacion}
-      onExit={volverALista}
-      onAnswer={handleRespuesta}
-      onPrevious={preguntaAnterior}
-      onNext={siguientePregunta}
-    />
+    <Routes>
+      <Route path="/" element={
+        <FolderView
+          cargando={cargando}
+          errorCarga={errorCarga}
+          subcarpetas={subcarpetas}
+          todosLosTests={todosLosTests}
+        />
+      } />
+
+      <Route path="/:folderName" element={
+        <TestWrapper
+          todosLosTests={todosLosTests}
+        />
+      } />
+
+      <Route path="/:folderName/add" element={
+        <AddWrapper
+          onProcessJson={handleProcessJson}
+        />
+      } />
+
+      <Route path="/:folderName/:testId" element={
+        <QuizWrapper
+          todosLosTests={todosLosTests}
+        />
+      } />
+
+      {/* Redirección por defecto */}
+      <Route path="*" element={<Navigate to="/" replace />} />
+    </Routes>
   );
+};
+
+// Wrappers para pasar params y props
+const TestWrapper = ({ todosLosTests }) => {
+  // Nota: La lógica de filtrado se mueve al componente o se pasa filtrada
+  // TestListView se actualizará para usar useParams
+  return <TestListView tests={todosLosTests} />;
+};
+
+const AddWrapper = ({ onProcessJson }) => {
+  const navigate = useNavigate();
+  // Obtener carpeta de params si es necesario pre-llenarla
+  // AddTestView puede usar useParams
+  return <AddTestView onCancel={() => navigate(-1)} onProcessJson={onProcessJson} />;
+};
+
+const QuizWrapper = ({ todosLosTests }) => {
+  // QuizView manejará la lógica de encontrar el test por ID
+  return <QuizView todosLosTests={todosLosTests} />;
 };
 
 export default QuizSystem;

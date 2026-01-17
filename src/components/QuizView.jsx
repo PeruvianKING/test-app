@@ -1,17 +1,77 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import { ArrowLeft, CheckCircle, XCircle } from 'lucide-react';
+import { Link, useParams, useNavigate } from 'react-router-dom';
+import ResultsView from './ResultsView';
 
-const QuizView = ({
-    test,
-    preguntaActual,
-    respuestas,
-    respuestaSeleccionada,
-    mostrarExplicacion,
-    onExit,
-    onAnswer,
-    onPrevious,
-    onNext
-}) => {
+const QuizView = ({ todosLosTests }) => {
+    const { folderName, testId } = useParams();
+    const navigate = useNavigate();
+
+    // Decodificar el ID y buscar el test
+    const decodedTestId = decodeURIComponent(testId);
+
+    const [preguntaActual, setPreguntaActual] = useState(0);
+    const [respuestas, setRespuestas] = useState({});
+    const [respuestaSeleccionada, setRespuestaSeleccionada] = useState(null);
+    const [mostrarExplicacion, setMostrarExplicacion] = useState(false);
+    const [test, setTest] = useState(null);
+    const [resultado, setResultado] = useState(false);
+
+    useEffect(() => {
+        // Encontrar el test en las props
+        const testEncontrado = todosLosTests.find(t => t.id === decodedTestId);
+
+        if (testEncontrado) {
+            // Mezclar opciones al cargar el test
+            const mezclarArray = (array) => [...array].sort(() => Math.random() - 0.5);
+
+            const testPreparado = {
+                ...testEncontrado,
+                preguntas: testEncontrado.preguntas.map(p => {
+                    const opcionesArray = Object.entries(p.opciones).map(
+                        ([letra, texto]) => ({ letra, texto })
+                    );
+                    return {
+                        ...p,
+                        opcionesMezcladas: mezclarArray(opcionesArray)
+                    };
+                })
+            };
+            setTest(testPreparado);
+        }
+    }, [decodedTestId, todosLosTests]);
+
+    if (!test) {
+        return (
+            <div className="fixed inset-0 flex items-center justify-center bg-gray-50">
+                <div className="text-center">
+                    <h3 className="text-xl font-bold text-gray-700">Cargando test...</h3>
+                    <p>Si tarda mucho, puede que el test no exista.</p>
+                    <button onClick={() => navigate('/')} className="mt-4 text-indigo-600 underline">Volver al inicio</button>
+                </div>
+            </div>
+        );
+    }
+
+    // Si ya terminamos, mostrar resultados
+    if (resultado) {
+        return (
+            <ResultsView
+                test={test}
+                respuestas={respuestas}
+                onBack={() => navigate(`/folder/${folderName}`)}
+                onRetry={() => {
+                    // Reiniciar estado
+                    setPreguntaActual(0);
+                    setRespuestas({});
+                    setRespuestaSeleccionada(null);
+                    setMostrarExplicacion(false);
+                    setResultado(false);
+                }}
+            />
+        );
+    }
+
     const pregunta = test.preguntas[preguntaActual];
     const progreso = ((preguntaActual + 1) / test.preguntas.length) * 100;
     const esUltimaPregunta = preguntaActual === test.preguntas.length - 1;
@@ -37,13 +97,38 @@ const QuizView = ({
         return partes.length === 0 ? [{ tipo: 'texto', contenido: texto }] : partes;
     };
 
+    // Handlers
+    const handleRespuesta = (opcion) => {
+        setRespuestaSeleccionada(opcion);
+        setRespuestas({ ...respuestas, [preguntaActual]: opcion });
+        setMostrarExplicacion(true);
+    };
+
+    const handleNext = () => {
+        if (preguntaActual < test.preguntas.length - 1) {
+            setPreguntaActual(preguntaActual + 1);
+            setRespuestaSeleccionada(respuestas[preguntaActual + 1] || null);
+            setMostrarExplicacion(!!respuestas[preguntaActual + 1]);
+        } else {
+            setResultado(true);
+        }
+    };
+
+    const handlePrevious = () => {
+        if (preguntaActual > 0) {
+            setPreguntaActual(preguntaActual - 1);
+            setRespuestaSeleccionada(respuestas[preguntaActual - 1] || null);
+            setMostrarExplicacion(!!respuestas[preguntaActual - 1]);
+        }
+    };
+
     return (
         <div className="fixed inset-0 bg-gradient-to-br from-blue-50 to-indigo-100 p-6 overflow-auto">
             <div className="max-w-3xl mx-auto">
-                <button onClick={onExit} className="flex items-center gap-2 bg-white px-4 py-2 rounded-lg text-gray-700 hover:bg-gray-50 transition border border-gray-200 mb-4">
+                <Link to={`/${folderName}`} className="inline-flex items-center gap-2 bg-white px-4 py-2 rounded-lg text-gray-700 hover:bg-gray-50 transition border border-gray-200 mb-4">
                     <ArrowLeft className="w-5 h-5" />
                     Volver a la lista
-                </button>
+                </Link>
                 <div className="bg-white rounded-2xl shadow-xl p-8">
                     <div className="mb-6">
                         <div className="flex justify-between items-center mb-2">
@@ -57,7 +142,7 @@ const QuizView = ({
                     <h2 className="text-2xl font-bold text-gray-800 mb-6">{pregunta.pregunta}</h2>
                     <div className="space-y-3 mb-8">
                         {pregunta.opcionesMezcladas.map(({ letra, texto }) => (
-                            <button key={letra} onClick={() => onAnswer(letra)} disabled={mostrarExplicacion} className={`w-full text-left p-4 rounded-lg border-2 transition-all ${mostrarExplicacion
+                            <button key={letra} onClick={() => handleRespuesta(letra)} disabled={mostrarExplicacion} className={`w-full text-left p-4 rounded-lg border-2 transition-all ${mostrarExplicacion
                                 ? letra === pregunta.respuesta_correcta ? 'border-green-500 bg-green-50' : letra === respuestaSeleccionada ? 'border-red-500 bg-red-50' : 'border-gray-200 bg-white opacity-60'
                                 : respuestaSeleccionada === letra ? 'border-indigo-500 bg-indigo-50 shadow-md' : 'border-gray-200 bg-white hover:border-indigo-300 hover:bg-gray-50'
                                 } ${mostrarExplicacion ? 'cursor-default' : 'cursor-pointer'}`}>
@@ -98,8 +183,8 @@ const QuizView = ({
                         </div>
                     )}
                     <div className="flex gap-3">
-                        <button onClick={onPrevious} disabled={preguntaActual === 0} className="px-6 py-3 rounded-lg font-semibold bg-white border-2 border-gray-300 text-gray-700 hover:bg-gray-50 disabled:opacity-50 disabled:cursor-not-allowed transition">Anterior</button>
-                        <button onClick={onNext} disabled={!respuestaSeleccionada} className="flex-1 bg-gradient-to-r from-blue-500 to-indigo-600 text-white py-3 rounded-lg font-semibold hover:from-blue-600 hover:to-indigo-700 disabled:opacity-50 disabled:cursor-not-allowed transition">
+                        <button onClick={handlePrevious} disabled={preguntaActual === 0} className="px-6 py-3 rounded-lg font-semibold bg-white border-2 border-gray-300 text-gray-700 hover:bg-gray-50 disabled:opacity-50 disabled:cursor-not-allowed transition">Anterior</button>
+                        <button onClick={handleNext} disabled={!respuestaSeleccionada} className="flex-1 bg-gradient-to-r from-blue-500 to-indigo-600 text-white py-3 rounded-lg font-semibold hover:from-blue-600 hover:to-indigo-700 disabled:opacity-50 disabled:cursor-not-allowed transition">
                             {esUltimaPregunta ? 'Ver Resultados' : 'Siguiente'}
                         </button>
                     </div>

@@ -1,16 +1,19 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { BookOpen, ArrowLeft, Plus, Search, X, Play } from 'lucide-react';
+import { Link, useParams } from 'react-router-dom';
 
 const TestListView = ({
-    carpetaSeleccionada,
     tests,
-    busqueda,
-    setBusqueda,
-    onBack,
-    onAddTest,
-    onSelectTest
 }) => {
-    const testsFiltrados = tests.filter(test => {
+    const { folderName } = useParams();
+    const [busqueda, setBusqueda] = useState('');
+
+    // Decodificar el nombre de la carpeta de la URL
+    const carpetaActual = decodeURIComponent(folderName);
+
+    const testsEnCarpeta = tests.filter(t => t.carpeta === carpetaActual);
+
+    const testsFiltrados = testsEnCarpeta.filter(test => {
         const t = busqueda.toLowerCase();
         return test.titulo.toLowerCase().includes(t) ||
             test.descripcion.toLowerCase().includes(t) ||
@@ -44,28 +47,28 @@ const TestListView = ({
       `}</style>
 
             <div className="max-w-5xl mx-auto">
-                <button
-                    onClick={onBack}
-                    className="flex items-center gap-2 bg-white px-4 py-2 rounded-lg text-gray-700 hover:bg-gray-50 transition border border-gray-200 mb-4"
+                <Link
+                    to="/"
+                    className="inline-flex items-center gap-2 bg-white px-4 py-2 rounded-lg text-gray-700 hover:bg-gray-50 transition border border-gray-200 mb-4"
                 >
                     <ArrowLeft className="w-5 h-5" />
                     Volver a carpetas
-                </button>
+                </Link>
 
                 <div className="text-center mb-12">
                     <BookOpen className="w-16 h-16 text-indigo-600 mx-auto mb-4" />
-                    <h1 className="text-4xl font-bold text-gray-800 mb-2">{carpetaSeleccionada}</h1>
+                    <h1 className="text-4xl font-bold text-gray-800 mb-2">{carpetaActual}</h1>
                     <p className="text-gray-600">Selecciona un test para comenzar</p>
                 </div>
 
                 <div className="mb-6 flex justify-center">
-                    <button onClick={onAddTest} className="bg-gradient-to-r from-green-500 to-emerald-600 text-white px-6 py-3 rounded-lg font-semibold hover:from-green-600 hover:to-emerald-700 transition flex items-center gap-2 shadow-lg">
+                    <Link to={`/${encodeURIComponent(carpetaActual)}/add`} className="bg-gradient-to-r from-green-500 to-emerald-600 text-white px-6 py-3 rounded-lg font-semibold hover:from-green-600 hover:to-emerald-700 transition flex items-center gap-2 shadow-lg">
                         <Plus className="w-5 h-5" />
                         Añadir Nuevo Test
-                    </button>
+                    </Link>
                 </div>
 
-                {tests.length > 0 && (
+                {testsEnCarpeta.length > 0 && (
                     <div className="mb-6 max-w-2xl mx-auto">
                         <div className="relative">
                             <Search className="absolute left-4 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
@@ -79,17 +82,15 @@ const TestListView = ({
                     </div>
                 )}
 
-                {tests.length === 0 ? (
+                {testsEnCarpeta.length === 0 ? (
                     <div className="bg-white rounded-xl shadow-lg p-12 text-center">
                         <BookOpen className="w-20 h-20 text-gray-300 mx-auto mb-4" />
                         <h3 className="text-2xl font-bold text-gray-700 mb-2">No hay tests disponibles</h3>
-                        <p className="text-gray-500 mb-4">No se encontraron tests en la carpeta public/tests</p>
+                        <p className="text-gray-500 mb-4">No se encontraron tests en esta carpeta</p>
                         <div className="bg-blue-50 border border-blue-200 rounded-lg p-4 mb-4 text-sm text-left">
                             <p className="font-semibold text-blue-900 mb-2">📁 Para cargar tests automáticamente:</p>
                             <ol className="list-decimal list-inside space-y-1 text-blue-800">
-                                <li>Crea un archivo <code className="bg-blue-100 px-2 py-0.5 rounded">public/tests/index.json</code></li>
-                                <li>Con el formato: <code className="bg-blue-100 px-2 py-0.5 rounded">{"{ \"folders\": [\"tema4\", \"tema5\"] }"}</code></li>
-                                <li>Coloca tus archivos JSON en: <code className="bg-blue-100 px-2 py-0.5 rounded">public/tests/tema4/gradle.json</code></li>
+                                <li>Asegúrate de que tus JSON están en <code className="bg-blue-100 px-2 py-0.5 rounded">src/tests/{carpetaActual}/</code></li>
                             </ol>
                         </div>
                         <p className="text-sm text-gray-400">O usa el botón de arriba para añadir tests manualmente</p>
@@ -126,10 +127,10 @@ const TestListView = ({
                                         </div>
                                     </div>
                                 </div>
-                                <button onClick={() => onSelectTest(test)} className="w-full bg-gradient-to-r from-blue-500 to-indigo-600 text-white py-3 rounded-lg font-semibold hover:from-blue-600 hover:to-indigo-700 transition flex items-center justify-center gap-2 mt-auto">
+                                <Link to={`/${encodeURIComponent(carpetaActual)}/${encodeURIComponent(test.id)}`} className="w-full bg-gradient-to-r from-blue-500 to-indigo-600 text-white py-3 rounded-lg font-semibold hover:from-blue-600 hover:to-indigo-700 transition flex items-center justify-center gap-2 mt-auto">
                                     <Play className="w-5 h-5" />
                                     Comenzar Test
-                                </button>
+                                </Link>
                             </div>
                         ))}
                     </div>

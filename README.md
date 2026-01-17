@@ -5,7 +5,7 @@
 ![Vite](https://img.shields.io/badge/Vite-6.0-646CFF?logo=vite&logoColor=white)
 ![Tailwind](https://img.shields.io/badge/Tailwind_CSS-3.4-38B2AC?logo=tailwind-css&logoColor=white)
 
-Un sistema de evaluación moderno, interactivo y dinámico diseñado para la gestión y ejecución de tests automatizados. **PeruvianKING** ofrece una experiencia de usuario premium con animaciones fluidas, feedback inmediato y una interfaz intuitiva.
+Un sistema de evaluación moderno, interactivo y dinámico diseñado para la gestión y ejecución de tests automatizados.
 
 ## ✨ Características Principales
 

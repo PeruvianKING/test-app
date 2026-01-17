@@ -160,33 +160,51 @@ const TestListView = ({
                         </div>
                     ) : (
                         <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
-                            {currentTests.map((test) => (
-                                <div key={test.id} className="bg-white rounded-xl shadow-lg p-6 hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1 flex flex-col h-full">
-                                    <div className="flex-1 flex flex-col">
-                                        <div className="mb-4">
-                                            <h2 className="text-xl font-bold text-gray-800 mb-2 line-clamp-2 min-h-[3.5rem]">{test.titulo}</h2>
-                                            <div className="text-gray-600 text-sm mb-4 h-[4rem] overflow-y-auto pr-2 custom-scrollbar">
-                                                {test.descripcion}
+                            {/* Rellenamos con placeholders invisibles para mantener el layout fijo */}
+                            {[...Array(ITEMS_PER_PAGE)].map((_, index) => {
+                                const test = currentTests[index];
+                                if (!test) {
+                                    return (
+                                        <div key={`placeholder-${index}`} className="opacity-0 pointer-events-none p-6 flex flex-col h-full border-2 border-transparent">
+                                            <div className="flex-1">
+                                                <div className="mb-4">
+                                                    <div className="h-8 bg-gray-200 rounded mb-2"></div>
+                                                    <div className="h-16 bg-gray-100 rounded"></div>
+                                                </div>
+                                            </div>
+                                            <div className="h-12 bg-gray-200 rounded mt-auto"></div>
+                                        </div>
+                                    );
+                                }
+
+                                return (
+                                    <div key={test.id} className="bg-white rounded-xl shadow-lg p-6 hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1 flex flex-col h-full">
+                                        <div className="flex-1 flex flex-col">
+                                            <div className="mb-4">
+                                                <h2 className="text-xl font-bold text-gray-800 mb-2 line-clamp-2 min-h-[3.5rem]">{test.titulo}</h2>
+                                                <div className="text-gray-600 text-sm mb-4 h-[4rem] overflow-y-auto pr-2 custom-scrollbar">
+                                                    {test.descripcion}
+                                                </div>
+                                            </div>
+                                            <div className="mb-4 flex-1">
+                                                <div className="flex items-center gap-2 text-sm text-gray-600 mb-2">
+                                                    <span className="font-semibold">{test.numeroPreguntas}</span>
+                                                    <span>preguntas</span>
+                                                </div>
+                                                <div className="flex flex-wrap gap-2">
+                                                    {test.temas.map((tema, idx) => (
+                                                        <span key={idx} className="px-3 py-1 bg-indigo-100 text-indigo-700 rounded-full text-xs font-medium">{tema}</span>
+                                                    ))}
+                                                </div>
                                             </div>
                                         </div>
-                                        <div className="mb-4 flex-1">
-                                            <div className="flex items-center gap-2 text-sm text-gray-600 mb-2">
-                                                <span className="font-semibold">{test.numeroPreguntas}</span>
-                                                <span>preguntas</span>
-                                            </div>
-                                            <div className="flex flex-wrap gap-2">
-                                                {test.temas.map((tema, idx) => (
-                                                    <span key={idx} className="px-3 py-1 bg-indigo-100 text-indigo-700 rounded-full text-xs font-medium">{tema}</span>
-                                                ))}
-                                            </div>
-                                        </div>
+                                        <Link to={`/${encodeURIComponent(carpetaActual)}/${encodeURIComponent(test.id)}`} className="w-full bg-gradient-to-r from-blue-500 to-indigo-600 text-white py-3 rounded-lg font-semibold hover:from-blue-600 hover:to-indigo-700 transition flex items-center justify-center gap-2 mt-auto">
+                                            <Play className="w-5 h-5" />
+                                            Comenzar Test
+                                        </Link>
                                     </div>
-                                    <Link to={`/${encodeURIComponent(carpetaActual)}/${encodeURIComponent(test.id)}`} className="w-full bg-gradient-to-r from-blue-500 to-indigo-600 text-white py-3 rounded-lg font-semibold hover:from-blue-600 hover:to-indigo-700 transition flex items-center justify-center gap-2 mt-auto">
-                                        <Play className="w-5 h-5" />
-                                        Comenzar Test
-                                    </Link>
-                                </div>
-                            ))}
+                                );
+                            })}
                         </div>
                     )}
                 </div>

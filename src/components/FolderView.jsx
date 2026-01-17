@@ -75,8 +75,21 @@ const FolderView = ({
                         </div>
                     ) : (
                         <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
-                            {currentFolders.map(([carpeta, info]) => {
-                                // Ahora usamos 'info.fileCount' para mostrar la cantidad
+                            {[...Array(ITEMS_PER_PAGE)].map((_, index) => {
+                                const folderEntry = currentFolders[index];
+                                if (!folderEntry) {
+                                    return (
+                                        <div key={`placeholder-${index}`} className="opacity-0 pointer-events-none p-6 flex flex-col h-full border-2 border-transparent">
+                                            <div className="flex-1">
+                                                <div className="w-16 h-16 bg-gray-200 rounded-lg mb-4"></div>
+                                                <div className="h-8 bg-gray-200 rounded mb-2"></div>
+                                            </div>
+                                            <div className="h-12 bg-gray-200 rounded mt-auto"></div>
+                                        </div>
+                                    );
+                                }
+
+                                const [carpeta, info] = folderEntry;
                                 return (
                                     <Link
                                         key={carpeta}

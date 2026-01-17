@@ -60,9 +60,7 @@ Sigue estos pasos para ejecutar el proyecto localmente:
 
 ## 📝 Añadir Nuevos Tests
 
-Tienes dos formas de agregar contenido al sistema:
-
-### 1. Método Automático (Recomendado)
+### 1. Crea una carpeta en /tests
 Crea archivos `.json` dentro de la carpeta `src/tests`. El sistema organizará las subcarpetas automáticamente.
 
 **Estructura de directorios:**
@@ -76,7 +74,7 @@ src/
 ```
 
 ### 2. Formato JSON Requerido
-Copia y pega este formato para tus archivos de test:
+Debes usar el siguiente formato para tus archivos de test:
 
 ```json
 {

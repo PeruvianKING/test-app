@@ -67,7 +67,7 @@ Crea carpetas dentro de src/data/ y añade archivos `.json` dentro de esas subca
 **Estructura de directorios:**
 ```text
 src/
-└── tests/
+└── data/
     ├── Historia/
     │   └── perú-siglo-xix.json
     └── Matemáticas/

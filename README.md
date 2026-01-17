@@ -6,7 +6,9 @@
 
 Un sistema de evaluación moderno, interactivo y dinámico diseñado para la gestión y ejecución de tests automatizados.
 
-## ✨ Características Principales
+[Visita la web para usar la app](https://peruvianking.com)
+
+## Características Principales
 
 *   **📂 Organización por Carpetas**: Navega fácilmente entre diferentes categorías de tests desde la pantalla de inicio.
 *   **⚡ Carga Dinámica**: El sistema detecta y carga automáticamente los tests situados en la carpeta `src/tests`.

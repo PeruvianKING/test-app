@@ -262,7 +262,15 @@ const QuizSystem = () => {
               className="w-16 h-16 mx-auto mb-4 rounded-full object-cover shadow-lg"
             />
             <h1 className="text-4xl font-bold text-gray-800 mb-2">PeruvianKING Inc.</h1>
-            <p className="text-gray-600">Selecciona una carpeta</p>
+            <p className="text-gray-600 mb-4">Selecciona una carpeta</p>
+            <a
+              href="https://github.com/PeruvianKING/test-app"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-indigo-600 hover:text-indigo-800 underline text-sm"
+            >
+              Ver repositorio en GitHub
+            </a>
           </div>
 
           {cargando ? (

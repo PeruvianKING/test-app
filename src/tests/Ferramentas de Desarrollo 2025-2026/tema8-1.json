@@ -1,0 +1,246 @@
+{
+    "titulo": "TEMA 8 - PRUEBAS DE RENDIMIENTO A",
+    "descripcion": "Este test evalúa conocimientos profundos sobre metodologías de pruebas de rendimiento, el uso técnico de Apache JMeter y la implementación de scripts avanzados con Grafana k6.",
+    "examen_automatizacion": [
+        {
+            "id": 1,
+            "pregunta": "¿Cuál es el enfoque principal de las pruebas de rendimiento como categoría de pruebas no funcionales?",
+            "opciones": {
+                "a": "Evaluar qué hace el sistema y si cumple con los requisitos de las características individuales.",
+                "b": "Determinar cómo se comporta el sistema bajo cargas específicas, priorizando cualidades operativas.",
+                "c": "Validar la integración de unidades de software antes de la prueba de aceptación.",
+                "d": "Asegurar que el código fuente no contenga vulnerabilidades de seguridad crítica."
+            },
+            "respuesta_correcta": "b",
+            "explicacion": "Las pruebas de rendimiento se centran en el cómo rinde el sistema (responsividad, estabilidad) en lugar de en el qué hace (funcionalidad),. Evalúan la eficiencia de los recursos y la confiabilidad bajo cargas específicas,."
+        },
+        {
+            "id": 2,
+            "pregunta": "En el contexto de tipos de pruebas, ¿qué diferencia fundamental existe entre Load Testing y Stress Testing?",
+            "opciones": {
+                "a": "Load testing busca el punto de ruptura, mientras que Stress testing mide tiempos bajo carga normal.",
+                "b": "Load testing evalúa el comportamiento bajo carga esperada; Stress testing empuja el sistema más allá de su capacidad máxima.",
+                "c": "Load testing se realiza solo en la base de datos; Stress testing se aplica solo a los servidores de aplicaciones.",
+                "d": "Stress testing mide la recuperación tras un fallo, mientras que Load testing mide la capacidad de almacenamiento."
+            },
+            "respuesta_correcta": "b",
+            "explicacion": "El Load Testing simula cargas de trabajo esperadas para medir tiempos de respuesta. El Stress Testing busca examinar los límites superiores y la robustez bajo condiciones extremas."
+        },
+        {
+            "id": 3,
+            "pregunta": "¿Cuál es el propósito primordial de realizar un Soak (Endurance) Testing?",
+            "opciones": {
+                "a": "Identificar fugas de memoria y degradación del rendimiento durante un periodo prolongado.",
+                "b": "Evaluar la capacidad del sistema para adaptarse a aumentos súbitos y masivos de tráfico.",
+                "c": "Comparar dos configuraciones de hardware diferentes para elegir la más óptima.",
+                "d": "Verificar la velocidad de renderizado de la interfaz de usuario en el navegador."
+            },
+            "respuesta_correcta": "a",
+            "explicacion": "El Soak Testing monitoriza el uso de memoria para detectar fugas y asegura que el rendimiento no se degrade con el tiempo bajo una carga sostenida,."
+        },
+        {
+            "id": 4,
+            "pregunta": "Según la metodología de Microsoft, ¿cuál es el segundo paso esencial en el proceso de pruebas de rendimiento?",
+            "opciones": {
+                "a": "Identificar el entorno de pruebas.",
+                "b": "Planificar y diseñar las pruebas.",
+                "c": "Definir los criterios de aceptación de rendimiento.",
+                "d": "Configurar el entorno de prueba."
+            },
+            "respuesta_correcta": "c",
+            "explicacion": "Tras identificar el entorno, el paso 2 consiste en definir criterios de aceptación, estableciendo metas de tiempo de respuesta, throughput y uso de recursos."
+        },
+        {
+            "id": 5,
+            "pregunta": "¿Qué métrica es fundamental para entender la experiencia del usuario final, pero difícil de medir solo con herramientas de carga como JMeter?",
+            "opciones": {
+                "a": "Server Response Time.",
+                "b": "Throughput total.",
+                "c": "Render Response Time.",
+                "d": "Latencia de red."
+            },
+            "respuesta_correcta": "c",
+            "explicacion": "El Render Response Time mide el tiempo para mostrar contenido. JMeter no ejecuta JavaScript ni renderiza HTML como un navegador, por lo que suele requerir scripts funcionales adicionales para capturar esta métrica,."
+        },
+        {
+            "id": 6,
+            "pregunta": "Si en JMeter configuramos un Thread Group con 10 usuarios y un Ramp-Up Period de 20 segundos, ¿cuál es el retraso entre el inicio de cada usuario?",
+            "opciones": {
+                "a": "0.5 segundos.",
+                "b": "2 segundos.",
+                "c": "10 segundos.",
+                "d": "20 segundos."
+            },
+            "respuesta_correcta": "b",
+            "explicacion": "El retraso se calcula dividiendo el Ramp-Up entre el número de hilos (20/10 = 2 segundos)."
+        },
+        {
+            "id": 7,
+            "pregunta": "En JMeter, ¿cuál es la función de un 'Config Element' como el HTTP Request Defaults?",
+            "opciones": {
+                "a": "Almacenar y gestionar las cookies recibidas del servidor automáticamente.",
+                "b": "Establecer valores comunes como IP y puerto para no repetirlos en cada sampler.",
+                "c": "Extraer datos de la respuesta HTTP usando expresiones regulares.",
+                "d": "Visualizar los resultados de la prueba en formato de gráfico o tabla."
+            },
+            "respuesta_correcta": "b",
+            "explicacion": "El HTTP Request Defaults permite configurar valores base (servidor, puerto) que son heredados por todos los samplers del grupo."
+        },
+        {
+            "id": 8,
+            "pregunta": "¿Por qué es recomendable ejecutar las pruebas de carga de JMeter mediante la CLI en lugar de la GUI?",
+            "opciones": {
+                "a": "La GUI no permite configurar más de 10 hilos simultáneos.",
+                "b": "La CLI es necesaria para poder usar protocolos como FTP o JDBC.",
+                "c": "Para obtener métricas fiables, ya que la GUI consume muchos recursos y puede afectar los resultados.",
+                "d": "La GUI no puede generar reportes en formato HTML automáticamente."
+            },
+            "respuesta_correcta": "c",
+            "explicacion": "Se debe usar la CLI (modo no-GUI) para obtener métricas fiables en pruebas reales, dejando la GUI solo para construcción y depuración."
+        },
+        {
+            "id": 9,
+            "pregunta": "¿Qué componente de JMeter se utiliza para simular el 'tiempo de pensamiento' (think time) de un usuario real entre peticiones?",
+            "opciones": {
+                "a": "Assertions.",
+                "b": "Timers.",
+                "c": "Listeners.",
+                "d": "Post Processors."
+            },
+            "respuesta_correcta": "b",
+            "explicacion": "Los Timers (como el Gaussian Random Timer) crean pausas dentro de las peticiones HTTP para simular el tiempo de procesamiento humano."
+        },
+        {
+            "id": 10,
+            "pregunta": "¿Cuál es una característica distintiva de Grafana k6 en comparación con JMeter?",
+            "opciones": {
+                "a": "k6 utiliza una interfaz gráfica basada en arrastrar y soltar elementos.",
+                "b": "k6 requiere el entorno de ejecución de Java (JRE) para funcionar.",
+                "c": "k6 utiliza scripts basados en JavaScript para definir escenarios complejos.",
+                "d": "k6 no admite pruebas distribuidas en clústeres de Kubernetes."
+            },
+            "respuesta_correcta": "c",
+            "explicacion": "k6 destaca por su scripting en JavaScript, lo que facilita la flexibilidad y la integración en flujos de desarrollo modernos,."
+        },
+        {
+            "id": 11,
+            "pregunta": "En el ciclo de vida de una prueba de k6, ¿qué ocurre en el 'Init context'?",
+            "opciones": {
+                "a": "Se ejecutan las peticiones HTTP principales de la prueba repetidamente.",
+                "b": "Se cargan archivos locales, se importan módulos y se declaran funciones de ciclo de vida.",
+                "c": "Se procesan los resultados finales y se cierra el entorno de prueba.",
+                "d": "Se comparten datos dinámicos entre los diferentes Usuarios Virtuales (VUs)."
+            },
+            "respuesta_correcta": "b",
+            "explicacion": "El Init context prepara el script cargando archivos e importando módulos antes de que comience la ejecución de los VUs,."
+        },
+        {
+            "id": 12,
+            "pregunta": "¿Qué tipo de métrica en k6 se utiliza para calcular estadísticas sobre múltiples valores, como percentiles (p95)?",
+            "opciones": {
+                "a": "Counters.",
+                "b": "Gauges.",
+                "c": "Rates.",
+                "d": "Trends."
+            },
+            "respuesta_correcta": "d",
+            "explicacion": "Los Trends permiten calcular valores estadísticos complejos como la media, moda o percentiles para una serie de datos."
+        },
+        {
+            "id": 13,
+            "pregunta": "Según el método RED recomendado para el análisis en k6, ¿cuáles son las tres métricas clave?",
+            "opciones": {
+                "a": "CPU, Memoria, Disco.",
+                "b": "http_reqs (tráfico), http_req_failed (errores), http_req_duration (latencia).",
+                "c": "VUs activos, Iteraciones totales, Data received.",
+                "d": "Setup time, VU code time, Teardown time."
+            },
+            "respuesta_correcta": "b",
+            "explicacion": "El método RED se alinea con las 'Golden Signals' de SRE, midiendo tráfico, disponibilidad (errores) y latencia."
+        },
+        {
+            "id": 14,
+            "pregunta": "¿Cómo se puede habilitar el panel web integrado (Web Dashboard) en k6 para visualización en tiempo real?",
+            "opciones": {
+                "a": "Instalando un plugin adicional desde el repositorio oficial de Grafana.",
+                "b": "Configurando la variable de entorno K6_WEB_DASHBOARD=true.",
+                "c": "Ejecutando el comando 'k6 dashboard' antes del test.",
+                "d": "Habilitando la opción en el archivo k6-resource.yaml."
+            },
+            "respuesta_correcta": "b",
+            "explicacion": "El panel se habilita estableciendo la variable de entorno K6_WEB_DASHBOARD=true al ejecutar k6 run."
+        },
+        {
+            "id": 15,
+            "pregunta": "En k6, ¿cuál es el propósito de la función setup()?",
+            "opciones": {
+                "a": "Es la función obligatoria donde reside la lógica principal de la prueba.",
+                "b": "Preparar datos para el procesamiento y permitir compartirlos entre todos los VUs.",
+                "c": "Definir las opciones de escalado (stages) del test.",
+                "d": "Liberar recursos y detener el entorno al finalizar la prueba."
+            },
+            "respuesta_correcta": "b",
+            "explicacion": "La etapa de Setup es opcional y sirve para configurar el entorno y generar o preparar datos que los VUs utilizarán,."
+        },
+        {
+            "id": 16,
+            "pregunta": "¿Qué módulo de k6 permite realizar automatización del navegador y medir métricas de rendimiento del frontend?",
+            "opciones": {
+                "a": "k6/http.",
+                "b": "k6/browser.",
+                "c": "k6/metrics.",
+                "d": "k6/execution."
+            },
+            "respuesta_correcta": "b",
+            "explicacion": "El módulo k6/browser habilita la automatización de navegadores y es compatible con la API de Playwright."
+        },
+        {
+            "id": 17,
+            "pregunta": "Para evitar la sobrecarga de métricas por URLs dinámicas en k6 (ej. /posts/1, /posts/2), ¿qué se recomienda hacer?",
+            "opciones": {
+                "a": "Desactivar el registro de métricas para esas peticiones.",
+                "b": "Usar la función batch() para agrupar todas las peticiones.",
+                "c": "Asignar explícitamente una etiqueta 'name' al request.",
+                "d": "Aumentar el número de VUs para procesar más datos."
+            },
+            "respuesta_correcta": "c",
+            "explicacion": "Se debe asignar un tag 'name' (ej. tags: { name: 'PostsItemURL' }) para agrupar URLs dinámicas en una sola entrada de métricas."
+        },
+        {
+            "id": 18,
+            "pregunta": "¿Cuál de estos es un modo de ejecución soportado por k6 para escalar pruebas?",
+            "opciones": {
+                "a": "Modo recursivo en servidores Windows.",
+                "b": "Ejecución distribuida en un clúster de Kubernetes.",
+                "c": "Ejecución peer-to-peer entre máquinas locales.",
+                "d": "Modo offline mediante archivos JAR."
+            },
+            "respuesta_correcta": "b",
+            "explicacion": "k6 permite la ejecución distribuida mediante recursos de Kubernetes (k6-resource.yaml)."
+        },
+        {
+            "id": 19,
+            "pregunta": "En JMeter, ¿qué componente permite validar que el contenido de la respuesta del servidor sea el esperado?",
+            "opciones": {
+                "a": "Post Processors.",
+                "b": "Config Elements.",
+                "c": "Assertions.",
+                "d": "Pre Processors."
+            },
+            "respuesta_correcta": "c",
+            "explicacion": "Las Assertions verifican que las respuestas cumplan con condiciones específicas (ej. contener un texto)."
+        },
+        {
+            "id": 20,
+            "pregunta": "Si un test de k6 muestra una métrica 'http_req_failed: 5.00%', ¿qué significa?",
+            "opciones": {
+                "a": "Que el 5% de los Usuarios Virtuales fallaron al iniciar.",
+                "b": "Que la tasa de peticiones HTTP con error fue del 5%.",
+                "c": "Que el tiempo de respuesta fue un 5% más lento de lo esperado.",
+                "d": "Que el test solo completó el 5% de las iteraciones planeadas."
+            },
+            "respuesta_correcta": "b",
+            "explicacion": "http_req_failed mide el número o porcentaje de peticiones que fallaron durante la prueba."
+        }
+    ]
+}

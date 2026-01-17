@@ -1,0 +1,246 @@
+{
+  "titulo": "TEMA 8 - PRUEBAS DE RENDIMIENTO B",
+  "descripcion": "Este examen evalúa el dominio técnico de las metodologías de Microsoft, la arquitectura de pruebas en Apache JMeter y el ciclo de vida avanzado de scripts en Grafana k6.",
+  "examen_automatizacion": [
+    {
+      "id": 1,
+      "pregunta": "¿Qué aspecto específico diferencia a las pruebas no funcionales de las funcionales?",
+      "opciones": {
+        "a": "Las no funcionales validan comportamientos específicos del sistema según requisitos de usuario.",
+        "b": "Las funcionales evalúan cualidades operativas como la eficiencia de recursos y la estabilidad.",
+        "c": "Las no funcionales se centran en el 'cómo' rinde el sistema bajo cargas específicas en lugar del 'qué' hace.",
+        "d": "Las funcionales analizan la robustez del sistema bajo condiciones extremas de tráfico."
+      },
+      "answer": "c",
+      "explicacion": "Las pruebas de rendimiento son una categoría de pruebas no funcionales que enfatizan cómo rinde el sistema, priorizando cualidades operativas generales sobre características individuales [1]."
+    },
+    {
+      "id": 2,
+      "pregunta": "En la metodología de Microsoft, ¿cuál es el enfoque principal al 'Identificar el Entorno de Prueba' (Paso 1)?",
+      "opciones": {
+        "a": "Establecer metas de throughput centradas en requisitos de negocio.",
+        "b": "Identificar configuraciones de hardware, software y red tanto de prueba como de producción.",
+        "c": "Diseñar escenarios clave y variabilidad entre los usuarios virtuales.",
+        "d": "Configurar balanceadores de carga para determinar el setup óptimo."
+      },
+      "answer": "b",
+      "explicacion": "El primer paso requiere identificar entornos de prueba y producción, incluyendo hardware, software y configuraciones de red, además de las herramientas disponibles [2]."
+    },
+    {
+      "id": 3,
+      "pregunta": "Si un ingeniero desea detectar fugas de memoria (memory leaks) a largo plazo, ¿qué tipo de prueba debe ejecutar?",
+      "opciones": {
+        "a": "Spike Testing.",
+        "b": "Stress Testing.",
+        "c": "Soak (Endurance) Testing.",
+        "d": "Configuration Testing."
+      },
+      "answer": "c",
+      "explicacion": "El Soak Testing monitoriza el uso de memoria para detectar fugas y analiza si el rendimiento se degrada tras un periodo prolongado de carga sostenida [3],[4]."
+    },
+    {
+      "id": 4,
+      "pregunta": "Al definir criterios de aceptación (Paso 2 de la metodología), ¿en qué se centra el criterio de 'Throughput'?",
+      "opciones": {
+        "a": "En la experiencia del usuario final.",
+        "b": "En los requisitos de negocio.",
+        "c": "En la capacidad máxima del sistema.",
+        "d": "En el uso de recursos de hardware."
+      },
+      "answer": "b",
+      "explicacion": "Dentro de los criterios de aceptación, el throughput se enfoca en los requisitos de negocio, mientras que el tiempo de respuesta se enfoca en el usuario [2]."
+    },
+    {
+      "id": 5,
+      "pregunta": "¿Por qué las herramientas de load-testing como JMeter tienen dificultades para medir el 'Render Response Time'?",
+      "opciones": {
+        "a": "Porque no pueden simular más de 100 usuarios concurrentes de forma nativa.",
+        "b": "Porque no ejecutan JavaScript ni renderizan HTML como lo hace un navegador real.",
+        "c": "Porque solo miden peticiones a bases de datos mediante JDBC.",
+        "d": "Porque el protocolo HTTP/S no permite capturar tiempos de procesamiento interno."
+      },
+      "answer": "b",
+      "explicacion": "JMeter no es un navegador; no ejecuta JavaScript ni renderiza HTML, por lo que los tiempos de renderizado no se incluyen en sus muestras habituales [5],[6]."
+    },
+    {
+      "id": 6,
+      "pregunta": "En JMeter, ¿cuál es el propósito de un 'HTTP Cookie Manager' dentro de un Thread Group?",
+      "opciones": {
+        "a": "Extraer tokens CSRF mediante expresiones regulares.",
+        "b": "Almacenar los resultados de la prueba en un archivo CSV.",
+        "c": "Gestionar y almacenar automáticamente las cookies por cada hilo (usuario).",
+        "d": "Definir el IP y puerto del servidor para todas las peticiones."
+      },
+      "answer": "c",
+      "explicacion": "El HTTP Cookie Manager se añade para gestionar las cookies de forma individual para cada hilo de usuario simulado [7]."
+    },
+    {
+      "id": 7,
+      "pregunta": "¿Qué elemento de JMeter permite cargar dinámicamente credenciales (usuario/password) desde un archivo externo?",
+      "opciones": {
+        "a": "HTTP Request Defaults.",
+        "b": "CSV Data Set Config.",
+        "c": "Regular Expression Extractor.",
+        "d": "Gaussian Random Timer."
+      },
+      "answer": "b",
+      "explicacion": "El CSV Data Set Config se utiliza para cargar parámetros como nombres de usuario y contraseñas desde archivos externos para las peticiones HTTP [8]."
+    },
+    {
+      "id": 8,
+      "pregunta": "Para obtener métricas fiables en JMeter, ¿cuál es el comando CLI correcto para generar un reporte HTML al finalizar?",
+      "opciones": {
+        "a": "jmeter -gui -t test.jmx -report results.",
+        "b": "jmeter -n -t test.jmx -l log.jtl -e -o results.",
+        "c": "jmeter -server -t test.jmx -html results.",
+        "d": "jmeter -run -t test.jmx -o html_report."
+      },
+      "answer": "b",
+      "explicacion": "El comando 'jmeter -n -t myTest.jmx -l log.jtl -e -o results' ejecuta JMeter en modo CLI y genera un reporte HTML en la carpeta de salida especificada [9]."
+    },
+    {
+      "id": 9,
+      "pregunta": "¿Cuál es una ventaja clave de Grafana k6 en el desarrollo moderno de software?",
+      "opciones": {
+        "a": "Su dependencia exclusiva del entorno Java para ejecución en clúster.",
+        "b": "El uso de scripts basados en JavaScript para mayor flexibilidad e integración.",
+        "c": "Su capacidad única para renderizar HTML sin necesidad de módulos adicionales.",
+        "d": "Que no requiere instalación local al funcionar solo en la nube."
+      },
+      "answer": "b",
+      "explicacion": "k6 utiliza scripts basados en JavaScript, lo que facilita la flexibilidad de scripting para escenarios complejos y una fácil integración [9]."
+    },
+    {
+      "id": 10,
+      "pregunta": "Dentro del ciclo de vida de k6, ¿en qué etapa se comparten datos entre los VUs (Virtual Users)?",
+      "opciones": {
+        "a": "Init context.",
+        "b": "Setup.",
+        "c": "VU Code (Default).",
+        "d": "Teardown."
+      },
+      "answer": "b",
+      "explicacion": "La función setup() permite preparar datos para el procesamiento y compartirlos entre todos los usuarios virtuales (VUs) [10]."
+    },
+    {
+      "id": 11,
+      "pregunta": "Según el método RED en k6, ¿qué métrica representa la 'Disponibilidad' (Availability)?",
+      "opciones": {
+        "a": "http_req_duration.",
+        "b": "http_reqs.",
+        "c": "http_req_failed.",
+        "d": "iterations."
+      },
+      "answer": "c",
+      "explicacion": "El método RED alinea http_req_failed con la disponibilidad (tasa de errores) del sistema [11]."
+    },
+    {
+      "id": 12,
+      "pregunta": "En k6, ¿qué tipo de métrica se utiliza para realizar cálculos estadísticos como el percentil 95 (p95)?",
+      "opciones": {
+        "a": "Counters.",
+        "b": "Gauges.",
+        "c": "Rates.",
+        "d": "Trends."
+      },
+      "answer": "d",
+      "explicacion": "Los Trends se encargan de calcular estadísticas para múltiples valores, incluyendo la media, moda y percentiles [12]."
+    },
+    {
+      "id": 13,
+      "pregunta": "Para evitar que URLs dinámicas (ej: /posts/1, /posts/2) saturen las métricas de k6, ¿qué técnica se recomienda?",
+      "opciones": {
+        "a": "Usar la función http.batch() para todas las peticiones.",
+        "b": "Asignar un tag de nombre (name tag) explícito a la petición.",
+        "c": "Filtrar los resultados usando el Web Dashboard.",
+        "d": "Utilizar un Teardown para limpiar los strings de las URLs."
+      },
+      "answer": "b",
+      "explicacion": "Se debe establecer un tag 'name' explícitamente para agrupar URLs dinámicas y evitar la sobrecarga de métricas individuales [13]."
+    },
+    {
+      "id": 14,
+      "pregunta": "¿Cómo se habilita el Web Dashboard integrado de k6 para monitoreo en tiempo real?",
+      "opciones": {
+        "a": "Ejecutando el comando 'k6 dashboard run'.",
+        "b": "Configurando K6_WEB_DASHBOARD=true como variable de entorno.",
+        "c": "Importando el módulo 'k6/x/dashboard' en el script.",
+        "d": "Accediendo directamente a la URL de Grafana Cloud."
+      },
+      "answer": "b",
+      "explicacion": "El dashboard se habilita configurando la variable de entorno 'K6_WEB_DASHBOARD=true' al ejecutar el comando k6 run [14]."
+    },
+    {
+      "id": 15,
+      "pregunta": "En el módulo k6/browser, ¿con qué API busca ser compatible para simplificar el aprendizaje?",
+      "opciones": {
+        "a": "Selenium WebDriver.",
+        "b": "Playwright API.",
+        "c": "Cypress Core.",
+        "d": "JMeter Sampler API."
+      },
+      "answer": "b",
+      "explicacion": "El módulo k6/browser busca proporcionar compatibilidad con la API de Playwright para facilitar su uso a los desarrolladores [15]."
+    },
+    {
+      "id": 16,
+      "pregunta": "¿Qué acción realiza k6 en el 'Init context' de un script?",
+      "opciones": {
+        "a": "Envía peticiones HTTP POST de forma paralela.",
+        "b": "Carga archivos locales, importa módulos y declara funciones de ciclo de vida.",
+        "c": "Calcula los percentiles finales de latencia.",
+        "d": "Cierra las conexiones de red abiertas por los VUs."
+      },
+      "answer": "b",
+      "explicacion": "El Init Context prepara el script cargando archivos, importando módulos y declarando las funciones necesarias para el test [11],[10]."
+    },
+    {
+      "id": 17,
+      "pregunta": "Si en un entorno de CI/CD se desea que k6 termine el proceso inmediatamente tras el test, ¿qué valor debe tener el puerto del dashboard?",
+      "opciones": {
+        "a": "0",
+        "b": "8080",
+        "c": "-1",
+        "d": "5665"
+      },
+      "answer": "c",
+      "explicacion": "Para salir del proceso de k6 inmediatamente después de los tests en CI/CD, se debe configurar el puerto a -1 [14]."
+    },
+    {
+      "id": 18,
+      "pregunta": "¿Qué tipo de prueba busca examinar los 'límites superiores' y la robustez bajo condiciones extremas?",
+      "opciones": {
+        "a": "Load Testing.",
+        "b": "Stress Testing.",
+        "c": "Configuration Testing.",
+        "d": "Unit Testing."
+      },
+      "answer": "b",
+      "explicacion": "El Stress Testing examina los límites superiores de la capacidad del sistema y su robustez bajo condiciones extremas [4]."
+    },
+    {
+      "id": 19,
+      "pregunta": "¿Cuál es un requisito para utilizar el módulo k6/browser?",
+      "opciones": {
+        "a": "Tener instalado un servidor de bases de datos JDBC.",
+        "b": "Contar con un navegador basado en Chromium instalado en la máquina.",
+        "c": "Usar exclusivamente la versión de k6 en la nube.",
+        "d": "Configurar un clúster de Kubernetes distribuido."
+      },
+      "answer": "b",
+      "explicacion": "Para usar k6/browser se requiere la última versión de k6 y un navegador basado en Chromium (como Google Chrome) instalado [15]."
+    },
+    {
+      "id": 20,
+      "pregunta": "En k6, ¿cuál es la restricción principal para el nombre de una métrica personalizada?",
+      "opciones": {
+        "a": "Debe contener al menos un carácter especial como $ o %.",
+        "b": "Debe empezar por un número para facilitar el ordenamiento.",
+        "c": "Máximo 128 caracteres, empezando por letra o guion bajo.",
+        "d": "No puede contener guiones bajos ni números."
+      },
+      "answer": "c",
+      "explicacion": "Los nombres de métricas pueden tener hasta 128 caracteres (ASCII, números, guiones bajos) y deben empezar por una letra o guion bajo [16]."
+    }
+  ]
+}

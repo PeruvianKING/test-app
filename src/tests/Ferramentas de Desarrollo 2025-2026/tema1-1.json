@@ -1,0 +1,246 @@
+{
+  "titulo": "TEMA 1 - IDEs A",
+  "descripcion": "Examen de nivel experto basado en las funcionalidades avanzadas, atajos y configuraciones de Visual Studio Code para el desarrollo en Java y entornos modernos.",
+  "examen_automatizacion": [
+    {
+      "id": 1,
+      "pregunta": "¿Cuál de las siguientes propiedades NO se considera una de las cuatro 'propiedades fundamentales' (core properties) de un IDE?",
+      "opciones": {
+        "a": "Edición consciente del lenguaje (Language-aware editing).",
+        "b": "Instalaciones de definición de proyectos.",
+        "c": "Refactorización automatizada de código.",
+        "d": "Ejecución paso a paso integrada (depurador)."
+      },
+      "respuesta_correcta": "c",
+      "explicacion": "Aunque la refactorización es una característica común, se definen cuatro propiedades centrales: edición consciente del lenguaje, instalaciones de definición de proyectos, compilación integrada y ejecución paso a paso integrada [1]. Las funciones como la refactorización se clasifican como 'otras características comunes' [2]."
+    },
+    {
+      "id": 2,
+      "pregunta": "En el contexto de la gestión de perfiles en VS Code, ¿qué permite específicamente un 'Perfil Parcial' (Partial Profile)?",
+      "opciones": {
+        "a": "Permite compartir solo las extensiones sin incluir la configuración de la interfaz.",
+        "b": "Permite personalizar un subconjunto de configuraciones mientras se hereda el resto del Perfil Predeterminado.",
+        "c": "Es un perfil que se desactiva automáticamente al cerrar el espacio de trabajo.",
+        "d": "Solo permite el uso de temas y fragmentos de código (snippets), bloqueando cambios en el depurador."
+      },
+      "respuesta_correcta": "b",
+      "explicacion": "Los Perfiles Parciales permiten al usuario personalizar un subconjunto de configuraciones, como fragmentos o ajustes específicos, mientras se utiliza el resto de la configuración proveniente del Perfil Predeterminado [3]."
+    },
+    {
+      "id": 3,
+      "pregunta": "Al utilizar la extensión 'Spring Boot Tools', ¿qué símbolo debe usarse en la paleta de comandos (Ctrl+T) para listar todos los beans definidos?",
+      "opciones": {
+        "a": "@/",
+        "b": "@>",
+        "c": "@+",
+        "d": "@!"
+      },
+      "respuesta_correcta": "c",
+      "explicacion": "La extensión Spring Boot Tools utiliza símbolos específicos para la navegación: `@/` para mapeos de solicitudes, `@+` para beans, `@>` para funciones y `@` para anotaciones de Spring [4]. Para listar beans, se usa el comando siguiente: \n```bash\n# En la paleta de navegación Ctrl+T\n@+\n``` [4]."
+    },
+    {
+      "id": 4,
+      "pregunta": "En la Barra de Estado de VS Code, ¿cuál de los siguientes elementos se categoriza específicamente como un ítem 'Secundario' (ubicado a la derecha)?",
+      "opciones": {
+        "a": "Problemas y advertencias del proyecto.",
+        "b": "Estado de sincronización de la cuenta.",
+        "c": "Información contextual como el lenguaje y el espaciado.",
+        "d": "Estado general del espacio de trabajo."
+      },
+      "respuesta_correcta": "c",
+      "explicacion": "La Barra de Estado divide los ítems en Primarios (izquierda), que afectan a todo el espacio de trabajo como problemas y sincronización, y Secundarios (derecha), que incluyen elementos contextuales como el lenguaje, espaciado y feedback [5]."
+    },
+    {
+      "id": 5,
+      "pregunta": "¿Qué tipo de punto de interrupción (breakpoint) permite registrar mensajes en la consola de depuración sin detener la ejecución del programa?",
+      "opciones": {
+        "a": "Conditional Breakpoint.",
+        "b": "Logpoint.",
+        "c": "Data Breakpoint.",
+        "d": "Triggered Breakpoint."
+      },
+      "respuesta_correcta": "b",
+      "explicacion": "Los Logpoints registran mensajes en la Consola de Depuración sin detener la ejecución, lo cual es útil para trazar el código sin modificarlo [6]. Un ejemplo de mensaje de Logpoint sería: \n```text\n\"Valor de x: {x}\"\n``` [6]."
+    },
+    {
+      "id": 6,
+      "pregunta": "Sobre la funcionalidad 'Hot Code Replace' (HCR) en el depurador de Java, ¿cuál es su principal ventaja?",
+      "opciones": {
+        "a": "Permite compilar el código en la nube para ahorrar recursos locales.",
+        "b": "Transmite cambios de clase a una JVM en ejecución sin necesidad de reiniciar la aplicación.",
+        "c": "Optimiza el bytecode de Java automáticamente durante la sesión de depuración.",
+        "d": "Permite depurar aplicaciones Java y React simultáneamente en el mismo puerto."
+      },
+      "respuesta_correcta": "b",
+      "explicacion": "El Hot Code Replace (HCR) permite al depurador inyectar cambios de código directamente en la JVM en ejecución, facilitando el desarrollo experimental por ensayo y error sin reiniciar la aplicación [7]."
+    },
+    {
+      "id": 7,
+      "pregunta": "¿Cuál es la función del atajo de teclado 'Ctrl+K Ctrl+0' en VS Code?",
+      "opciones": {
+        "a": "Restablecer el nivel de zoom de la interfaz.",
+        "b": "Plegar (fold) todas las regiones de código en el editor.",
+        "c": "Cerrar todos los editores abiertos en el grupo actual.",
+        "d": "Eliminar todos los puntos de interrupción activos."
+      },
+      "respuesta_correcta": "b",
+      "explicacion": "El comando `Ctrl+K Ctrl+0` se utiliza para plegar todas las regiones del código, mientras que `Ctrl+K Ctrl+J` se utiliza para desplegarlas [8]."
+    },
+    {
+      "id": 8,
+      "pregunta": "Para depurar una aplicación de React utilizando el navegador Chrome desde VS Code, ¿qué configuración es esencial en el archivo 'launch.json'?",
+      "opciones": {
+        "a": "Cambiar el tipo a 'node' y el puerto a 8080.",
+        "b": "Ajustar el 'type' a 'chrome', el 'request' a 'launch' y la 'url' al puerto 3000.",
+        "c": "Establecer 'webRoot' a la carpeta 'node_modules'.",
+        "d": "Configurar una conexión remota mediante 'SSH' al servidor de webpack."
+      },
+      "respuesta_correcta": "b",
+      "explicacion": "Para depurar React, se debe crear una configuración en `launch.json` eligiendo 'chrome', ajustando la URL al puerto 3000 (común en desarrollo de React) y asegurando que el servidor de desarrollo esté iniciado [9]."
+    },
+    {
+      "id": 9,
+      "pregunta": "Al trabajar con fragmentos de código postfijos (Postfix Snippets) en Java, ¿qué genera el atajo '.nnull' tras una expresión?",
+      "opciones": {
+        "a": "Lanza una excepción si la expresión es nula.",
+        "b": "Crea una sentencia 'if' que comprueba si la expresión NO es nula.",
+        "c": "Asigna el valor a una nueva variable solo si no es nula.",
+        "d": "Convierte la expresión en un objeto Optional de Java."
+      },
+      "respuesta_correcta": "b",
+      "explicacion": "El fragmento postfijo `.nnull` crea una estructura `if (expr != null) {}`, mientras que `.null` comprueba si es nula [10]. Ejemplo: \n```java\nmiObjeto.nnull\n// se convierte en:\nif (miObjeto != null) {\n    \n}\n``` [10]."
+    },
+    {
+      "id": 10,
+      "pregunta": "¿Qué característica distingue a los 'Triggered Breakpoints' de los puntos de interrupción estándar?",
+      "opciones": {
+        "a": "Se activan automáticamente solo cuando ocurre una excepción no capturada.",
+        "b": "Se activan automáticamente solo después de que se haya alcanzado otro punto de interrupción específico.",
+        "c": "Solo funcionan en aplicaciones que corren dentro de contenedores Docker.",
+        "d": "Envían una notificación al sistema operativo cuando se detiene la ejecución."
+      },
+      "respuesta_correcta": "b",
+      "explicacion": "Los Triggered Breakpoints son ideales para diagnosticar problemas que ocurren solo bajo ciertas condiciones previas, ya que se activan únicamente tras golpear otro breakpoint específico definido por el usuario [6]."
+    },
+    {
+      "id": 11,
+      "pregunta": "Dentro de la vista 'Java Projects', ¿cuál es la diferencia entre la 'Hierarchical View' y la 'Flat View'?",
+      "opciones": {
+        "a": "La vista plana oculta los archivos que no son de Java, la jerárquica los muestra.",
+        "b": "La vista jerárquica muestra la estructura de paquetes anidada, mientras que la plana los lista al mismo nivel.",
+        "c": "La vista jerárquica solo muestra el código fuente, la plana incluye las dependencias de Maven.",
+        "d": "No existe una diferencia visual, solo cambia la velocidad de carga de los archivos."
+      },
+      "respuesta_correcta": "b",
+      "explicacion": "En el botón de desbordamiento de la barra de navegación de la vista de proyectos Java, el usuario puede alternar entre la vista jerárquica y la plana para gestionar cómo se visualizan los paquetes y dependencias [11]."
+    },
+    {
+      "id": 12,
+      "pregunta": "¿Qué herramienta de VS Code permite ver un historial cronológico detallado de cambios locales de un archivo, independientemente de si se usa Git?",
+      "opciones": {
+        "a": "Source Control View.",
+        "b": "Timeline View (Local History).",
+        "c": "GitLab Workflow.",
+        "d": "Outline View."
+      },
+      "respuesta_correcta": "b",
+      "explicacion": "La función Timeline proporciona un historial detallado de cambios para cada archivo en el código base, permitiendo rastrear modificaciones a lo largo del tiempo de forma integrada y sin instalaciones adicionales [12]."
+    },
+    {
+      "id": 13,
+      "pregunta": "¿Cuál es la función del comando 'Restart Frame' en el stack de llamadas (Call Stack) durante la depuración?",
+      "opciones": {
+        "a": "Reinicia toda la sesión de depuración desde el método 'main'.",
+        "b": "Reinicia la ejecución de un frame (método) específico en el stack sin reiniciar toda la sesión.",
+        "c": "Limpia las variables locales del método actual pero continúa la ejecución.",
+        "d": "Cierra el hilo actual y abre uno nuevo con la misma configuración."
+      },
+      "respuesta_correcta": "b",
+      "explicacion": "Restart Frame es útil para volver a ejecutar código de un método específico cuando se desea reevaluar su comportamiento sin tener que reiniciar toda la sesión de depuración desde el principio [13]."
+    },
+    {
+      "id": 14,
+      "pregunta": "Al configurar la depuración de aplicaciones Spring Boot en Docker, ¿cuál es un paso crítico respecto a los argumentos de la JVM?",
+      "opciones": {
+        "a": "Se debe añadir la flag '-Xmx512m' para limitar la memoria del contenedor.",
+        "b": "Se deben añadir argumentos de depuración JDWP como '-agentlib:jdwp=transport=dt_socket,server=y,suspend=n,address=*:5005'.",
+        "c": "Se debe deshabilitar el firewall interno del contenedor Docker.",
+        "d": "Es obligatorio usar el puerto 8080 para la conexión del depurador JDWP."
+      },
+      "respuesta_correcta": "b",
+      "explicacion": "Para depurar de forma remota en Docker, la JVM de la aplicación debe estar configurada con argumentos específicos que permitan la conexión del depurador a través de un socket en un puerto expuesto (usualmente el 5005) [14]."
+    },
+    {
+      "id": 15,
+      "pregunta": "¿Cuál de las siguientes acciones de refactorización en Java crea un campo 'static final' a partir de una expresión seleccionada?",
+      "opciones": {
+        "a": "Extract to local variable.",
+        "b": "Extract to method.",
+        "c": "Extract to constant.",
+        "d": "Extract to field."
+      },
+      "respuesta_correcta": "c",
+      "explicacion": "La acción 'Extract to constant' crea un campo estático final, sustituye la expresión por una referencia al campo y reescribe otras ocurrencias de dicha expresión en el código [15]."
+    },
+    {
+      "id": 16,
+      "pregunta": "En el sistema de control de fuentes (SCM) integrado, ¿qué indican los indicadores de la esquina inferior izquierda?",
+      "opciones": {
+        "a": "El número de líneas de código y el tiempo de compilación.",
+        "b": "La rama actual, indicadores de cambios (dirty indicators) y el número de commits entrantes/salientes.",
+        "c": "La versión de Java y el estado del servidor de Maven.",
+        "d": "El número de extensiones instaladas y actualizaciones pendientes."
+      },
+      "respuesta_correcta": "b",
+      "explicacion": "La esquina inferior izquierda muestra el estado del repositorio, permitiendo además hacer clic en el nombre de la rama para realizar un 'checkout' de cualquier otra rama disponible [16, 17]."
+    },
+    {
+      "id": 17,
+      "pregunta": "¿Qué extensión es necesaria para habilitar la vista de 'Community Server Connector' y gestionar servidores como Apache Tomcat?",
+      "opciones": {
+        "a": "Docker extension.",
+        "b": "Community Server Connectors de Red Hat.",
+        "c": "Spring Boot Dashboard.",
+        "d": "Java Extension Pack."
+      },
+      "respuesta_correcta": "b",
+      "explicacion": "VS Code no incluye servidores de aplicaciones integrados por defecto, por lo que se requieren extensiones de terceros como la de Red Hat, que utiliza el Remote Server Protocol para gestionar servidores como Tomcat [18, 19]."
+    },
+    {
+      "id": 18,
+      "pregunta": "En cuanto a la depuración de datos (Data Breakpoints), ¿cuál es un requisito indispensable para su configuración?",
+      "opciones": {
+        "a": "La aplicación debe estar escrita en un lenguaje funcional puro.",
+        "b": "Deben establecerse durante una sesión de depuración activa, tras haber alcanzado un punto de interrupción regular.",
+        "c": "Solo se pueden aplicar a variables globales o estáticas.",
+        "d": "Requieren que el código se compile con la flag '--debug-data'."
+      },
+      "respuesta_correcta": "b",
+      "explicacion": "Los Data Breakpoints, que pausan la ejecución cuando el valor de una variable cambia, deben configurarse mientras se depura, seleccionando la variable tras haber pausado la ejecución previamente con un breakpoint normal [6]."
+    },
+    {
+      "id": 19,
+      "pregunta": "¿Qué funcionalidad permite ver una definición de un símbolo en una ventana flotante sin abandonar la línea de código actual?",
+      "opciones": {
+        "a": "Go to Definition (F12).",
+        "b": "Peek Definition (Ctrl+Shift+F10).",
+        "c": "Call Hierarchy.",
+        "d": "Outline View."
+      },
+      "respuesta_correcta": "b",
+      "explicacion": "Peek Definition abre una pequeña ventana (peek window) sobre el código actual para visualizar la definición del símbolo seleccionado sin cambiar de archivo o posición [20]."
+    },
+    {
+      "id": 20,
+      "pregunta": "Para mejorar la seguridad del código mediante acciones de fuente (Source Actions), ¿cuál de estas opciones automatiza VS Code en Java?",
+      "opciones": {
+        "a": "Convertir todos los bucles 'while' en bucles 'for'.",
+        "b": "Cambiar modificadores a 'final' donde sea posible.",
+        "c": "Eliminar todos los comentarios del archivo.",
+        "d": "Cifrar las cadenas de texto que parezcan contraseñas."
+      },
+      "respuesta_correcta": "b",
+      "explicacion": "Dentro de las 'Source Actions' para Java, VS Code permite automatizar la asignación del modificador 'final' a campos y variables donde sea posible para mejorar la seguridad y robustez del código [21]."
+    }
+  ]
+}

@@ -1,0 +1,246 @@
+{
+    "titulo": "TEMA 6 - SONAR B",
+    "descripcion": "Un test de alta dificultad que profundiza en los matices técnicos y procedimentales de la Inspección Continua y el ecosistema SonarQube.",
+    "examen_automatizacion": [
+        {
+            "id": 1,
+            "pregunta": "¿Cuál es la diferencia fundamental entre la calidad externa e interna?",
+            "opciones": {
+                "a": "La externa mide la robustez del código y la interna los estándares de cumplimiento.",
+                "b": "La externa mide el cumplimiento de requisitos funcionales y la interna atributos como la mantenibilidad.",
+                "c": "La externa se enfoca en el coste de mantenimiento y la interna en el despliegue.",
+                "d": "La externa depende de las Quality Gates y la interna de las auditorías puntuales."
+            },
+            "respuesta_correcta": "b",
+            "explicacion": "La calidad externa mide qué tan bien el software cumple con sus requisitos funcionales definidos, mientras que la interna se enfoca en robustez, estándares y mantenibilidad [1]."
+        },
+        {
+            "id": 2,
+            "pregunta": "En el modelo de Inspección Continua, ¿cuál es el beneficio principal de aumentar la visibilidad de la calidad del código?",
+            "opciones": {
+                "a": "Eliminar la necesidad de auditorías externas.",
+                "b": "Permitir que solo los gerentes tomen decisiones sobre el código.",
+                "c": "Animar a todos los stakeholders a priorizar y mantener estándares de alta calidad.",
+                "d": "Reducir el uso de herramientas de análisis dinámico."
+            },
+            "respuesta_correcta": "c",
+            "explicacion": "Al aumentar la visibilidad, se fomenta que todos los involucrados prioricen la calidad como un estándar integral [2]."
+        },
+        {
+            "id": 3,
+            "pregunta": "Para que el desarrollo se considere 'completado', ¿qué requisito debe cumplirse estrictamente?",
+            "opciones": {
+                "a": "Haber pasado al menos una auditoría trimestral.",
+                "b": "Haber alcanzado el 100% de cobertura de test.",
+                "c": "Integrar la calidad en el proceso y cumplir con los estándares definidos.",
+                "d": "Que el equipo de QA externo firme la aprobación del código."
+            },
+            "respuesta_correcta": "c",
+            "explicacion": "Se indica que el cumplimiento de los estándares de calidad es un requisito duro para declarar el desarrollo como finalizado [3]."
+        },
+        {
+            "id": 4,
+            "pregunta": "¿Qué característica deben tener los requerimientos de calidad para asegurar la consistencia entre diferentes productos de software?",
+            "opciones": {
+                "a": "Deben ser definidos individualmente por cada equipo de desarrollo.",
+                "b": "Deben ser objetivos y, en la medida de lo posible, consistentes para todos los productos.",
+                "c": "Deben basarse en el número de líneas de código (LOC).",
+                "d": "Deben ser subjetivos para adaptarse a la complejidad de cada proyecto."
+            },
+            "respuesta_correcta": "b",
+            "explicacion": "Se recomienda que los requisitos sean objetivos y consistentes independientemente de las especificaciones del producto [4]."
+        },
+        {
+            "id": 5,
+            "pregunta": "¿Cuál es la acción recomendada cuando se introducen nuevas fallas de calidad en el código?",
+            "opciones": {
+                "a": "Esperar a la siguiente fase de auditoría para corregirlas.",
+                "b": "Alertar inmediatamente a los stakeholders (vía email, fallos de build, etc.).",
+                "c": "Ignorar las fallas menores para no retrasar el ciclo de vida.",
+                "d": "Asignarlas automáticamente al gerente del proyecto."
+            },
+            "respuesta_correcta": "b",
+            "explicacion": "Los stakeholders deben ser alertados de inmediato ante nuevas fallas para tomar decisiones rápidas e informadas [4]."
+        },
+        {
+            "id": 6,
+            "pregunta": "Además de las fallas nuevas, ¿qué otro tipo de incidencias debe tener una ruta de resolución y tiempo claro?",
+            "opciones": {
+                "a": "Todas las incidencias de estilo menores.",
+                "b": "Las incidencias críticas ya existentes.",
+                "c": "Solo las incidencias detectadas por análisis dinámico.",
+                "d": "Únicamente las incidencias que afecten a la interfaz de usuario."
+            },
+            "respuesta_correcta": "b",
+            "explicacion": "Se señala que tanto las incidencias nuevas como las críticas existentes deben tener un plan de resolución [5]."
+        },
+        {
+            "id": 7,
+            "pregunta": "SonarQube evalúa el impacto en el código del proyecto analizando:",
+            "opciones": {
+                "a": "Solo los defectos de código y errores de estilo.",
+                "b": "Desde detalles menores de estilo hasta fallos de diseño críticos.",
+                "c": "Exclusivamente el cumplimiento de requisitos funcionales externos.",
+                "d": "La velocidad de ejecución de las consultas a la base de datos."
+            },
+            "respuesta_correcta": "b",
+            "explicacion": "SonarQube rastrea todo lo que impacta el código, desde estilo hasta diseño crítico [6]."
+        },
+        {
+            "id": 8,
+            "pregunta": "¿Cómo se organizan las reglas de código en SonarQube?",
+            "opciones": {
+                "a": "De forma aleatoria por cada escaneo.",
+                "b": "En grupos lógicos donde cada una contribuye de forma distinta a la calidad global.",
+                "c": "Por fecha de creación en la base de datos de SonarSource.",
+                "d": "Por el número de líneas de código que analizan."
+            },
+            "respuesta_correcta": "b",
+            "explicacion": "Las reglas se organizan en grupos lógicos y cada una aporta valor a la calidad general del proyecto [6]."
+        },
+        {
+            "id": 9,
+            "pregunta": "Si se desea configurar el análisis local especificando las carpetas de origen, ¿qué propiedad es obligatoria?",
+            "opciones": {
+                "a": "sonar.projectDescription",
+                "b": "sonar.projectVersion",
+                "c": "sonar.sources",
+                "d": "sonar.sourceEncoding"
+            },
+            "respuesta_correcta": "c",
+            "explicacion": "La propiedad 'sonar.sources' es requerida para indicar la ruta a los directorios de código fuente [7]."
+        },
+        {
+            "id": 10,
+            "pregunta": "En una configuración de Maven, ¿dónde se define habitualmente la versión del plugin de Sonar para un proyecto padre?",
+            "opciones": {
+                "a": "Dentro de la etiqueta <dependencies>.",
+                "b": "Dentro de <pluginManagement>.",
+                "c": "En el archivo sonar.properties externo.",
+                "d": "En el archivo settings.xml del usuario."
+            },
+            "respuesta_correcta": "b",
+            "explicacion": "Se muestra que la versión del plugin se define en <pluginManagement> dentro del POM [8]."
+        },
+        {
+            "id": 11,
+            "pregunta": "¿Qué información proporciona el Dashboard de un proyecto específico en SonarQube?",
+            "opciones": {
+                "a": "Un listado de todos los desarrolladores del sistema.",
+                "b": "Un resumen de los indicadores más importantes del proyecto.",
+                "c": "El código fuente completo de todos los archivos del proyecto.",
+                "d": "La configuración de hardware del servidor SonarQube."
+            },
+            "respuesta_correcta": "b",
+            "explicacion": "Al hacer clic en un proyecto, el dashboard muestra un resumen de sus indicadores clave [9]."
+        },
+        {
+            "id": 12,
+            "pregunta": "En la vista de 'Issues', ¿por qué criterios se pueden filtrar las incidencias detectadas?",
+            "opciones": {
+                "a": "Solo por la fecha de creación.",
+                "b": "Por estado, severidad, autor, asignado y más.",
+                "c": "Únicamente por el número de línea de código.",
+                "d": "Por el tamaño del archivo en bytes."
+            },
+            "respuesta_correcta": "b",
+            "explicacion": "La vista de incidencias permite filtrar por diversos criterios como estado, autor o severidad [9, 10]."
+        },
+        {
+            "id": 13,
+            "pregunta": "Al visualizar un archivo individual en SonarQube, ¿qué datos adicionales se pueden observar además del código fuente?",
+            "opciones": {
+                "a": "El historial de navegación del usuario.",
+                "b": "Datos de cobertura y las incidencias detectadas en ese archivo.",
+                "c": "Las contraseñas de la base de datos JDBC.",
+                "d": "El tiempo de compilación del artefacto Maven."
+            },
+            "respuesta_correcta": "b",
+            "explicacion": "La interfaz permite ver el código fuente junto con los datos de cobertura e incidencias [11]."
+        },
+        {
+            "id": 14,
+            "pregunta": "¿Qué representa el eje vertical en el gráfico de Reliability (Fiabilidad)?",
+            "opciones": {
+                "a": "El volumen de líneas de código.",
+                "b": "El esfuerzo de remediación estimado (Remediation Effort).",
+                "c": "La complejidad ciclomática.",
+                "d": "El número de vulnerabilidades de seguridad."
+            },
+            "respuesta_correcta": "b",
+            "explicacion": "Según el gráfico de fiabilidad, la posición vertical representa el tiempo estimado para corregir los bugs [10]."
+        },
+        {
+            "id": 15,
+            "pregunta": "¿Cómo se calcula la métrica de 'Security' (Seguridad) en SonarQube?",
+            "opciones": {
+                "a": "Basándose en el número de líneas de código duplicadas.",
+                "b": "Estimándola a partir de las vulnerabilidades detectadas.",
+                "c": "Contando el número de comentarios en el código.",
+                "d": "Analizando la complejidad cognitiva de los métodos."
+            },
+            "respuesta_correcta": "b",
+            "explicacion": "La seguridad se estima directamente a partir de las vulnerabilidades identificadas [12]."
+        },
+        {
+            "id": 16,
+            "pregunta": "En el gráfico de 'Measures', ¿qué indica una burbuja de color verde en la esquina inferior izquierda?",
+            "opciones": {
+                "a": "Un riesgo operativo inminente.",
+                "b": "El mejor estado posible para un componente.",
+                "c": "Que el componente tiene demasiada deuda técnica.",
+                "d": "Que el componente no ha sido analizado todavía."
+            },
+            "respuesta_correcta": "b",
+            "explicacion": "Se menciona que las burbujas verdes en la parte inferior izquierda son las mejores en términos de riesgo [10]."
+        },
+        {
+            "id": 17,
+            "pregunta": "¿De quién depende el ajuste de los 'Ratings' (calificaciones) de las medidas?",
+            "opciones": {
+                "a": "Del equipo de desarrollo exclusivamente.",
+                "b": "De la configuración específica ajustada por el administrador.",
+                "c": "Son fijos y no se pueden cambiar en SonarQube.",
+                "d": "De la versión de Java utilizada."
+            },
+            "respuesta_correcta": "b",
+            "explicacion": "Los ratings dependen de configuraciones que el administrador puede ajustar [12]."
+        },
+        {
+            "id": 18,
+            "pregunta": "¿Cuál es la función del 'Breadcrumb navigation' en la vista de componentes?",
+            "opciones": {
+                "a": "Cambiar el idioma de la interfaz web.",
+                "b": "Permitir la navegación jerárquica con una vista de árbol.",
+                "c": "Eliminar incidencias de forma masiva.",
+                "d": "Exportar los resultados a un archivo PDF."
+            },
+            "respuesta_correcta": "b",
+            "explicacion": "El breadcrumb permite navegar por los niveles de componentes del proyecto en una estructura de árbol [11]."
+        },
+        {
+            "id": 19,
+            "pregunta": "Para integrar SonarLint con un servidor SonarQube en VS Code, ¿qué es necesario generar en el servidor?",
+            "opciones": {
+                "a": "Una nueva base de datos MySQL.",
+                "b": "Un 'User Token'.",
+                "c": "Un nuevo archivo de configuración Jenkins.",
+                "d": "Una clave de cifrado RSA de 4096 bits."
+            },
+            "respuesta_correcta": "b",
+            "explicacion": "Se requiere un token de usuario generado en los ajustes de SonarQube para configurar la conexión [13]."
+        },
+        {
+            "id": 20,
+            "pregunta": "¿Qué permite hacer el 'Project Binding' en Visual Studio Code?",
+            "opciones": {
+                "a": "Compilar el código local usando el servidor SonarQube.",
+                "b": "Vincular el proyecto de VS Code con el proyecto asociado en el servidor SonarQube.",
+                "c": "Subir el código automáticamente al repositorio Git.",
+                "d": "Instalar plugins de SonarQube directamente desde el editor."
+            },
+            "respuesta_correcta": "b",
+            "explicacion": "El binding asocia el proyecto local con su contraparte en el servidor para aplicar los mismos estándares [14]."
+        }
+    ]
+}

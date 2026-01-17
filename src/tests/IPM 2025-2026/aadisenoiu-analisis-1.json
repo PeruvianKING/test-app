@@ -1,0 +1,486 @@
+{
+    "titulo": "Diseño IU - Análisis",
+    "descripcion": "Examen exhaustivo sobre el proceso de diseño centrado en el usuario, análisis de tareas, creación de personas y modelos mentales.",
+    "examen_automatizacion": [
+        {
+            "id": 1,
+            "pregunta": "¿Cuál es el enfoque principal de la primera etapa del proceso de Diseño Centrado en el Usuario (UCD)?",
+            "opciones": {
+                "a": "Definir los requisitos técnicos y las restricciones del sistema.",
+                "b": "Identificar quiénes son los usuarios y qué actividades necesitan realizar.",
+                "c": "Establecer la jerarquía visual y el modelo de implementación.",
+                "d": "Diseñar prototipos de baja fidelidad para evaluar con expertos."
+            },
+            "respuesta_correcta": "b",
+            "explicacion": "La primera etapa del UCD se centra en conocer al usuario (quiénes son) y sus actividades (qué necesitan hacer) [1]."
+        },
+        {
+            "id": 2,
+            "pregunta": "Dentro del UCD, ¿cuál de estos factores se considera una característica del conjunto objetivo de usuarios a identificar?",
+            "opciones": {
+                "a": "El presupuesto asignado al desarrollo del software.",
+                "b": "Los patrones de comunicación y el entorno de trabajo.",
+                "c": "La arquitectura de la base de datos subyacente.",
+                "d": "El tiempo estimado de entrega del producto final."
+            },
+            "respuesta_correcta": "b",
+            "explicacion": "Entre las características del objetivo de usuarios se incluyen el entorno de trabajo, contexto social y patrones de comunicación [2]."
+        },
+        {
+            "id": 3,
+            "pregunta": "¿Qué departamento suele aislar sistemáticamente a los desarrolladores de los usuarios finales según las fuentes?",
+            "opciones": {
+                "a": "Recursos Humanos.",
+                "b": "Control de Calidad (QA).",
+                "c": "Ventas y Marketing.",
+                "d": "Administración de Sistemas."
+            },
+            "respuesta_correcta": "c",
+            "explicacion": "Ventas/Marketing y el Soporte Técnico son identificados como obstáculos que aíslan a los desarrolladores de los usuarios [3]."
+        },
+        {
+            "id": 4,
+            "pregunta": "¿Qué problema fundamental enfrentan los desarrolladores al conocer las necesidades reales de los usuarios?",
+            "opciones": {
+                "a": "Los usuarios suelen pedir funcionalidades técnicamente imposibles.",
+                "b": "Los usuarios a menudo no saben con precisión qué es lo que necesitan.",
+                "c": "Los usuarios siempre mienten sobre su experiencia previa.",
+                "d": "Los usuarios prefieren no participar en el proceso de diseño."
+            },
+            "respuesta_correcta": "b",
+            "explicacion": "Es común que, aunque se sepa quiénes son los usuarios, ni ellos mismos sepan con precisión qué necesitan [3]."
+        },
+        {
+            "id": 5,
+            "pregunta": "Al investigar lo que la gente hace actualmente, ¿cuál es el objetivo primordial del diseñador?",
+            "opciones": {
+                "a": "Documentar los errores para culpar al sistema anterior.",
+                "b": "Encontrar una manera de hacerlo más fácil y eficiente.",
+                "c": "Eliminar por completo la intervención humana en el proceso.",
+                "d": "Copiar exactamente el flujo de trabajo manual en el digital."
+            },
+            "respuesta_correcta": "b",
+            "explicacion": "El objetivo es analizar qué hace la gente actualmente para encontrar formas de hacerlo más fácil y eficiente [4]."
+        },
+        {
+            "id": 6,
+            "pregunta": "¿Cuál es la premisa fundamental de la técnica de 'Job Shadowing'?",
+            "opciones": {
+                "a": "Entrevistar al usuario en una sala de reuniones aislada.",
+                "b": "Visitar a los usuarios en su entorno para extraer información directa.",
+                "c": "Grabar la pantalla del usuario sin que este lo sepa.",
+                "d": "Sustituir al usuario en su puesto de trabajo para entender su estrés."
+            },
+            "respuesta_correcta": "b",
+            "explicacion": "El Job Shadowing consiste en visitar a los usuarios en su entorno para extraer información útil de la que a veces no son conscientes [5]."
+        },
+        {
+            "id": 7,
+            "pregunta": "Durante el Job Shadowing, ¿qué tipo de comportamiento del usuario puede revelar la necesidad de automatización?",
+            "opciones": {
+                "a": "El uso de lenguaje técnico avanzado.",
+                "b": "La ejecución de tareas con 'workarounds' o rodeos.",
+                "c": "La interacción social con otros compañeros de trabajo.",
+                "d": "El cumplimiento estricto de los manuales de usuario."
+            },
+            "respuesta_correcta": "b",
+            "explicacion": "Detectar si el usuario ejecuta tareas con rodeos o memoriza pasos técnicos sugiere procesos que podrían gestionarse automáticamente [5, 6]."
+        },
+        {
+            "id": 8,
+            "pregunta": "¿Qué ventaja principal ofrece la 'Entrevista en su Contexto' frente a la simple observación?",
+            "opciones": {
+                "a": "Permite al usuario diseñar la interfaz final.",
+                "b": "Extrae conocimiento del dominio que solo se obtiene hablando con expertos.",
+                "c": "Es mucho más rápida de ejecutar que el Job Shadowing.",
+                "d": "Garantiza que el usuario no se sienta observado."
+            },
+            "respuesta_correcta": "b",
+            "explicacion": "Aunque la observación es clave, mucho conocimiento del dominio solo puede extraerse hablando con los expertos tras el proceso de observación [6]."
+        },
+        {
+            "id": 9,
+            "pregunta": "¿Qué se debe evitar activamente durante una entrevista contextual?",
+            "opciones": {
+                "a": "Preguntar por qué se realizó una tarea de cierta manera.",
+                "b": "Indagar en las posibles mejoras del sistema.",
+                "c": "Forzar al usuario a diseñar por el desarrollador.",
+                "d": "Preguntar sobre problemas que ocurren a menudo."
+            },
+            "respuesta_correcta": "c",
+            "explicacion": "Durante la entrevista se deben evitar las opiniones personales y no forzar al usuario a realizar la labor de diseño por nosotros [7]."
+        },
+        {
+            "id": 10,
+            "pregunta": "¿Cuál es una ventaja específica de la Observación Remota (Remote Shadowing)?",
+            "opciones": {
+                "a": "No requiere la colaboración del usuario observado.",
+                "b": "Permite revisitar los vídeos grabados siempre que sea necesario.",
+                "c": "Elimina la necesidad de realizar entrevistas posteriores.",
+                "d": "Es la única forma de obtener datos de alta resolución."
+            },
+            "respuesta_correcta": "b",
+            "explicacion": "Una ventaja de la observación remota mediante grabaciones es que los vídeos pueden revisitarse durante el proceso de diseño [8]."
+        },
+        {
+            "id": 11,
+            "pregunta": "Respecto a la predicción de situaciones futuras, ¿qué limitación tienen tanto usuarios como desarrolladores?",
+            "opciones": {
+                "a": "Solo los desarrolladores pueden predecir correctamente el uso.",
+                "b": "Nunca se podrá llegar al 100% de seguridad en la predicción del uso.",
+                "c": "Los usuarios siempre predicen correctamente su comportamiento futuro.",
+                "d": "La predicción es exacta si se usan suficientes cámaras de vídeo."
+            },
+            "respuesta_correcta": "b",
+            "explicacion": "Los humanos no predicen perfectamente situaciones futuras; por ello, nunca se tiene seguridad total y hay que saber cuándo pasar a la evaluación [8, 9]."
+        },
+        {
+            "id": 12,
+            "pregunta": "¿Cómo se definen las 'Personas' en el ámbito del diseño de interfaces?",
+            "opciones": {
+                "a": "Perfiles de usuarios reales con nombres y apellidos verificables.",
+                "b": "Representaciones ficticias de ciertos grupos objetivo de usuarios.",
+                "c": "Diagramas de flujo que muestran el comportamiento del sistema.",
+                "d": "Modelos estadísticos sobre el uso de la memoria del software."
+            },
+            "respuesta_correcta": "b",
+            "explicacion": "Las Personas son representaciones ficticias útiles para resumir información de un segmento de usuarios [9]."
+        },
+        {
+            "id": 13,
+            "pregunta": "¿Cuál es una función principal de la creación de 'Personas'?",
+            "opciones": {
+                "a": "Sustituir las pruebas con usuarios reales al final del desarrollo.",
+                "b": "Ayudar a la comunicación sencilla y focalizar el producto.",
+                "c": "Ahorrar tiempo eliminando la etapa de investigación previa.",
+                "d": "Asegurar que el usuario nunca lleve la contraria al desarrollador."
+            },
+            "respuesta_correcta": "b",
+            "explicacion": "Las Personas ayudan a comunicarse de forma sencilla y a focalizar el producto identificando categorías entre la audiencia [10]."
+        },
+        {
+            "id": 14,
+            "pregunta": "¿Cuándo NO aporta grandes ventajas el uso de 'Personas'?",
+            "opciones": {
+                "a": "En aplicaciones orientadas a un público global.",
+                "b": "En equipos de trabajo muy pequeños donde todos conocen al usuario.",
+                "c": "Cuando el presupuesto de marketing es muy elevado.",
+                "d": "En proyectos de alta complejidad con múltiples perfiles."
+            },
+            "respuesta_correcta": "b",
+            "explicacion": "En equipos pequeños no aporta grandes ventajas porque los miembros suelen tener ya una idea correcta de los usuarios involucrados [11]."
+        },
+        {
+            "id": 15,
+            "pregunta": "¿Cuántas 'Personas' se recomienda crear habitualmente para un proyecto?",
+            "opciones": {
+                "a": "Una por cada usuario entrevistado.",
+                "b": "Aproximadamente diez para cubrir todos los casos.",
+                "c": "Tres o cuatro como mucho, agrupando lo más posible.",
+                "d": "Tantas como funcionalidades tenga la aplicación."
+            },
+            "respuesta_correcta": "c",
+            "explicacion": "Se recomienda agrupar lo más posible, siendo habitualmente suficientes tres o cuatro personas [11]."
+        },
+        {
+            "id": 16,
+            "pregunta": "En la creación de Personas, ¿por qué se recomienda añadir detalles irrelevantes?",
+            "opciones": {
+                "a": "Para confundir a los competidores que vean el diseño.",
+                "b": "Para ayudar a recordarlas y evitar que el perfil sea demasiado elástico.",
+                "c": "Porque el cliente suele exigir perfiles biográficos completos.",
+                "d": "Para rellenar espacio en la documentación del proyecto."
+            },
+            "respuesta_correcta": "b",
+            "explicacion": "Los detalles irrelevantes ayudan a recordar a las personas y evitan que el perfil sea 'elástico', además de que podrían ser relevantes luego [12]."
+        },
+        {
+            "id": 17,
+            "pregunta": "¿Qué precaución se debe tomar con el nombre asignado a una 'Persona'?",
+            "opciones": {
+                "a": "Debe ser el nombre del usuario más representativo observado.",
+                "b": "No debería reflejar a nadie real.",
+                "c": "Debe incluir el cargo laboral exacto en el nombre.",
+                "d": "Debe ser un código alfanumérico para mantener la neutralidad."
+            },
+            "respuesta_correcta": "b",
+            "explicacion": "El nombre de la Persona no debe reflejar a nadie real, ya que es un mecanismo interno de diseño [12]."
+        },
+        {
+            "id": 18,
+            "pregunta": "¿En qué situación es preferible el Diseño Centrado en Actividades (ACD) frente al UCD?",
+            "opciones": {
+                "a": "Cuando se diseña para un público muy específico y experto.",
+                "b": "Cuando el producto está orientado a una audiencia general.",
+                "c": "Cuando el equipo de desarrollo no tiene acceso a internet.",
+                "d": "Cuando el diseño es para una aplicación interna de una empresa."
+            },
+            "respuesta_correcta": "b",
+            "explicacion": "Si el producto es para una audiencia general, la investigación de usuarios es de poca ayuda y es mejor centrarse en las actividades [13]."
+        },
+        {
+            "id": 19,
+            "pregunta": "En el Análisis de Tareas, ¿qué representa cada tarea individual?",
+            "opciones": {
+                "a": "Un paso técnico en el código fuente.",
+                "b": "Un objetivo (el 'qué' y no el 'cómo').",
+                "c": "Un elemento visual de la interfaz de usuario.",
+                "d": "Una restricción de hardware del sistema."
+            },
+            "respuesta_correcta": "b",
+            "explicacion": "Cada tarea identificada es un objetivo, centrándose en el 'qué' debe hacerse y no en el 'cómo' [14]."
+        },
+        {
+            "id": 20,
+            "pregunta": "¿Cuáles son las partes esenciales en el Análisis de Tareas?",
+            "opciones": {
+                "a": "Presupuesto, cronograma y equipo responsable.",
+                "b": "Objetivos, precondiciones y subtareas.",
+                "c": "Colores, tipografías y dimensiones de iconos.",
+                "d": "Servidores, lenguajes de programación y APIs."
+            },
+            "respuesta_correcta": "b",
+            "explicacion": "Las partes esenciales son los objetivos (qué hay que hacer), las precondiciones (qué es necesario previamente) y las subtareas (pasos involucrados) [15]."
+        },
+        {
+            "id": 21,
+            "pregunta": "En el ejemplo del checkout de un supermercado, ¿cuál se considera una precondición para pasar productos?",
+            "opciones": {
+                "a": "Que el código de barras esté defectuoso.",
+                "b": "Que todos los productos ya estén en el carrito.",
+                "c": "Que el usuario sepa usar una pantalla táctil.",
+                "d": "Que el asistente de tienda esté presente."
+            },
+            "respuesta_correcta": "b",
+            "explicacion": "Una precondición para la tarea de pasar productos es que estos ya se encuentren en el carrito [16]."
+        },
+        {
+            "id": 22,
+            "pregunta": "¿Por qué es importante agrupar la información en jerarquías?",
+            "opciones": {
+                "a": "Para reducir el peso de la aplicación en el disco duro.",
+                "b": "Para facilitar la comprensión a los usuarios.",
+                "c": "Para cumplir con los estándares de programación orientada a objetos.",
+                "d": "Para evitar que el usuario tenga que usar el ratón."
+            },
+            "respuesta_correcta": "b",
+            "explicacion": "Las jerarquías están presentes en aplicaciones (como navegadores) para facilitar la comprensión del producto al usuario [17]."
+        },
+        {
+            "id": 23,
+            "pregunta": "¿Cuál es el propósito principal de la técnica 'Card Sorting'?",
+            "opciones": {
+                "a": "Ordenar las tareas de los desarrolladores por prioridad.",
+                "b": "Obtener información sobre cómo el usuario estructura mentalmente las partes del producto.",
+                "c": "Diseñar los iconos de las cartas en una aplicación de juegos.",
+                "d": "Evaluar la velocidad de procesamiento de la interfaz."
+            },
+            "respuesta_correcta": "b",
+            "explicacion": "El Card Sorting permite saber qué piensa el usuario de las partes individuales del producto y cómo las agruparía [18]."
+        },
+        {
+            "id": 24,
+            "pregunta": "En una aplicación gráfica, ¿qué podrían representar las cartas en un Card Sorting?",
+            "opciones": {
+                "a": "Solo las páginas web del sitio.",
+                "b": "Propiedades, ítems de menú o comandos.",
+                "c": "Los nombres de los desarrolladores del proyecto.",
+                "d": "Los distintos tipos de cables de conexión."
+            },
+            "respuesta_correcta": "b",
+            "explicacion": "Dependiendo del producto, las cartas pueden ser páginas, áreas, ítems de menú, comandos o tareas [19]."
+        },
+        {
+            "id": 25,
+            "pregunta": "¿Qué ventaja tiene realizar Card Sorting con varios participantes a la vez?",
+            "opciones": {
+                "a": "Se acaba mucho más rápido el proceso.",
+                "b": "Puede crear conversación y facilitar la extracción de alternativas.",
+                "c": "Evita que un único usuario domine la sesión.",
+                "d": "Garantiza un resultado estadísticamente perfecto."
+            },
+            "respuesta_correcta": "b",
+            "explicacion": "La interacción entre varios participantes puede generar conversación y facilitar información útil, aunque a veces uno pueda dominar la sesión [20]."
+        },
+        {
+            "id": 26,
+            "pregunta": "Durante el Card Sorting, ¿qué instrucción es vital dar a los participantes?",
+            "opciones": {
+                "a": "Que ordenen las cartas por orden alfabético.",
+                "b": "Que agrupen cartas similares desde el punto de vista de la aplicación.",
+                "c": "Que diseñen nuevos iconos para cada carta.",
+                "d": "Que descarten las cartas que no les gusten."
+            },
+            "respuesta_correcta": "b",
+            "explicacion": "Se debe aclarar que deben agrupar elementos que deberían ir juntos o pantallas accesibles entre sí en la aplicación [21]."
+        },
+        {
+            "id": 27,
+            "pregunta": "En un Card Sorting de 'conjunto cerrado', ¿cómo se evalúan habitualmente los resultados?",
+            "opciones": {
+                "a": "Identificando palabras distintas que representan lo mismo.",
+                "b": "Contando en qué grupo predefinido es más frecuente un elemento.",
+                "c": "Permitiendo que el usuario cree nuevas categorías libremente.",
+                "d": "Calculando el tiempo medio por cada carta movida."
+            },
+            "respuesta_correcta": "b",
+            "explicacion": "En el conjunto cerrado se hace un conteo de la frecuencia con la que un elemento aparece en cada grupo establecido [21, 22]."
+        },
+        {
+            "id": 28,
+            "pregunta": "¿Qué se recomienda respecto a la ubicación de los elementos en una jerarquía?",
+            "opciones": {
+                "a": "Ser estrictos y permitir que un elemento exista solo en un lugar.",
+                "b": "Permitir que las cosas existan en varios sitios para evitar pensamientos únicos.",
+                "c": "Eliminar duplicados para no confundir al sistema.",
+                "d": "Ocultar los elementos secundarios en menús contextuales."
+            },
+            "respuesta_correcta": "b",
+            "explicacion": "Una guía general es permitir que las cosas existan en varios sitios para no ser estrictos con el usuario [22]."
+        },
+        {
+            "id": 29,
+            "pregunta": "En cuanto a la profundidad de las jerarquías, ¿qué se considera una métrica generalmente positiva?",
+            "opciones": {
+                "a": "Una jerarquía muy profunda con muchos niveles.",
+                "b": "Una jerarquía superficial que permita llegar a todo con menos clics.",
+                "c": "Aumentar al máximo el número de posibilidades ofrecidas al usuario.",
+                "d": "Obligar al usuario a pasar por todos los niveles secuencialmente."
+            },
+            "respuesta_correcta": "b",
+            "explicacion": "La jerarquía superficial se considera positiva porque permite llegar a los elementos más rápido [22]."
+        },
+        {
+            "id": 30,
+            "pregunta": "¿Cómo ayuda el agrupamiento visual de elementos al usuario?",
+            "opciones": {
+                "a": "Aumenta la resolución de la pantalla.",
+                "b": "Permite descartar bloques de opciones de un plumazo por tipo de funcionalidad.",
+                "c": "Reduce el consumo de batería del dispositivo.",
+                "d": "Evita que el usuario tenga que leer las etiquetas."
+            },
+            "respuesta_correcta": "b",
+            "explicacion": "Agrupar opciones en bloques comunes permite al usuario descartar grupos enteros si no son de la funcionalidad buscada [23]."
+        },
+        {
+            "id": 31,
+            "pregunta": "¿Qué es el 'Modelo Mental' de un usuario?",
+            "opciones": {
+                "a": "El esquema de la base de datos que el usuario debe aprender.",
+                "b": "El concepto que el usuario se forma de cómo funciona un sistema.",
+                "c": "La capacidad cognitiva medida en un test de inteligencia.",
+                "d": "La representación visual de la interfaz en blanco y negro."
+            },
+            "respuesta_correcta": "b",
+            "explicacion": "El modelo mental es el concepto o idea preconcebida que el usuario se forma sobre el funcionamiento de algo [24]."
+        },
+        {
+            "id": 32,
+            "pregunta": "¿Cuáles son los tres modelos que típicamente refleja un producto?",
+            "opciones": {
+                "a": "Modelo de negocio, modelo de datos y modelo de red.",
+                "b": "Modelo mental, modelo de IU (diseño) y modelo de implementación.",
+                "c": "Modelo de usuario, modelo de administrador y modelo de invitado.",
+                "d": "Modelo lógico, modelo físico y modelo conceptual."
+            },
+            "respuesta_correcta": "b",
+            "explicacion": "Los tres modelos son: cómo el usuario cree que funciona (Mental), cómo se presenta (Diseño/IU) y cómo se implementa (Programador) [24, 25]."
+        },
+        {
+            "id": 33,
+            "pregunta": "¿Qué ocurre en la realidad respecto a la consistencia de estos tres modelos?",
+            "opciones": {
+                "a": "En un producto ideal y real siempre son consistentes.",
+                "b": "Nunca son totalmente consistentes entre sí.",
+                "c": "El modelo mental siempre se impone al de implementación.",
+                "d": "El modelo de diseño es el único que importa."
+            },
+            "respuesta_correcta": "b",
+            "explicacion": "La realidad es que los tres modelos nunca son consistentes, por lo que se requiere un compromiso entre simplicidad y consistencia [25]."
+        },
+        {
+            "id": 34,
+            "pregunta": "En un sistema de compra de películas online, ¿cuál es el objetivo del modelo de IU respecto al modelo mental?",
+            "opciones": {
+                "a": "Mostrar todos los detalles del descifrado y descarga del vídeo.",
+                "b": "Ser lo más cercano posible al modelo mental del usuario (ir a la tienda/bucear).",
+                "c": "Forzar al usuario a entender cómo funciona el servidor.",
+                "d": "Eliminar la metáfora de la tienda por ser anticuada."
+            },
+            "respuesta_correcta": "b",
+            "explicacion": "El modelo de IU debe acercarse al modelo mental del usuario, escondiendo la complejidad técnica de la implementación [26]."
+        },
+        {
+            "id": 35,
+            "pregunta": "Dentro de los 7 principios para modelos mentales, ¿a qué se refiere la 'Affordance'?",
+            "opciones": {
+                "a": "Al coste económico de desarrollar la interfaz.",
+                "b": "Al potencial o adecuación de un objeto para sugerir su uso.",
+                "c": "A la velocidad de respuesta del sistema ante un clic.",
+                "d": "A la capacidad del sistema para recuperarse de errores."
+            },
+            "respuesta_correcta": "b",
+            "explicacion": "La 'Affordance' (potencial o adecuación) es uno de los 7 principios para ayudar a formar modelos mentales válidos [27]."
+        },
+        {
+            "id": 36,
+            "pregunta": "¿Qué principio busca que el usuario sienta que no puede romper nada grave al interactuar?",
+            "opciones": {
+                "a": "Reconocimiento.",
+                "b": "Seguridad.",
+                "c": "Flexibilidad.",
+                "d": "Familiaridad."
+            },
+            "respuesta_correcta": "b",
+            "explicacion": "La seguridad es uno de los 7 principios para modelos mentales, enfocada en que el usuario se sienta seguro al explorar [27]."
+        },
+        {
+            "id": 37,
+            "pregunta": "¿Qué principio se basa en utilizar elementos que el usuario ya conoce de otros ámbitos?",
+            "opciones": {
+                "a": "Simplicidad.",
+                "b": "Familiaridad.",
+                "c": "Feedback.",
+                "d": "Affordances."
+            },
+            "respuesta_correcta": "b",
+            "explicacion": "La familiaridad consiste en usar conceptos conocidos para ayudar al usuario a entender el sistema [26, 27]."
+        },
+        {
+            "id": 38,
+            "pregunta": "¿Cuál es un riesgo de que el modelo de IU sea demasiado fiel al modelo de implementación?",
+            "opciones": {
+                "a": "La interfaz se vuelve demasiado simple para el usuario.",
+                "b": "La complejidad técnica abruma al usuario y rompe su modelo mental.",
+                "c": "El programador tendrá menos trabajo de codificación.",
+                "d": "El sistema será inherentemente más seguro."
+            },
+            "respuesta_correcta": "b",
+            "explicacion": "Si la interfaz refleja demasiado la implementación, no es consistente con el modelo mental simplificado del usuario [25, 26]."
+        },
+        {
+            "id": 39,
+            "pregunta": "En el análisis de tareas, ¿qué aspecto se refiere a la recurrencia de una acción?",
+            "opciones": {
+                "a": "Precondiciones.",
+                "b": "Frecuencia de la tarea.",
+                "c": "Restricciones temporales.",
+                "d": "Contexto o escenario."
+            },
+            "respuesta_correcta": "b",
+            "explicacion": "La frecuencia de la tarea es una de las preguntas clave en el análisis de tareas para entender su importancia [28]."
+        },
+        {
+            "id": 40,
+            "pregunta": "¿Cuál es la conclusión final sobre las técnicas de investigación de usuarios?",
+            "opciones": {
+                "a": "Garantizan un diseño libre de errores.",
+                "b": "Es preferible pasar a la siguiente etapa y evaluarla que buscar la seguridad total.",
+                "c": "Deben realizarse hasta que no quede ninguna duda hipotética.",
+                "d": "Son innecesarias si el desarrollador tiene mucha experiencia."
+            },
+            "respuesta_correcta": "b",
+            "explicacion": "Como nunca se llega al 100% de seguridad, hay que saber cuándo parar y pasar a la siguiente etapa para evaluarla [9]."
+        }
+    ]
+}

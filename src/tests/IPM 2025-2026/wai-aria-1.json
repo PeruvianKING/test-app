@@ -1,0 +1,246 @@
+{
+    "titulo": "WAI-ARIA",
+    "descripcion": "Un examen exhaustivo diseñado para evaluar conocimientos profundos sobre roles, estados, propiedades y reglas de uso de WAI-ARIA según los estándares de accesibilidad.",
+    "examen_automatizacion": [
+        {
+            "id": 1,
+            "pregunta": "¿Cuál es la función principal de WAI-ARIA en el contexto de la Web 2.0?",
+            "opciones": {
+                "a": "Sustituir por completo las etiquetas HTML nativas para mejorar el SEO.",
+                "b": "Proporcionar accesibilidad en controles interactivos, regiones dinámicas y estructuras no estándar.",
+                "c": "Optimizar el rendimiento de la carga de páginas con estructuras estándar.",
+                "d": "Eliminar la necesidad de utilizar JavaScript en la actualización de contenidos dinámicos."
+            },
+            "respuesta_correcta": "b",
+            "explicacion": "WAI-ARIA se utiliza específicamente para mejorar la accesibilidad en la Web 2.0, enfocándose en controles interactivos, regiones dinámicas y páginas con estructuras no estándar [1]."
+        },
+        {
+            "id": 2,
+            "pregunta": "En cuanto a los Landmark roles, ¿qué afirmación define mejor su propósito técnico?",
+            "opciones": {
+                "a": "Sirven exclusivamente para dar estilos CSS específicos a las regiones del documento.",
+                "b": "Describen estructuras que organizan el contenido pero que nunca son interactivas.",
+                "c": "Identifican regiones del documento y establecen marcas de navegación para lectores de pantalla.",
+                "d": "Sustituyen la lógica de los atributos de relación entre elementos del DOM."
+            },
+            "respuesta_correcta": "c",
+            "explicacion": "Los Landmark roles identifican regiones en el documento y establecen marcas de navegación críticas para los lectores de pantalla [2]."
+        },
+        {
+            "id": 3,
+            "pregunta": "Si un desarrollador utiliza la etiqueta HTML5 <nav>, ¿cuál es su equivalencia semántica exacta en los roles WAI-ARIA?",
+            "opciones": {
+                "a": "role=\"banner\"",
+                "b": "role=\"main\"",
+                "c": "role=\"navigation\"",
+                "d": "role=\"region\""
+            },
+            "respuesta_correcta": "c",
+            "explicacion": "Según las equivalencias semánticas de WAI-ARIA, la etiqueta HTML5 <nav> corresponde al rol 'navigation' [2]."
+        },
+        {
+            "id": 4,
+            "pregunta": "¿Qué característica distingue fundamentalmente a los 'Document structure roles' de otros tipos de roles?",
+            "opciones": {
+                "a": "Son objetos con los que el usuario siempre debe interactuar directamente.",
+                "b": "Describen estructuras que organizan el contenido y suelen ser no interactivos.",
+                "c": "Se utilizan únicamente para definir estados dinámicos que cambian con JavaScript.",
+                "d": "Son roles abstractos que no pueden aplicarse directamente en el código HTML."
+            },
+            "respuesta_correcta": "b",
+            "explicacion": "Los Document structure roles describen estructuras para organizar el contenido de una página y, a diferencia de los widgets, no suelen ser interactivos [3]."
+        },
+        {
+            "id": 5,
+            "pregunta": "De acuerdo con las reglas de uso de WAI-ARIA, ¿cuál es la práctica recomendada al crear una lista?",
+            "opciones": {
+                "a": "Utilizar siempre <div> con role=\"list\" para garantizar la compatibilidad total.",
+                "b": "Usar el elemento nativo de HTML (como <ul>) siempre que sea posible.",
+                "c": "Combinar roles de widget con roles de estructura en el mismo elemento.",
+                "d": "Cambiar la semántica de los elementos nativos para que actúen como botones."
+            },
+            "respuesta_correcta": "b",
+            "explicacion": "Una de las reglas fundamentales de uso es priorizar el elemento o atributo nativo de HTML antes que recurrir a ARIA [4]."
+        },
+        {
+            "id": 6,
+            "pregunta": "¿Cuál de los siguientes es un ejemplo de 'Widget compuesto' según la clasificación de WAI-ARIA?",
+            "opciones": {
+                "a": "button",
+                "b": "tablist",
+                "c": "checkbox",
+                "d": "scrollbar"
+            },
+            "respuesta_correcta": "b",
+            "explicacion": "WAI-ARIA distingue entre widgets simples y compuestos; 'tablist' se categoriza específicamente como un widget compuesto [5]."
+        },
+        {
+            "id": 7,
+            "pregunta": "¿Cuál es la diferencia crítica entre 'Propiedades' y 'Estados' en los atributos de widgets?",
+            "opciones": {
+                "a": "Las propiedades son constantes, mientras que los estados deben actualizarse con Javascript cuando cambian las condiciones.",
+                "b": "Los estados son estáticos y las propiedades definen la interacción del teclado.",
+                "c": "Las propiedades solo se aplican a elementos ocultos y los estados a elementos visibles.",
+                "d": "No hay diferencia técnica; ambos términos se refieren a los mismos atributos de relación."
+            },
+            "respuesta_correcta": "a",
+            "explicacion": "Mientras que las propiedades dan significado extra, los estados definen condiciones actuales que deben ser actualizadas mediante Javascript ante cualquier cambio [6, 7]."
+        },
+        {
+            "id": 8,
+            "pregunta": "El atributo 'aria-required' se clasifica como:",
+            "opciones": {
+                "a": "Un estado dinámico.",
+                "b": "Un Landmark role.",
+                "c": "Una propiedad de widget.",
+                "d": "Un atributo de relación."
+            },
+            "respuesta_correcta": "c",
+            "explicacion": "El atributo 'aria-required' es una propiedad que proporciona significado adicional sobre la obligatoriedad de un elemento [6]."
+        },
+        {
+            "id": 9,
+            "pregunta": "¿Para qué se utilizan los 'Atributos de relación' en WAI-ARIA?",
+            "opciones": {
+                "a": "Para definir si un elemento es visible o invisible para el lector de pantalla.",
+                "b": "Para describir asociaciones entre elementos que no pueden ser directamente deducidas.",
+                "c": "Para indicar que una región del documento se actualizará automáticamente.",
+                "d": "Para convertir un elemento de estructura en un widget interactivo."
+            },
+            "respuesta_correcta": "b",
+            "explicacion": "Los atributos de relación describen asociaciones entre elementos que no son obvias o deducibles por la estructura del DOM [8]."
+        },
+        {
+            "id": 10,
+            "pregunta": "Si se desea que un lector de pantalla lea una descripción larga de un campo de contraseña, ¿qué atributo de relación es el más adecuado?",
+            "opciones": {
+                "a": "aria-labelledby",
+                "b": "aria-controls",
+                "c": "aria-describedby",
+                "d": "aria-owns"
+            },
+            "respuesta_correcta": "c",
+            "explicacion": "El atributo 'aria-describedby' se utiliza para asociar un elemento con otro que contiene su descripción explicativa [9]."
+        },
+        {
+            "id": 11,
+            "pregunta": "¿Qué define a una 'Live Region' en WAI-ARIA?",
+            "opciones": {
+                "a": "Una región que solo se activa cuando el usuario hace clic en ella.",
+                "b": "Contenido que puede cambiar dinámicamente sin que el usuario interaccione con él.",
+                "c": "Un área del documento que impide la interacción con el resto de la página (modal).",
+                "d": "Una sección que permanece estática independientemente de las acciones de JavaScript."
+            },
+            "respuesta_correcta": "b",
+            "explicacion": "Las Live regions indican que el contenido puede variar de forma dinámica sin necesidad de interacción directa del usuario [9]."
+        },
+        {
+            "id": 12,
+            "pregunta": "En el atributo 'aria-live', ¿cuál es la diferencia entre los valores 'polite' y 'assertive'?",
+            "opciones": {
+                "a": "Polite espera a que el usuario esté inactivo; assertive interrumpe inmediatamente.",
+                "b": "Polite es para errores críticos; assertive es para notificaciones secundarias.",
+                "c": "Polite solo funciona con widgets simples; assertive solo con widgets compuestos.",
+                "d": "No hay diferencia; ambos valores notifican al usuario con la misma prioridad."
+            },
+            "respuesta_correcta": "a",
+            "explicacion": "Aunque las fuentes mencionan los valores [off | polite | assertive], en accesibilidad general (y apoyado por el contexto de urgencia de los roles como 'alert'), assertive tiene una prioridad más alta de notificación que polite [9]."
+        },
+        {
+            "id": 13,
+            "pregunta": "¿Qué rol de widget se considera intrínsecamente una 'Live region'?",
+            "opciones": {
+                "a": "button",
+                "b": "alert",
+                "c": "tree",
+                "d": "scrollbar"
+            },
+            "respuesta_correcta": "b",
+            "explicacion": "El rol 'alert' es uno de los roles de widgets que funcionan como Live regions [9]."
+        },
+        {
+            "id": 14,
+            "pregunta": "¿Qué atributo se utiliza para indicar que una región está actualmente actualizándose y no debería ser leída aún por el lector de pantalla?",
+            "opciones": {
+                "a": "aria-hidden",
+                "b": "aria-busy",
+                "c": "aria-disabled",
+                "d": "aria-atomic"
+            },
+            "respuesta_correcta": "b",
+            "explicacion": "El estado 'aria-busy' se utiliza en las Live regions para indicar que el elemento está en proceso de cambio [10]."
+        },
+        {
+            "id": 15,
+            "pregunta": "Sobre la regla de 'No cambiar la semántica de los elementos', ¿cuál de los siguientes ejemplos es INCORRECTO?",
+            "opciones": {
+                "a": "<button role=\"switch\">",
+                "b": "<h1 role=\"button\">Texto</h1>",
+                "c": "<div role=\"listitem\">",
+                "d": "<nav role=\"navigation\">"
+            },
+            "respuesta_correcta": "b",
+            "explicacion": "Las reglas de uso prohíben cambiar la semántica base de un elemento de forma incorrecta, poniendo como ejemplo negativo el uso de role=\"button\" en un <h1> [4]."
+        },
+        {
+            "id": 16,
+            "pregunta": "¿Qué requisito de accesibilidad deben cumplir todos los controles nativos que utilicen ARIA?",
+            "opciones": {
+                "a": "Deben ser usables exclusivamente con el ratón.",
+                "b": "Deben incluir siempre el atributo aria-live=\"assertive\".",
+                "c": "Deben ser usables con el teclado.",
+                "d": "Deben estar contenidos dentro de un rol de tipo 'application'."
+            },
+            "respuesta_correcta": "c",
+            "explicacion": "Una regla fundamental de WAI-ARIA es que todos los controles deben ser operables mediante el teclado [4]."
+        },
+        {
+            "id": 17,
+            "pregunta": "El atributo 'aria-atomic' se utiliza en las Live Regions para:",
+            "opciones": {
+                "a": "Determinar si el lector de pantalla debe presentar la región entera o solo las partes modificadas.",
+                "b": "Hacer que el elemento sea invisible para el lector de pantalla pero visible visualmente.",
+                "c": "Indicar que el elemento es un widget compuesto.",
+                "d": "Establecer una relación jerárquica de tipo padre-hijo."
+            },
+            "respuesta_correcta": "a",
+            "explicacion": "El atributo 'aria-atomic' es un atributo específico de Live regions para gestionar cómo se anuncia el contenido actualizado [9]."
+        },
+        {
+            "id": 18,
+            "pregunta": "Si un desarrollador utiliza <footer role=\"contentinfo\">, está empleando un:",
+            "opciones": {
+                "a": "Document structure role.",
+                "b": "Widget role.",
+                "c": "Landmark role.",
+                "d": "Live region role."
+            },
+            "respuesta_correcta": "c",
+            "explicacion": "El rol 'contentinfo', equivalente a la etiqueta <footer>, se clasifica como un Landmark role [2]."
+        },
+        {
+            "id": 19,
+            "pregunta": "¿Cuál de los siguientes es un atributo de relación encargado de gestionar el tamaño de un conjunto de elementos?",
+            "opciones": {
+                "a": "aria-setsize",
+                "b": "aria-posinset",
+                "c": "aria-colcount",
+                "d": "aria-level"
+            },
+            "respuesta_correcta": "a",
+            "explicacion": "El atributo 'aria-setsize' forma parte de los atributos de relación y se utiliza para definir el número total de elementos en un conjunto [8]."
+        },
+        {
+            "id": 20,
+            "pregunta": "¿Cuál es la función del estado 'aria-expanded'?",
+            "opciones": {
+                "a": "Indicar si un elemento de control ha sido pulsado o no.",
+                "b": "Definir si un elemento (como un menú o sección) está actualmente abierto o cerrado.",
+                "c": "Señalar que un elemento es obligatorio en un formulario.",
+                "d": "Ocultar el elemento completamente del árbol de accesibilidad."
+            },
+            "respuesta_correcta": "b",
+            "explicacion": "El estado 'aria-expanded' se utiliza para indicar si el contenido asociado a un control está expandido o colapsado, como se muestra en los ejemplos de menús [7, 11]."
+        }
+    ]
+}

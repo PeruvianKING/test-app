@@ -1,0 +1,247 @@
+{
+    "titulo": "TEMA 4 - Maven",
+    "descripcion": "Evaluación integral sobre el ciclo de vida, gestión de dependencias, POM y plugins en Apache Maven.",
+    "temas": ["maven", "tema 4"],
+    "examen_automatizacion": [
+        {
+            "id": 1,
+            "pregunta": "¿Cómo define Maven su propósito principal más allá de ser una herramienta de construcción?",
+            "opciones": {
+                "a": "Como un compilador optimizado para entornos de microservicios.",
+                "b": "Como una herramienta de gestión y comprensión de proyectos basada en patrones.",
+                "c": "Como un repositorio centralizado de librerías binarias.",
+                "d": "Como un lenguaje de scripting para la automatización de servidores."
+            },
+            "respuesta_correcta": "b",
+            "explicacion": "Maven intenta aplicar patrones a la infraestructura de construcción de un proyecto para promover la comprensión y la productividad, proporcionando un camino claro en el uso de las mejores prácticas [1]."
+        },
+        {
+            "id": 2,
+            "pregunta": "En un archivo POM, ¿qué etiqueta define el tipo de artefacto (como jar o war) que se producirá?",
+            "opciones": {
+                "a": "<groupId>",
+                "b": "<artifactId>",
+                "c": "<packaging>",
+                "d": "<version>"
+            },
+            "respuesta_correcta": "c",
+            "explicacion": "La etiqueta `<packaging>` especifica el tipo de build, siendo 'jar' el valor por defecto, aunque también admite 'pom', 'war', 'ear', entre otros [2]."
+        },
+        {
+            "id": 3,
+            "pregunta": "Si un proyecto A depende de B, y B depende de C, ¿qué característica de Maven permite que A incluya a C automáticamente?",
+            "opciones": {
+                "a": "Herencia de perfiles.",
+                "b": "Dependencias transitivas.",
+                "c": "Filtrado de recursos.",
+                "d": "Arquetipos de proyecto."
+            },
+            "respuesta_correcta": "b",
+            "explicacion": "Desde Maven 2, las dependencias pueden ser transitivas, lo que permite evitar la especificación manual de las librerías que requieren tus propias dependencias, incluyéndolas automáticamente [3]."
+        },
+        {
+            "id": 4,
+            "pregunta": "Según la jerarquía estándar de directorios, ¿dónde deben alojarse los archivos de recursos que NO son código (como .properties) para el artefacto principal?",
+            "opciones": {
+                "a": "src/main/java",
+                "b": "src/test/resources",
+                "c": "target/classes",
+                "d": "src/main/resources"
+            },
+            "respuesta_correcta": "d",
+            "explicacion": "Los archivos fuente no compilados que van en el artefacto primario se ubican en `src/main/resources` [4]."
+        },
+        {
+            "id": 5,
+            "pregunta": "¿Qué ocurre exactamente al ejecutar el comando 'mvn install'?",
+            "opciones": {
+                "a": "Solo se copia el archivo empaquetado al repositorio local.",
+                "b": "Se ejecutan las fases previas (compile, test, package, etc.) y luego se instala en el repositorio local.",
+                "c": "Se descarga el proyecto desde el repositorio remoto a la máquina local.",
+                "d": "Se limpian los archivos de builds anteriores antes de compilar."
+            },
+            "respuesta_correcta": "b",
+            "explicacion": "Invocar una fase del ciclo de vida ejecuta automáticamente todas las fases previas. `mvn install` ejecuta generate, compile, test, package e integration-test antes de install [5, 6]."
+        },
+        {
+            "id": 6,
+            "pregunta": "Desde Maven 2.0.9, si se encuentran dos versiones de la misma dependencia a la misma distancia en el árbol, ¿cuál es el criterio de desempate?",
+            "opciones": {
+                "a": "La versión más reciente numéricamente.",
+                "b": "La versión que tenga el tamaño de archivo más pequeño.",
+                "c": "El orden de declaración en el POM (la primera gana).",
+                "d": "Se genera un error de conflicto de dependencias."
+            },
+            "respuesta_correcta": "c",
+            "explicacion": "Maven utiliza 'dependency mediation'. Aunque originalmente usaba la 'definición más cercana', desde la versión 2.0.9 prima el orden de declaración: la primera declaración gana [7]."
+        },
+        {
+            "id": 7,
+            "pregunta": "¿Cuál es la función del 'scope' de dependencia denominado 'runtime'?",
+            "opciones": {
+                "a": "La dependencia es necesaria para compilar pero no para ejecutar.",
+                "b": "La dependencia se requiere solo durante la ejecución y los tests, no para la compilación.",
+                "c": "Indica que el JDK proporcionará la librería en tiempo de ejecución.",
+                "d": "La dependencia solo está disponible durante la fase de empaquetado."
+            },
+            "respuesta_correcta": "b",
+            "explicacion": "El alcance 'runtime' indica que la dependencia no es requerida para la compilación, pero aparece en los classpaths de ejecución y test [8]."
+        },
+        {
+            "id": 8,
+            "pregunta": "¿Qué sección del POM permite centralizar y controlar las versiones de dependencias transitivas en proyectos multi-módulo?",
+            "opciones": {
+                "a": "<dependencies>",
+                "b": "<profiles>",
+                "c": "<build>",
+                "d": "<dependencyManagement>"
+            },
+            "respuesta_correcta": "d",
+            "explicacion": "El bloque `<dependencyManagement>` permite a los autores especificar directamente las versiones de los artefactos que se usarán cuando se encuentren en dependencias transitivas [7, 9]."
+        },
+        {
+            "id": 9,
+            "pregunta": "¿En qué se diferencia el repositorio local del repositorio remoto en Maven?",
+            "opciones": {
+                "a": "El remoto es una caché del local.",
+                "b": "El local reside en la instalación del usuario (caché); el remoto es cualquier otro accesible por protocolos como HTTP.",
+                "c": "El local solo guarda plugins y el remoto solo dependencias.",
+                "d": "No hay diferencia técnica, solo cambia la ubicación física."
+            },
+            "respuesta_correcta": "b",
+            "explicacion": "El repositorio local es una copia en tu propia instalación que actúa como caché de descargas remotas y contiene artefactos de build temporales [10]."
+        },
+        {
+            "id": 10,
+            "pregunta": "¿Qué fase del ciclo de vida 'Clean' se encarga de eliminar los archivos generados por construcciones anteriores?",
+            "opciones": {
+                "a": "pre-clean",
+                "b": "post-clean",
+                "c": "clean",
+                "d": "delete-target"
+            },
+            "respuesta_correcta": "c",
+            "explicacion": "El ciclo de vida Clean tiene 3 fases: pre-clean, clean (que elimina los archivos) y post-clean [11]."
+        },
+        {
+            "id": 11,
+            "pregunta": "¿Para qué sirve habilitar el 'filtering' en la configuración de recursos del POM?",
+            "opciones": {
+                "a": "Para excluir archivos de log del empaquetado.",
+                "b": "Para inyectar valores dinámicos (propiedades) en los archivos de recursos durante el build.",
+                "c": "Para comprimir los archivos de configuración.",
+                "d": "Para verificar que los archivos XML estén bien formados."
+            },
+            "respuesta_correcta": "b",
+            "explicacion": "Los filtros permiten reemplazar placeholders en los archivos de recursos por valores reales basados en propiedades del proyecto, útil para diferenciar entornos (dev, prod) [12, 13]."
+        },
+        {
+            "id": 12,
+            "pregunta": "¿Qué plugin de Maven es responsable de ejecutar las pruebas unitarias (JUnit)?",
+            "opciones": {
+                "a": "maven-compiler-plugin",
+                "b": "maven-failsafe-plugin",
+                "c": "maven-surefire-plugin",
+                "d": "maven-jar-plugin"
+            },
+            "respuesta_correcta": "c",
+            "explicacion": "El plugin 'surefire' es el encargado de ejecutar los tests unitarios en un classloader aislado [14]."
+        },
+        {
+            "id": 13,
+            "pregunta": "En un proyecto multi-módulo, ¿qué valor debe tener la etiqueta <packaging> en el archivo POM raíz?",
+            "opciones": {
+                "a": "jar",
+                "b": "war",
+                "c": "pom",
+                "d": "parent"
+            },
+            "respuesta_correcta": "c",
+            "explicacion": "Un POM que se utiliza para agrupar módulos o para herencia debe tener un empaquetado de tipo 'pom' [4, 15]."
+        },
+        {
+            "id": 14,
+            "pregunta": "¿Qué es un 'Archetype' en el ecosistema de Maven?",
+            "opciones": {
+                "a": "Un sistema de encriptación para dependencias.",
+                "b": "Un conjunto de herramientas de plantillas para generar proyectos parametrizados.",
+                "c": "El nombre del motor que ejecuta el ciclo de vida.",
+                "d": "Un tipo especial de repositorio para librerías legacy."
+            },
+            "respuesta_correcta": "b",
+            "explicacion": "Un Archetype es un toolkit de plantillas que ayuda a crear proyectos consistentes con las mejores prácticas de la organización [16]."
+        },
+        {
+            "id": 15,
+            "pregunta": "¿Cuál es el comando correcto para instalar manualmente un archivo JAR externo en el repositorio local?",
+            "opciones": {
+                "a": "mvn install -Dfile=lib.jar",
+                "b": "mvn install:install-file -Dfile=path/to/jar -DgroupId=... -DartifactId=... -Dversion=... -Dpackaging=jar",
+                "c": "mvn copy:local -Dfile=lib.jar",
+                "d": "mvn add-dependency -Djar=lib.jar"
+            },
+            "respuesta_correcta": "b",
+            "explicacion": "Cuando una librería no está en repositorios centrales, se usa el goal 'install-file' con sus coordenadas correspondientes para registrarla localmente [3]."
+        },
+        {
+            "id": 16,
+            "pregunta": "¿Qué diferencia hay entre las fases 'package' y 'deploy'?",
+            "opciones": {
+                "a": "Package crea el JAR y Deploy lo instala en el repositorio local.",
+                "b": "Package compila el código y Deploy lo empaqueta.",
+                "c": "Package crea el formato distributivo (JAR/WAR) y Deploy lo copia al repositorio remoto para compartirlo.",
+                "d": "Deploy solo funciona en proyectos de un solo módulo."
+            },
+            "respuesta_correcta": "c",
+            "explicacion": "La fase 'package' empaqueta el código compilado, mientras que 'deploy' envía el paquete final al repositorio remoto para otros desarrolladores [5, 10, 17]."
+        },
+        {
+            "id": 17,
+            "pregunta": "En la configuración de un plugin dentro del POM, ¿para qué sirve el elemento <executions>?",
+            "opciones": {
+                "a": "Para definir cuántas veces se puede ejecutar el build al día.",
+                "b": "Para configurar el enlace (binding) de los goals del plugin a fases específicas del ciclo de vida.",
+                "c": "Para listar los desarrolladores que pueden ejecutar el plugin.",
+                "d": "Para especificar la ruta del ejecutable del plugin en el sistema."
+            },
+            "respuesta_correcta": "b",
+            "explicacion": "El bloque `<executions>` permite configurar cuándo y cómo se ejecutan los goals de un plugin. Ejemplo:\n\n```xml\n<execution>\n  <id>nombre-id</id>\n  <goals>\n    <goal>run</goal>\n  </goals>\n  <phase>verify</phase>\n</execution>\n``` [18-20]."
+        },
+        {
+            "id": 18,
+            "pregunta": "¿Cuál es la fase que se encarga de procesar los archivos generados tras la compilación (como el bytecode enhancement)?",
+            "opciones": {
+                "a": "process-sources",
+                "b": "process-classes",
+                "c": "compile",
+                "d": "prepare-package"
+            },
+            "respuesta_correcta": "b",
+            "explicacion": "La fase 'process-classes' post-procesa los archivos generados por la compilación, permitiendo mejoras en el bytecode [21]."
+        },
+        {
+            "id": 19,
+            "pregunta": "¿Cómo se activa un perfil (profile) de Maven desde la línea de comandos?",
+            "opciones": {
+                "a": "mvn clean install --profile production",
+                "b": "mvn clean install -P production",
+                "c": "mvn clean install -A production",
+                "d": "mvn clean install --active production"
+            },
+            "respuesta_correcta": "b",
+            "explicacion": "Los perfiles se activan mediante el parámetro `-P` seguido del ID del perfil definido en el POM o settings.xml [22]."
+        },
+        {
+            "id": 20,
+            "pregunta": "¿Qué indica el scope 'provided' en una dependencia de Maven?",
+            "opciones": {
+                "a": "Que la dependencia solo es necesaria para compilar el código de test.",
+                "b": "Que la dependencia es necesaria para compilar, pero el entorno de ejecución (JDK o contenedor) ya la proporciona.",
+                "c": "Que la dependencia debe ser descargada manualmente por el usuario.",
+                "d": "Que la dependencia es opcional para el proyecto."
+            },
+            "respuesta_correcta": "b",
+            "explicacion": "El alcance 'provided' se usa para librerías requeridas en compilación pero que se asume que estarán presentes en el runtime (ej. el API de Servlets en un contenedor web) [8]."
+        }
+    ]
+}

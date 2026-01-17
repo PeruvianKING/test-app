@@ -1,0 +1,246 @@
+{
+    "titulo": "Diseño IU Intro",
+    "descripcion": "Un test exhaustivo que cubre desde la definición y dimensiones de la usabilidad hasta los modelos de desarrollo y etapas de diseño de interfaces, basado exclusivamente en los materiales proporcionados.",
+    "examen_automatizacion": [
+        {
+            "id": 1,
+            "pregunta": "¿Cuál es la definición técnica de Interfaz de Usuario según las fuentes?",
+            "opciones": {
+                "a": "Un entorno gráfico avanzado que facilita la comunicación entre procesos de software.",
+                "b": "El mecanismo de interacción que permite la entrada de información y la salida pertinente entre usuario y sistema.",
+                "c": "Un dispositivo de hardware diseñado específicamente para la visualización de datos informáticos.",
+                "d": "La capa estética superior que confiere usabilidad a un software independientemente de su función."
+            },
+            "respuesta_correcta": "b",
+            "explicacion": "La interfaz de usuario es el mecanismo mediante el cual un usuario interactúa con un sistema, permitiendo la entrada de información y ofreciendo la salida pertinente [1]."
+        },
+        {
+            "id": 2,
+            "pregunta": "En el contexto del 'Hall of Shame', ¿qué indica la presencia excesiva de texto de ayuda en una interfaz?",
+            "opciones": {
+                "a": "Que el sistema está bien documentado para usuarios novatos.",
+                "b": "Que la interfaz es cómoda pero la tarea es intrínsecamente compleja.",
+                "c": "Que la interfaz no es lo suficientemente cómoda o intuitiva.",
+                "d": "Que el diseño gráfico es de alta calidad y requiere soporte textual."
+            },
+            "respuesta_correcta": "c",
+            "explicacion": "La necesidad de mucho texto de ayuda suele ser un síntoma de que la interfaz no es cómoda para el usuario [2]."
+        },
+        {
+            "id": 3,
+            "pregunta": "Respecto a las barras de scroll mal diseñadas, ¿cuál es un error común mencionado en las fuentes?",
+            "opciones": {
+                "a": "La falta de marcas que indiquen cantidad o posición de los elementos.",
+                "b": "El uso de colores que no contrastan con el fondo de la ventana.",
+                "c": "La imposibilidad de usarlas mediante el teclado.",
+                "d": "Que solo permitan desplazamientos verticales en documentos largos."
+            },
+            "respuesta_correcta": "a",
+            "explicacion": "Un mal diseño de barra de scroll carece de marcas, no aclara cuántos modelos hay ni cómo están ordenados, dificultando la navegación [2]."
+        },
+        {
+            "id": 4,
+            "pregunta": "¿Cómo afecta la estética inicial a la percepción del usuario sobre los errores?",
+            "opciones": {
+                "a": "El usuario detecta los errores más rápido si la interfaz es bonita.",
+                "b": "El usuario tiende a culpar al software inmediatamente si el diseño es atractivo.",
+                "c": "El usuario puede culparse a sí mismo de errores de diseño si el interfaz le parece atractivo.",
+                "d": "La estética no tiene impacto en la atribución de errores por parte del usuario."
+            },
+            "respuesta_correcta": "c",
+            "explicacion": "Si una interfaz es atractiva de inicio, el usuario puede llegar a echarse la culpa de errores que en realidad se deben a un mal diseño [3]."
+        },
+        {
+            "id": 5,
+            "pregunta": "En relación con los problemas de un mal diseño de IU, ¿qué afirma el texto sobre los humanos y la tecnología?",
+            "opciones": {
+                "a": "Los humanos mejoran su velocidad de procesamiento siguiendo la ley de Moore.",
+                "b": "El tiempo de los usuarios se vuelve más barato a medida que la tecnología avanza.",
+                "c": "Los humanos no nos regimos por la ley de Moore, por lo que nuestro tiempo no se abarata.",
+                "d": "La eficiencia humana crece exponencialmente con la potencia de los procesadores."
+            },
+            "respuesta_correcta": "c",
+            "explicacion": "A diferencia del hardware, los humanos no se rigen por la ley de Moore y su tiempo no se abarata con el paso de los años [3, 4]."
+        },
+        {
+            "id": 6,
+            "pregunta": "¿Qué porcentaje del esfuerzo total (tiempo y código) suele representar la interfaz en un proyecto software?",
+            "opciones": {
+                "a": "Aproximadamente el 25%.",
+                "b": "Cerca del 50%.",
+                "c": "Más del 75%.",
+                "d": "Depende totalmente de si es un sistema crítico o no."
+            },
+            "respuesta_correcta": "b",
+            "explicacion": "Las interfaces de usuario requieren normalmente en torno al 50% del tiempo de diseño, implementación, mantenimiento y tamaño del código [5]."
+        },
+        {
+            "id": 7,
+            "pregunta": "Si un sistema es utilizado por usuarios poco frecuentes, ¿qué dimensión de la usabilidad debe priorizarse?",
+            "opciones": {
+                "a": "Eficiencia.",
+                "b": "Satisfacción.",
+                "c": "Recuerdo.",
+                "d": "Aprendizaje."
+            },
+            "respuesta_correcta": "c",
+            "explicacion": "Un usuario poco frecuente necesita especialmente una buena tasa de recuerdo para poder usar el sistema tras periodos de inactividad [6]."
+        },
+        {
+            "id": 8,
+            "pregunta": "¿Qué dimensión de la usabilidad es la más crítica para un usuario experto?",
+            "opciones": {
+                "a": "Aprendizaje.",
+                "b": "Eficiencia.",
+                "c": "Recuerdo.",
+                "d": "Gestión de errores."
+            },
+            "respuesta_correcta": "b",
+            "explicacion": "El usuario experto, una vez dominada la aplicación, lo que más necesita es que el sistema sea rápido de usar, es decir, eficiente [6]."
+        },
+        {
+            "id": 9,
+            "pregunta": "¿Por qué el modelo de desarrollo en cascada tradicional es inapropiado para las IU?",
+            "opciones": {
+                "a": "Porque requiere demasiada documentación técnica inicial.",
+                "b": "Porque el usuario no interviene hasta la fase de aceptación, lo que lo hace arriesgado.",
+                "c": "Porque no permite la codificación de la lógica de negocio en paralelo.",
+                "d": "Porque es un proceso demasiado predecible para el diseño creativo."
+            },
+            "respuesta_correcta": "b",
+            "explicacion": "En el modelo en cascada, el usuario solo interviene al final (aceptación), lo que hace que cualquier error de diseño detectado tarde sea muy costoso y arriesgado [7]."
+        },
+        {
+            "id": 10,
+            "pregunta": "En el modelo en espiral aplicado a interfaces, ¿qué representa la dimensión radial?",
+            "opciones": {
+                "a": "El tiempo transcurrido desde el inicio del proyecto.",
+                "b": "La satisfacción acumulada del usuario final.",
+                "c": "El coste de cada una de las iteraciones.",
+                "d": "La complejidad técnica de la implementación."
+            },
+            "respuesta_correcta": "c",
+            "explicacion": "En el desarrollo en espiral, la dimensión radial corresponde al coste que tiene cada iteración del proceso [8]."
+        },
+        {
+            "id": 11,
+            "pregunta": "¿Cuál es la principal ventaja de usar prototipos 'baratos' en las iteraciones iniciales del modelo en espiral?",
+            "opciones": {
+                "a": "Permiten el diseño en paralelo de varios modelos para explorar distintas vías.",
+                "b": "Aseguran que la implementación final no tenga errores de funcionalidad.",
+                "c": "Sustituyen la necesidad de realizar un análisis de tareas exhaustivo.",
+                "d": "Permiten sacar el producto al mercado de forma inmediata (early release)."
+            },
+            "respuesta_correcta": "a",
+            "explicacion": "El uso de prototipos baratos en etapas iniciales habilita el diseño en paralelo para explorar diferentes soluciones antes de invertir más recursos [8]."
+        },
+        {
+            "id": 12,
+            "pregunta": "Durante la etapa de 'Análisis de usuarios/tareas', ¿qué técnica NO se menciona para recopilar información?",
+            "opciones": {
+                "a": "Grupos focales de usuarios.",
+                "b": "Observación en el entorno de trabajo.",
+                "c": "Pruebas de stress con carga real.",
+                "d": "Revisión de procesos de workflow."
+            },
+            "respuesta_correcta": "c",
+            "explicacion": "Las pruebas de stress pertenecen a la fase de prueba de la solución implementada, no a la captura inicial de información [9, 10]."
+        },
+        {
+            "id": 13,
+            "pregunta": "¿Cuál de los siguientes es un patrón de diseño específico de la interfaz de usuario (IU)?",
+            "opciones": {
+                "a": "MVC (Modelo-Vista-Controlador).",
+                "b": "Wizards (Asistentes).",
+                "c": "Singleton.",
+                "d": "Fachadas."
+            },
+            "respuesta_correcta": "b",
+            "explicacion": "Los 'Wizards' se categorizan como patrones de diseño de IU, mientras que MVC o Singleton se consideran patrones no-IU [11]."
+        },
+        {
+            "id": 14,
+            "pregunta": "¿Qué abarca la 'Lógica de presentación' dentro de la arquitectura de la solución?",
+            "opciones": {
+                "a": "Requisitos del dominio y casos de uso.",
+                "b": "Gestión de datos y persistencia.",
+                "c": "Interacciones, tecnología y patrones de usabilidad.",
+                "d": "Codificación exclusiva de la funcionalidad interna."
+            },
+            "respuesta_correcta": "c",
+            "explicacion": "La arquitectura del diseño incluye la lógica de presentación, que se centra en las interacciones, tecnología y patrones de usabilidad [11]."
+        },
+        {
+            "id": 15,
+            "pregunta": "En las sesiones de diseño colaborativo (CDS), ¿quiénes participan activamente en la creación de bocetos?",
+            "opciones": {
+                "a": "Únicamente los programadores y analistas.",
+                "b": "El equipo de trabajo en colaboración con los usuarios.",
+                "c": "Solo los usuarios finales para asegurar su satisfacción.",
+                "d": "Expertos externos en evaluación heurística."
+            },
+            "respuesta_correcta": "b",
+            "explicacion": "En las sesiones CDS, el equipo de trabajo colabora directamente con los usuarios para diseñar bocetos de la solución [12]."
+        },
+        {
+            "id": 16,
+            "pregunta": "¿Qué nivel de fidelidad corresponde a una aplicación 'wireframe'?",
+            "opciones": {
+                "a": "Baja fidelidad.",
+                "b": "Fidelidad media.",
+                "c": "Alta fidelidad.",
+                "d": "Fidelidad final o entregable."
+            },
+            "respuesta_correcta": "b",
+            "explicacion": "Se considera que los bocetos en papel son de baja fidelidad, los wireframes de fidelidad media y las aplicaciones de ejemplo de alta fidelidad [10]."
+        },
+        {
+            "id": 17,
+            "pregunta": "¿Cuál es la diferencia fundamental entre Alpha y Beta testing?",
+            "opciones": {
+                "a": "Alpha prueba la usabilidad y Beta prueba solo la seguridad.",
+                "b": "Alpha se hace en etapas iniciales con funcionalidad mínima; Beta es el paso previo a la release.",
+                "c": "Alpha es realizado por usuarios externos; Beta es realizado internamente por el equipo.",
+                "d": "Alpha se centra en la lógica de negocio y Beta en la lógica de presentación."
+            },
+            "respuesta_correcta": "b",
+            "explicacion": "El Alpha testing ocurre en etapas iniciales con poca funcionalidad, mientras que el Beta testing se da en etapas avanzadas como paso previo a la producción [13]."
+        },
+        {
+            "id": 18,
+            "pregunta": "Respecto a la dificultad de diseño, ¿por qué se afirma que 'tú no eres el usuario'?",
+            "opciones": {
+                "a": "Porque los desarrolladores tienen menos experiencia en el dominio que los usuarios.",
+                "b": "Porque en el desarrollo de interfaces te comunicas con un humano, no con otro proceso de software.",
+                "c": "Porque los usuarios siempre saben expresar perfectamente lo que quieren.",
+                "d": "Porque el diseño de interfaces es una tarea puramente estética ajena a la ingeniería."
+            },
+            "respuesta_correcta": "b",
+            "explicacion": "A diferencia de la ingeniería de software tradicional donde procesos se comunican entre sí, en las interfaces el desarrollador debe comunicarse con un usuario externo [4]."
+        },
+        {
+            "id": 19,
+            "pregunta": "Según la usabilidad, ¿qué implica que un sistema tenga una buena dimensión de 'Aprendizaje'?",
+            "opciones": {
+                "a": "Que el sistema es capaz de aprender de los hábitos del usuario automáticamente.",
+                "b": "Que es fácil para el usuario aprender a usar el sistema desde cero.",
+                "c": "Que el manual de usuario es breve y está bien redactado.",
+                "d": "Que el sistema no permite que el usuario cometa errores durante el entrenamiento."
+            },
+            "respuesta_correcta": "b",
+            "explicacion": "La dimensión de aprendizaje mide lo fácil que resulta para los usuarios aprender a utilizar la funcionalidad del sistema [6]."
+        },
+        {
+            "id": 20,
+            "pregunta": "En el modelo en espiral, ¿cuál es el orden típico de las primeras tres etapas?",
+            "opciones": {
+                "a": "Prototipo en papel, Implementación, Evaluación del usuario.",
+                "b": "Análisis de tareas, Prototipo en papel, Testeo del prototipo con el usuario.",
+                "c": "Análisis de usuarios, Evaluación heurística, Prototipo en PC.",
+                "d": "Diseño colaborativo, Codificación de gráficos, Beta testing."
+            },
+            "respuesta_correcta": "b",
+            "explicacion": "Según el ejemplo del modelo en espiral, el proceso comienza con el análisis de tareas/usuarios, seguido del prototipo en papel y su posterior testeo con el usuario [14]."
+        }
+    ]
+}

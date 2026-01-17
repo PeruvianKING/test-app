@@ -1,0 +1,246 @@
+{
+  "titulo": "TEMA 1 - IDEs B",
+  "descripcion": "Un test de alta dificultad enfocado en detalles técnicos, flujos de trabajo avanzados y configuración de herramientas de desarrollo.",
+  "examen_automatizacion": [
+    {
+      "id": 1,
+      "pregunta": "¿Cuál de las siguientes opciones describe mejor una de las ventajas fundamentales de usar un IDE para gestionar sistemas de software de gran tamaño?",
+      "opciones": {
+        "a": "Reducción automática de la complejidad ciclomática del código.",
+        "b": "Capacidad para entender, corregir y mejorar sistemas de software complejos con mayor rapidez.",
+        "c": "Eliminación total de la necesidad de realizar pruebas unitarias manuales.",
+        "d": "Optimización del uso de memoria RAM del sistema operativo mediante el framework Electron."
+      },
+      "respuesta_correcta": "b",
+      "explicacion": "Las ventajas principales de un IDE incluyen entender, corregir y mejorar grandes sistemas de software de manera más rápida, además de facilitar la gestión de la calidad [1]."
+    },
+    {
+      "id": 2,
+      "pregunta": "Respecto al lanzamiento de Visual Studio Code como código abierto, ¿bajo qué licencia y en qué fecha ocurrió este evento?",
+      "opciones": {
+        "a": "Licencia Apache 2.0 en abril de 2015.",
+        "b": "Licencia MIT en noviembre de 2015.",
+        "c": "Licencia GNU GPL en abril de 2015.",
+        "d": "Licencia MIT en abril de 2015."
+      },
+      "respuesta_correcta": "b",
+      "explicacion": "VS Code fue anunciado inicialmente en abril de 2015, pero su lanzamiento como código abierto bajo la **Licencia MIT** no ocurrió hasta **noviembre de 2015** [2]."
+    },
+    {
+      "id": 3,
+      "pregunta": "En la gestión de espacios de trabajo (Workspaces), ¿cuál es una característica exclusiva de los 'Multi-root Workspaces'?",
+      "opciones": {
+        "a": "Permiten abrir múltiples archivos de diferentes lenguajes en una sola pestaña.",
+        "b": "Permiten incluir múltiples carpetas independientes en una única ventana de VS Code.",
+        "c": "Permiten ejecutar múltiples instancias del depurador en diferentes sistemas operativos.",
+        "d": "Sincronizan automáticamente el historial de Git entre repositorios locales y remotos."
+      },
+      "respuesta_correcta": "b",
+      "explicacion": "Un espacio de trabajo suele ser una carpeta, pero los **Multi-root Workspaces** permiten incluir múltiples carpetas abiertas en una sola ventana de VS Code [3, 4]."
+    },
+    {
+      "id": 4,
+      "pregunta": "Al crear un nuevo Perfil en VS Code, ¿cuáles son las tres opciones de origen que ofrece la herramienta?",
+      "opciones": {
+        "a": "Desde el perfil actual, desde un perfil vacío o desde una plantilla de perfil.",
+        "b": "Desde la nube, desde un archivo JSON o desde una extensión instalada.",
+        "c": "Desde el Perfil Predeterminado, desde GitHub o desde un Workspace activo.",
+        "d": "Desde una URL de importación, desde una copia de seguridad o desde el sistema local."
+      },
+      "respuesta_correcta": "a",
+      "explicacion": "Al crear un perfil mediante `File > Preferences > Profile > New Profile`, el usuario puede elegir crearlo desde el **perfil actual**, un **perfil vacío** o una **plantilla** [5]."
+    },
+    {
+      "id": 5,
+      "pregunta": "Dentro del 'Extension Pack for Java', ¿qué funcionalidad específica aporta la extensión 'IntelliCode API Usage Examples'?",
+      "opciones": {
+        "a": "Genera documentación Javadoc automática para métodos privados.",
+        "b": "Proporciona ejemplos de código para más de 100,000 APIs diferentes.",
+        "c": "Analiza el uso de APIs obsoletas y sugiere reemplazos modernos.",
+        "d": "Permite la conexión con APIs externas mediante protocolos SOAP y REST."
+      },
+      "respuesta_correcta": "b",
+      "explicacion": "Esta extensión específica dentro del paquete de Java se encarga de ofrecer **ejemplos de uso de código** para un vasto catálogo de más de 100K APIs [6]."
+    },
+    {
+      "id": 6,
+      "pregunta": "En la estructura de barras de VS Code, ¿qué acción puede realizar el usuario con los ítems de la 'Activity Bar'?",
+      "opciones": {
+        "a": "No pueden moverse, son fijos por el sistema.",
+        "b": "Pueden arrastrarse a otras ubicaciones, como el Panel inferior.",
+        "c": "Solo pueden ocultarse mediante el menú contextual del ratón.",
+        "d": "Se pueden duplicar para tener dos vistas de Explorador simultáneas."
+      },
+      "respuesta_correcta": "b",
+      "explicacion": "Los usuarios pueden personalizar su diseño **arrastrando ítems de la Barra de Actividad** a otras localizaciones como el Panel [7]."
+    },
+    {
+      "id": 7,
+      "pregunta": "Utilizando 'Spring Boot Tools', ¿qué comando en la búsqueda de símbolos (Ctrl+T) permite localizar todas las anotaciones de Spring en el código?",
+      "opciones": {
+        "a": "@/",
+        "b": "@>",
+        "c": "@",
+        "d": "@!"
+      },
+      "respuesta_correcta": "c",
+      "explicacion": "El símbolo `@` (sin caracteres adicionales) se utiliza específicamente para encontrar todas las **anotaciones de Spring** dentro del código base [8]."
+    },
+    {
+      "id": 8,
+      "pregunta": "En la 'Problems View', ¿cuál es el atajo de teclado para alternar su visibilidad en el Panel inferior?",
+      "opciones": {
+        "a": "Ctrl+Shift+P",
+        "b": "Ctrl+Shift+M",
+        "c": "Ctrl+Shift+E",
+        "d": "Ctrl+Shift+F"
+      },
+      "respuesta_correcta": "b",
+      "explicacion": "La vista de problemas puede activarse o desactivarse mediante el menú `View > Problems` o utilizando el atajo **Ctrl+Shift+M** [9]."
+    },
+    {
+      "id": 9,
+      "pregunta": "Al editar código Java, ¿cuál es la diferencia funcional entre los fragmentos (snippets) 'sysout' y 'systrace'?",
+      "opciones": {
+        "a": "'sysout' imprime una variable; 'systrace' genera un stack trace completo.",
+        "b": "'sysout' imprime en la consola estándar; 'systrace' imprime el nombre del método actual en la consola estándar.",
+        "c": "'sysout' es para la salida de error; 'systrace' es para la salida estándar.",
+        "d": "No hay diferencia, ambos mapean a 'System.out.println()'."
+      },
+      "respuesta_correcta": "b",
+      "explicacion": "Según la tabla de atajos, `sysout` (o `sout`) imprime en la salida estándar, mientras que `systrace` (o `soutm`) imprime el **nombre del método actual** [10]."
+    },
+    {
+      "id": 10,
+      "pregunta": "¿Qué acción realiza específicamente el fragmento postfijo (postfix snippet) '.forr' en Java?",
+      "opciones": {
+        "a": "Crea un bucle 'for' que itera sobre un array de forma aleatoria.",
+        "b": "Crea una iteración inversa (reverse iteration) sobre un array.",
+        "c": "Crea un bucle 'for-each' para objetos de tipo Iterable.",
+        "d": "Refactoriza un bucle 'while' para convertirlo en un 'for' clásico."
+      },
+      "respuesta_correcta": "b",
+      "explicacion": "El atajo `.forr` genera un bucle de **iteración inversa** sobre un array [11]."
+    },
+    {
+      "id": 11,
+      "pregunta": "Dentro de las opciones de refactorización de Java, ¿qué hace la función 'Invert conditions'?",
+      "opciones": {
+        "a": "Cambia el orden de los bloques 'if' y 'else'.",
+        "b": "Invierte la expresión booleana dentro de las condiciones.",
+        "c": "Sustituye una condición 'if' por una estructura 'switch'.",
+        "d": "Transforma condiciones ternarias en sentencias 'if' completas."
+      },
+      "respuesta_correcta": "b",
+      "explicacion": "La acción **'Invert conditions'** se encarga de invertir la expresión booleana en las condiciones seleccionadas [12]."
+    },
+    {
+      "id": 12,
+      "pregunta": "En el contexto de 'Source Actions' para Java, ¿qué permite la opción 'Generate delegate methods'?",
+      "opciones": {
+        "a": "Crea métodos que delegan llamadas a otro objeto interno.",
+        "b": "Genera automáticamente patrones de diseño 'Proxy' para la clase actual.",
+        "c": "Crea hilos (Threads) secundarios para ejecutar métodos pesados en segundo plano.",
+        "d": "Delega la compilación de la clase a un servidor remoto."
+      },
+      "respuesta_correcta": "a",
+      "explicacion": "Esta acción de fuente genera métodos cuya función es **delegar llamadas** a otro objeto contenido en la clase [13]."
+    },
+    {
+      "id": 13,
+      "pregunta": "¿Cuál es el atajo de teclado para saltar directamente al paréntesis o corchete de cierre/apertura coincidente (matching bracket)?",
+      "opciones": {
+        "a": "Ctrl+Shift+P",
+        "b": "Ctrl+Shift+\\",
+        "c": "Ctrl+Shift+A",
+        "d": "Ctrl+Shift+L"
+      },
+      "respuesta_correcta": "b",
+      "explicacion": "El comando para saltar al paréntesis o corchete coincidente es **Ctrl+Shift+\\** [14]."
+    },
+    {
+      "id": 14,
+      "pregunta": "En la escala de depuración, ¿cuál es la sexta etapa irónica?",
+      "opciones": {
+        "a": "Why does that happen?",
+        "b": "Oh, I see.",
+        "c": "How did that ever work?",
+        "d": "That shouldn't happen."
+      },
+      "respuesta_correcta": "c",
+      "explicacion": "Se listan seis etapas, siendo la última: **'6. How did that ever work?'** [15]."
+    },
+    {
+      "id": 15,
+      "pregunta": "¿Qué característica distingue a la 'Timeline View' de VS Code respecto a otros sistemas de control de versiones?",
+      "opciones": {
+        "a": "Solo funciona si el proyecto está conectado a un servidor GitLab.",
+        "b": "Viene integrada por defecto y proporciona un historial de cambios local para cada archivo sin necesidad de configurar Git.",
+        "c": "Permite ver los cambios realizados por otros miembros del equipo en tiempo real.",
+        "d": "Solo registra los cambios que se han guardado con el comando 'Ctrl+S'."
+      },
+      "respuesta_correcta": "b",
+      "explicacion": "La vista de línea de tiempo es una herramienta de **control de versiones local** integrada por defecto que no requiere instalaciones adicionales y rastrea la evolución del archivo [16]."
+    },
+    {
+      "id": 16,
+      "pregunta": "Al utilizar la extensión 'GitLab Workflow', ¿cuál de las siguientes tareas se puede realizar directamente desde el editor?",
+      "opciones": {
+        "a": "Editar imágenes binarias almacenadas en el repositorio.",
+        "b": "Validar la configuración de GitLab CI/CD localmente mediante un comando.",
+        "c": "Cifrar el repositorio completo con una clave PGP.",
+        "d": "Crear máquinas virtuales en la infraestructura de GitLab."
+      },
+      "respuesta_correcta": "b",
+      "explicacion": "La extensión permite, entre otras cosas, **validar la configuración de CI/CD** de GitLab de forma local con un comando específico [17]."
+    },
+    {
+      "id": 17,
+      "pregunta": "Dentro de la vista de 'Source Control', ¿cuáles son las tres categorías en las que se dividen los cambios del repositorio?",
+      "opciones": {
+        "a": "LOCAL, REMOTE, STASHED.",
+        "b": "CHANGES, STAGED CHANGES, MERGE CHANGES.",
+        "c": "UNTRACKED, MODIFIED, COMMITTED.",
+        "d": "ADD, REMOVE, UPDATE."
+      },
+      "respuesta_correcta": "b",
+      "explicacion": "La vista de control de fuente categoriza los cambios detalladamente en **CHANGES**, **STAGED CHANGES** y **MERGE CHANGES** [18]."
+    },
+    {
+      "id": 18,
+      "pregunta": "Para habilitar la 'Documentation View' como una vista persistente en lugar de un popup flotante, ¿qué acción es necesaria?",
+      "opciones": {
+        "a": "Cambiar la configuración 'editor.hover.enabled' a falso.",
+        "b": "Instalar la extensión 'Docs View'.",
+        "c": "Presionar 'F1' y seleccionar 'Show Documentation'.",
+        "d": "Arrastrar el popup de ayuda a la barra lateral."
+      },
+      "respuesta_correcta": "b",
+      "explicacion": "Por defecto, la documentación se muestra al pasar el ratón (hover), pero la vista persistente se habilita instalando la extensión **'Docs View'** [19]."
+    },
+    {
+      "id": 19,
+      "pregunta": "¿Qué funcionalidad del depurador permite reiniciar la ejecución de un hilo específico desde el principio del método actual sin reiniciar toda la aplicación?",
+      "opciones": {
+        "a": "Hot Code Replace.",
+        "b": "Restart Frame.",
+        "c": "Step Out.",
+        "d": "Resume execution (F5)."
+      },
+      "respuesta_correcta": "b",
+      "explicacion": "**Restart Frame** permite volver a ejecutar el código de un marco (método) específico en el stack de llamadas [20, 21]."
+    },
+    {
+      "id": 20,
+      "pregunta": "En la depuración de aplicaciones Java dentro de contenedores Docker, ¿qué argumento de la JVM es necesario para que el depurador no espere a la conexión para iniciar la app?",
+      "opciones": {
+        "a": "transport=dt_socket",
+        "b": "suspend=n",
+        "c": "server=y",
+        "d": "address=*:5005"
+      },
+      "respuesta_correcta": "b",
+      "explicacion": "El parámetro `suspend=n` indica que la aplicación debe iniciar inmediatamente y no suspender la ejecución a la espera de que el depurador se conecte. \n```bash\n-agentlib:jdwp=transport=dt_socket,server=y,suspend=n,address=*:5005\n``` [22]."
+    }
+  ]
+}

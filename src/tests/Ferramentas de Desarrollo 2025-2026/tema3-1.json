@@ -1,0 +1,246 @@
+{
+    "titulo": "TEMA 3 - ITS A",
+    "descripcion": "Este test evalúa los conocimientos sobre sistemas de seguimiento de problemas, buenas prácticas y el uso de la herramienta Redmine.",
+    "examen_automatizacion": [
+        {
+            "id": 1,
+            "pregunta": "¿Qué es un Sistema de Seguimiento de Problemas (ITS)?",
+            "opciones": {
+                "a": "Una aplicación para monitorear y mantener una lista de problemas reportados.",
+                "b": "Una aplicación para monitorear y mantener el código fuente del proyecto.",
+                "c": "Una aplicación para monitorear y mantener el hardware de la organización.",
+                "d": "Una aplicación para monitorear y mantener la documentación física de la empresa."
+            },
+            "respuesta_correcta": "a",
+            "explicacion": "Un **Issue Tracking System (ITS)**, también conocido como sistema de tickets, es una aplicación de software que las organizaciones utilizan para **monitorear y mantener una lista de problemas reportados** [1]."
+        },
+        {
+            "id": 2,
+            "pregunta": "En el contexto de un ITS, ¿qué información registra típicamente un 'ticket'?",
+            "opciones": {
+                "a": "Quién es responsable de resolver el problema.",
+                "b": "Quién es el responsable de la seguridad del edificio.",
+                "c": "Quién es el responsable de la contratación de personal.",
+                "d": "Quién es el responsable de la limpieza del servidor."
+            },
+            "respuesta_correcta": "a",
+            "explicacion": "Un ticket registra información detallada, incluyendo **quién es responsable de resolver el problema**, la ubicación de la documentación y las funciones incluidas en una versión [2]."
+        },
+        {
+            "id": 3,
+            "pregunta": "¿Cuál es una de las mejores prácticas recomendadas para el seguimiento de errores?",
+            "opciones": {
+                "a": "Escribir informes de defectos claros y reproducibles.",
+                "b": "Escribir informes de defectos cortos y ambiguos.",
+                "c": "Escribir informes de defectos extensos y sin pasos técnicos.",
+                "d": "Escribir informes de defectos rápidos y sin capturas de pantalla."
+            },
+            "respuesta_correcta": "a",
+            "explicacion": "Es fundamental **escribir informes de defectos claros y reproducibles** para facilitar la resolución de problemas por parte del equipo [3, 4]."
+        },
+        {
+            "id": 4,
+            "pregunta": "¿Para qué se recomienda el uso de capturas de pantalla en los informes de errores?",
+            "opciones": {
+                "a": "Para reducir la ambigüedad al ilustrar errores.",
+                "b": "Para aumentar el tamaño de los informes de errores.",
+                "c": "Para decorar los informes de errores del sistema.",
+                "d": "Para ocultar la ambigüedad de los informes de errores."
+            },
+            "respuesta_correcta": "a",
+            "explicacion": "Se deben adjuntar capturas de pantalla para **ilustrar los errores y reducir la ambigüedad**, evitando así fallos de comunicación [5]."
+        },
+        {
+            "id": 5,
+            "pregunta": "¿Por qué es importante integrar la gestión de problemas con el control de versiones (SCM)?",
+            "opciones": {
+                "a": "Para asegurar un seguimiento y actualizaciones fluidas.",
+                "b": "Para asegurar un seguimiento y actualizaciones lentas.",
+                "c": "Para asegurar un seguimiento y actualizaciones manuales.",
+                "d": "Para asegurar un seguimiento y actualizaciones opcionales."
+            },
+            "respuesta_correcta": "a",
+            "explicacion": "Vincular la gestión de problemas con los **sistemas de control de versiones (SCM)** garantiza un **seguimiento y actualizaciones fluidas** [6]."
+        },
+        {
+            "id": 6,
+            "pregunta": "¿Cuál es el elemento central o básico en Redmine?",
+            "opciones": {
+                "a": "La petición o problema (issue).",
+                "b": "El foro de discusión del proyecto.",
+                "c": "La página de noticias del equipo.",
+                "d": "El repositorio de código fuente."
+            },
+            "respuesta_correcta": "a",
+            "explicacion": "En Redmine, el **elemento principal es el 'issue' (petición o problema)**, que representa una tarea específica y procesable [6]."
+        },
+        {
+            "id": 7,
+            "pregunta": "¿Qué función cumplen los 'Foros' en Redmine?",
+            "opciones": {
+                "a": "Un lugar para que los interesados discutan y colaboren.",
+                "b": "Un lugar para que los interesados almacenen código fuente.",
+                "c": "Un lugar para que los interesados rastreen el tiempo trabajado.",
+                "d": "Un lugar para que los interesados creen gráficos de Gantt."
+            },
+            "respuesta_correcta": "a",
+            "explicacion": "Los **Foros** proporcionan un espacio para que las partes interesadas **discutan, colaboren y documenten** dichas conversaciones [7]."
+        },
+        {
+            "id": 8,
+            "pregunta": "¿Qué tipos de trackers (rastreadores) incluye Redmine de forma predeterminada?",
+            "opciones": {
+                "a": "Errores, Tareas y Soporte.",
+                "b": "Errores, Reuniones y Soporte.",
+                "c": "Errores, Tareas y Finanzas.",
+                "d": "Errores, Código y Soporte."
+            },
+            "respuesta_correcta": "a",
+            "explicacion": "Redmine incluye por defecto trackers para **Errores, Tareas y Soporte** [8]."
+        },
+        {
+            "id": 9,
+            "pregunta": "¿Cuáles son algunos de los estados (statuses) predeterminados de una petición en Redmine?",
+            "opciones": {
+                "a": "Nueva, En curso y Resuelta.",
+                "b": "Nueva, En espera y Archivada.",
+                "c": "Nueva, En curso y Eliminada.",
+                "d": "Nueva, En pausa y Finalizada."
+            },
+            "respuesta_correcta": "a",
+            "explicacion": "Los estados por defecto en Redmine incluyen **Nueva, En curso (Active), Resuelta (Solved)**, además de Comentarios, Cerrada y Rechazada [8]."
+        },
+        {
+            "id": 10,
+            "pregunta": "¿Qué niveles de prioridad existen por defecto en Redmine?",
+            "opciones": {
+                "a": "Baja, Normal, Alta, Urgente e Inmediata.",
+                "b": "Baja, Normal, Alta, Crítica e Inmediata.",
+                "c": "Baja, Media, Alta, Urgente e Inmediata.",
+                "d": "Baja, Normal, Muy Alta, Urgente e Inmediata."
+            },
+            "respuesta_correcta": "a",
+            "explicacion": "Las prioridades por defecto son **Baja, Normal, Alta, Urgente e Inmediata** [8]."
+        },
+        {
+            "id": 11,
+            "pregunta": "¿Qué representa el campo 'Assignee' (Asignado a) en Redmine?",
+            "opciones": {
+                "a": "El miembro del equipo responsable de resolver el problema.",
+                "b": "El miembro del equipo que reportó originalmente el problema.",
+                "c": "El miembro del equipo que debe aprobar la resolución del problema.",
+                "d": "El miembro del equipo que supervisa a todos los programadores."
+            },
+            "respuesta_correcta": "a",
+            "explicacion": "El **Assignee** es el miembro del equipo **responsable de resolver la petición** [8]."
+        },
+        {
+            "id": 12,
+            "pregunta": "¿Qué permite la función de registro de tiempo (Time Tracking) en Redmine?",
+            "opciones": {
+                "a": "Registrar horas especificando el tipo de actividad y comentarios.",
+                "b": "Registrar horas especificando el coste del salario y la fecha.",
+                "c": "Registrar horas especificando el lenguaje de programación usado.",
+                "d": "Registrar horas especificando la ubicación GPS del desarrollador."
+            },
+            "respuesta_correcta": "a",
+            "explicacion": "Permite registrar horas directamente en las peticiones, **especificando el tipo de actividad** y aportando comentarios explicativos [9]."
+        },
+        {
+            "id": 13,
+            "pregunta": "¿Qué sucede con el contador de tiempo de una petición tras registrar horas?",
+            "opciones": {
+                "a": "Se actualiza el contador de tiempo dedicado (spent time).",
+                "b": "Se reinicia el contador de tiempo dedicado (spent time).",
+                "c": "Se bloquea el contador de tiempo dedicado (spent time).",
+                "d": "Se duplica el contador de tiempo dedicado (spent time)."
+            },
+            "respuesta_correcta": "a",
+            "explicacion": "Una vez registradas las horas, el **contador de tiempo dedicado (spent time) de la petición se actualiza** automáticamente [10]."
+        },
+        {
+            "id": 14,
+            "pregunta": "¿Cómo se agregan nuevas páginas a la Wiki integrada de Redmine?",
+            "opciones": {
+                "a": "Usando el formato [[nombre de la nueva página]].",
+                "b": "Usando el formato {{nombre de la nueva página}}.",
+                "c": "Usando el formato ((nombre de la nueva página)).",
+                "d": "Usando el formato <<nombre de la nueva página>>."
+            },
+            "respuesta_correcta": "a",
+            "explicacion": "Para añadir nuevas páginas a la Wiki se utiliza la sintaxis de doble corchete: **[[nombre de la página]]** [11]."
+        },
+        {
+            "id": 15,
+            "pregunta": "¿Cuál es el propósito principal de la pestaña 'Documentos' en Redmine?",
+            "opciones": {
+                "a": "Almacenar la documentación técnica y general del proyecto.",
+                "b": "Almacenar el código fuente en formato binario del proyecto.",
+                "c": "Almacenar los correos electrónicos enviados por el equipo.",
+                "d": "Almacenar las contraseñas de acceso a los servidores de desarrollo."
+            },
+            "respuesta_correcta": "a",
+            "explicacion": "La pestaña **Documentos** está diseñada para **almacenar documentación del proyecto** y permite configurar categorías para organizarla [12, 13]."
+        },
+        {
+            "id": 16,
+            "pregunta": "¿Qué tipo de archivos se suelen guardar en la pestaña 'Archivos' (Files)?",
+            "opciones": {
+                "a": "Parches, imágenes y archivos de uso común.",
+                "b": "Solo archivos de texto sin formato.",
+                "c": "Solo ejecutables finales del proyecto.",
+                "d": "Solo grabaciones de las reuniones del equipo."
+            },
+            "respuesta_correcta": "a",
+            "explicacion": "La pestaña **Archivos** actúa como repositorio para **parches, archivos de uso común, imágenes** y documentos de gestión [13]."
+        },
+        {
+            "id": 17,
+            "pregunta": "¿Qué permite la vista 'Repositorio' cuando Redmine está integrado con Git?",
+            "opciones": {
+                "a": "Navegar por el historial del código fuente.",
+                "b": "Borrar el historial del código fuente.",
+                "c": "Ocultar el historial del código fuente.",
+                "d": "Comprar el historial del código fuente."
+            },
+            "respuesta_correcta": "a",
+            "explicacion": "Al integrarse con un SCM como Git, permite a los usuarios **navegar por el historial del código fuente** y ver revisiones [14]."
+        },
+        {
+            "id": 18,
+            "pregunta": "¿De qué formas permite Redmine comparar revisiones de código?",
+            "opciones": {
+                "a": "De forma integrada (inline) o en paralelo (side-by-side).",
+                "b": "De forma vertical o de forma horizontal.",
+                "c": "De forma resumida o de forma extendida.",
+                "d": "De forma pública o de forma privada."
+            },
+            "respuesta_correcta": "a",
+            "explicacion": "Redmine facilita el seguimiento de diferencias permitiendo comparaciones **inline (integradas) o side-by-side (en paralelo)** [15]."
+        },
+        {
+            "id": 19,
+            "pregunta": "¿Qué efecto puede tener un mensaje de commit de Git como 'fixes #3' en Redmine?",
+            "opciones": {
+                "a": "Puede actualizar automáticamente el estado de la petición #3.",
+                "b": "Puede borrar automáticamente la petición #3 del sistema.",
+                "c": "Puede crear automáticamente una nueva página Wiki para la petición #3.",
+                "d": "Puede enviar automáticamente un correo a todos los usuarios sobre la petición #3."
+            },
+            "respuesta_correcta": "a",
+            "explicacion": "Incluso sin herramientas avanzadas, los mensajes de commit pueden **interactuar con Redmine para actualizar estados** (ej: fixes #3) [16]."
+        },
+        {
+            "id": 20,
+            "pregunta": "¿Qué acción se puede realizar desde la integración de Redmine con VS Code?",
+            "opciones": {
+                "a": "Registrar entradas de tiempo sin salir del editor.",
+                "b": "Cambiar el tema de colores de la web de Redmine.",
+                "c": "Navegar por internet de forma anónima desde el editor.",
+                "d": "Reproducir música almacenada en los servidores de Redmine."
+            },
+            "respuesta_correcta": "a",
+            "explicacion": "La integración con VS Code permite **registrar entradas de tiempo (log time)** y actualizar estados de tareas directamente desde el editor [17]."
+        }
+    ]
+}

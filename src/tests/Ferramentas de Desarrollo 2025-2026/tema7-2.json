@@ -1,0 +1,246 @@
+{
+  "titulo": "TEMA 7 - PROFILING B",
+  "descripcion": "Una evaluación detallada sobre los mecanismos internos de la JVM, el uso de Java Mission Control y técnicas de análisis de rendimiento.",
+  "examen_automatizacion": [
+    {
+      "id": 1,
+      "pregunta": "¿Qué diferencia fundamental existe entre el profiling y el benchmarking?",
+      "opciones": {
+        "a": "El benchmarking es dinámico y el profiling es estático",
+        "b": "El profiling ofrece mediciones más detalladas de los componentes del sistema",
+        "c": "El benchmarking minimiza la influencia de factores externos",
+        "d": "El profiling se limita exclusivamente al tiempo de ejecución"
+      },
+      "respuesta_correcta": "b",
+      "explicacion": "A diferencia del benchmarking, el profiling proporciona mediciones más detalladas y precisas de los componentes del sistema, ofreciendo una visión más profunda del rendimiento [1]."
+    },
+    {
+      "id": 2,
+      "pregunta": "¿Cuál de las siguientes es una técnica empleada por los profilers para el análisis?",
+      "opciones": {
+        "a": "Compilación predictiva",
+        "b": "Simulación y métodos estadísticos",
+        "c": "Recolección manual de basura",
+        "d": "Interpretación de código fuente únicamente"
+      },
+      "respuesta_correcta": "b",
+      "explicacion": "Los profilers emplean diversas técnicas, incluyendo métodos basados en eventos, estadísticos, instrumentación y simulación [1]."
+    },
+    {
+      "id": 3,
+      "pregunta": "¿En qué momento se crea el heap de la JVM?",
+      "opciones": {
+        "a": "Cuando se instancia el primer objeto",
+        "b": "Al compilar el código fuente",
+        "c": "Cuando se inicia la JVM",
+        "d": "Durante la primera recolección de basura"
+      },
+      "respuesta_correcta": "c",
+      "explicacion": "El heap se crea cuando la JVM se inicia y tiene la capacidad de crecer o reducirse dinámicamente durante la ejecución [2]."
+    },
+    {
+      "id": 4,
+      "pregunta": "¿Qué ocurre específicamente cuando el 'nursery' del heap se llena?",
+      "opciones": {
+        "a": "Se detiene la ejecución del programa permanentemente",
+        "b": "Se activa una recolección de basura de tipo 'young collection'",
+        "c": "Los objetos se mueven directamente al stack de hilos",
+        "d": "Se duplica el tamaño del Metaspace automáticamente"
+      },
+      "respuesta_correcta": "b",
+      "explicacion": "Cuando el nursery se llena, se dispara una 'young collection'. Los objetos que sobreviven lo suficiente son promocionados al 'old space' [3]."
+    },
+    {
+      "id": 5,
+      "pregunta": "¿Cuál es la función de la 'keep area' dentro del nursery?",
+      "opciones": {
+        "a": "Almacenar objetos que ya han sido promocionados",
+        "b": "Mantener los objetos más recientemente asignados para evitar su promoción prematura",
+        "c": "Reservar espacio para los stacks de los hilos",
+        "d": "Gestionar exclusivamente los handles nativos"
+      },
+      "respuesta_correcta": "b",
+      "explicacion": "La 'keep area' contiene los objetos más recientes y evita que sean recolectados o promocionados prematuramente hasta la siguiente recolección [3]."
+    },
+    {
+      "id": 6,
+      "pregunta": "¿Cuál es el rango de tamaño típico para un objeto?",
+      "opciones": {
+        "a": "Entre 1 MB y 10 MB",
+        "b": "Entre 2 kB y 128 kB",
+        "c": "Menos de 512 bytes",
+        "d": "Exactamente 1024 kB"
+      },
+      "respuesta_correcta": "b",
+      "explicacion": "Los objetos suelen tener entre 2 y 128 kB según la configuración."
+    },
+    {
+      "id": 7,
+      "pregunta": "¿Qué beneficio aporta la Gestión Automática de Memoria a la calidad del código?",
+      "opciones": {
+        "a": "Reduce la abstracción de las interfaces",
+        "b": "Hace que el código sea más confiable y menos propenso a errores",
+        "c": "Elimina la necesidad de usar hilos",
+        "d": "Aumenta la velocidad de ejecución en un 50%"
+      },
+      "respuesta_correcta": "b",
+      "explicacion": "Este enfoque aumenta la abstracción y conduce a un código más fiable y menos propenso a errores en comparación con la gestión manual [5]."
+    },
+    {
+      "id": 8,
+      "pregunta": "¿Cuál es un síntoma de negligencia ante posibles fugas de memoria en Java?",
+      "opciones": {
+        "a": "Un uso excesivo de registros de CPU",
+        "b": "Un intercambio de disco (swap) excesivo que degrada el rendimiento",
+        "c": "La reducción dinámica del tamaño del heap",
+        "d": "La liberación automática de referencias colgantes"
+      },
+      "respuesta_correcta": "b",
+      "explicacion": "La negligencia ante fugas puede llenar el heap, causando excepciones OutOfMemoryError o un swap de disco excesivo [6]."
+    },
+    {
+      "id": 9,
+      "pregunta": "¿Desde qué versión del JDK se incluyó Java Mission Control junto con la JVM HotSpot?",
+      "opciones": {
+        "a": "JDK 1.5",
+        "b": "JDK 1.6",
+        "c": "Versiones tardías de JDK 1.7",
+        "d": "JDK 1.4"
+      },
+      "respuesta_correcta": "c",
+      "explicacion": "JMC se incluyó en el bundle de JVM HotSpot desde las versiones tardías de JDK 1.7 [7]."
+    },
+    {
+      "id": 10,
+      "pregunta": "¿Por qué se considera que JMC es adecuado para entornos de producción?",
+      "opciones": {
+        "a": "Porque es una herramienta de código abierto",
+        "b": "Porque recolecta datos con un impacto mínimo en el sistema en ejecución",
+        "c": "Porque permite detener la JVM en cualquier momento",
+        "d": "Porque no requiere una licencia de Java"
+      },
+      "respuesta_correcta": "b",
+      "explicacion": "A diferencia de otras tecnologías intrusivas, JMC minimiza el impacto en el rendimiento, lo que permite su uso en producción [8]."
+    },
+    {
+      "id": 11,
+      "pregunta": "¿Qué elementos componen la interfaz de gestión de un MBean?",
+      "opciones": {
+        "a": "Solo una lista de métodos estáticos",
+        "b": "Atributos legibles/escribibles, operaciones invocables y una autodescripción",
+        "c": "Únicamente notificaciones de errores de red",
+        "d": "Variables de entorno del sistema operativo"
+      },
+      "respuesta_correcta": "b",
+      "explicacion": "Un MBean proporciona una interfaz que incluye atributos, operaciones invocables y su propia descripción siguiendo la especificación JMX [9]."
+    },
+    {
+      "id": 12,
+      "pregunta": "¿Qué vista de JMC permite verificar la información del servidor, como la versión de la VM y los argumentos de inicio?",
+      "opciones": {
+        "a": "MBeans view",
+        "b": "General view",
+        "c": "Triggers view",
+        "d": "Memory view"
+      },
+      "respuesta_correcta": "b",
+      "explicacion": "La vista general ('General view') permite consultar la información detallada del servidor y de la JVM [10]."
+    },
+    {
+      "id": 13,
+      "pregunta": "¿Qué permite configurar la pestaña de 'Triggers' en Java Mission Control?",
+      "opciones": {
+        "a": "La frecuencia de la recolección de basura",
+        "b": "Alertas activadas por comportamientos específicos, como correos electrónicos o volcados",
+        "c": "El tamaño máximo del nursery",
+        "d": "La prioridad de los hilos del sistema"
+      },
+      "respuesta_correcta": "b",
+      "explicacion": "En la pestaña 'Triggers', se pueden definir reglas para activar alertas (emails, logs, dumps) ante comportamientos detectados en el proceso [10]."
+    },
+    {
+      "id": 14,
+      "pregunta": "¿Qué información se puede obtener de la vista 'JVM Information' dentro de un Flight Recording?",
+      "opciones": {
+        "a": "El historial completo de llamadas de red",
+        "b": "Argumentos de la línea de comandos y argumentos de la aplicación Java",
+        "c": "El código fuente de los métodos más activos",
+        "d": "La lista de usuarios conectados al sistema"
+      },
+      "respuesta_correcta": "b",
+      "explicacion": "Esta vista muestra detalles específicos de la instancia grabada, incluyendo los argumentos de comandos y de la aplicación [11]."
+    },
+    {
+      "id": 15,
+      "pregunta": "En el contexto de JFR, ¿qué muestran los 'Hot methods'?",
+      "opciones": {
+        "a": "Métodos que fallaron durante la ejecución",
+        "b": "Los métodos que estuvieron más activos durante la grabación",
+        "c": "Métodos que no se han ejecutado nunca",
+        "d": "Métodos que consumen menos memoria"
+      },
+      "respuesta_correcta": "b",
+      "explicacion": "Dentro de la vista de código, los 'Hot methods' identifican qué partes del código fueron más activas y podrían causar problemas de rendimiento [12]."
+    },
+    {
+      "id": 16,
+      "pregunta": "¿Qué herramienta se utiliza para ver qué métodos invocaron a otros dentro del análisis de código?",
+      "opciones": {
+        "a": "Histograma de eventos",
+        "b": "Call Trees (Árboles de llamadas)",
+        "c": "MBeans Browser",
+        "d": "System Properties"
+      },
+      "respuesta_correcta": "b",
+      "explicacion": "Los 'Call Trees' permiten visualizar la jerarquía de llamadas para entender qué métodos invocaron a los 'hot methods' [13]."
+    },
+    {
+      "id": 17,
+      "pregunta": "¿Dónde se pueden encontrar los volcados de hilos (thread dumps) en JFR?",
+      "opciones": {
+        "a": "En la pestaña de I/O",
+        "b": "En la pestaña 'Thread Dumps' dentro de la vista de hilos",
+        "c": "En el log de eventos del sistema",
+        "d": "En la configuración de la recolección de basura"
+      },
+      "respuesta_correcta": "b",
+      "explicacion": "Los volcados de hilos están disponibles específicamente en la pestaña 'Thread Dumps' para un análisis detallado del estado de los hilos [13]."
+    },
+    {
+      "id": 18,
+      "pregunta": "¿Qué tipo de actividades monitorea la vista de I/O en un Flight Recording?",
+      "opciones": {
+        "a": "Asignación de memoria en el heap",
+        "b": "Lecturas y escrituras de archivos y sockets",
+        "c": "Interrupciones de hardware de la CPU",
+        "d": "Ciclos de vida de los servlets"
+      },
+      "respuesta_correcta": "b",
+      "explicacion": "La vista de I/O proporciona datos cruciales sobre las actividades de entrada/salida tanto en archivos como en sockets [14]."
+    },
+    {
+      "id": 19,
+      "pregunta": "¿Qué permite hacer la 'Graph View' en el análisis de eventos?",
+      "opciones": {
+        "a": "Exportar el código a formato PDF",
+        "b": "Visualizar cómo diferentes hilos manejaron eventos en puntos específicos del tiempo",
+        "c": "Cambiar la configuración del recolector de basura en tiempo real",
+        "d": "Ver la estructura de carpetas del proyecto"
+      },
+      "respuesta_correcta": "b",
+      "explicacion": "Esta vista permite una representación visual de la actividad y eventos de los hilos a lo largo de una línea de tiempo específica [15]."
+    },
+    {
+      "id": 20,
+      "pregunta": "¿Qué plugin adicional de JMC ayuda a detectar anti-patrones en el uso de la memoria?",
+      "opciones": {
+        "a": "JConsole Plug-in",
+        "b": "JOverflow Heap Analyzer",
+        "c": "Twitter Action",
+        "d": "DTrace Recorder"
+      },
+      "respuesta_correcta": "b",
+      "explicacion": "JOverflow Heap Analyzer es un plugin que añade funcionalidad para explorar el contenido del heap y detectar anti-patrones de uso de memoria [15]."
+    }
+  ]
+}

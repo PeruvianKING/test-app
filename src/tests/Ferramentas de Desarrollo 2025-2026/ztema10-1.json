@@ -1,0 +1,246 @@
+{
+    "titulo": "TEMA 10 - DOCKER Y KUBERNETES A",
+    "descripcion": "Un test técnico exhaustivo diseñado para evaluar conocimientos profundos sobre virtualización, gestión de contenedores con Docker y orquestación con Kubernetes.",
+    "examen_automatizacion": [
+        {
+            "id": 1,
+            "pregunta": "¿Cuál es la diferencia fundamental en el nivel de aislamiento entre una Máquina Virtual (VM) y un Contenedor?",
+            "opciones": {
+                "a": "Las VMs comparten el kernel del host, mientras que los contenedores emulan hardware completo.",
+                "b": "Las VMs proporcionan aislamiento a nivel de sistema operativo completo; los contenedores comparten el kernel del sistema operativo del host.",
+                "c": "Los contenedores son más pesados porque incluyen su propio kernel, a diferencia de las VMs.",
+                "d": "No existe diferencia en el aislamiento; ambos utilizan el mismo método de emulación de software."
+            },
+            "respuesta_correcta": "b",
+            "explicacion": "Las VMs proporcionan un aislamiento total a nivel de SO, mientras que los contenedores son más ligeros porque comparten el kernel del host [1]."
+        },
+        {
+            "id": 2,
+            "pregunta": "En las mejores prácticas de Docker, ¿por qué se recomienda mantener los contenedores con un 'propósito único' (single-purpose)?",
+            "opciones": {
+                "a": "Para reducir el uso de la CPU al evitar procesos en segundo plano.",
+                "b": "Para permitir que el kernel del host gestione mejor la memoria compartida.",
+                "c": "Para mantener la modularidad y facilitar el escalado independiente de funciones.",
+                "d": "Es un requisito obligatorio de Docker para poder ejecutar el comando docker build."
+            },
+            "respuesta_correcta": "c",
+            "explicacion": "Se indica que cada contenedor debe servir a una única función (ej. servidor web, base de datos) para mantener la modularidad y facilidad de escalado [2]."
+        },
+        {
+            "id": 3,
+            "pregunta": "Al optimizar un Dockerfile, ¿cuál es el beneficio principal de utilizar una imagen base 'scratch'?",
+            "opciones": {
+                "a": "Permite heredar todas las herramientas de depuración de Ubuntu automáticamente.",
+                "b": "Ofrece un sistema de archivos vacío, lo que reduce drásticamente el tamaño de la imagen y la superficie de ataque.",
+                "c": "Facilita la instalación de paquetes mediante comandos RUN simplificados.",
+                "d": "Es la única imagen que permite la persistencia de datos nativa sin volúmenes."
+            },
+            "respuesta_correcta": "b",
+            "explicacion": "La imagen 'scratch' es un base vacía que reduce el tamaño, mejora la seguridad al minimizar componentes vulnerables y aumenta el rendimiento [3]."
+        },
+        {
+            "id": 4,
+            "pregunta": "En un Dockerfile, ¿cuál es la distinción técnica entre las instrucciones RUN y CMD?",
+            "opciones": {
+                "a": "RUN se ejecuta al iniciar el contenedor; CMD se ejecuta durante la construcción de la imagen.",
+                "b": "RUN ejecuta comandos en una nueva capa y confirma los resultados en la imagen; CMD establece el comando por defecto al arrancar el contenedor.",
+                "c": "Ambas son idénticas y pueden usarse indistintamente para instalar paquetes.",
+                "d": "RUN solo sirve para variables de entorno; CMD solo sirve para copiar archivos."
+            },
+            "respuesta_correcta": "b",
+            "explicacion": "RUN se utiliza para instalar paquetes y crear capas durante el build, mientras que CMD proporciona los valores por defecto para ejecutar el contenedor [4, 5]."
+        },
+        {
+            "id": 5,
+            "pregunta": "Si necesita descargar un archivo comprimido desde una URL y extraerlo automáticamente dentro del contenedor durante la construcción, ¿qué instrucción debe usar?",
+            "opciones": {
+                "a": "COPY",
+                "b": "ENV",
+                "c": "ADD",
+                "d": "WORKDIR"
+            },
+            "respuesta_correcta": "c",
+            "explicacion": "A diferencia de COPY, la instrucción ADD puede extraer archivos comprimidos y obtener archivos desde URLs [5]."
+        },
+        {
+            "id": 6,
+            "pregunta": "¿Qué sucede técnicamente cuando un usuario ejecuta el comando 'docker run'?",
+            "opciones": {
+                "a": "Se crea una nueva capa de lectura/escritura sobre la imagen y se lanza un proceso aislado con su propio sistema de archivos y red.",
+                "b": "Se compila el código fuente del Dockerfile antes de crear el contenedor.",
+                "c": "El contenedor se fusiona con el sistema de archivos del host para mejorar el rendimiento.",
+                "d": "Docker detiene todos los demás contenedores para asignar recursos exclusivos al nuevo."
+            },
+            "respuesta_correcta": "a",
+            "explicacion": "Docker lanza un contenedor con un proceso aislado, sistema de archivos propio, red y árbol de procesos separados del host [6]."
+        },
+        {
+            "id": 7,
+            "pregunta": "¿Cuál es la función de las banderas '-i' y '-t' en el comando 'docker run -it'?",
+            "opciones": {
+                "a": "Indican 'install' y 'test' para verificar la integridad de la imagen.",
+                "b": "Mantienen el estándar de entrada (stdin) abierto y asignan un pseudo-TTY para una interfaz de terminal.",
+                "c": "Sirven para mapear puertos de forma interna y temporal.",
+                "d": "Permiten que el contenedor se ejecute en segundo plano (detached mode)."
+            },
+            "respuesta_correcta": "b",
+            "explicacion": "La bandera -i mantiene la entrada abierta y -t asigna un pseudo-TTY, permitiendo la interactividad con el shell del contenedor [7]."
+        },
+        {
+            "id": 8,
+            "pregunta": "Para mapear el puerto 8080 del host al puerto 80 de un contenedor Nginx, ¿cuál es la sintaxis correcta?",
+            "opciones": {
+                "a": "docker run -p 80:8080 nginx",
+                "b": "docker run --port 8080-80 nginx",
+                "c": "docker run -p 8080:80 nginx",
+                "d": "docker run -e PORT=8080:80 nginx"
+            },
+            "respuesta_correcta": "c",
+            "explicacion": "La sintaxis correcta del flag -p es <puerto_host>:<puerto_contenedor> [8]."
+        },
+        {
+            "id": 9,
+            "pregunta": "¿Cuál es la principal ventaja de utilizar Volúmenes en lugar de almacenar datos en la capa de escritura del contenedor?",
+            "opciones": {
+                "a": "Los volúmenes son más pequeños y fáciles de mover por la red.",
+                "b": "Los datos persisten incluso si el contenedor se elimina, y ofrecen mejor rendimiento que la capa de escritura.",
+                "c": "Los volúmenes cifran automáticamente los datos para mayor seguridad.",
+                "d": "Permiten que el contenedor corra sin necesidad de una imagen base."
+            },
+            "respuesta_correcta": "b",
+            "explicacion": "Los volúmenes permiten la persistencia de datos fuera del ciclo de vida del contenedor y ofrecen mayor rendimiento [9]."
+        },
+        {
+            "id": 10,
+            "pregunta": "¿Qué tipo de red de Docker permite que contenedores en diferentes hosts físicos se comuniquen entre sí?",
+            "opciones": {
+                "a": "Bridge",
+                "b": "Host",
+                "c": "Overlay",
+                "d": "Macvlan"
+            },
+            "respuesta_correcta": "c",
+            "explicacion": "La red de tipo Overlay se utiliza para el 'multi-host networking', conectando diferentes hosts de Docker [10]."
+        },
+        {
+            "id": 11,
+            "pregunta": "¿Qué herramienta se define como un sistema para configurar y gestionar aplicaciones multi-contenedor mediante archivos YAML?",
+            "opciones": {
+                "a": "Docker Registry",
+                "b": "Docker Compose",
+                "c": "Dockerfile",
+                "d": "Jenkins"
+            },
+            "respuesta_correcta": "b",
+            "explicacion": "Docker Compose utiliza archivos YAML para configurar servicios, redes y volúmenes en aplicaciones de múltiples contenedores [11, 12]."
+        },
+        {
+            "id": 12,
+            "pregunta": "En Kubernetes, ¿cuál es la característica distintiva de un 'Pod' respecto a la comunicación entre sus contenedores?",
+            "opciones": {
+                "a": "Cada contenedor tiene una IP diferente y deben usar DNS externos.",
+                "b": "Comparten el mismo espacio de nombres de red e IP, pudiendo comunicarse vía 'localhost'.",
+                "c": "Los contenedores dentro de un pod no pueden comunicarse entre sí por seguridad.",
+                "d": "Deben usar obligatoriamente volúmenes compartidos para pasarse mensajes de red."
+            },
+            "respuesta_correcta": "b",
+            "explicacion": "Los contenedores en un Pod comparten la misma dirección IP y espacio de puertos, lo que les permite usar 'localhost' para comunicarse [13]."
+        },
+        {
+            "id": 13,
+            "pregunta": "¿Qué componente de Kubernetes es responsable de ajustar el número de pods según el uso de CPU o métricas personalizadas?",
+            "opciones": {
+                "a": "Cluster Autoscaler",
+                "b": "Horizontal Pod Autoscaler (HPA)",
+                "c": "Service Discovery",
+                "d": "Kubelet"
+            },
+            "respuesta_correcta": "b",
+            "explicacion": "El HPA monitoriza el rendimiento de la aplicación y escala el número de pods (instancias de contenedores) según sea necesario [14]."
+        },
+        {
+            "id": 14,
+            "pregunta": "¿Cuál es la función del 'Cluster Autoscaler' en una infraestructura de Kubernetes?",
+            "opciones": {
+                "a": "Aumentar la memoria RAM de los nodos existentes automáticamente.",
+                "b": "Ajustar el número de nodos físicos o virtuales en el clúster basándose en la demanda de recursos.",
+                "c": "Reiniciar contenedores que han fallado por falta de recursos.",
+                "d": "Gestionar las actualizaciones 'rolling updates' sin tiempo de inactividad."
+            },
+            "respuesta_correcta": "b",
+            "explicacion": "El Cluster Autoscaler añade o elimina nodos del clúster basándose en la demanda de recursos de los contenedores [14]."
+        },
+        {
+            "id": 15,
+            "pregunta": "Según el temario, ¿qué define el concepto de 'Orquestación'?",
+            "opciones": {
+                "a": "La creación manual de redes entre contenedores individuales.",
+                "b": "El proceso de empaquetar bibliotecas y código en un solo paquete.",
+                "c": "La disposición, coordinación y gestión automatizada de recursos y servicios de computación complejos.",
+                "d": "La ejecución de pruebas unitarias dentro de un contenedor Docker."
+            },
+            "respuesta_correcta": "c",
+            "explicacion": "La orquestación se refiere a la automatización de la gestión, despliegue, escalado y networking de contenedores en un clúster [15]."
+        },
+        {
+            "id": 16,
+            "pregunta": "¿Qué ventaja específica ofrece Docker Swarm sobre el uso de contenedores aislados?",
+            "opciones": {
+                "a": "Permite crear Dockerfiles más complejos.",
+                "b": "Organiza contenedores en múltiples hosts para que funcionen como un único host virtual (Clustering nativo).",
+                "c": "Es la única forma de utilizar volúmenes persistentes.",
+                "d": "Elimina la necesidad de utilizar imágenes base en los contenedores."
+            },
+            "respuesta_correcta": "b",
+            "explicacion": "Docker Swarm es una herramienta nativa de clustering que organiza contenedores a través de múltiples hosts como si fuera uno solo [6, 16]."
+        },
+        {
+            "id": 17,
+            "pregunta": "En un flujo de despliegue con Jenkins y Kubernetes, ¿por qué es necesario ejecutar 'mvn k8s:undeploy' antes de un nuevo push?",
+            "opciones": {
+                "a": "Para limpiar la caché local de Maven en el servidor de Jenkins.",
+                "b": "Porque la imagen vieja debe ser eliminada antes de poder subir y desplegar la nueva versión.",
+                "c": "Es un requisito para renovar las licencias de Docker Hub.",
+                "d": "Para verificar que los puertos del host están libres de conexiones antiguas."
+            },
+            "respuesta_correcta": "b",
+            "explicacion": "Según las notas de despliegue desde Jenkins, es necesario ejecutar undeploy porque la imagen antigua debe ser removida antes de procesar la nueva [17]."
+        },
+        {
+            "id": 18,
+            "pregunta": "¿Qué hace el comando 'docker-compose down'?",
+            "opciones": {
+                "a": "Solo detiene los contenedores pero mantiene las redes y volúmenes intactos.",
+                "b": "Detiene y elimina contenedores, redes y, opcionalmente, volúmenes creados por el comando 'up'.",
+                "c": "Reduce la prioridad de CPU de los contenedores para ahorrar energía.",
+                "d": "Descarga una versión anterior de la aplicación desde el registro."
+            },
+            "respuesta_correcta": "b",
+            "explicacion": "El comando down detiene y elimina los recursos creados previamente por el comando up (contenedores, redes y volúmenes) [11]."
+        },
+        {
+            "id": 19,
+            "pregunta": "¿Cuál es la función del archivo 'Ingress' configurado en el despliegue de Kubernetes?",
+            "opciones": {
+                "a": "Definir las variables de entorno para la base de datos Postgres.",
+                "b": "Gestionar el acceso externo a los servicios en el clúster, permitiendo reglas de enrutamiento y reescritura de objetivos.",
+                "c": "Configurar los límites de memoria RAM para cada pod.",
+                "d": "Sincronizar el código fuente entre el repositorio Git y los nodos."
+            },
+            "respuesta_correcta": "b",
+            "explicacion": "El archivo Ingress gestiona reglas de red externas, como el reenvío de tráfico a servicios específicos (ej. rewrite-target) [17]."
+        },
+        {
+            "id": 20,
+            "pregunta": "En el archivo 'docker-compose.yml' analizado, ¿cómo se definen las dependencias de red personalizadas?",
+            "opciones": {
+                "a": "Se incluyen automáticamente al definir una imagen base.",
+                "b": "Se especifican en una sección opcional llamada 'networks' para aislar y gestionar la comunicación.",
+                "c": "Se configuran mediante comandos RUN dentro del Dockerfile vinculado.",
+                "d": "Solo se pueden definir si se utiliza la versión 1 del formato de Compose."
+            },
+            "respuesta_correcta": "b",
+            "explicacion": "El archivo docker-compose.yml incluye secciones opcionales para 'networks' y 'volumes' para configurar la infraestructura de la aplicación [12]."
+        }
+    ]
+}

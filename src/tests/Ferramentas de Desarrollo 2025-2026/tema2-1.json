@@ -1,0 +1,246 @@
+{
+    "titulo": "TEMA 2 - SCM A",
+    "descripcion": "Examen de 20 preguntas sobre Software Configuration Management (SCM), buenas prácticas y el uso avanzado de Git..",
+    "examen_automatizacion": [
+        {
+            "id": 1,
+            "pregunta": "¿Qué actividades incluye fundamentalmente el Software Configuration Management (SCM)?",
+            "opciones": {
+                "a": "Control de revisiones, líneas base del proyecto, colaboración en equipo y seguimiento de defectos.",
+                "b": "Control de revisiones, gestión de hardware, colaboración en equipo y desarrollo de requisitos.",
+                "c": "Control de versiones, líneas base de servidores, seguimiento de defectos y auditoría física.",
+                "d": "Control de código fuente, gestión de entornos, depuración de hardware y documentación técnica."
+            },
+            "respuesta_correcta": "a",
+            "explicacion": "El SCM implica rastrear y controlar cambios, incluyendo control de revisiones, líneas base (baselines), ramificación (branching), colaboración y rastreo de defectos [1]."
+        },
+        {
+            "id": 2,
+            "pregunta": "Como componente del SCM, ¿cuál es una función clave del Source Code Management?",
+            "opciones": {
+                "a": "Permitir que un solo desarrollador bloquee el código para evitar ediciones externas.",
+                "b": "Rastrear la historia completa del desarrollo del software.",
+                "c": "Generar notas de lanzamiento basadas exclusivamente en la documentación del usuario.",
+                "d": "Notificar cambios solo al líder del proyecto para mantener la jerarquía."
+            },
+            "respuesta_correcta": "b",
+            "explicacion": "El Source Code Management proporciona historia (tracking de la historia completa del desarrollo), colaboración, generación de notas de lanzamiento y notificaciones de cambios [2-4]."
+        },
+        {
+            "id": 3,
+            "pregunta": "Según las buenas prácticas de SCM, ¿cómo debe ser cada commit?",
+            "opciones": {
+                "a": "Un conjunto indiscriminado de cambios realizados durante toda la jornada laboral.",
+                "b": "Una unidad lógica que sirva para un propósito único y definido, implementándolo totalmente.",
+                "c": "Una unidad lógica que agrupe múltiples tareas diferentes para ahorrar espacio.",
+                "d": "Un archivo individual enviado de forma aislada sin importar su relación con otros archivos."
+            },
+            "respuesta_correcta": "b",
+            "explicacion": "Las buenas prácticas dictan que cada commit debe ser una unidad lógica que sirva a un propósito definido y lo implemente completamente [5, 6]."
+        },
+        {
+            "id": 4,
+            "pregunta": "¿Cuál es una recomendación de SCM para minimizar conflictos al trabajar en equipo?",
+            "opciones": {
+                "a": "Incorporar los cambios de otros con poca frecuencia para evitar distracciones.",
+                "b": "Editar simultáneamente partes principales de los mismos archivos para fomentar la fusión.",
+                "c": "Compartir y empujar (push) tus cambios frecuentemente, asegurando que sean unidades lógicas.",
+                "d": "Evitar el uso de convenciones de formato comunes para diferenciar el trabajo de cada autor."
+            },
+            "respuesta_correcta": "c",
+            "explicacion": "Se recomienda compartir cambios frecuentemente e incorporar los de otros a menudo (frequent pulls) para minimizar conflictos [7-9]."
+        },
+        {
+            "id": 5,
+            "pregunta": "¿Cuál es la característica principal de Git como sistema de control de versiones?",
+            "opciones": {
+                "a": "Es un sistema de control de versiones centralizado basado en BitKeeper.",
+                "b": "Es un sistema de control de versiones distribuido con diseño simple y soporte para desarrollo no lineal.",
+                "c": "Es un sistema de control de versiones lineal diseñado exclusivamente para proyectos pequeños.",
+                "d": "Es un sistema propietario creado para gestionar el kernel de Linux."
+            },
+            "respuesta_correcta": "b",
+            "explicacion": "Git es un sistema de control de versiones distribuido, con diseño simple, rápido y fuerte soporte para desarrollo no lineal (ramas paralelas) [9, 10]."
+        },
+        {
+            "id": 6,
+            "pregunta": "Para configurar el nombre del usuario de forma global en Git, ¿qué comando se utiliza?",
+            "opciones": {
+                "a": "git config --local user.name \"Nombre\"",
+                "b": "git config --system user.name \"Nombre\"",
+                "c": "git config --global user.name \"Nombre\"",
+                "d": "git config --all user.name \"Nombre\""
+            },
+            "respuesta_correcta": "c",
+            "explicacion": "La configuración global del nombre de usuario se realiza mediante el comando 'git config --global user.name' seguido del nombre entre comillas [10]."
+        },
+        {
+            "id": 7,
+            "pregunta": "En el ciclo de vida de Git, ¿qué es un archivo 'untracked'?",
+            "opciones": {
+                "a": "Un archivo que formaba parte del último commit pero ha sido modificado.",
+                "b": "Un archivo en el directorio de trabajo que no estaba en el último commit ni está en el área de preparación (staging).",
+                "c": "Un archivo que ha sido añadido al área de preparación para el próximo commit.",
+                "d": "Un archivo que ha sido ignorado explícitamente por el archivo .gitignore."
+            },
+            "respuesta_correcta": "b",
+            "explicacion": "Los archivos 'untracked' son aquellos en el directorio de trabajo que no formaron parte del último commit y no están preparados (staged) [11]."
+        },
+        {
+            "id": 8,
+            "pregunta": "¿Qué ocurre específicamente cuando se ejecuta 'git add <archivo>' sobre un archivo modificado?",
+            "opciones": {
+                "a": "El archivo se guarda permanentemente en la base de datos del repositorio.",
+                "b": "Se crea una copia de seguridad del archivo en una rama remota.",
+                "c": "La versión del archivo en ese momento exacto se añade al área de preparación (staging area).",
+                "d": "El archivo se marca como 'unmodified' para evitar cambios accidentales."
+            },
+            "respuesta_correcta": "c",
+            "explicacion": "Al ejecutar 'git add', la versión del archivo en ese momento exacto se prepara para el próximo commit [11, 12]."
+        },
+        {
+            "id": 9,
+            "pregunta": "¿Para qué sirve el comando 'git rm --cached <archivo>'?",
+            "opciones": {
+                "a": "Elimina el archivo tanto de la carpeta local como del repositorio.",
+                "b": "Elimina el archivo del repositorio pero lo mantiene físicamente en la carpeta.",
+                "c": "Elimina el archivo de la carpeta pero lo mantiene en el historial del repositorio.",
+                "d": "Limpia la caché de Git sin afectar al estado de los archivos en el repositorio."
+            },
+            "respuesta_correcta": "b",
+            "explicacion": "Este comando elimina el archivo del repositorio (deja de ser rastreado) pero lo conserva en el sistema de archivos local [12]."
+        },
+        {
+            "id": 10,
+            "pregunta": "¿Cuál es la función del archivo '.gitignore'?",
+            "opciones": {
+                "a": "Listar los archivos que deben ser eliminados del historial del repositorio.",
+                "b": "Especificar qué archivos y directorios deben ser excluidos permanentemente del rastreo de Git.",
+                "c": "Ocultar archivos sensibles en el explorador de archivos del sistema operativo.",
+                "d": "Configurar las credenciales de acceso para repositorios remotos."
+            },
+            "respuesta_correcta": "b",
+            "explicacion": "El archivo .gitignore se usa para especificar archivos y directorios que Git debe ignorar (excluir del repositorio), como archivos compilados .class [13]."
+        },
+        {
+            "id": 11,
+            "pregunta": "¿Qué comando permite ver las diferencias que han sido preparadas (staged) y están listas para el commit?",
+            "opciones": {
+                "a": "git diff",
+                "b": "git diff --staged",
+                "c": "git diff --all",
+                "d": "git status --diff"
+            },
+            "respuesta_correcta": "b",
+            "explicacion": "Mientras que 'git diff' muestra cambios no preparados, 'git diff --staged' (o --cached) muestra lo que está en el área de preparación listo para commit [13, 14]."
+        },
+        {
+            "id": 12,
+            "pregunta": "Si has olvidado añadir un archivo en el último commit y no quieres crear un commit nuevo, ¿qué puedes hacer?",
+            "opciones": {
+                "a": "git commit --undo y luego git commit",
+                "b": "git commit --amend tras haber añadido el archivo olvidado al staging area.",
+                "c": "git reset --soft y luego git push",
+                "d": "git revert HEAD y luego git add"
+            },
+            "respuesta_correcta": "b",
+            "explicacion": "El comando 'git commit --amend' permite modificar el último commit, incluyendo nuevos archivos añadidos al staging o corrigiendo el mensaje [15]."
+        },
+        {
+            "id": 13,
+            "pregunta": "¿En qué consiste un 'Soft Reset' (git reset --soft HEAD~1)?",
+            "opciones": {
+                "a": "Deshace el último commit y elimina todos los cambios del directorio de trabajo.",
+                "b": "Deshace el último commit, pero mantiene los cambios en el directorio y los deja preparados (staged).",
+                "c": "Deshace el último commit, mantiene los cambios en el directorio pero los deja sin preparar (unstaged).",
+                "d": "Reinicia el repositorio al estado inicial de la instalación."
+            },
+            "respuesta_correcta": "b",
+            "explicacion": "Un 'Soft Reset' deshace el commit pero mantiene los cambios en el índice (staged), permitiendo volver a confirmar con los mismos cambios [16, 17]."
+        },
+        {
+            "id": 14,
+            "pregunta": "¿Qué es una rama (branch) en el contexto técnico de Git?",
+            "opciones": {
+                "a": "Una copia completa de todos los archivos del proyecto en una subcarpeta nueva.",
+                "b": "Un puntero móvil hacia uno de los objetos de confirmación (commits) del historial.",
+                "c": "Un archivo comprimido que contiene el historial de cambios de un desarrollador.",
+                "d": "Una conexión permanente con un servidor remoto para sincronizar cambios."
+            },
+            "respuesta_correcta": "b",
+            "explicacion": "En Git, una rama es simplemente un puntero móvil que apunta a uno de los commits en la historia del proyecto [18, 19]."
+        },
+        {
+            "id": 15,
+            "pregunta": "¿Qué ocurre durante un 'Fast-forward merge'?",
+            "opciones": {
+                "a": "Git realiza una fusión de tres vías creando un nuevo commit automático.",
+                "b": "Git simplemente mueve el puntero de la rama hacia adelante al último commit de la rama integrada.",
+                "c": "Git acelera la descarga de archivos desde el repositorio remoto.",
+                "d": "Se eliminan todos los commits intermedios para limpiar la historia."
+            },
+            "respuesta_correcta": "b",
+            "explicacion": "Ocurre un 'Fast-forward' cuando no hay cambios divergentes; Git simplemente mueve el puntero de la rama actual al último commit de la rama fusionada [20, 21]."
+        },
+        {
+            "id": 16,
+            "pregunta": "En la estrategia 'Feature Branching', ¿qué son los 'feature flags'?",
+            "opciones": {
+                "a": "Iconos que indican qué desarrollador está trabajando en cada rama.",
+                "b": "Interruptores (toggles) que permiten habilitar o deshabilitar funciones en el producto.",
+                "c": "Etiquetas de Git que marcan el final de una funcionalidad.",
+                "d": "Scripts automáticos que fusionan la rama de funcionalidad con master."
+            },
+            "respuesta_correcta": "b",
+            "explicacion": "Los 'feature flags' son interruptores que permiten controlar cuándo una funcionalidad es visible para el usuario final, facilitando despliegues tempranos [22, 23]."
+        },
+        {
+            "id": 17,
+            "pregunta": "¿Cuál es la función principal de las ramas 'Hotfix'?",
+            "opciones": {
+                "a": "Desarrollar nuevas funcionalidades experimentales a largo plazo.",
+                "b": "Preparar lanzamientos de producción no planificados para corregir errores críticos en vivo.",
+                "c": "Almacenar el código fuente que ha sido optimizado para el rendimiento (hot code).",
+                "d": "Servir de base para la rama 'develop' en el modelo Git-flow."
+            },
+            "respuesta_correcta": "b",
+            "explicacion": "Las ramas Hotfix se crean a partir de una etiqueta de producción en 'master' para solucionar problemas urgentes sin interrumpir el desarrollo en otras ramas [24, 25]."
+        },
+        {
+            "id": 18,
+            "pregunta": "¿Cuál es la principal diferencia visual entre 'Rebasing' y 'Merging'?",
+            "opciones": {
+                "a": "El merge produce una historia lineal y el rebase una historia ramificada.",
+                "b": "El rebase produce una historia limpia y lineal, mientras que el merge mantiene la estructura de ramas.",
+                "c": "El rebase elimina los archivos originales y el merge los duplica.",
+                "d": "No existe diferencia visual; ambos comandos son idénticos en el historial de Git."
+            },
+            "respuesta_correcta": "b",
+            "explicacion": "Aunque el resultado final del código sea el mismo, el rebase reaplica los cambios sobre otra rama produciendo una historia lineal y más limpia [26, 27]."
+        },
+        {
+            "id": 19,
+            "pregunta": "En un flujo de revisión de código, ¿cuál es una responsabilidad clave del autor?",
+            "opciones": {
+                "a": "Delegar la responsabilidad de encontrar la solución al revisor.",
+                "b": "Asegurar que la solución aborda el problema sin dejar errores lógicos ni vulnerabilidades conocidas.",
+                "c": "Fusionar el código inmediatamente después de subir la rama para ahorrar tiempo.",
+                "d": "Ignorar los comentarios subjetivos del revisor para mantener la visión original."
+            },
+            "respuesta_correcta": "b",
+            "explicacion": "El autor debe responsabilizarse de encontrar la mejor solución, verificar que no haya bugs, casos límite sin cubrir ni vulnerabilidades, y asegurar que pase la CI [28, 29]."
+        },
+        {
+            "id": 20,
+            "pregunta": "¿Qué práctica se considera una de las 'peores prácticas' (Worst Practices) en SCM?",
+            "opciones": {
+                "a": "Usar mensajes de commit descriptivos con ID de tareas.",
+                "b": "Confirmar (commit) archivos grandes binarios siempre que sea posible.",
+                "c": "Realizar revisiones de código antes de la fusión.",
+                "d": "Hacer pulls frecuentes para minimizar conflictos."
+            },
+            "respuesta_correcta": "b",
+            "explicacion": "Entre las peores prácticas se incluye confirmar archivos binarios grandes, archivos generados, información sensible o reescribir historia pública [27, 30]."
+        }
+    ]
+}

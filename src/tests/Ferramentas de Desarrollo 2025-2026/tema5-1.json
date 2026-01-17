@@ -1,0 +1,246 @@
+{
+    "titulo": "TEMA 5 - JENKINS A",
+    "descripcion": "Un test exhaustivo diseñado para evaluar conocimientos profundos sobre las prácticas de CI y el funcionamiento técnico de Jenkins.",
+    "examen_automatizacion": [
+        {
+            "id": 1,
+            "pregunta": "¿Cuál es la frecuencia recomendada de integración para un desarrollador en una práctica estándar de CI?",
+            "opciones": {
+                "a": "Al menos una vez por semana para asegurar la estabilidad.",
+                "b": "Varias veces al día, integrando cada cambio individual inmediatamente.",
+                "c": "Al menos una vez al día, lo que resulta en múltiples integraciones diarias para el equipo.",
+                "d": "Únicamente cuando se completa una funcionalidad lógica compleja."
+            },
+            "respuesta_correcta": "c",
+            "explicacion": "La Integración Continua (CI) es una práctica donde los miembros del equipo integran su trabajo frecuentemente; típicamente cada desarrollador integra al menos una vez al día [1]."
+        },
+        {
+            "id": 2,
+            "pregunta": "¿Qué ventaja específica de la CI motiva a los desarrolladores a escribir código más modular y menos complejo?",
+            "opciones": {
+                "a": "La automatización del despliegue en servidores Tomcat o JBoss.",
+                "b": "El feedback instantáneo y el fomento de check-ins frecuentes.",
+                "c": "La capacidad de revertir el código a un estado estable rápidamente.",
+                "d": "El uso de repositorios binarios centrales para la trazabilidad."
+            },
+            "respuesta_correcta": "b",
+            "explicacion": "La CI ofrece feedback instantáneo y fomenta los check-ins frecuentes, lo cual motiva a los desarrolladores a escribir código modular y menos complejo [2]."
+        },
+        {
+            "id": 3,
+            "pregunta": "En cuanto a la gestión de configuración, ¿qué elementos deben versionarse obligatoriamente según las mejores prácticas de CI?",
+            "opciones": {
+                "a": "Solo el código fuente del proyecto para mantener el historial de cambios.",
+                "b": "El código fuente, los scripts de prueba y los archivos de configuración.",
+                "c": "Únicamente el código fuente y los binarios generados (JARs/WARs).",
+                "d": "Los resultados de las pruebas unitarias y los logs del servidor de builds."
+            },
+            "respuesta_correcta": "b",
+            "explicacion": "Se debe gestionar el código fuente mediante control de versiones, pero también es imperativo versionar los scripts de prueba y los archivos de configuración para asegurar trazabilidad y auditoría [2, 3]."
+        },
+        {
+            "id": 4,
+            "pregunta": "¿Cuál es el tiempo límite recomendado para que un 'build' sea considerado rápido y no desmotive a los desarrolladores?",
+            "opciones": {
+                "a": "Menos de 5 minutos para permitir despliegues inmediatos.",
+                "b": "Cualquier duración es aceptable si se ejecutan trabajos en paralelo.",
+                "c": "Máximo 10 minutos; si tarda más, el proceso puede verse obstaculizado.",
+                "d": "Entre 15 y 20 minutos para asegurar que todas las pruebas unitarias se completen."
+            },
+            "respuesta_correcta": "c",
+            "explicacion": "Los builds deben completarse rápidamente; cualquier proceso que tome más de 10 minutos puede desincentivar a los desarrolladores de realizar commits frecuentes [4]."
+        },
+        {
+            "id": 5,
+            "pregunta": "Para garantizar la precisión de las pruebas, el servidor de integración debe ser una 'réplica de producción'. ¿Qué debe coincidir exactamente?",
+            "opciones": {
+                "a": "Únicamente el tipo de servidor de aplicaciones (Tomcat, JBoss, etc.).",
+                "b": "El hardware físico y la capacidad de red del centro de datos.",
+                "c": "Versión del SO, parches instalados y bibliotecas utilizadas.",
+                "d": "Solo la versión de Java y la herramienta de build (Maven/Ant)."
+            },
+            "respuesta_correcta": "c",
+            "explicacion": "El servidor de build debe cumplir con los estándares de producción, incluyendo la misma versión del sistema operativo, parches y librerías para asegurar la exactitud de las pruebas [5]."
+        },
+        {
+            "id": 6,
+            "pregunta": "¿Cuál fue el motivo principal por el cual el proyecto Jenkins se separó (fork) de Hudson?",
+            "opciones": {
+                "a": "Una disputa técnica sobre el soporte de servlets en Apache Tomcat.",
+                "b": "Un conflicto de marca registrada con Oracle sobre el nombre 'Hudson'.",
+                "c": "La necesidad de reescribir el código base de Java a otro lenguaje.",
+                "d": "La falta de soporte para plugins de terceros en el proyecto original."
+            },
+            "respuesta_correcta": "b",
+            "explicacion": "Jenkins nació como un fork del proyecto Hudson tras una disputa de marca registrada con Oracle [6]."
+        },
+        {
+            "id": 7,
+            "pregunta": "¿Cuál de las siguientes es una forma válida y sencilla de instalar Jenkins?",
+            "opciones": {
+                "a": "Instalar una base de datos SQL externa y luego ejecutar el instalador.",
+                "b": "Configurar manualmente un servidor de archivos XML antes del primer inicio.",
+                "c": "Ejecutar el comando 'java -jar jenkins.war' o desplegarlo en un contenedor de servlets.",
+                "d": "Compilar el código fuente desde el repositorio Git de Jenkins usando Maven."
+            },
+            "respuesta_correcta": "c",
+            "explicacion": "Jenkins es de fácil instalación: basta con ejecutar 'java -jar jenkins.war' o desplegarlo en un contenedor de servlets como Apache Tomcat, sin necesidad de bases de datos adicionales [6]."
+        },
+        {
+            "id": 8,
+            "pregunta": "¿Cómo gestiona Jenkins el historial de cambios para minimizar la carga en el repositorio de control de fuentes?",
+            "opciones": {
+                "a": "Descargando todo el historial en cada build para auditoría completa.",
+                "b": "Generando eficientemente una lista de cambios ('Change Set') realizada en cada build.",
+                "c": "Utilizando un sistema de 'File Fingerprinting' que reemplaza al SCM.",
+                "d": "Almacenando copias de seguridad de cada commit en su propia base de datos interna."
+            },
+            "respuesta_correcta": "b",
+            "explicacion": "Jenkins genera eficientemente una lista de los cambios realizados en cada construcción desde el sistema de control de fuentes, minimizando así la carga en el repositorio [7]."
+        },
+        {
+            "id": 9,
+            "pregunta": "Jenkins proporciona 'Permanent Links' para facilitar la referencia. ¿Cuál de estos es un ejemplo real?",
+            "opciones": {
+                "a": "/builds/most-stable-version",
+                "b": "/latest_successful_build",
+                "c": "/jobs/current/last-test-results",
+                "d": "/admin/config/last-xml"
+            },
+            "respuesta_correcta": "b",
+            "explicacion": "Jenkins ofrece URLs limpias y legibles, incluyendo permalinks como 'latest build' y 'latest successful build' [8]."
+        },
+        {
+            "id": 10,
+            "pregunta": "¿Qué funcionalidad permite a Jenkins rastrear qué versiones de un JAR son utilizadas por otros builds?",
+            "opciones": {
+                "a": "JUnit Reporting.",
+                "b": "Distributed Builds.",
+                "c": "File Fingerprinting.",
+                "d": "After-the-fact Tagging."
+            },
+            "respuesta_correcta": "c",
+            "explicacion": "El 'File Fingerprinting' permite a Jenkins rastrear qué construcciones produjeron qué binarios (como JARs) y qué versiones están siendo utilizadas por otras construcciones [9]."
+        },
+        {
+            "id": 11,
+            "pregunta": "En la configuración de un trabajo de Jenkins, ¿en qué sección se pueden inyectar variables de entorno o herramientas como Node.js?",
+            "opciones": {
+                "a": "Source Code Management.",
+                "b": "Build Environment.",
+                "c": "Pre-steps.",
+                "d": "Post-build Actions."
+            },
+            "respuesta_correcta": "b",
+            "explicacion": "En la sección 'Build Environment', es posible inyectar variables de entorno o herramientas (como instalaciones de Node/NPM) desde diferentes fuentes [10]."
+        },
+        {
+            "id": 12,
+            "pregunta": "Al configurar un proyecto Maven en Jenkins, ¿qué ventaja específica se menciona respecto a otros tipos de trabajos como 'Freestyle'?",
+            "opciones": {
+                "a": "Permite el uso de scripts de shell arbitrarios.",
+                "b": "Aprovecha los archivos POM para reducir drásticamente la configuración.",
+                "c": "Es el único que soporta notificaciones por RSS.",
+                "d": "No requiere configurar el SCM (Source Code Management)."
+            },
+            "respuesta_correcta": "b",
+            "explicacion": "Para proyectos Maven, Jenkins aprovecha los archivos POM del proyecto, lo cual reduce drásticamente la configuración necesaria [11]."
+        },
+        {
+            "id": 13,
+            "pregunta": "En el contexto de los triggers de construcción, ¿qué evento de GitLab NO se muestra explícitamente como opción configurable en las capturas de pantalla?",
+            "opciones": {
+                "a": "Push Events.",
+                "b": "Opened Merge Request Events.",
+                "c": "Comments.",
+                "d": "Automatic Deployment to Production."
+            },
+            "respuesta_correcta": "d",
+            "explicacion": "Las capturas muestran disparadores para Push Events, Opened Merge Request Events y Comments, pero el despliegue automático a producción no es un trigger de entrada de GitLab, sino una acción posterior [10]."
+        },
+        {
+            "id": 14,
+            "pregunta": "¿Qué diferencia fundamental hay entre 'Pre-steps' y 'Build steps' en la configuración de un job?",
+            "opciones": {
+                "a": "Los Pre-steps solo se ejecutan si el build falla.",
+                "b": "Los Pre-steps definen tareas necesarias (como scripts de bash) antes de ejecutar la integración principal.",
+                "c": "Los Build steps son siempre manuales, mientras que los Pre-steps son automáticos.",
+                "d": "No hay diferencia; Jenkins los ejecuta en paralelo para ahorrar tiempo."
+            },
+            "respuesta_correcta": "b",
+            "explicacion": "La sección 'Pre-steps' permite definir tareas necesarias antes de ejecutar la integración propiamente dicha, como ejecutar scripts de shell [10, 12]."
+        },
+        {
+            "id": 15,
+            "pregunta": "¿Qué herramienta de inspección de código se menciona como destino típico para verificar la calidad tras un build exitoso?",
+            "opciones": {
+                "a": "Apache Ant.",
+                "b": "SonarQube.",
+                "c": "Redmine.",
+                "d": "Jenkins Jack."
+            },
+            "respuesta_correcta": "b",
+            "explicacion": "Tras una construcción, es típico revisar el trabajo de inspección de código en herramientas como SonarQube [13]."
+        },
+        {
+            "id": 16,
+            "pregunta": "¿Qué información se puede visualizar específicamente en la sección 'Workspace' de un proyecto en Jenkins?",
+            "opciones": {
+                "a": "El historial completo de todos los builds realizados.",
+                "b": "Los archivos actuales del proyecto en el servidor, incluyendo artefactos generados.",
+                "c": "Gráficos de tendencias de fallos en las pruebas JUnit.",
+                "d": "La configuración XML interna del servidor Jenkins."
+            },
+            "respuesta_correcta": "b",
+            "explicacion": "La sección 'Workspace' muestra el espacio de trabajo de Jenkins para el proyecto, permitiendo ver los archivos y artefactos generados [13]."
+        },
+        {
+            "id": 17,
+            "pregunta": "Para integrar Jenkins con el IDE Visual Studio Code, ¿cuál es el nombre de la extensión recomendada?",
+            "opciones": {
+                "a": "Jenkins Connector.",
+                "b": "Hudson Legacy.",
+                "c": "Jenkins Jack.",
+                "d": "VS Jenkins Tool."
+            },
+            "respuesta_correcta": "c",
+            "explicacion": "Al instalar la extensión 'Jenkins Jack' para VSCode, puedes conectarte a tu servidor Jenkins directamente [14]."
+        },
+        {
+            "id": 18,
+            "pregunta": "¿Qué funcionalidad de VSCode permite la extensión respecto a los logs?",
+            "opciones": {
+                "a": "Modificar los logs directamente en el servidor.",
+                "b": "Recuperar logs directamente desde el servidor para ver los resultados.",
+                "c": "Borrar el historial de logs para liberar espacio en disco.",
+                "d": "Traducir los logs del sistema a otros idiomas automáticamente."
+            },
+            "respuesta_correcta": "b",
+            "explicacion": "La integración con VSCode permite acceder a los resultados recuperando los logs directamente desde el servidor [15]."
+        },
+        {
+            "id": 19,
+            "pregunta": "Al editar un trabajo existente, ¿qué ejemplo de 'Post-build Action' se muestra como posible adición para mejorar la trazabilidad?",
+            "opciones": {
+                "a": "Eliminar el workspace para ahorrar espacio.",
+                "b": "Empujar (push) un tag al commit integrado.",
+                "c": "Reiniciar el servidor Tomcat automáticamente.",
+                "d": "Cambiar la contraseña del usuario administrador."
+            },
+            "respuesta_correcta": "b",
+            "explicacion": "Se muestra que se puede añadir una 'Post-build Action' para realizar un push de un tag al commit integrado [14]."
+        },
+        {
+            "id": 20,
+            "pregunta": "Matthias Marschal afirma algo crucial sobre la transición a la entrega continua (Continuous Delivery). ¿Cuál es su advertencia?",
+            "opciones": {
+                "a": "Que el proceso será perfecto desde el primer día.",
+                "b": "Que la automatización total es imposible sin herramientas propietarias.",
+                "c": "Que se debe esperar que las cosas empeoren antes de que puedan mejorar.",
+                "d": "Que los desarrolladores deben dejar de usar control de versiones."
+            },
+            "respuesta_correcta": "c",
+            "explicacion": "La cita de Matthias Marschal indica que en la transición a la entrega continua, se debe esperar que las cosas empeoren antes de que sea posible mejorarlas [15]."
+        }
+    ]
+}

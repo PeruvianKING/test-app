@@ -1,0 +1,246 @@
+{
+  "titulo": "WCAG - 1",
+  "descripcion": "Un examen exhaustivo diseñado para evaluar el conocimiento profundo sobre los principios, pautas y niveles de conformidad (A, AA, AAA) de las WCAG 2.2 según las fuentes proporcionadas.",
+  "examen_automatizacion": [
+    {
+      "id": 1,
+      "pregunta": "¿Qué nivel de conformidad se requiere para proporcionar lengua de signos en vídeos pregrabados?",
+      "opciones": {
+        "a": "Nivel A",
+        "b": "Nivel AA",
+        "c": "Nivel AAA",
+        "d": "No es un requisito de las WCAG"
+      },
+      "respuesta_correcta": "c",
+      "explicacion": "Según las fuentes, la lengua de signos pregrabada es un requisito del nivel AAA dentro de la pauta 1.2 [1]."
+    },
+    {
+      "id": 2,
+      "pregunta": "Para cumplir con el nivel AA, ¿cuál debe ser el contraste mínimo entre el texto normal y su fondo?",
+      "opciones": {
+        "a": "3:1",
+        "b": "4.5:1",
+        "c": "7:1",
+        "d": "21:1"
+      },
+      "respuesta_correcta": "b",
+      "explicacion": "Las fuentes especifican que el contraste mínimo para el nivel AA es de 4.5:1, mientras que el nivel AAA requiere 7:1 [2]."
+    },
+    {
+      "id": 3,
+      "pregunta": "Bajo el principio 'Perceptible', ¿qué nivel de conformidad prohíbe el uso de imágenes de texto?",
+      "opciones": {
+        "a": "Nivel A",
+        "b": "Nivel AA",
+        "c": "Nivel AAA",
+        "d": "Ninguno, se permiten si tienen texto alternativo"
+      },
+      "respuesta_correcta": "c",
+      "explicacion": "El criterio de no usar imágenes con texto pertenece al nivel AAA [2]."
+    },
+    {
+      "id": 4,
+      "pregunta": "Si un componente de interfaz cambia de contenido al recibir el 'hover' del ratón, ¿qué nivel de conformidad rige la seguridad de esta interacción?",
+      "opciones": {
+        "a": "Nivel A",
+        "b": "Nivel AA",
+        "c": "Nivel AAA",
+        "d": "Nivel A y AA simultáneamente"
+      },
+      "respuesta_correcta": "b",
+      "explicacion": "Asegurar la interacción si el hover o el focus causan cambios de contenido es un requisito de nivel AA [3]."
+    },
+    {
+      "id": 5,
+      "pregunta": "Respecto a los límites de tiempo, ¿qué nivel de conformidad exige avisar de cualquier inactividad menor a 20 horas que pueda causar pérdida de datos?",
+      "opciones": {
+        "a": "Nivel A",
+        "b": "Nivel AA",
+        "c": "Nivel AAA",
+        "d": "No se menciona en las fuentes"
+      },
+      "respuesta_correcta": "c",
+      "explicacion": "Avisar de la duración de inactividad <20h para evitar pérdida de datos es una recomendación de nivel AAA [4]."
+    },
+    {
+      "id": 6,
+      "pregunta": "Para evitar convulsiones, el nivel A prohíbe contenidos que produzcan más de:",
+      "opciones": {
+        "a": "Tres destellos en 1 segundo",
+        "b": "Tres destellos leves en 1 segundo",
+        "c": "Cinco destellos en 2 segundos",
+        "d": "Cualquier tipo de destello"
+      },
+      "respuesta_correcta": "b",
+      "explicacion": "El nivel A especifica que no se permiten más de tres destellos leves en 1s; el nivel AAA es más estricto prohibiendo cualquier tipo de tres destellos en 1s [5]."
+    },
+    {
+      "id": 7,
+      "pregunta": "En cuanto a la navegación, proporcionar al menos dos formas de acceder a un contenido es un requisito de nivel:",
+      "opciones": {
+        "a": "Nivel A",
+        "b": "Nivel AA",
+        "c": "Nivel AAA",
+        "d": "Es opcional en todos los niveles"
+      },
+      "respuesta_correcta": "b",
+      "explicacion": "Proporcionar al menos dos formas de acceder al mismo contenido es un criterio de nivel AA [6]."
+    },
+    {
+      "id": 8,
+      "pregunta": "El indicador de foco de teclado debe ser visible en el nivel A, pero ¿en qué nivel debe tener un contraste suficiente y ser totalmente visible?",
+      "opciones": {
+        "a": "Nivel AA",
+        "b": "Nivel AAA",
+        "c": "Nivel AA para contraste y AAA para visibilidad total",
+        "d": "Nivel A para ambos"
+      },
+      "respuesta_correcta": "b",
+      "explicacion": "Según las fuentes, el contraste suficiente y la visibilidad total del foco son requisitos del nivel AAA [7]."
+    },
+    {
+      "id": 9,
+      "pregunta": "Según la pauta 2.5 de Modalidades de Entrada, ¿cuál es el tamaño mínimo de un elemento pulsable para el nivel AA?",
+      "opciones": {
+        "a": "12x12 px",
+        "b": "24x24 px",
+        "c": "44x44 px",
+        "d": "48x48 px"
+      },
+      "respuesta_correcta": "b",
+      "explicacion": "El tamaño mínimo para el nivel AA es 24x24 px, mientras que para el nivel AAA es 44x44 px [8]."
+    },
+    {
+      "id": 10,
+      "pregunta": "Identificar el idioma principal de la página es nivel A, pero identificar el idioma de partes específicas es nivel:",
+      "opciones": {
+        "a": "Nivel A",
+        "b": "Nivel AA",
+        "c": "Nivel AAA",
+        "d": "No es necesario"
+      },
+      "respuesta_correcta": "b",
+      "explicacion": "Especificar el idioma de partes de la página es un requisito de nivel AA [8, 9]."
+    },
+    {
+      "id": 11,
+      "pregunta": "Si un texto requiere habilidades de lectura superiores a la educación secundaria, ¿qué debe hacerse para cumplir el nivel AAA?",
+      "opciones": {
+        "a": "Eliminar el contenido",
+        "b": "Proporcionar una versión alternativa más sencilla",
+        "c": "Añadir un glosario de términos",
+        "d": "No se requiere nada adicional"
+      },
+      "respuesta_correcta": "b",
+      "explicacion": "Para el nivel AAA, si el texto supera el nivel de educación secundaria, se debe proporcionar una versión más sencilla [9]."
+    },
+    {
+      "id": 12,
+      "pregunta": "La consistencia en la posición de los mecanismos de ayuda en todas las páginas es un requisito de nivel:",
+      "opciones": {
+        "a": "Nivel A",
+        "b": "Nivel AA",
+        "c": "Nivel AAA",
+        "d": "No es un requisito de consistencia"
+      },
+      "respuesta_correcta": "a",
+      "explicacion": "Mantener los mecanismos de ayuda en la misma posición es un criterio de nivel A [10]."
+    },
+    {
+      "id": 13,
+      "pregunta": "Sugerir formas de corregir un error detectado es un requisito de nivel:",
+      "opciones": {
+        "a": "Nivel A",
+        "b": "Nivel AA",
+        "c": "Nivel AAA",
+        "d": "Recomendación general sin nivel asignado"
+      },
+      "respuesta_correcta": "b",
+      "explicacion": "Sugerir formas de corregir errores es una pauta de nivel AA [10]."
+    },
+    {
+      "id": 14,
+      "pregunta": "En sitios financieros o legales, permitir confirmar o revertir acciones es nivel AA. ¿En qué nivel se exige esto para cualquier tipo de sitio web?",
+      "opciones": {
+        "a": "Nivel AA",
+        "b": "Nivel AAA",
+        "c": "Sigue siendo nivel AA",
+        "d": "Nivel A"
+      },
+      "respuesta_correcta": "b",
+      "explicacion": "Proporcionar confirmación/reversión en general (más allá de lo financiero/legal) es nivel AAA [11]."
+    },
+    {
+      "id": 15,
+      "pregunta": "¿Qué nivel de conformidad requiere la 'Autenticación con poco esfuerzo mental' sin resolver cálculos o transcribir?",
+      "opciones": {
+        "a": "Nivel A",
+        "b": "Nivel AA",
+        "c": "Nivel AAA",
+        "d": "Nivel AA y AAA tienen requisitos sobre esto"
+      },
+      "respuesta_correcta": "d",
+      "explicacion": "El nivel AA exige evitar estos problemas y el nivel AAA exige proporcionar un método alternativo adicional [11]."
+    },
+    {
+      "id": 16,
+      "pregunta": "La notificación de cambios de estado a tecnologías asistivas cuando el componente no recibe el foco es nivel:",
+      "opciones": {
+        "a": "Nivel A",
+        "b": "Nivel AA",
+        "c": "Nivel AAA",
+        "d": "Nivel Robusto (sin nivel de letra)"
+      },
+      "respuesta_correcta": "b",
+      "explicacion": "Permitir a las tecnologías asistivas notificar cambios de estado que no reciben el foco es nivel AA [12]."
+    },
+    {
+      "id": 17,
+      "pregunta": "Bajo la pauta 'Adaptable' (1.3), describir controles por su nombre y no por su apariencia o localización es nivel:",
+      "opciones": {
+        "a": "Nivel A",
+        "b": "Nivel AA",
+        "c": "Nivel AAA",
+        "d": "Nivel A y AA"
+      },
+      "respuesta_correcta": "b",
+      "explicacion": "Describir controles con nombres en lugar de por apariencia o localización es nivel AA [13]."
+    },
+    {
+      "id": 18,
+      "pregunta": "El nivel AAA en el principio 'Operable' exige que todas las acciones con punteros tengan un equivalente en:",
+      "opciones": {
+        "a": "Voz",
+        "b": "Teclado",
+        "c": "Movimiento",
+        "d": "Pantalla táctil"
+      },
+      "respuesta_correcta": "b",
+      "explicacion": "El nivel AAA requiere que todas las acciones de puntero tengan equivalente en teclado [4]."
+    },
+    {
+      "id": 19,
+      "pregunta": "Respecto a la descripción de audio, ¿en qué nivel se requiere que sea 'extendida'?",
+      "opciones": {
+        "a": "Nivel A",
+        "b": "Nivel AA",
+        "c": "Nivel AAA",
+        "d": "No existe la descripción extendida"
+      },
+      "respuesta_correcta": "c",
+      "explicacion": "La descripción de audio normal es nivel A, pero la extendida es nivel AAA [1]."
+    },
+    {
+      "id": 20,
+      "pregunta": "El principio que busca maximizar la compatibilidad con navegadores actuales y futuros, así como con tecnologías asistivas, es:",
+      "opciones": {
+        "a": "Perceptible",
+        "b": "Operable",
+        "c": "Entendible",
+        "d": "Robusto"
+      },
+      "respuesta_correcta": "d",
+      "explicacion": "El principio 4, Robusto, se centra en la compatibilidad con distintos agentes de usuario y tecnologías asistivas [1, 11]."
+    }
+  ]
+}

@@ -1,0 +1,246 @@
+{
+    "titulo": "TEMA 6 - SONAR A",
+    "descripcion": "Un examen exhaustivo diseñado para evaluar conocimientos profundos sobre la calidad del software, los principios de la inspección continua y la configuración técnica de SonarQube.",
+    "examen_automatizacion": [
+        {
+            "id": 1,
+            "pregunta": "¿Qué porcentaje del coste total del ciclo de vida de un producto de software se estima que se dedica al mantenimiento?",
+            "opciones": {
+                "a": "Aproximadamente el 20%.",
+                "b": "Aproximadamente el 50%.",
+                "c": "Aproximadamente el 80%.",
+                "d": "Aproximadamente el 95%."
+            },
+            "respuesta_correcta": "c",
+            "explicacion": "cerca del 80% del coste de vida de un software se gasta en mantenimiento, lo cual está ligado a la calidad interna."
+        },
+        {
+            "id": 2,
+            "pregunta": "En el contexto de la calidad del software, ¿cuál es el enfoque principal de la calidad interna?",
+            "opciones": {
+                "a": "Cumplir con los requisitos funcionales definidos por el cliente.",
+                "b": "Atributos como la robustez, el cumplimiento de estándares y la mantenibilidad.",
+                "c": "La experiencia de usuario y la interfaz gráfica.",
+                "d": "La velocidad de despliegue en entornos de producción."
+            },
+            "respuesta_correcta": "b",
+            "explicacion": "La calidad interna se centra en la robustez, el cumplimiento de estándares y la mantenibilidad del código."
+        },
+        {
+            "id": 3,
+            "pregunta": "¿Cuál es la principal desventaja de confiar únicamente en auditorías puntuales o 'quality gates' tradicionales?",
+            "opciones": {
+                "a": "Son demasiado costosas de implementar inicialmente.",
+                "b": "Requieren herramientas como CodePro que ya no existen.",
+                "c": "A menudo provocan retrasos, retrabajo y el lanzamiento de software de baja calidad.",
+                "d": "No permiten el uso de análisis estático de código."
+            },
+            "respuesta_correcta": "c",
+            "explicacion": "Confiar solo en auditorías puntuales suele causar retrasos, retrabajo y posibles lanzamientos de mala calidad."
+        },
+        {
+            "id": 4,
+            "pregunta": "Según las mejores prácticas de Inspección Continua, ¿quién es el responsable principal de asegurar la calidad?",
+            "opciones": {
+                "a": "El equipo de gestión exclusivamente.",
+                "b": "Todos los stakeholders del proceso.",
+                "c": "El equipo de desarrollo.",
+                "d": "El departamento de control de calidad (QA) externo."
+            },
+            "respuesta_correcta": "c",
+            "explicacion": "Aunque la calidad es una preocupación de todos desde el inicio, es responsabilidad primaria del equipo de desarrollo asegurar que se cumpla."
+        },
+        {
+            "id": 5,
+            "pregunta": "¿Cómo deben ser los requisitos de calidad del software para evitar decisiones subjetivas?",
+            "opciones": {
+                "a": "Deben basarse en la experiencia del desarrollador senior.",
+                "b": "Deben ser objetivos, evitando decisiones de aprobado/suspenso basadas en opiniones.",
+                "c": "Deben cambiar según el producto específico que se esté desarrollando.",
+                "d": "Deben ser evaluados únicamente al final del ciclo de vida."
+            },
+            "respuesta_correcta": "b",
+            "explicacion": "Se indica que los requisitos deben ser objetivos para evitar decisiones subjetivas."
+        },
+        {
+            "id": 6,
+            "pregunta": "¿En qué términos deben presentarse los datos de calidad según las mejores prácticas?",
+            "opciones": {
+                "a": "Únicamente en términos absolutos para todo el código.",
+                "b": "Únicamente en términos diferenciales para el código nuevo.",
+                "c": "Tanto en términos absolutos (todo el código) como diferenciales (código nuevo).",
+                "d": "Solo mediante métricas de líneas de código (LOC)."
+            },
+            "respuesta_correcta": "c",
+            "explicacion": "Los datos deben mostrarse tanto de forma absoluta para todo el proyecto como de forma diferencial para las nuevas contribuciones."
+        },
+        {
+            "id": 7,
+            "pregunta": "SonarQube es una plataforma de gestión de calidad que combina:",
+            "opciones": {
+                "a": "Análisis estático y análisis dinámico de herramientas.",
+                "b": "Solo análisis estático de código Java.",
+                "c": "Pruebas de caja negra y pruebas de aceptación.",
+                "d": "Gestión de dependencias y despliegue continuo."
+            },
+            "respuesta_correcta": "a",
+            "explicacion": "SonarQube utiliza una combinación de herramientas de análisis estático y dinámico para medir la calidad continuamente."
+        },
+        {
+            "id": 8,
+            "pregunta": "¿Cuántas reglas de código incorpora aproximadamente la plataforma SonarQube?",
+            "opciones": {
+                "a": "Más de 100.",
+                "b": "Más de 500.",
+                "c": "Más de 900.",
+                "d": "Exactamente 2013."
+            },
+            "respuesta_correcta": "c",
+            "explicacion": "La plataforma incorpora más de 900 reglas de código que chequean diversos aspectos del proyecto."
+        },
+        {
+            "id": 9,
+            "pregunta": "Para realizar un análisis local con Sonar-Scanner, ¿cuál es la URL por defecto que se configura en 'sonar.host.url'?",
+            "opciones": {
+                "a": "http://localhost:8080",
+                "b": "http://localhost:9000",
+                "c": "http://sonar.fic.udc.es:3306",
+                "d": "http://localhost:9090"
+            },
+            "respuesta_correcta": "b",
+            "explicacion": "El valor por defecto para el servidor SonarQube es http://localhost:9000."
+        },
+        {
+            "id": 10,
+            "pregunta": "Dentro del archivo 'sonar.properties', ¿cuál de los siguientes metadatos es obligatorio?",
+            "opciones": {
+                "a": "sonar.projectDescription",
+                "b": "sonar.projectKey",
+                "c": "sonar.my.property",
+                "d": "sonar.jdbc.password"
+            },
+            "respuesta_correcta": "b",
+            "explicacion": "El campo 'sonar.projectKey' se lista bajo los metadatos requeridos para el escaneo."
+        },
+        {
+            "id": 11,
+            "pregunta": "Si se utiliza Maven para el análisis, ¿cuál es el comando correcto para ejecutar SonarQube?",
+            "opciones": {
+                "a": "mvn sonar:analyze",
+                "b": "mvn sonar:run",
+                "c": "mvn sonar:sonar",
+                "d": "mvn install sonar"
+            },
+            "respuesta_correcta": "c",
+            "explicacion": "El comando especificado para analizar con Maven es 'mvn sonar:sonar'."
+        },
+        {
+            "id": 12,
+            "pregunta": "¿Qué permite la vista de 'Issues' (Incidencias) en la interfaz web de SonarQube?",
+            "opciones": {
+                "a": "Ver la evolución histórica de la cobertura.",
+                "b": "Resumir las incidencias por estado, severidad, autor y asignado.",
+                "c": "Configurar los umbrales de las Quality Gates.",
+                "d": "Ejecutar un nuevo escaneo manualmente."
+            },
+            "respuesta_correcta": "b",
+            "explicacion": "La vista de incidencias resume los problemas de calidad por estado, severidad, autores y más."
+        },
+        {
+            "id": 13,
+            "pregunta": "¿Cuál es la función principal de la vista de 'Actividad'?",
+            "opciones": {
+                "a": "Permitir a los desarrolladores ver la evolución de diferentes indicadores a lo largo del tiempo.",
+                "b": "Mostrar qué archivos están siendo editados en tiempo real.",
+                "c": "Listar los plugins instalados en el servidor.",
+                "d": "Administrar los permisos de los usuarios del sistema."
+            },
+            "respuesta_correcta": "a",
+            "explicacion": "La vista de actividad permite chequear la evolución de los indicadores con el tiempo."
+        },
+        {
+            "id": 14,
+            "pregunta": "En la vista de 'Componentes', es posible realizar un análisis:",
+            "opciones": {
+                "a": "Solo a nivel de proyecto global.",
+                "b": "Jerárquico, navegando por subcomponentes y carpetas hasta el nivel de archivo.",
+                "c": "Únicamente de las librerías externas de terceros.",
+                "d": "De las dependencias de red del servidor."
+            },
+            "respuesta_correcta": "b",
+            "explicacion": "La vista de componentes permite navegar jerárquicamente para chequear los datos en cualquier nivel particular."
+        },
+        {
+            "id": 15,
+            "pregunta": "En la vista de 'Measures' (Medidas), ¿qué representa el tamaño de las burbujas en el gráfico de Reliability (Fiabilidad)?",
+            "opciones": {
+                "a": "El esfuerzo de remediación.",
+                "b": "Las líneas de código (Lines of Code).",
+                "c": "El volumen de bugs.",
+                "d": "La complejidad ciclomática."
+            },
+            "respuesta_correcta": "c",
+            "explicacion": "En el gráfico de fiabilidad, el tamaño de la burbuja indica el volumen de bugs."
+        },
+        {
+            "id": 16,
+            "pregunta": "¿A partir de qué métrica se estima la 'Mantenibilidad' en SonarQube?",
+            "opciones": {
+                "a": "A partir de los bugs detectados.",
+                "b": "A partir de las vulnerabilidades de seguridad.",
+                "c": "A partir de los 'code smells' (olores de código).",
+                "d": "A partir del porcentaje de duplicación."
+            },
+            "respuesta_correcta": "c",
+            "explicacion": "La mantenibilidad se estima basándose en los code smells detectados en el proyecto."
+        },
+        {
+            "id": 17,
+            "pregunta": "¿Qué son las 'Quality Gates' (Puertas de Calidad)?",
+            "opciones": {
+                "a": "Servidores físicos que filtran el tráfico de SonarQube.",
+                "b": "Umbrales específicos para medidas de código nuevo o existente que el proyecto debe superar.",
+                "c": "Extensiones de VS Code para bloquear el commit si hay errores.",
+                "d": "Un tipo de licencia de pago de SonarQube."
+            },
+            "respuesta_correcta": "b",
+            "explicacion": "Las Quality Gates son umbrales específicos para medidas que el proyecto debe pasar obligatoriamente."
+        },
+        {
+            "id": 18,
+            "pregunta": "¿Qué extensión es necesaria para integrar SonarQube con Visual Studio Code?",
+            "opciones": {
+                "a": "SonarScanner Extension.",
+                "b": "SonarLint.",
+                "c": "Java Quality Tool.",
+                "d": "Checkstyle for VS Code."
+            },
+            "respuesta_correcta": "b",
+            "explicacion": "Se debe instalar la extensión SonarLint en VS Code para conectar con una instancia de SonarQube."
+        },
+        {
+            "id": 19,
+            "pregunta": "Para configurar la conexión entre VS Code y SonarQube en modo conectado, se requiere:",
+            "opciones": {
+                "a": "Solo la dirección IP del servidor.",
+                "b": "La URL del servidor y un 'User Token'.",
+                "c": "La contraseña de administrador de la base de datos MySQL.",
+                "d": "El archivo pom.xml del proyecto únicamente."
+            },
+            "respuesta_correcta": "b",
+            "explicacion": "Es necesario proporcionar la ubicación del servidor y un token de usuario para configurar la conexión."
+        },
+        {
+            "id": 20,
+            "pregunta": "¿Qué utilidad tiene la herramienta 'Jdepend'?",
+            "opciones": {
+                "a": "Generar documentación automática del código Java.",
+                "b": "Mostrar problemas de dependencias en el proyecto.",
+                "c": "Medir el tiempo de ejecución de las pruebas unitarias.",
+                "d": "Gestionar las versiones de los artefactos en Maven."
+            },
+            "respuesta_correcta": "b",
+            "explicacion": "Jdepend es una medida interesante que muestra problemas de dependencia en el proyecto."
+        }
+    ]
+}

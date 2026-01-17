@@ -1,0 +1,258 @@
+{
+    "titulo": "Diseño Web Adaptativo (RWD)",
+    "descripcion": "Un examen técnico exhaustivo sobre los principios, cálculos y técnicas de Responsive Web Design según el temario proporcionado.",
+    "examen_automatizacion": [
+        {
+            "id": 1,
+            "pregunta": "¿Cuáles son los tres pilares fundamentales que definen el Responsive Web Design?",
+            "opciones": {
+                "a": "Grid flexible, Media queries y Tipografía relativa.",
+                "b": "Layout fluido, Media queries e Imágenes flexibles.",
+                "c": "Diseño líquido, Breakpoints y Gráficos vectoriales.",
+                "d": "Contenedores elásticos, Viewport units y Carga progresiva."
+            },
+            "respuesta_correcta": "b",
+            "explicacion": "Según las fuentes, el Responsive Web Design se sustenta en tres pilares: 1. Fluid layout, 2. Media queries y 3. Imágenes flexibles [1]."
+        },
+        {
+            "id": 2,
+            "pregunta": "Para convertir un diseño de píxeles a un layout fluido, ¿cuál es la fórmula matemática correcta?",
+            "opciones": {
+                "a": "contexto / objetivo = resultado",
+                "b": "objetivo / contexto = resultado",
+                "c": "objetivo * contexto = resultado",
+                "d": "resultado / contexto = objetivo"
+            },
+            "respuesta_correcta": "b",
+            "explicacion": "La fórmula establecida para obtener el tamaño relativo (result) es dividir el tamaño deseado (target) entre el tamaño del contenedor (context) [1, 2]."
+        },
+        {
+            "id": 3,
+            "pregunta": "Al establecer tipografías flexibles, ¿cuál es la práctica recomendada para el tamaño base del 'body'?",
+            "opciones": {
+                "a": "Establecer font-size: 16px; para asegurar consistencia.",
+                "b": "Establecer font-size: 1rem; para heredar del sistema.",
+                "c": "Establecer font-size: 100%; para respetar el valor por defecto del navegador.",
+                "d": "Establecer font-size: 62.5%; para facilitar el cálculo de rem."
+            },
+            "respuesta_correcta": "c",
+            "explicacion": "Las fuentes indican que se debe establecer el tamaño de fuente al 100%, lo cual normalmente equivale a los 16px por defecto del navegador [3]."
+        },
+        {
+            "id": 4,
+            "pregunta": "En el cálculo de tipografías con unidades 'em', si el navegador tiene un valor base de 16px y queremos un encabezado de 24px, ¿cuál es el valor resultante?",
+            "opciones": {
+                "a": "1.25em",
+                "b": "1.5em",
+                "c": "1.75em",
+                "d": "0.66em"
+            },
+            "respuesta_correcta": "b",
+            "explicacion": "Siguiendo la fórmula target / context = result (24px / 16px), el resultado es 1.5em [3]."
+        },
+        {
+            "id": 5,
+            "pregunta": "¿Qué representa exactamente la unidad de medida '1vw'?",
+            "opciones": {
+                "a": "El 1% del ancho del contenedor padre.",
+                "b": "El 1% del ancho del viewport (ventana de visualización).",
+                "c": "Un píxel variable dependiendo de la resolución de pantalla.",
+                "d": "La centésima parte de la altura total del documento."
+            },
+            "respuesta_correcta": "b",
+            "explicacion": "Las unidades de viewport (vw/vh) representan el 1% del ancho o alto del viewport respectivamente [3]."
+        },
+        {
+            "id": 6,
+            "pregunta": "Si utilizamos 'font-size: calc(1em + 1vw);', ¿qué sucede con el texto al aumentar el tamaño de la pantalla?",
+            "opciones": {
+                "a": "Se mantiene estático porque 1em es una unidad fija.",
+                "b": "Se hace más pequeño para compensar el espacio adicional.",
+                "c": "Se hace más grande de forma dinámica debido a la parte 'vw'.",
+                "d": "Solo cambia si el usuario hace zoom manual en el navegador."
+            },
+            "respuesta_correcta": "c",
+            "explicacion": "El navegador calcula el tamaño dinámicamente; cuanto más grande es la parte vw (ancho del viewport), más grande se hace el texto en pantallas grandes [2, 3]."
+        },
+        {
+            "id": 7,
+            "pregunta": "Al calcular márgenes flexibles mediante porcentajes, ¿cuál es el contexto que se debe utilizar?",
+            "opciones": {
+                "a": "El tamaño del elemento al que se le aplica el margen.",
+                "b": "El ancho total del viewport en ese momento.",
+                "c": "El tamaño del elemento contenedor.",
+                "d": "La suma total de los anchos de los elementos hermanos."
+            },
+            "respuesta_correcta": "c",
+            "explicacion": "Para el margen flexible (Flexible margin), el contexto es el tamaño del contenedor [4]."
+        },
+        {
+            "id": 8,
+            "pregunta": "A diferencia de los márgenes, ¿cuál es el contexto para calcular el 'padding' flexible en un elemento?",
+            "opciones": {
+                "a": "El tamaño del elemento contenedor.",
+                "b": "El tamaño del propio elemento.",
+                "c": "La resolución en DPI del dispositivo.",
+                "d": "El ancho del viewport menos los bordes."
+            },
+            "respuesta_correcta": "b",
+            "explicacion": "Para el padding flexible (Flexible padding), el contexto es el tamaño del propio elemento [4]."
+        },
+        {
+            "id": 9,
+            "pregunta": "En Flexbox, ¿cuál es el comportamiento por defecto de la propiedad 'flex-wrap'?",
+            "opciones": {
+                "a": "wrap",
+                "b": "wrap-reverse",
+                "c": "nowrap",
+                "d": "auto"
+            },
+            "respuesta_correcta": "c",
+            "explicacion": "El valor por defecto de flex-wrap en un contenedor flex es 'nowrap' [4]."
+        },
+        {
+            "id": 10,
+            "pregunta": "Si un ítem tiene la propiedad 'flex: 2 200px;', ¿qué indican estos valores?",
+            "opciones": {
+                "a": "Que el elemento crecerá el doble que otros y su base es 200px.",
+                "b": "Que tiene un margen de 2 y un ancho fijo de 200px.",
+                "c": "Que se repetirá 2 veces cada 200px de contenedor.",
+                "d": "Que su prioridad de orden es 2 y su ancho máximo es 200px."
+            },
+            "respuesta_correcta": "a",
+            "explicacion": "En la sintaxis de Flexbox, los valores representan el factor de crecimiento (flex-grow) y la base de tamaño (flex-basis) [5]."
+        },
+        {
+            "id": 11,
+            "pregunta": "En CSS Grid Layout, ¿qué significa la unidad '1fr'?",
+            "opciones": {
+                "a": "Un píxel de resolución fija (Fixed Resolution).",
+                "b": "Una fracción del espacio disponible en el contenedor grid.",
+                "c": "El tamaño del primer elemento hijo (First Render).",
+                "d": "Un ancho igual al 100% de la fila."
+            },
+            "respuesta_correcta": "b",
+            "explicacion": "La unidad 'fr' se utiliza en Grid Layout para definir fracciones del espacio disponible en las columnas o filas [5]."
+        },
+        {
+            "id": 12,
+            "pregunta": "En Grid Layout, ¿qué hace la instrucción 'repeat(auto-fill, minmax(200px, 1fr))'?",
+            "opciones": {
+                "a": "Crea exactamente 200 columnas de 1fr cada una.",
+                "b": "Rellena el contenedor con tantas columnas como quepan de al menos 200px.",
+                "c": "Fuerza a todos los elementos a medir 200px ignorando el espacio sobrante.",
+                "d": "Crea una sola columna que oscila entre 200px y el ancho total."
+            },
+            "respuesta_correcta": "b",
+            "explicacion": "Esta instrucción permite crear un layout donde el número de columnas se ajusta automáticamente (auto-fill) manteniendo un tamaño mínimo (200px) y expandiéndose para ocupar el resto (1fr) [6]."
+        },
+        {
+            "id": 13,
+            "pregunta": "¿Qué permite detectar la media query '@media (max-device-width: 480px) and (orientation: portrait)'?",
+            "opciones": {
+                "a": "Dispositivos con un ancho de ventana mayor a 480px en horizontal.",
+                "b": "Dispositivos con un ancho de pantalla físico máximo de 480px en orientación vertical.",
+                "c": "Cualquier navegador que esté en modo vertical sin importar el ancho.",
+                "d": "Impresoras que tengan un ancho de página de 480px."
+            },
+            "respuesta_correcta": "b",
+            "explicacion": "Esta media query combina el ancho máximo del dispositivo (480px) con la orientación específica de 'portrait' (vertical) [6]."
+        },
+        {
+            "id": 14,
+            "pregunta": "Para aplicar estilos específicos a pantallas 'Retina' o de alta densidad, ¿qué propiedad de media query se utiliza?",
+            "opciones": {
+                "a": "min-device-pixel-ratio o min-resolution",
+                "b": "high-definition: active",
+                "c": "screen-density: 2x",
+                "d": "pixel-aspect-ratio: 16/9"
+            },
+            "respuesta_correcta": "a",
+            "explicacion": "Se utilizan min-resolution (en dpi o dppx) o el prefijo específico para detectar la densidad de píxeles del dispositivo [6]."
+        },
+        {
+            "id": 15,
+            "pregunta": "¿Cuál es el efecto de aplicar 'img { max-width: 100%; }'?",
+            "opciones": {
+                "a": "La imagen siempre medirá el 100% del viewport.",
+                "b": "La imagen se escala para ser más grande que su tamaño original.",
+                "c": "La imagen se escala al tamaño de su contenedor pero no lo sobrepasa.",
+                "d": "La imagen mantiene un tamaño fijo de 100px independientemente del contenedor."
+            },
+            "respuesta_correcta": "c",
+            "explicacion": "Esta propiedad escala las imágenes al tamaño del elemento contenedor, asegurando que no se desborden [7]."
+        },
+        {
+            "id": 16,
+            "pregunta": "En HTML 5.1, ¿para qué sirve el atributo 'srcset' con descriptores 'x' (ej. 1x, 2x)?",
+            "opciones": {
+                "a": "Para definir el ancho de la imagen en píxeles.",
+                "b": "Para seleccionar la imagen basada en la densidad de píxeles del dispositivo.",
+                "c": "Para indicar cuántas veces se debe repetir la imagen de fondo.",
+                "d": "Para multiplicar el tamaño de la imagen por un factor determinado."
+            },
+            "respuesta_correcta": "b",
+            "explicacion": "El descriptor 'x' permite al navegador seleccionar la imagen según el 'device pixel ratio' (densidad de píxeles) [7, 8]."
+        },
+        {
+            "id": 17,
+            "pregunta": "Cuando se usa 'srcset' con descriptores 'w', ¿qué función cumple el atributo 'sizes'?",
+            "opciones": {
+                "a": "Define el tamaño físico real del archivo de imagen en el servidor.",
+                "b": "Indica al navegador el tamaño relativo que ocupará la imagen en el viewport según condiciones.",
+                "c": "Establece la relación de aspecto fija (3:2, 4:3) de la imagen.",
+                "d": "Es un respaldo para navegadores antiguos que no entienden CSS."
+            },
+            "respuesta_correcta": "b",
+            "explicacion": "El atributo 'sizes' indica el tamaño relativo del viewport (vw) que la imagen ocupará bajo ciertas condiciones de media query [8]."
+        },
+        {
+            "id": 18,
+            "pregunta": "¿En qué situación es preferible usar el elemento '<picture>' en lugar de solo '<img>' con 'srcset'?",
+            "opciones": {
+                "a": "Cuando solo queremos cambiar la resolución de la misma imagen.",
+                "b": "Cuando necesitamos cambiar la imagen por completo basándonos en breakpoints de media query.",
+                "c": "Cuando queremos que la imagen cargue más rápido en móviles.",
+                "d": "Cuando no conocemos el tamaño del contenedor padre."
+            },
+            "respuesta_correcta": "b",
+            "explicacion": "El elemento <picture> permite la selección de imágenes por breakpoint mediante el uso de etiquetas <source media='...'> [8, 9]."
+        },
+        {
+            "id": 19,
+            "pregunta": "Según la filosofía 'Mobile First', ¿cuál es el papel de las Media Queries?",
+            "opciones": {
+                "a": "Se deben usar para esconder elementos en la versión de escritorio.",
+                "b": "La ausencia de media query define el diseño base (móvil).",
+                "c": "Se deben definir primero los estilos de desktop y luego usar max-width.",
+                "d": "Sirven exclusivamente para detectar si el usuario tiene pantalla táctil."
+            },
+            "respuesta_correcta": "b",
+            "explicacion": "En Mobile First, se empieza con el diseño para móvil y la ausencia de una media query es, de hecho, la primera media query [9]."
+        },
+        {
+            "id": 20,
+            "pregunta": "¿Qué caracteriza al patrón responsive denominado 'Column drop'?",
+            "opciones": {
+                "a": "Las columnas se hacen más estrechas hasta desaparecer.",
+                "b": "Las columnas se apilan verticalmente a medida que el ancho de pantalla disminuye.",
+                "c": "El contenido se oculta en un menú lateral deslizable.",
+                "d": "El layout cambia por completo la posición de todos los elementos."
+            },
+            "respuesta_correcta": "b",
+            "explicacion": "El patrón 'Column drop' se caracteriza por apilar las columnas una debajo de otra cuando el espacio ya no permite mantenerlas en paralelo [10]."
+        },
+        {
+            "id": 21,
+            "pregunta": "¿Cuál es la característica principal del patrón 'Off canvas'?",
+            "opciones": {
+                "a": "Mantiene todo el contenido visible reduciendo su tamaño proporcionalmente.",
+                "b": "Coloca contenido (como menús) fuera de la pantalla, mostrándolo solo tras una acción.",
+                "c": "Cambia el orden de las columnas mediante la propiedad 'order' de Flexbox.",
+                "d": "Ajusta solo los márgenes y paddings de forma mínima."
+            },
+            "respuesta_correcta": "b",
+            "explicacion": "El patrón 'Off canvas' oculta elementos fuera del área visible del viewport hasta que se activan [10]."
+        }
+    ]
+}

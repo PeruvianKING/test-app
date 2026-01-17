@@ -1,0 +1,246 @@
+{
+  "titulo": "WCAG - 2",
+  "descripcion": "Un examen técnico diseñado para evaluar la comprensión de la estructura jerárquica de las WCAG, vinculando cada pauta específica con su principio fundamental (Perceptible, Operable, Entendible o Robusto) según las fuentes.",
+  "examen_automatizacion": [
+    {
+      "id": 1,
+      "pregunta": "¿Cuál es la definición técnica de las WCAG según las fuentes?",
+      "opciones": {
+        "a": "Un conjunto de recomendaciones para hacer contenidos web accesibles",
+        "b": "Un estándar de codificación obligatoria para navegadores",
+        "c": "Un software de evaluación de interfaces persona-máquina",
+        "d": "Una guía de diseño gráfico para usuarios con discapacidad"
+      },
+      "respuesta_correcta": "a",
+      "explicacion": "Las fuentes definen las WCAG como un conjunto de recomendaciones para hacer contenidos web accesibles [1]."
+    },
+    {
+      "id": 2,
+      "pregunta": "¿En qué estado se encuentran las versiones 2.2 y 3 de las pautas respectivamente?",
+      "opciones": {
+        "a": "La 2.2 es el estándar actual y la 3 está en estado de 'working draft'",
+        "b": "Ambas son recomendaciones finales y vigentes",
+        "c": "La 2.2 es un borrador y la 3 es el estándar actual",
+        "d": "La 2.2 ha sido sustituida completamente por la 3"
+      },
+      "respuesta_correcta": "a",
+      "explicacion": "Según las fuentes, el estándar actual es WCAG 2.2, mientras que WCAG 3 está en estado de 'working draft' [1]."
+    },
+    {
+      "id": 3,
+      "pregunta": "El requisito de que la información y los componentes de la interfaz se presenten de forma que los usuarios puedan captarlos con sus sentidos corresponde al principio:",
+      "opciones": {
+        "a": "Operable",
+        "b": "Entendible",
+        "c": "Perceptible",
+        "d": "Robusto"
+      },
+      "respuesta_correcta": "c",
+      "explicacion": "El principio 1, Perceptible, establece que la información y los componentes deben presentarse de forma que los usuarios los puedan percibir [1]."
+    },
+    {
+      "id": 4,
+      "pregunta": "La pauta 1.2 sobre 'Medios dependientes del tiempo' (vídeo y audio) pertenece al principio:",
+      "opciones": {
+        "a": "Perceptible",
+        "b": "Operable",
+        "c": "Robusto",
+        "d": "Entendible"
+      },
+      "respuesta_correcta": "a",
+      "explicacion": "La pauta 1.2 se encuentra dentro del principio Perceptible y trata sobre alternativas para medios como el vídeo y el audio [2]."
+    },
+    {
+      "id": 5,
+      "pregunta": "La pauta 1.3 'Adaptable' busca crear contenido que se presente de distintas formas sin perder estructura. ¿A qué principio pertenece?",
+      "opciones": {
+        "a": "Perceptible",
+        "b": "Entendible",
+        "c": "Robusto",
+        "d": "Operable"
+      },
+      "respuesta_correcta": "a",
+      "explicacion": "La pauta 1.3 'Adaptable' forma parte del principio Perceptible [3]."
+    },
+    {
+      "id": 6,
+      "pregunta": "Facilitar que los usuarios vean y oigan el contenido (Pauta 1.4 'Distinguible') es un objetivo del principio:",
+      "opciones": {
+        "a": "Entendible",
+        "b": "Perceptible",
+        "c": "Operable",
+        "d": "Robusto"
+      },
+      "respuesta_correcta": "b",
+      "explicacion": "La pauta 1.4 'Distinguible' es la cuarta sección del principio Perceptible [4]."
+    },
+    {
+      "id": 7,
+      "pregunta": "El principio que dicta que la navegación y los componentes de interfaz deben ser manejables por el usuario es:",
+      "opciones": {
+        "a": "Perceptible",
+        "b": "Entendible",
+        "c": "Operable",
+        "d": "Robusto"
+      },
+      "respuesta_correcta": "c",
+      "explicacion": "El principio 2, Operable, establece que la navegación y los componentes de la interfaz deben ser operables [2]."
+    },
+    {
+      "id": 8,
+      "pregunta": "La pauta 2.1 'Accesible por teclado' asegura que todas las funciones se operen sin ratón. ¿En qué principio se encuadra?",
+      "opciones": {
+        "a": "Robusto",
+        "b": "Operable",
+        "c": "Perceptible",
+        "d": "Entendible"
+      },
+      "respuesta_correcta": "b",
+      "explicacion": "La pauta 2.1 es la primera sección del principio Operable [5]."
+    },
+    {
+      "id": 9,
+      "pregunta": "La pauta 2.2 trata sobre proporcionar 'Tiempo suficiente' para leer y usar el contenido. ¿A qué principio pertenece?",
+      "opciones": {
+        "a": "Operable",
+        "b": "Entendible",
+        "c": "Perceptible",
+        "d": "Robusto"
+      },
+      "respuesta_correcta": "a",
+      "explicacion": "La pauta 2.2 sobre límites de tiempo es parte del principio Operable [6]."
+    },
+    {
+      "id": 10,
+      "pregunta": "Evitar diseños que causen convulsiones o reacciones físicas (Pauta 2.3) es un requisito del principio:",
+      "opciones": {
+        "a": "Perceptible",
+        "b": "Entendible",
+        "c": "Robusto",
+        "d": "Operable"
+      },
+      "respuesta_correcta": "d",
+      "explicacion": "La pauta 2.3 sobre convulsiones pertenece al principio Operable [7]."
+    },
+    {
+      "id": 11,
+      "pregunta": "Ayudar a los usuarios a navegar, encontrar contenido y saber dónde están (Pauta 2.4 'Navegable') pertenece al principio:",
+      "opciones": {
+        "a": "Operable",
+        "b": "Entendible",
+        "c": "Perceptible",
+        "d": "Robusto"
+      },
+      "respuesta_correcta": "a",
+      "explicacion": "La pauta 2.4 se encuentra bajo el principio Operable [7, 8]."
+    },
+    {
+      "id": 12,
+      "pregunta": "La pauta 2.5 'Modalidades de entrada' facilita la operación mediante gestos o punteros. ¿A qué principio pertenece?",
+      "opciones": {
+        "a": "Robusto",
+        "b": "Perceptible",
+        "c": "Operable",
+        "d": "Entendible"
+      },
+      "respuesta_correcta": "c",
+      "explicacion": "La pauta 2.5, que trata sobre diversos tipos de entrada, pertenece al principio Operable [9]."
+    },
+    {
+      "id": 13,
+      "pregunta": "¿Qué principio exige que la información y el modo de operar la interfaz sean comprensibles?",
+      "opciones": {
+        "a": "Entendible",
+        "b": "Robusto",
+        "c": "Perceptible",
+        "d": "Operable"
+      },
+      "respuesta_correcta": "a",
+      "explicacion": "El principio 3, Entendible, busca que tanto la información como la operación sean comprensibles [2]."
+    },
+    {
+      "id": 14,
+      "pregunta": "La pauta 3.1 'Legible' se encarga de que el contenido textual sea entendible. ¿A qué principio pertenece?",
+      "opciones": {
+        "a": "Entendible",
+        "b": "Perceptible",
+        "c": "Robusto",
+        "d": "Operable"
+      },
+      "respuesta_correcta": "a",
+      "explicacion": "La pauta 3.1 es la primera sección del principio Entendible [10]."
+    },
+    {
+      "id": 15,
+      "pregunta": "Asegurar que las páginas operen de forma 'Predecible' (Pauta 3.2) es un requisito del principio:",
+      "opciones": {
+        "a": "Operable",
+        "b": "Perceptible",
+        "c": "Entendible",
+        "d": "Robusto"
+      },
+      "respuesta_correcta": "c",
+      "explicacion": "La pauta 3.2 sobre consistencia y predictibilidad pertenece al principio Entendible [11]."
+    },
+    {
+      "id": 16,
+      "pregunta": "La pauta 3.3 'Asistencia de entrada' ayuda a evitar y corregir errores. ¿Bajo qué principio se encuentra?",
+      "opciones": {
+        "a": "Robusto",
+        "b": "Entendible",
+        "c": "Operable",
+        "d": "Perceptible"
+      },
+      "respuesta_correcta": "b",
+      "explicacion": "La pauta 3.3 forma parte del principio Entendible [12]."
+    },
+    {
+      "id": 17,
+      "pregunta": "¿Qué principio busca maximizar la compatibilidad con navegadores actuales y futuros, incluyendo tecnologías asistivas?",
+      "opciones": {
+        "a": "Operable",
+        "b": "Robusto",
+        "c": "Entendible",
+        "d": "Perceptible"
+      },
+      "respuesta_correcta": "b",
+      "explicacion": "El principio 4, Robusto, se centra en la compatibilidad con agentes de usuario y tecnologías asistivas [2, 13]."
+    },
+    {
+      "id": 18,
+      "pregunta": "La pauta 4.1 'Compatible' es la única sección mencionada para su principio. ¿Cuál es dicho principio?",
+      "opciones": {
+        "a": "Robusto",
+        "b": "Perceptible",
+        "c": "Entendible",
+        "d": "Operable"
+      },
+      "respuesta_correcta": "a",
+      "explicacion": "La pauta 4.1 'Compatible' pertenece al principio Robusto [13]."
+    },
+    {
+      "id": 19,
+      "pregunta": "¿Cómo clasifican las fuentes los niveles de conformidad A, AA y AAA?",
+      "opciones": {
+        "a": "A: Básico, AA: Medio, AAA: Avanzado",
+        "b": "A: Esencial, AA: Soporte ideal, AAA: Soporte especializado",
+        "c": "A: Obligatorio, AA: Recomendado, AAA: Opcional",
+        "d": "A: Mínimo, AA: Estándar, AAA: Máximo"
+      },
+      "respuesta_correcta": "b",
+      "explicacion": "Las fuentes definen A como Esencial, AA como Soporte ideal y AAA como Soporte especializado [1]."
+    },
+    {
+      "id": 20,
+      "pregunta": "Dentro del principio Entendible, la pauta 3.2 'Predecible' incluye un requisito de nivel A sobre:",
+      "opciones": {
+        "a": "El orden de navegación consistente",
+        "b": "La posición de los mecanismos de ayuda",
+        "c": "La funcionalidad idéntica de componentes",
+        "d": "El cambio de idioma en partes de la página"
+      },
+      "respuesta_correcta": "b",
+      "explicacion": "Dentro de la pauta 3.2 (Principio Entendible), mantener los mecanismos de ayuda en la misma posición es nivel A [12]."
+    }
+  ]
+}

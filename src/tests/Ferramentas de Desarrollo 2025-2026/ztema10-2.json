@@ -1,0 +1,246 @@
+{
+  "titulo": "TEMA 10 - DOCKER Y KUBERNETES B",
+  "descripcion": "Segundo test de nivel avanzado que profundiza en los aspectos técnicos de Docker, Kubernetes y flujos de CI/CD.",
+  "examen_automatizacion": [
+    {
+      "id": 1,
+      "pregunta": "¿Qué característica de las Máquinas Virtuales (VM) las diferencia principalmente de los contenedores en términos de recursos?",
+      "opciones": {
+        "a": "Las VMs no utilizan memoria del host, sino que crean su propia memoria virtual.",
+        "b": "Cada VM incluye su propio sistema operativo completo, lo que las hace más pesadas y lentas al arrancar.",
+        "c": "Las VMs comparten el kernel del host, lo que permite un ahorro masivo de CPU.",
+        "d": "Las VMs son exclusivamente para entornos de producción, mientras que los contenedores son para desarrollo."
+      },
+      "respuesta_correcta": "b",
+      "explicacion": "Se indica que una VM incluye su propio SO que corre sobre el del host [1]. Esto las hace más intensivas en recursos y con tiempos de arranque mayores en comparación con los contenedores [2]."
+    },
+    {
+      "id": 2,
+      "pregunta": "¿Cómo define el temario el concepto de 'Orquestación' en la gestión de contenedores?",
+      "opciones": {
+        "a": "Es la escritura manual de scripts para reiniciar procesos fallidos.",
+        "b": "Es el empaquetado de dependencias y librerías en una sola imagen.",
+        "c": "Es la disposición, coordinación y gestión automatizada de recursos y servicios de computación complejos.",
+        "d": "Es la creación de una interfaz gráfica para visualizar Docker Hub."
+      },
+      "respuesta_correcta": "c",
+      "explicacion": "La orquestación se refiere específicamente al arreglo y gestión automatizada de recursos [3]. Incluye tareas como el despliegue, escalado y gestión del ciclo de vida en un clúster [3]."
+    },
+    {
+      "id": 3,
+      "pregunta": "En cuanto a la seguridad de los contenedores, ¿cuál es una de las 'Best Practices' mencionadas?",
+      "opciones": {
+        "a": "Ejecutar siempre los contenedores como usuario root para evitar errores de permisos.",
+        "b": "Evitar el uso del usuario root y ejecutar contenedores con los menores privilegios posibles.",
+        "c": "Desactivar el aislamiento del kernel para mejorar la velocidad de red.",
+        "d": "No actualizar nunca las imágenes base para mantener la estabilidad del software."
+      },
+      "respuesta_correcta": "b",
+      "explicacion": "Se recomienda ejecutar contenedores con los privilegios mínimos necesarios [4]. También sugieren evitar el uso del usuario root para mejorar la seguridad [4]."
+    },
+    {
+      "id": 4,
+      "pregunta": "¿Cuál es la función específica de la instrucción ENTRYPOINT en un Dockerfile?",
+      "opciones": {
+        "a": "Define la imagen base desde la cual se hereda el entorno.",
+        "b": "Permite configurar un contenedor para que funcione como un ejecutable, permitiendo inicializaciones complejas.",
+        "c": "Sirve únicamente para copiar archivos comprimidos desde una URL.",
+        "d": "Establece las variables de entorno que no pueden ser modificadas en el 'runtime'."
+      },
+      "respuesta_correcta": "b",
+      "explicacion": "La instrucción ENTRYPOINT se utiliza para configurar el contenedor como un ejecutable [5]. Esto permite realizar procesos de inicialización más sofisticados que CMD [5]."
+    },
+    {
+      "id": 5,
+      "pregunta": "Al optimizar imágenes, ¿qué ventaja ofrece el uso de 'multi-stage builds'?",
+      "opciones": {
+        "a": "Permite ejecutar múltiples sistemas operativos dentro del mismo contenedor.",
+        "b": "Reduce el tamaño de la imagen final al separar el entorno de compilación del de ejecución.",
+        "c": "Aumenta el número de capas para mejorar la persistencia de los datos.",
+        "d": "Es la única forma de exponer puertos superiores al 1024."
+      },
+      "respuesta_correcta": "b",
+      "explicacion": "Optimizar Dockerfiles implica usar multi-stage builds para reducir el tamaño de la imagen [6]. Esto ayuda a minimizar las capas y eliminar dependencias innecesarias de la imagen final [6]."
+    },
+    {
+      "id": 6,
+      "pregunta": "¿Qué comando de la CLI de Docker se debe utilizar para eliminar una imagen específica del sistema local?",
+      "opciones": {
+        "a": "docker rm",
+        "b": "docker stop",
+        "c": "docker rmi",
+        "d": "docker pause"
+      },
+      "respuesta_correcta": "c",
+      "explicacion": "El comando 'docker rmi' se utiliza específicamente para remover una imagen de la máquina local [7]. Por el contrario, 'docker rm' se usa para eliminar contenedores detenidos [8]."
+    },
+    {
+      "id": 7,
+      "pregunta": "Dentro del modo interactivo, ¿para qué sirve exactamente el flag '-i'?",
+      "opciones": {
+        "a": "Para asignar un pseudo-TTY.",
+        "b": "Para mantener el estándar de entrada (stdin) abierto incluso si no está conectado.",
+        "c": "Para ignorar los errores durante la ejecución del comando.",
+        "d": "Para instalar automáticamente las dependencias faltantes."
+      },
+      "respuesta_correcta": "b",
+      "explicacion": "El flag '-i' mantiene abierta la entrada estándar del contenedor [9]. Se combina frecuentemente con '-t', que es el que asigna el pseudo-TTY para la interfaz de terminal [9]."
+    },
+    {
+      "id": 8,
+      "pregunta": "¿Qué comando permite seguir los logs de un contenedor en tiempo real?",
+      "opciones": {
+        "a": "docker logs -realtime",
+        "b": "docker logs -f",
+        "c": "docker ps -logs",
+        "d": "docker inspect -l"
+      },
+      "respuesta_correcta": "b",
+      "explicacion": "Para monitorizar la salida de logs de forma continua, se utiliza el flag '-f' (follow) con el comando docker logs [10]. Esto es vital para tareas de depuración en tiempo real [11]."
+    },
+    {
+      "id": 9,
+      "pregunta": "¿Cuál es la principal diferencia entre un volumen de Docker y la capa de escritura del contenedor?",
+      "opciones": {
+        "a": "La capa de escritura es persistente, mientras que los volúmenes se borran con el contenedor.",
+        "b": "Los volúmenes se almacenan fuera del sistema de archivos del contenedor, garantizando la persistencia.",
+        "c": "No hay diferencia; ambos términos son sinónimos en Docker.",
+        "d": "Los volúmenes solo pueden ser de lectura y nunca de escritura."
+      },
+      "respuesta_correcta": "b",
+      "explicacion": "Los volúmenes se almacenan fuera del sistema de archivos del contenedor para que los datos persistan tras su eliminación [12]. Además, ofrecen un rendimiento superior a la capa de escritura [12]."
+    },
+    {
+      "id": 10,
+      "pregunta": "¿Qué tipo de red de Docker permite que un contenedor aparezca como un dispositivo físico con su propia MAC address?",
+      "opciones": {
+        "a": "Bridge",
+        "b": "Host",
+        "c": "Overlay",
+        "d": "Macvlan"
+      },
+      "respuesta_correcta": "d",
+      "explicacion": "La red Macvlan asigna una dirección MAC a cada contenedor, permitiendo que el sistema lo trate como un dispositivo físico en la red [13]."
+    },
+    {
+      "id": 11,
+      "pregunta": "En un archivo docker-compose.yml, ¿qué sección se encarga de definir los contenedores que se van a ejecutar?",
+      "opciones": {
+        "a": "version",
+        "b": "services",
+        "c": "networks",
+        "d": "volumes"
+      },
+      "respuesta_correcta": "b",
+      "explicacion": "La sección 'services' es donde se definen y configuran los distintos contenedores que componen la aplicación multi-contenedor [14]."
+    },
+    {
+      "id": 12,
+      "pregunta": "¿Cuál es el comando de Docker Compose para detener y eliminar todos los recursos (contenedores, redes y volúmenes) creados por 'up'?",
+      "opciones": {
+        "a": "docker-compose stop",
+        "b": "docker-compose rm",
+        "c": "docker-compose down",
+        "d": "docker-compose delete"
+      },
+      "respuesta_correcta": "c",
+      "explicacion": "El comando 'down' detiene y elimina por completo los contenedores y redes generados por el archivo YAML [14, 15]."
+    },
+    {
+      "id": 13,
+      "pregunta": "¿Qué es un 'Pod' en el contexto de Kubernetes?",
+      "opciones": {
+        "a": "Un servidor físico donde se instalan los nodos del clúster.",
+        "b": "La unidad de despliegue más pequeña que representa una instancia de un proceso en ejecución.",
+        "c": "Un comando especial para compilar imágenes de Java con Maven.",
+        "d": "Un tipo de red que conecta Docker Swarm con Kubernetes."
+      },
+      "respuesta_correcta": "b",
+      "explicacion": "Un Pod es la unidad mínima desplegable en Kubernetes [16]. Representa una única instancia de un proceso corriendo en el clúster [16]."
+    },
+    {
+      "id": 14,
+      "pregunta": "¿Cómo se comunican los contenedores que residen dentro de un mismo Pod?",
+      "opciones": {
+        "a": "A través de la red Overlay mediante IPs públicas.",
+        "b": "Utilizando 'localhost' ya que comparten el mismo espacio de red e IP.",
+        "c": "Mediante cables virtuales de fibra óptica emulados por el kernel.",
+        "d": "No pueden comunicarse entre sí por razones de aislamiento estricto."
+      },
+      "respuesta_correcta": "b",
+      "explicacion": "Los contenedores en un Pod comparten IP y puertos, lo que les permite comunicarse fácilmente usando 'localhost' [16]. Esto facilita el trabajo de aplicaciones fuertemente acopladas [16]."
+    },
+    {
+      "id": 15,
+      "pregunta": "¿Qué funcionalidad de Kubernetes asegura que las aplicaciones sigan funcionando reiniciando contenedores fallidos?",
+      "opciones": {
+        "a": "Automated Scheduling",
+        "b": "Self-Healing Capabilities",
+        "c": "Horizontal Scaling",
+        "d": "Service Discovery"
+      },
+      "respuesta_correcta": "b",
+      "explicacion": "Las capacidades de 'Self-Healing' permiten a Kubernetes reiniciar automáticamente contenedores que fallan o reemplazar nodos que no responden [17]."
+    },
+    {
+      "id": 16,
+      "pregunta": "¿Cuál es el propósito del plugin de Maven 'JKube'?",
+      "opciones": {
+        "a": "Sustituir a Docker para crear imágenes sin necesidad de un motor local.",
+        "b": "Facilitar la configuración y el despliegue de aplicaciones Java en Kubernetes mediante Maven.",
+        "c": "Cifrar las variables de entorno de los contenedores Postgres.",
+        "d": "Analizar el código fuente en busca de vulnerabilidades antes de hacer el push."
+      },
+      "respuesta_correcta": "b",
+      "explicacion": "JKube es un plugin de Maven utilizado para configurar recursos y facilitar el despliegue en Kubernetes [18]. Permite definir imágenes y puertos directamente en el archivo de configuración del proyecto [18]."
+    },
+    {
+      "id": 17,
+      "pregunta": "En la configuración de un archivo Ingress de Kubernetes, ¿qué hace la anotación 'rewrite-target'?",
+      "opciones": {
+        "a": "Cambia el nombre de la imagen en el registro de Docker.",
+        "b": "Redirige el tráfico entrante a un path específico dentro del servicio de destino.",
+        "c": "Obliga al contenedor a reiniciarse cada vez que recibe una petición.",
+        "d": "Modifica el puerto 8080 del host al 80 del contenedor automáticamente."
+      },
+      "respuesta_correcta": "b",
+      "explicacion": "La anotación 'rewrite-target' en el Ingress se utiliza para gestionar cómo se redirige la ruta del tráfico hacia el backend [19]."
+    },
+    {
+      "id": 18,
+      "pregunta": "Dentro de un flujo de Jenkins, ¿cuál es el orden correcto de comandos para un despliegue completo según el ejemplo?",
+      "opciones": {
+        "a": "k8s:deploy -> k8s:build -> k8s:push",
+        "b": "k8s:build -> k8s:resource -> k8s:undeploy -> k8s:push -> k8s:deploy",
+        "c": "k8s:push -> k8s:deploy -> k8s:undeploy",
+        "d": "k8s:resource -> k8s:build -> k8s:deploy"
+      },
+      "respuesta_correcta": "b",
+      "explicacion": "El flujo de Jenkins mostrado incluye primero la construcción, la generación de recursos, la eliminación de la versión anterior (undeploy), el push de la nueva imagen y finalmente el despliegue [19, 20]."
+    },
+    {
+      "id": 19,
+      "pregunta": "¿Qué ventaja principal ofrece Docker Swarm sobre Kubernetes para la gestión de clústeres?",
+      "opciones": {
+        "a": "Swarm permite una gestión más sencilla y nativa al estar integrado directamente en Docker.",
+        "b": "Swarm es capaz de auto-escalar nodos físicos, algo que Kubernetes no puede hacer.",
+        "c": "Swarm no utiliza archivos YAML, sino que se configura solo por voz.",
+        "d": "Swarm es el único que permite actualizaciones con 'zero downtime'."
+      },
+      "respuesta_correcta": "a",
+      "explicacion": "Docker Swarm es una herramienta de orquestación nativa que permite una gestión y escalado sencillos [21]. Organiza los hosts para que funcionen como un único host virtual [22]."
+    },
+    {
+      "id": 20,
+      "pregunta": "¿Qué ocurre si se utiliza la imagen 'scratch' como base en un Dockerfile?",
+      "opciones": {
+        "a": "El contenedor heredará todas las herramientas de red de Alpine Linux.",
+        "b": "Se obtendrá una imagen con un sistema de archivos totalmente vacío, sin librerías ni herramientas preinstaladas.",
+        "c": "El sistema instalará automáticamente un kernel de Windows para compatibilidad.",
+        "d": "La imagen resultante pesará exactamente lo mismo que una de Ubuntu para garantizar seguridad."
+      },
+      "respuesta_correcta": "b",
+      "explicacion": "La imagen 'scratch' es una base vacía sin herramientas ni librerías [23]. Su uso reduce drásticamente el tamaño y mejora la seguridad al minimizar la superficie de ataque [23]."
+    }
+  ]
+}

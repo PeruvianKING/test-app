@@ -1,0 +1,246 @@
+{
+    "titulo": "Peticiones HTTP Asíncronas y Fetch API",
+    "descripcion": "Un examen exhaustivo diseñado para evaluar el conocimiento profundo sobre AJAX, el modelo de comunicación asíncrona, CORS y el uso técnico de la Fetch API según las fuentes proporcionadas.",
+    "examen_automatizacion": [
+        {
+            "id": 1,
+            "pregunta": "¿Cuál es la función principal del motor AJAX (AJAX engine) en el modelo de comunicación de aplicaciones web?",
+            "opciones": {
+                "a": "Sustituir por completo al servidor web en la lógica de procesamiento de datos.",
+                "b": "Intermediar entre las llamadas de Javascript del navegador y las peticiones HTTP al servidor, permitiendo actualizaciones asíncronas.",
+                "c": "Recargar la página completa cada vez que se realiza una petición de datos mediante HTML DOM.",
+                "d": "Bloquear las peticiones Cross-Origin por motivos de seguridad del navegador."
+            },
+            "respuesta_correcta": "b",
+            "explicacion": "El motor AJAX permite actualizar páginas web de forma asíncrona sin recargar la página completa al combinar objetos del navegador para realizar peticiones de datos con Javascript."
+        },
+        {
+            "id": 2,
+            "pregunta": "En el contexto de CORS, ¿qué ocurre cuando un recurso de un dominio A intenta realizar una petición a un dominio B?",
+            "opciones": {
+                "a": "El navegador permite la petición automáticamente si se trata de un script Javascript.",
+                "b": "La petición se realiza siempre que el servidor B no tenga configuradas cabeceras de seguridad.",
+                "c": "Por motivos de seguridad, los navegadores no permiten realizar peticiones HTTP a otros dominios desde scripts por defecto.",
+                "d": "El motor AJAX redirecciona la petición al dominio de origen para evitar conflictos de DNS."
+            },
+            "respuesta_correcta": "c",
+            "explicacion": "Por motivos de seguridad, los navegadores restringen las peticiones HTTP a otros dominios desde scripts, lo cual es el principio fundamental que regula CORS."
+        },
+        {
+            "id": 3,
+            "pregunta": "¿En qué año se introdujo Fetch como reemplazo de XMLHttpRequest dentro del estándar ECMAScript?",
+            "opciones": {
+                "a": "ECMAScript 5 (2009)",
+                "b": "ECMAScript 6 (2015)",
+                "c": "ECMAScript 2017",
+                "d": "ECMAScript 2018"
+            },
+            "respuesta_correcta": "b",
+            "explicacion": "Fetch fue introducido en ECMAScript 6 en el año 2015 como reemplazo de XMLHttpRequest."
+        },
+        {
+            "id": 4,
+            "pregunta": "¿Cuál de los siguientes navegadores NO ofrece soporte para la API Fetch?",
+            "opciones": {
+                "a": "Google Chrome",
+                "b": "Mozilla Firefox",
+                "c": "Internet Explorer",
+                "d": "Microsoft Edge"
+            },
+            "respuesta_correcta": "c",
+            "explicacion": "Fetch es soportado en la mayoría de los navegadores desde 2017, pero no cuenta con soporte en Internet Explorer, Opera Mini y Blackberry browser."
+        },
+        {
+            "id": 5,
+            "pregunta": "Dentro de la función fetch(resource[, init]), ¿qué representa el parámetro 'resource'?",
+            "opciones": {
+                "a": "Un objeto de configuración que contiene el método y las cabeceras.",
+                "b": "El cuerpo del mensaje (body) que se envía en la petición.",
+                "c": "El recurso que se solicita, pudiendo ser una URL o un objeto Request.",
+                "d": "Una promesa que se resuelve en un objeto de tipo Response."
+            },
+            "respuesta_correcta": "c",
+            "explicacion": "El parámetro 'resource' es la entrada que indica el recurso solicitado, habitualmente una URL o un objeto Request."
+        },
+        {
+            "id": 6,
+            "pregunta": "¿Cuál de las siguientes propiedades del objeto 'init' de Fetch se utiliza para definir el modo de caché?",
+            "opciones": {
+                "a": "mode",
+                "b": "credentials",
+                "c": "cache",
+                "d": "redirect"
+            },
+            "respuesta_correcta": "c",
+            "explicacion": "La propiedad 'cache' dentro del objeto de configuración 'init' permite definir el modo de caché de la petición."
+        },
+        {
+            "id": 7,
+            "pregunta": "¿Qué valor de retorno proporciona la función fetch()?",
+            "opciones": {
+                "a": "Un objeto Response con el contenido de la petición.",
+                "b": "Una Promise que se resuelve en un objeto Response.",
+                "c": "Un objeto JSON con los datos solicitados al servidor.",
+                "d": "Un booleano que indica si la petición fue exitosa (true) o no (false)."
+            },
+            "respuesta_correcta": "b",
+            "explicacion": "La función fetch devuelve una Promise que actúa como un proxy y se resuelve en un objeto Response."
+        },
+        {
+            "id": 8,
+            "pregunta": "Al trabajar con Promesas en Fetch, ¿cuándo se ejecuta el método promise.finally()?",
+            "opciones": {
+                "a": "Solo cuando la petición termina de forma exitosa.",
+                "b": "Solo cuando se produce una excepción o error de red.",
+                "c": "Al final, independientemente del resultado de la petición asíncrona.",
+                "d": "Únicamente después de que el método promise.then() haya devuelto un objeto JSON."
+            },
+            "respuesta_correcta": "c",
+            "explicacion": "El método .finally() se ejecuta al concluir la operación, sin importar si el resultado fue exitoso o fallido."
+        },
+        {
+            "id": 9,
+            "pregunta": "¿Qué indica la propiedad 'ok' del objeto Response?",
+            "opciones": {
+                "a": "El código de estado numérico de la respuesta (ej. 200).",
+                "b": "Un booleano que determina si la respuesta fue exitosa.",
+                "c": "El mensaje de texto correspondiente al código de estado (ej. 'OK').",
+                "d": "La URL final tras las redirecciones."
+            },
+            "respuesta_correcta": "b",
+            "explicacion": "La propiedad 'ok' es un valor booleano que indica si la respuesta fue exitosa."
+        },
+        {
+            "id": 10,
+            "pregunta": "Si se desea obtener el cuerpo de una respuesta en formato de texto plano (USVString), ¿qué método del objeto Response debe utilizarse?",
+            "opciones": {
+                "a": "json()",
+                "b": "blob()",
+                "c": "formData()",
+                "d": "text()"
+            },
+            "respuesta_correcta": "d",
+            "explicacion": "El método text() lee el stream de la respuesta y devuelve una Promise que se resuelve en un USVString (texto)."
+        },
+        {
+            "id": 11,
+            "pregunta": "¿Cuál es la característica común de los métodos .json(), .blob() y .arrayBuffer() de la clase Response?",
+            "opciones": {
+                "a": "Devuelven los datos de forma síncrona de inmediato.",
+                "b": "Leen el stream de la respuesta y devuelven una Promise que se resuelve en el objeto correspondiente.",
+                "c": "Solo pueden llamarse si la propiedad 'ok' es falsa.",
+                "d": "Requieren que las cabeceras incluyan obligatoriamente el Content-Type."
+            },
+            "respuesta_correcta": "b",
+            "explicacion": "Estos métodos leen el stream de la respuesta y devuelven una Promise, ya que la lectura del cuerpo de la respuesta también es una operación asíncrona."
+        },
+        {
+            "id": 12,
+            "pregunta": "En una petición fetch(), ¿en qué circunstancia se ejecuta generalmente el bloque .catch()?",
+            "opciones": {
+                "a": "Cuando el servidor devuelve un código de error 404.",
+                "b": "Cuando el servidor devuelve un código de error 500.",
+                "c": "Únicamente ante errores de red, como cuando el servidor está caído.",
+                "d": "Siempre que la propiedad response.ok sea falsa."
+            },
+            "respuesta_correcta": "c",
+            "explicacion": "El bloque .catch() normalmente solo maneja errores de red, como fallos en la conexión o servidores caídos; los errores HTTP (4xx, 5xx) deben gestionarse manualmente dentro del .then()."
+        },
+        {
+            "id": 13,
+            "pregunta": "Para enviar datos en una petición POST utilizando FormData, ¿cómo se deben añadir los campos?",
+            "opciones": {
+                "a": "A través del método .append() del objeto FormData.",
+                "b": "Mediante el uso de JSON.stringify() sobre el objeto FormData.",
+                "c": "Definiéndolos directamente en las cabeceras de la petición.",
+                "d": "Pasando un objeto plano de Javascript al parámetro 'body' sin instanciar FormData."
+            },
+            "respuesta_correcta": "a",
+            "explicacion": "Se utiliza el método .append('nombre', valor) para añadir campos a un objeto FormData antes de enviarlo en el cuerpo de la petición."
+        },
+        {
+            "id": 14,
+            "pregunta": "Si un servidor devuelve un estado 401 (Unauthorized) en una petición de login, ¿cómo se recomienda manejarlo para que llegue al .catch()?",
+            "opciones": {
+                "a": "No es necesario hacer nada, el navegador lo lanza al .catch() automáticamente.",
+                "b": "Lanzando manualmente una excepción mediante 'throw Error()' tras comprobar el status.",
+                "c": "Cambiando la propiedad response.ok a false manualmente.",
+                "d": "Usando el método response.error() proporcionado por la API Fetch."
+            },
+            "respuesta_correcta": "b",
+            "explicacion": "Las respuestas HTTP fallidas (como el 401) se gestionan en el primer .then(). Para procesarlas en el .catch(), se debe lanzar un Error explícitamente."
+        },
+        {
+            "id": 15,
+            "pregunta": "Al realizar una petición POST enviando un objeto JSON, ¿qué cabecera es IMPRESCINDIBLE configurar?",
+            "opciones": {
+                "a": "Authorization: Bearer token",
+                "b": "Content-Type: application/json",
+                "c": "Accept: text/plain",
+                "d": "Cache-Control: no-cache"
+            },
+            "respuesta_correcta": "b",
+            "explicacion": "Cuando se envía un cuerpo en formato JSON, se debe especificar 'Content-Type': 'application/json' en las cabeceras para que el servidor interprete correctamente los datos."
+        },
+        {
+            "id": 16,
+            "pregunta": "¿Cómo se debe transformar un objeto Javascript antes de asignarlo al 'body' de una petición fetch con Content-Type JSON?",
+            "opciones": {
+                "a": "Usando el método .toJSON() del objeto.",
+                "b": "Mediante el método JSON.stringify(objeto).",
+                "c": "No hace falta transformación, se puede pasar el objeto directamente.",
+                "d": "Convirtiéndolo a un Blob mediante response.blob()."
+            },
+            "respuesta_correcta": "b",
+            "explicacion": "El cuerpo del mensaje debe ser una cadena o stream; por tanto, los objetos JSON deben convertirse a string usando JSON.stringify()."
+        },
+        {
+            "id": 17,
+            "pregunta": "Para realizar una petición autenticada mediante un token, ¿en qué cabecera se suele incluir habitualmente según los ejemplos?",
+            "opciones": {
+                "a": "En una cabecera personalizada llamada 'Token'.",
+                "b": "En la cabecera 'Authentication' con el prefijo 'Key '.",
+                "c": "En la cabecera 'Authorization' con el prefijo 'Bearer '.",
+                "d": "Directamente en el cuerpo del mensaje (body) como un campo JSON."
+            },
+            "respuesta_correcta": "c",
+            "explicacion": "En los ejemplos de uso, se añade una cabecera 'Authorization' con el valor 'Bearer ' concatenado al token."
+        },
+        {
+            "id": 18,
+            "pregunta": "¿Qué cabeceras se utilizan en los ejemplos para deshabilitar explícitamente la caché en una petición fetch?",
+            "opciones": {
+                "a": "cache: 'no-store'",
+                "b": "'pragma': 'no-cache' y 'cache-control': 'no-cache'",
+                "c": "'mode': 'no-cors'",
+                "d": "Únicamente la cabecera 'Authorization'."
+            },
+            "respuesta_correcta": "b",
+            "explicacion": "Para evitar el uso de caché, se pueden añadir las cabeceras 'pragma': 'no-cache' y 'cache-control': 'no-cache'."
+        },
+        {
+            "id": 19,
+            "pregunta": "Tras recibir una imagen como un objeto Blob en una petición fetch, ¿qué función de la API del navegador permite crear una URL para mostrarla en un elemento <img>?",
+            "opciones": {
+                "a": "JSON.stringify(data)",
+                "b": "URL.createObjectURL(data)",
+                "c": "document.createImage(data)",
+                "d": "response.text(data)"
+            },
+            "respuesta_correcta": "b",
+            "explicacion": "La función URL.createObjectURL(data) permite generar una URL temporal a partir de un objeto Blob para asignarla al atributo 'src' de una imagen."
+        },
+        {
+            "id": 20,
+            "pregunta": "En el modelo de comunicación AJAX, ¿cuál es el flujo de datos correcto tras la respuesta del servidor?",
+            "opciones": {
+                "a": "Servidor -> Web Browser (recarga total) -> Usuario.",
+                "b": "Servidor -> Datos del Servidor -> Motor AJAX -> HTML + CSS -> Web Browser.",
+                "c": "Web Browser -> HTTP Request -> Servidor -> JS + HTML + CSS -> Usuario.",
+                "d": "Motor AJAX -> Javascript calls -> Web Browser -> Servidor."
+            },
+            "respuesta_correcta": "b",
+            "explicacion": "Según el modelo de comunicación de aplicaciones AJAX, el servidor devuelve datos al motor AJAX, el cual entrega HTML + CSS al navegador para actualizar la interfaz."
+        }
+    ]
+}

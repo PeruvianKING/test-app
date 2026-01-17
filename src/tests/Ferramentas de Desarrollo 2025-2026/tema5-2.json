@@ -1,0 +1,246 @@
+{
+  "titulo": "TEMA 5 - JENKINS B",
+  "descripcion": "Segundo nivel de evaluación sobre integración continua, centrado en detalles técnicos de configuración, gestión de artefactos y herramientas complementarias.",
+  "examen_automatizacion": [
+    {
+      "id": 1,
+      "pregunta": "¿Qué impacto directo tiene la integración continua en la naturaleza del código desarrollado, según las mejores prácticas?",
+      "opciones": {
+        "a": "Fomenta la creación de bloques de código extensos para reducir el número de commits.",
+        "b": "Motiva a los desarrolladores a escribir código más modular y con menor complejidad lógica.",
+        "c": "Elimina por completo la necesidad de realizar fusiones (merges) complejas entre ramas.",
+        "d": "Obliga a que el código sea compilado únicamente en entornos locales antes de la integración."
+      },
+      "respuesta_correcta": "b",
+      "explicacion": "La CI proporciona feedback instantáneo y motiva a los desarrolladores a escribir código modular y menos complejo al fomentar check-ins frecuentes [1]."
+    },
+    {
+      "id": 2,
+      "pregunta": "Además del código fuente, ¿qué otros elementos deben estar bajo control de versiones para asegurar la trazabilidad completa?",
+      "opciones": {
+        "a": "Únicamente los ejecutables finales y los informes de errores.",
+        "b": "Los scripts de prueba y los archivos de configuración del proyecto.",
+        "c": "Solo las dependencias externas descargadas por Maven o Ant.",
+        "d": "Las capturas de pantalla de la interfaz de usuario de Jenkins."
+      },
+      "respuesta_correcta": "b",
+      "explicacion": "Es una práctica esencial versionar tanto los scripts de prueba como los archivos de configuración, ya que ambos evolucionan con el tiempo [1, 2]."
+    },
+    {
+      "id": 3,
+      "pregunta": "Si un 'build' tarda habitualmente más de 10 minutos en completarse, ¿qué solución se propone?",
+      "opciones": {
+        "a": "Reducir la frecuencia de los commits para no saturar el servidor.",
+        "b": "Ejecutar las pruebas unitarias solo una vez por semana.",
+        "c": "Dividir el build en múltiples trabajos y ejecutarlos en paralelo.",
+        "d": "Desactivar las notificaciones de fallo para agilizar el proceso."
+      },
+      "respuesta_correcta": "c",
+      "explicacion": "Para mantener los builds rápidos y no desmotivar a los desarrolladores, los trabajos grandes pueden dividirse y ejecutarse en paralelo [3]."
+    },
+    {
+      "id": 4,
+      "pregunta": "¿Cuál es la función principal de utilizar un repositorio de binarios centralizado?",
+      "opciones": {
+        "a": "Sustituir al sistema de control de versiones (SCM) como Git o SVN.",
+        "b": "Almacenar únicamente los logs de la consola para auditoría externa.",
+        "c": "Facilitar la gestión de artefactos y proporcionar trazabilidad entre binarios, builds y código.",
+        "d": "Instalar automáticamente plugins de terceros en el servidor Jenkins."
+      },
+      "respuesta_correcta": "c",
+      "explicacion": "Un repositorio central de artefactos simplifica la gestión de archivos binarios y metadatos, vinculando versiones de código con sus binarios correspondientes [4]."
+    },
+    {
+      "id": 5,
+      "pregunta": "Según el listado de herramientas de CI, ¿cuál de las siguientes NO es un ejemplo mencionado?",
+      "opciones": {
+        "a": "Atlassian Bamboo",
+        "b": "Microsoft Team Foundation Server",
+        "c": "CircleCI",
+        "d": "CruiseControl"
+      },
+      "respuesta_correcta": "c",
+      "explicacion": "Se mencionan herramientas como Bamboo, MS Team Foundation Server y CruiseControl, pero no incluyen CircleCI en su lista de ejemplos [5]."
+    },
+    {
+      "id": 6,
+      "pregunta": "¿Cuál es el requisito técnico principal para ejecutar Jenkins como sistema basado en servidor?",
+      "opciones": {
+        "a": "Tener preinstalada una base de datos Oracle SQL.",
+        "b": "Disponer de un contenedor de servlets, como por ejemplo Apache Tomcat.",
+        "c": "Contar con una licencia comercial de Hudson.",
+        "d": "Utilizar exclusivamente el sistema operativo Windows para el archivo .war."
+      },
+      "respuesta_correcta": "b",
+      "explicacion": "Jenkins se ejecuta como un sistema basado en servidor dentro de un contenedor de servlets como Apache Tomcat [6, 7]."
+    },
+    {
+      "id": 7,
+      "pregunta": "¿Cómo facilita Jenkins el acceso a la información de los builds mediante sus URLs?",
+      "opciones": {
+        "a": "Genera tokens aleatorios que cambian cada hora por seguridad.",
+        "b": "Proporciona enlaces permanentes (permalinks) limpios y legibles como 'latest_successful_build'.",
+        "c": "Obliga a los usuarios a navegar siempre desde la página de inicio (Dashboard).",
+        "d": "Solo permite el acceso a través de la dirección IP estática del nodo esclavo."
+      },
+      "respuesta_correcta": "b",
+      "explicacion": "Jenkins ofrece URLs limpias y legibles, incluyendo 'permalinks' para facilitar la referencia a los builds más recientes o exitosos [8]."
+    },
+    {
+      "id": 8,
+      "pregunta": "¿Qué capacidad de Jenkins permite visualizar la evolución temporal de la calidad del software?",
+      "opciones": {
+        "a": "Distributed Builds.",
+        "b": "JUnit/TestNG Reporting con gráficos de tendencias históricas.",
+        "c": "Change Set Support en tiempo real.",
+        "d": "Plugin Support para Redmine IST."
+      },
+      "respuesta_correcta": "b",
+      "explicacion": "Jenkins puede resumir los resultados de las pruebas y mostrar tendencias históricas mediante gráficos sobre cuándo empezaron a fallar los tests [9]."
+    },
+    {
+      "id": 9,
+      "pregunta": "¿En qué consiste la técnica de 'File Fingerprinting' en Jenkins?",
+      "opciones": {
+        "a": "Es un sistema de seguridad biométrica para acceder al servidor.",
+        "b": "Rastrea qué builds produjeron qué binarios y qué versiones utilizan otros builds.",
+        "c": "Es una firma digital para validar que el desarrollador es quien dice ser.",
+        "d": "Sirve para identificar archivos duplicados en el repositorio de Git."
+      },
+      "respuesta_correcta": "b",
+      "explicacion": "El 'fingerprinting' permite rastrear la procedencia de los binarios (como archivos JAR) y su uso en diferentes construcciones [10]."
+    },
+    {
+      "id": 10,
+      "pregunta": "Al configurar un nuevo ítem en Jenkins, ¿qué tipo de proyecto se describe como capaz de orquestar actividades de larga duración en múltiples agentes?",
+      "opciones": {
+        "a": "Freestyle project.",
+        "b": "Maven project.",
+        "c": "Pipeline.",
+        "d": "External Job."
+      },
+      "respuesta_correcta": "c",
+      "explicacion": "El tipo 'Pipeline' orquesta actividades de larga duración que pueden abarcar múltiples agentes de construcción [11]."
+    },
+    {
+      "id": 11,
+      "pregunta": "En la sección de 'Source Code Management', ¿qué especificación se utiliza habitualmente para monitorizar cualquier rama del repositorio?",
+      "opciones": {
+        "a": "branch: all",
+        "b": "*/*",
+        "c": "master/main",
+        "d": "refs/heads/*"
+      },
+      "respuesta_correcta": "b",
+      "explicacion": "Según las capturas de pantalla de la configuración, el 'Branch Specifier' suele configurarse como */* para incluir cualquier rama [11]."
+    },
+    {
+      "id": 12,
+      "pregunta": "¿Cuál de las siguientes es una opción válida para ejecutar los 'Post Steps' en un trabajo de Jenkins?",
+      "opciones": {
+        "a": "Ejecutar solo si el build falla.",
+        "b": "Ejecutar independientemente del resultado del build (Run regardless of build result).",
+        "c": "Ejecutar solo si hay cambios en el archivo POM.",
+        "d": "Ejecutar exclusivamente en el nodo maestro."
+      },
+      "respuesta_correcta": "b",
+      "explicacion": "Los 'Post Steps' pueden configurarse para ejecutarse si el build tiene éxito, si es inestable, o sin importar el resultado final [12]."
+    },
+    {
+      "id": 13,
+      "pregunta": "¿Qué información detallada se puede obtener al 'bucear' (drill down) en los resultados de los tests en Jenkins?",
+      "opciones": {
+        "a": "El historial de salarios del desarrollador que escribió el test.",
+        "b": "Resultados individuales por paquete, clase de test y nombre del método.",
+        "c": "El código fuente completo de la herramienta JUnit.",
+        "d": "La configuración de red del servidor GitLab."
+      },
+      "respuesta_correcta": "b",
+      "explicacion": "Jenkins permite ver los resultados de los tests a nivel de paquete y profundizar hasta ver el estado de métodos individuales como 'testPostLogin_Ok' [13, 14]."
+    },
+    {
+      "id": 14,
+      "pregunta": "Para integrar Jenkins con VSCode, ¿qué paso previo es necesario realizar en el IDE?",
+      "opciones": {
+        "a": "Compilar el código fuente de Jenkins en local.",
+        "b": "Instalar la extensión denominada 'Jenkins Jack'.",
+        "c": "Configurar una conexión SSH manual sin extensiones.",
+        "d": "Exportar el workspace de Jenkins como un archivo ZIP."
+      },
+      "respuesta_correcta": "b",
+      "explicacion": "La conexión entre VSCode y el servidor Jenkins se realiza mediante la instalación de la extensión 'Jenkins Jack' [14]."
+    },
+    {
+      "id": 15,
+      "pregunta": "¿Qué ventaja ofrece la integración de Jenkins en VSCode respecto a la depuración de errores?",
+      "opciones": {
+        "a": "Permite corregir el código automáticamente mediante IA.",
+        "b": "Permite recuperar los logs directamente desde el servidor para analizar los resultados.",
+        "c": "Aumenta la velocidad de compilación del servidor remoto.",
+        "d": "Elimina la necesidad de tener una cuenta de usuario en Jenkins."
+      },
+      "respuesta_correcta": "b",
+      "explicacion": "La integración con VSCode permite acceder a los resultados recuperando los logs de ejecución directamente desde el servidor [15]."
+    },
+    {
+      "id": 16,
+      "pregunta": "¿Quién es el autor de la obra de referencia 'Jenkins: The Definitive Guide'?",
+      "opciones": {
+        "a": "Martin Fowler.",
+        "b": "Javier Parapar.",
+        "c": "John Ferguson Smart.",
+        "d": "Matthias Marschal."
+      },
+      "respuesta_correcta": "c",
+      "explicacion": "La bibliografía cita a John Ferguson Smart como autor de 'Jenkins: The Definitive Guide' [15]."
+    },
+    {
+      "id": 17,
+      "pregunta": "Según Matthias Marschal, ¿qué debe esperarse durante la transición hacia la entrega continua?",
+      "opciones": {
+        "a": "Una mejora inmediata en la productividad del equipo.",
+        "b": "Que las cosas empeoren antes de poder mejorarlas.",
+        "c": "Que el sistema de control de versiones se vuelva obsoleto.",
+        "d": "Una reducción drástica en el número de servidores necesarios."
+      },
+      "respuesta_correcta": "b",
+      "explicacion": "Marschal afirma que la clave en la transición a la entrega continua es esperar que las cosas empeoren antes de lograr mejorarlas [15]."
+    },
+    {
+      "id": 18,
+      "pregunta": "En la configuración de triggers para GitLab, ¿qué opción permite reaccionar ante una petición de fusión de código?",
+      "opciones": {
+        "a": "Push Events.",
+        "b": "Opened Merge Request Events.",
+        "c": "Tag Push Events.",
+        "d": "Job Priority Events."
+      },
+      "respuesta_correcta": "b",
+      "explicacion": "Entre los disparadores de GitLab configurables en Jenkins se encuentra expresamente 'Opened Merge Request Events' [16]."
+    },
+    {
+      "id": 19,
+      "pregunta": "¿Qué componente de la interfaz de Jenkins muestra los artefactos generados (como archivos .war o .jar)?",
+      "opciones": {
+        "a": "Console Output.",
+        "b": "Workspace.",
+        "c": "Build Triggers.",
+        "d": "Pre-steps."
+      },
+      "respuesta_correcta": "b",
+      "explicacion": "La sección 'Workspace' muestra los archivos del proyecto en el nodo de construcción, incluyendo los artefactos generados en la carpeta 'target' [13]."
+    },
+    {
+      "id": 20,
+      "pregunta": "¿Qué funcionalidad permite a Jenkins distribuir la carga de trabajo entre diferentes máquinas?",
+      "opciones": {
+        "a": "Plugin Support.",
+        "b": "Change Set Support.",
+        "c": "Distributed Builds.",
+        "d": "After-the-fact Tagging."
+      },
+      "respuesta_correcta": "c",
+      "explicacion": "Jenkins tiene la capacidad de distribuir la carga de construcción y de pruebas a través de múltiples máquinas mediante 'Distributed Builds' [17]."
+    }
+  ]
+}

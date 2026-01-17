@@ -1,0 +1,246 @@
+{
+  "titulo": "TEMA 9 - PRUEBAS FUNCIONALES B",
+  "descripcion": "Un segundo test exhaustivo con 20 preguntas técnicas adicionales, centradas en detalles específicos del ciclo de vida de Maven, herramientas de mocking, y la gestión de datos de prueba.",
+  "examen_automatizacion": [
+    {
+      "id": 1,
+      "pregunta": "¿Qué aspecto del sistema describen específicamente los requisitos no funcionales?",
+      "opciones": {
+        "a": "El comportamiento individual de los métodos de una clase.",
+        "b": "El 'qué' hace el sistema según las especificaciones del cliente.",
+        "c": "El 'cómo' opera el sistema, incluyendo rendimiento y fiabilidad.",
+        "d": "La salida esperada de una característica tras comparar resultados."
+      },
+      "respuesta_correcta": "c",
+      "explicacion": "Mientras las pruebas funcionales se centran en el 'qué' [1], las no funcionales evalúan factores como rendimiento y fiabilidad, describiendo el 'cómo' opera el sistema [2]."
+    },
+    {
+      "id": 2,
+      "pregunta": "¿Cuál es una característica esencial de los unit tests?",
+      "opciones": {
+        "a": "Deben ser extensos para cubrir múltiples hilos simultáneamente.",
+        "b": "Deben ser pequeños, rápidos e independientes.",
+        "c": "Deben ejecutarse únicamente después de empaquetar el código.",
+        "d": "Deben evitar el uso de 'mock objects' para garantizar realismo."
+      },
+      "respuesta_correcta": "b",
+      "explicacion": "Se definen que los unit tests deben ser pequeños, rápidos e independientes para evaluar las unidades mínimas de funcionalidad [3]."
+    },
+    {
+      "id": 3,
+      "pregunta": "En el desarrollo ágil, ¿en qué se basan habitualmente las pruebas de aceptación de usuario (UAT)?",
+      "opciones": {
+        "a": "En la cobertura de líneas de código generada por JaCoCo.",
+        "b": "En la estructura interna de los servicios de backend.",
+        "c": "En historias de usuario (user stories) para satisfacer las necesidades del usuario final.",
+        "d": "En la configuración de los runners de JUnit en el IDE."
+      },
+      "respuesta_correcta": "c",
+      "explicacion": "En contextos ágiles, las pruebas de aceptación suelen basarse en historias de usuario para asegurar que se cumplen las necesidades del cliente [4]."
+    },
+    {
+      "id": 4,
+      "pregunta": "Si una prueba se realiza sin ninguna aserción pero ejecuta todas las líneas de código, ¿cuál es el resultado?",
+      "opciones": {
+        "a": "Se obtiene un 100% de cobertura y se garantiza la corrección del sistema.",
+        "b": "Se obtiene un 100% de cobertura, pero no se verifica la corrección lógica.",
+        "c": "JaCoCo marcará las líneas como 'no ejecutadas' por falta de validación.",
+        "d": "El Maven Failsafe Plugin detendrá la construcción por error de sintaxis."
+      },
+      "respuesta_correcta": "b",
+      "explicacion": "La cobertura de código por sí sola no garantiza efectividad; es posible lograr el 100% sin aserciones, fallando en verificar si el sistema realmente funciona bien [5]."
+    },
+    {
+      "id": 5,
+      "pregunta": "Para mejorar la visibilidad de los informes de JaCoCo, ¿qué acción técnica es necesaria durante la compilación?",
+      "opciones": {
+        "a": "Compilar las clases con información de depuración (debug information).",
+        "b": "Inyectar el agente de JaCoCo en el navegador del cliente.",
+        "c": "Utilizar exclusivamente la versión 2 de Mockito.",
+        "d": "Ejecutar las pruebas en el puerto 7080 de Tomcat."
+      },
+      "respuesta_correcta": "a",
+      "explicacion": "Para habilitar el resaltado de sintaxis y los números de línea en los informes, se debe compilar con información de depuración [6]."
+    },
+    {
+      "id": 6,
+      "pregunta": "¿Qué diferencia a la fase 'test' de Maven de la fase 'integration-test' respecto al manejo del código?",
+      "opciones": {
+        "a": "La fase 'test' requiere que el código esté desplegado en Tomcat.",
+        "b": "La fase 'test' no requiere que el código esté empaquetado ni desplegado.",
+        "c": "La fase 'integration-test' solo ejecuta marcos de trabajo de JavaScript.",
+        "d": "La fase 'integration-test' impide la limpieza automática del entorno."
+      },
+      "respuesta_correcta": "b",
+      "explicacion": "Maven define que la fase 'test' ejecuta pruebas sin requerir empaquetado ni despliegue, a diferencia de 'integration-test' que procesa el paquete si es necesario [7]."
+    },
+    {
+      "id": 7,
+      "pregunta": "¿Cuál es la función del objetivo 'surefire:test' dentro del ciclo de vida de Maven?",
+      "opciones": {
+        "a": "Gestionar el inicio de contenedores de aplicaciones.",
+        "b": "Ejecutar las pruebas unitarias en la fase 'test'.",
+        "c": "Generar informes de cobertura para el frontend de React.",
+        "d": "Limpiar el entorno tras un fallo en las pruebas de integración."
+      },
+      "respuesta_correcta": "b",
+      "explicacion": "El Surefire Plugin proporciona el objetivo 'surefire:test' encargado de correr las pruebas unitarias [8]."
+    },
+    {
+      "id": 8,
+      "pregunta": "¿En qué fase del ciclo de vida de integración de Maven se deben limpiar los recursos utilizados?",
+      "opciones": {
+        "a": "verify",
+        "b": "pre-integration-test",
+        "c": "post-integration-test",
+        "d": "compile"
+      },
+      "respuesta_correcta": "c",
+      "explicacion": "La fase 'post-integration-test' está diseñada específicamente para limpiar el entorno tras las pruebas [9]."
+    },
+    {
+      "id": 9,
+      "pregunta": "¿Por qué es riesgoso utilizar Surefire para pruebas que requieren un servidor activo (como Tomcat)?",
+      "opciones": {
+        "a": "Porque Surefire no es compatible con el puerto 7080.",
+        "b": "Porque si una prueba falla, el proceso se detiene y el servidor podría quedar activo sin cerrarse.",
+        "c": "Porque Surefire solo reconoce archivos terminados en .js.",
+        "d": "Porque requiere el uso obligatorio de 'geckodriver'."
+      },
+      "respuesta_correcta": "b",
+      "explicacion": "Si una prueba falla en Surefire, el ciclo se detiene, lo que puede dejar el entorno de pruebas (como Tomcat) mal cerrado [9]."
+    },
+    {
+      "id": 10,
+      "pregunta": "¿Qué herramienta permite automatizar acciones del navegador y es compatible con múltiples proveedores?",
+      "opciones": {
+        "a": "Cargo",
+        "b": "Selenium",
+        "c": "JaCoCo",
+        "d": "Mockito"
+      },
+      "respuesta_correcta": "b",
+      "explicacion": "Selenium es una herramienta para automatizar acciones de navegador con amplia compatibilidad entre proveedores [10]."
+    },
+    {
+      "id": 11,
+      "pregunta": "¿Para qué sirve el componente 'geckodriver' en la configuración de pruebas de este curso?",
+      "opciones": {
+        "a": "Para simular el backend de Spring en las pruebas unitarias.",
+        "b": "Para permitir que Selenium interactúe con el navegador Firefox.",
+        "c": "Para medir la cobertura de código en aplicaciones Java EE.",
+        "d": "Para generar datos simulados en formato JSON."
+      },
+      "respuesta_correcta": "b",
+      "explicacion": "En el curso se utiliza Firefox junto con 'geckodriver' para ejecutar las pruebas de aceptación automatizadas [10, 11]."
+    },
+    {
+      "id": 12,
+      "pregunta": "¿Cuál de las siguientes es una ventaja destacada del framework Jest para JavaScript?",
+      "opciones": {
+        "a": "Requiere una configuración compleja y detallada para cada proyecto.",
+        "b": "Incluye herramientas integradas para mocking y análisis de cobertura.",
+        "c": "Sustituye por completo la necesidad de usar Maven en el backend.",
+        "d": "Está limitado exclusivamente a aplicaciones construidas con Vue."
+      },
+      "respuesta_correcta": "b",
+      "explicacion": "Jest es conocido por su facilidad de uso y por incluir herramientas integradas de cobertura y mocking [12]."
+    },
+    {
+      "id": 13,
+      "pregunta": "En Jest, ¿qué comando o función se utiliza para comparar el renderizado de un componente con una versión previa guardada?",
+      "opciones": {
+        "a": "expect(tree).toMatchSnapshot();",
+        "b": "assert.equals(current, previous);",
+        "c": "fireEvent.change(inputText);",
+        "d": "driver.findElement(By.id());"
+      },
+      "respuesta_correcta": "a",
+      "explicacion": "El snapshot testing en Jest utiliza '.toMatchSnapshot()' para rastrear cambios en objetos complejos [12, 13]."
+    },
+    {
+      "id": 14,
+      "pregunta": "¿Cómo se simula una respuesta exitosa de un servicio de backend en una prueba unitaria de Jest?",
+      "opciones": {
+        "a": "Usando 'mvn verify' para levantar el servidor real.",
+        "b": "Mediante la función 'mockResolvedValueOnce' de un mock de Jest.",
+        "c": "Configurando el puerto de Cargo en el archivo pom.xml.",
+        "d": "Invocando directamente a 'fetch' sin interceptores."
+      },
+      "respuesta_correcta": "b",
+      "explicacion": "Para unit tests de componentes que dependen de servicios, se usa 'mockResolvedValueOnce' para simular la respuesta del backend [14, 15]."
+    },
+    {
+      "id": 15,
+      "pregunta": "¿A qué se refiere el término 'volumen de datos' en el diseño de Mock Data?",
+      "opciones": {
+        "a": "A la cantidad de archivos de configuración necesarios para el test.",
+        "b": "A la cantidad de registros necesarios para estresar el sistema y hallar cuellos de botella.",
+        "c": "Al tamaño en megabytes de la base de datos de producción.",
+        "d": "Al número de aserciones presentes en una suite de pruebas."
+      },
+      "respuesta_correcta": "b",
+      "explicacion": "El volumen de datos se refiere a la cantidad de registros requeridos para realizar pruebas de estrés y rendimiento [15]."
+    },
+    {
+      "id": 16,
+      "pregunta": "¿Cuál es la principal diferencia entre Faker.js y Mockaroo?",
+      "opciones": {
+        "a": "Faker.js es para Java y Mockaroo es para JavaScript.",
+        "b": "Faker.js es una biblioteca de JS, mientras que Mockaroo es un servicio online personalizable.",
+        "c": "Faker.js solo genera nombres y Mockaroo solo genera fechas.",
+        "d": "No hay diferencia; ambos son plugins de Maven."
+      },
+      "respuesta_correcta": "b",
+      "explicacion": "Faker.js es una biblioteca de JavaScript y Mockaroo se describe como un servicio online personalizable para generar datos [16]."
+    },
+    {
+      "id": 17,
+      "pregunta": "¿Qué herramienta se menciona para crear datos JSON basados en plantillas de forma sencilla?",
+      "opciones": {
+        "a": "JSON Generator",
+        "b": "Cargo Maven Plugin",
+        "c": "JaCoCo Agent",
+        "d": "JUnit Platform"
+      },
+      "respuesta_correcta": "a",
+      "explicacion": "JSON Generator es listado como una herramienta simple para crear datos JSON a partir de plantillas [16]."
+    },
+    {
+      "id": 18,
+      "pregunta": "En las pruebas de integración holísticas, ¿qué elementos suelen involucrarse?",
+      "opciones": {
+        "a": "Únicamente métodos aislados con mocks.",
+        "b": "Hilos, acceso a bases de datos y dependencias reales.",
+        "c": "Exclusivamente el código fuente sin compilar.",
+        "d": "Solo la interfaz de usuario sin lógica de negocio."
+      },
+      "respuesta_correcta": "b",
+      "explicacion": "Las pruebas de integración adoptan un enfoque holístico que puede involucrar hilos y acceso a bases de datos reales para verificar interacciones [17]."
+    },
+    {
+      "id": 19,
+      "pregunta": "¿Qué característica de Mockito ayuda significativamente a los desarrolladores cuando una prueba falla?",
+      "opciones": {
+        "a": "Reinicia automáticamente el servidor Tomcat.",
+        "b": "Genera mensajes de error claros y mejora la legibilidad.",
+        "c": "Corrige el código fuente de forma autónoma.",
+        "d": "Aumenta la cobertura de código sin añadir tests."
+      },
+      "respuesta_correcta": "b",
+      "explicacion": "Mockito destaca por hacer los tests altamente legibles y por generar mensajes de error claros en caso de fallo [18]."
+    },
+    {
+      "id": 20,
+      "pregunta": "¿Cuál es el propósito de los 'Test Runners' en el framework JUnit?",
+      "opciones": {
+        "a": "Definir las aserciones de igualdad entre objetos.",
+        "b": "Controlar la ejecución de las pruebas.",
+        "c": "Configurar los datos comunes para ser reutilizados.",
+        "d": "Conectar el IDE con el repositorio de Git."
+      },
+      "respuesta_correcta": "b",
+      "explicacion": "Dentro de las características clave de JUnit, los Test Runners tienen la función de controlar cómo se ejecutan las pruebas [18, 19]."
+    }
+  ]
+}

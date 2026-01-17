@@ -1,0 +1,246 @@
+{
+    "titulo": "TEMA 3 - AGILE",
+    "descripcion": "Un examen exhaustivo diseñado para evaluar el conocimiento profundo sobre el desarrollo iterativo, incremental y los principios del Manifiesto Ágil, basándose estrictamente en la documentación técnica proporcionada.",
+    "examen_automatizacion": [
+        {
+            "id": 1,
+            "pregunta": "¿Cuál es el objetivo primordial al final de cada ciclo en el desarrollo iterativo?",
+            "opciones": {
+                "a": "Generar un prototipo visual para validar los requisitos con el cliente.",
+                "b": "Entregar una versión funcional del software con un incremento constante en calidad y funcionalidad.",
+                "c": "Finalizar la codificación de todos los módulos previstos en el plan maestro.",
+                "d": "Documentar exhaustivamente los cambios realizados durante el mini-proyecto."
+            },
+            "respuesta_correcta": "b",
+            "explicacion": "El desarrollo iterativo busca entregar una versión funcional del software al final de cada iteración, asegurando un progreso real en calidad y funcionalidad [1]."
+        },
+        {
+            "id": 2,
+            "pregunta": "En la estructura de una iteración, ¿qué diferencia fundamental existe entre una 'release' y un prototipo?",
+            "opciones": {
+                "a": "La release es un subconjunto real, operativo e integrado del sistema final.",
+                "b": "El prototipo es una versión estable que se entrega al cliente para su puesta en producción.",
+                "c": "La release se centra únicamente en el diseño, mientras que el prototipo incluye codificación.",
+                "d": "No existe diferencia; ambos términos son intercambiables en metodologías ágiles."
+            },
+            "respuesta_correcta": "a",
+            "explicacion": "A diferencia de un prototipo, cada release es un subconjunto real y operativo del sistema final que ya está integrado y es estable [2, 3]."
+        },
+        {
+            "id": 3,
+            "pregunta": "Según las fuentes, ¿cuál es la tendencia actual respecto a la duración de las iteraciones y por qué?",
+            "opciones": {
+                "a": "Ciclos de 6 a 8 semanas para asegurar que se completan todas las funcionalidades complejas.",
+                "b": "Ciclos fijos de un mes para estandarizar los procesos de revisión técnica.",
+                "c": "Ciclos más cortos para maximizar la retroalimentación y reducir el riesgo de desviaciones.",
+                "d": "Ciclos variables que dependen exclusivamente de la velocidad de codificación del equipo."
+            },
+            "respuesta_correcta": "c",
+            "explicacion": "Se tiende a utilizar ciclos cortos (normalmente entre 1 y 6 semanas) para maximizar la retroalimentación y adaptabilidad, reduciendo riesgos [4]."
+        },
+        {
+            "id": 4,
+            "pregunta": "Al planificar una iteración, ¿qué criterio se debe seguir para definir la prioridad de las tareas?",
+            "opciones": {
+                "a": "Priorizar únicamente las tareas de menor riesgo para asegurar éxitos tempranos.",
+                "b": "Enfocarse exclusivamente en lo que el cliente percibe como alto valor de negocio.",
+                "c": "Seguir estrictamente el orden de llegada de los requisitos funcionales.",
+                "d": "Combinar la mitigación de riesgos técnicos con la entrega de valor de negocio percibido por el cliente."
+            },
+            "respuesta_correcta": "d",
+            "explicacion": "Se recomienda aplicar ambos esquemas (Riesgo y Valor para el cliente) ya que los desarrolladores y clientes tienen perspectivas diferentes sobre la importancia de las tareas [5]."
+        },
+        {
+            "id": 5,
+            "pregunta": "En el contexto del 'Timeboxing', ¿qué acción es correcta si se detecta que no se cumplirán las tareas planificadas?",
+            "opciones": {
+                "a": "Extender la fecha de finalización de la iteración para completar el alcance.",
+                "b": "Ajustar el alcance de la iteración, priorizando lo más importante.",
+                "c": "Aumentar la carga de trabajo y presión sobre los desarrolladores.",
+                "d": "Cancelar la iteración y renegociar el contrato con el cliente."
+            },
+            "respuesta_correcta": "b",
+            "explicacion": "El Timeboxing fija la duración; si no se llega al objetivo, se reduce el alcance en lugar de mover la fecha o aumentar la presión [6, 7]."
+        },
+        {
+            "id": 6,
+            "pregunta": "¿Cuál es la política respecto a los cambios solicitados por implicados externos durante el transcurso de una iteración ya definida?",
+            "opciones": {
+                "a": "Deben incorporarse inmediatamente para mantener la agilidad del proyecto.",
+                "b": "Se permite el cambio siempre que no afecte a la base de datos central.",
+                "c": "Bajo ninguna circunstancia se permite que un implicado externo cambie el trabajo definido.",
+                "d": "Se aceptan cambios si el cliente está dispuesto a pagar un coste adicional por la iteración."
+            },
+            "respuesta_correcta": "c",
+            "explicacion": "Una vez definidas las tareas de una iteración, no se permite el caos de cambios externos, aunque la metodología en general sea flexible al cambio entre iteraciones [8]."
+        },
+        {
+            "id": 7,
+            "pregunta": "¿Qué asume el desarrollo adaptativo respecto a la definición de requisitos al inicio del proyecto?",
+            "opciones": {
+                "a": "Que es fundamental conocer el 100% de los requisitos funcionales antes de codificar.",
+                "b": "Que los requisitos no pueden ser completamente definidos al inicio y requieren feedback continuo.",
+                "c": "Que los requisitos definidos al principio deben ser inamovibles para evitar el sobrecoste.",
+                "d": "Que el análisis de requisitos es innecesario si se tiene un equipo con mucha experiencia."
+            },
+            "respuesta_correcta": "b",
+            "explicacion": "El desarrollo adaptativo asume que los requisitos no pueden definirse totalmente al inicio y se ajustan mediante feedback de usuarios y desarrolladores [9]."
+        },
+        {
+            "id": 8,
+            "pregunta": "Según la visión ágil del análisis de requisitos, ¿cuál es una práctica recomendada en las primeras iteraciones?",
+            "opciones": {
+                "a": "Realizar talleres de requisitos de un mes para asegurar la trazabilidad completa.",
+                "b": "Identificar el 'Top Ten' de los requisitos de alto nivel para comenzar la construcción.",
+                "c": "Evitar cualquier tipo de documentación para acelerar el desarrollo.",
+                "d": "Subvencionar el desarrollo basándose únicamente en la intuición del jefe de proyecto."
+            },
+            "respuesta_correcta": "b",
+            "explicacion": "No es necesario el 100% de los requisitos; se destaca la importancia de identificar el Top Ten de requisitos de alto nivel al inicio [10]."
+        },
+        {
+            "id": 9,
+            "pregunta": "¿Qué describe el concepto del 'Cono de Incertidumbre' en la planificación adaptativa?",
+            "opciones": {
+                "a": "El aumento progresivo de los costes a medida que el software se vuelve más complejo.",
+                "b": "La incapacidad de predecir el éxito del producto final debido a la competencia.",
+                "c": "La reducción de la incertidumbre en los planes y estimaciones conforme avanza el desarrollo.",
+                "d": "El riesgo de que el equipo pierda la motivación tras las primeras iteraciones."
+            },
+            "respuesta_correcta": "c",
+            "explicacion": "El Cono de Incertidumbre muestra cómo la incertidumbre se reduce con cada iteración, permitiendo estimaciones más precisas [11, 12]."
+        },
+        {
+            "id": 10,
+            "pregunta": "¿En qué se diferencia la 'Entrega Incremental' del 'Desarrollo Iterativo' según las fuentes?",
+            "opciones": {
+                "a": "La entrega incremental es exclusiva de Scrum, mientras que el desarrollo iterativo es de XP.",
+                "b": "El desarrollo iterativo es interno, mientras que la entrega incremental supone la puesta en producción de versiones.",
+                "c": "No hay diferencia real, son conceptos sinónimos dentro del marco ágil.",
+                "d": "La entrega incremental se refiere a hardware y el desarrollo iterativo a software."
+            },
+            "respuesta_correcta": "b",
+            "explicacion": "La entrega incremental se refiere específicamente a poner versiones en producción con funcionalidades adicionales [12, 13]."
+        },
+        {
+            "id": 11,
+            "pregunta": "Dentro de los valores del Manifiesto Ágil, ¿qué se prefiere sobre el 'seguimiento de un plan'?",
+            "opciones": {
+                "a": "La negociación contractual rigurosa.",
+                "b": "La respuesta al cambio.",
+                "c": "La documentación técnica detallada.",
+                "d": "La jerarquía de procesos estables."
+            },
+            "respuesta_correcta": "b",
+            "explicacion": "El manifiesto valora 'Responder al cambio sobre seguir un plan' [14]."
+        },
+        {
+            "id": 12,
+            "pregunta": "Según el Manifiesto Ágil, ¿cuál es la medida principal de progreso en un proyecto?",
+            "opciones": {
+                "a": "El número de horas trabajadas por el equipo de desarrollo.",
+                "b": "La cantidad de documentación técnica aprobada por el cliente.",
+                "c": "El software funcionando.",
+                "d": "El cumplimiento estricto del cronograma inicial."
+            },
+            "respuesta_correcta": "c",
+            "explicacion": "El principio número 7 del manifiesto establece que 'El software funcionando es la medida principal de progreso' [15]."
+        },
+        {
+            "id": 13,
+            "pregunta": "¿Cuál es el método más eficiente para comunicar información al equipo según los principios ágiles?",
+            "opciones": {
+                "a": "Correos electrónicos con copia a todos los interesados.",
+                "b": "Conversaciones cara a cara.",
+                "c": "Informes de estado semanales en formato PDF.",
+                "d": "Uso exclusivo de herramientas de gestión de tickets."
+            },
+            "respuesta_correcta": "b",
+            "explicacion": "El principio número 6 indica que la conversación cara a cara es el método más eficiente y efectivo [16]."
+        },
+        {
+            "id": 14,
+            "pregunta": "En las metodologías ágiles, ¿qué promueve el desarrollo sostenible respecto al ritmo de trabajo?",
+            "opciones": {
+                "a": "Realizar horas extra al final de cada iteración para cumplir el objetivo.",
+                "b": "Mantener un ritmo constante de forma indefinida para promotores, desarrolladores y usuarios.",
+                "c": "Alternar periodos de inactividad con periodos de alta presión laboral.",
+                "d": "Acelerar la velocidad del equipo en cada nueva iteración sin límites."
+            },
+            "respuesta_correcta": "b",
+            "explicacion": "Los procesos ágiles promueven el desarrollo sostenible, manteniendo un ritmo constante de forma indefinida [15]."
+        },
+        {
+            "id": 15,
+            "pregunta": "¿Qué papel juega la 'simplicidad' en el desarrollo ágil?",
+            "opciones": {
+                "a": "Elegir la opción que aporte más valor empleando el menor esfuerzo posible.",
+                "b": "Reducir el número de desarrolladores para simplificar la gestión.",
+                "c": "Eliminar las pruebas unitarias para acelerar la entrega.",
+                "d": "Usar solo lenguajes de programación básicos."
+            },
+            "respuesta_correcta": "a",
+            "explicacion": "La simplicidad se define como el arte de maximizar la cantidad de trabajo no realizado (o elegir la opción de más valor con menor esfuerzo) [15]."
+        },
+        {
+            "id": 16,
+            "pregunta": "Dentro de las prácticas de Scrum mencionadas, ¿qué caracteriza a las reuniones diarias?",
+            "opciones": {
+                "a": "Son reuniones largas de planificación de toda la iteración.",
+                "b": "Son reuniones de pie para sincronizar el trabajo y resolver problemas rápidamente.",
+                "c": "Se utilizan para negociar el contrato con el cliente externo.",
+                "d": "Son sesiones de revisión de código individuales."
+            },
+            "respuesta_correcta": "b",
+            "explicacion": "Las Scrum meetings son diarias, cortas, se hacen de pie y sirven para sincronizar y resolver bloqueos [17]."
+        },
+        {
+            "id": 17,
+            "pregunta": "En eXtreme Programming (XP), ¿en qué consiste la práctica de 'Pair programming'?",
+            "opciones": {
+                "a": "Dos equipos compitiendo por resolver el mismo problema.",
+                "b": "Un desarrollador y un cliente diseñando la interfaz juntos.",
+                "c": "Dos desarrolladores trabajando juntos en una misma tarea para mejorar la calidad.",
+                "d": "Programar dos versiones diferentes del mismo software para redundancia."
+            },
+            "respuesta_correcta": "c",
+            "explicacion": "Pair programming implica a dos desarrolladores trabajando en la misma tarea para mejorar la calidad del código [17]."
+        },
+        {
+            "id": 18,
+            "pregunta": "¿De dónde emergen las mejores arquitecturas, requisitos y diseños en un entorno ágil?",
+            "opciones": {
+                "a": "De la dirección centralizada del arquitecto jefe de la empresa.",
+                "b": "De consultores externos especializados en diseño predictivo.",
+                "c": "De equipos auto-organizados.",
+                "d": "De la documentación detallada generada en la fase de preventa."
+            },
+            "respuesta_correcta": "c",
+            "explicacion": "El principio número 11 del Manifiesto Ágil indica que estas emergen de equipos auto-organizados [15]."
+        },
+        {
+            "id": 19,
+            "pregunta": "¿Cuál es la frecuencia de entrega de software funcional preferida por el manifiesto?",
+            "opciones": {
+                "a": "Cada seis meses, para asegurar la estabilidad total.",
+                "b": "Entre dos semanas y dos meses, con preferencia al periodo más corto.",
+                "c": "Al final de cada año fiscal.",
+                "d": "Solo cuando el cliente haya pagado la totalidad del módulo."
+            },
+            "respuesta_correcta": "b",
+            "explicacion": "Se prefiere la entrega frecuente, en periodos de dos semanas a dos meses, priorizando siempre el más corto [16]."
+        },
+        {
+            "id": 20,
+            "pregunta": "¿Qué valoramos más según el manifiesto: la colaboración con el cliente o la negociación contractual?",
+            "opciones": {
+                "a": "La negociación contractual, para evitar problemas legales.",
+                "b": "Ambas por igual en todo momento.",
+                "c": "La colaboración con el cliente.",
+                "d": "Ninguna; lo más importante es la herramienta de desarrollo."
+            },
+            "respuesta_correcta": "c",
+            "explicacion": "El manifiesto valora la colaboración con el cliente sobre la negociación contractual [14]."
+        }
+    ]
+}

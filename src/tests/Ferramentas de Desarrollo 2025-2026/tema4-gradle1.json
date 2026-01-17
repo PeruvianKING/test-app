@@ -1,0 +1,246 @@
+{
+  "titulo": "TEMA 4 - Gradle",
+  "descripcion": "20 preguntas de alta dificultad sobre el sistema de construcción Gradle, sus fases, tareas y gestión de proyectos complejos.",
+  "examen_automatizacion": [
+    {
+      "id": 1,
+      "pregunta": "¿En qué orden exacto ensambla Gradle los objetos del proyecto durante la inicialización del build?",
+      "opciones": {
+        "a": "Crea la jerarquía de Project, evalúa build.gradle y finalmente crea la instancia de Settings.",
+        "b": "Crea una instancia de Settings, evalúa el script settings.gradle contra ella y luego crea la jerarquía de Project.",
+        "c": "Evalúa settings.gradle, crea las instancias de Project y finalmente genera el objeto Settings.",
+        "d": "Evalúa todos los build.gradle de forma jerárquica y después inicializa el objeto Settings."
+      },
+      "respuesta_correcta": "b",
+      "explicacion": "El proceso es: 1. Crear instancia de Settings. 2. Evaluar settings.gradle contra dicho objeto. 3. Usar Settings para crear la jerarquía de Project. 4. Evaluar cada build.gradle."
+    },
+    {
+      "id": 2,
+      "pregunta": "Si un bloque de código está dentro de una tarea pero fuera de 'doFirst' o 'doLast', ¿cuándo se ejecuta?",
+      "opciones": {
+        "a": "Solo si la tarea es invocada por el usuario.",
+        "b": "Durante la fase de ejecución, justo antes de doFirst.",
+        "c": "Durante la fase de configuración, incluso si la tarea no se invoca.",
+        "d": "Nunca, a menos que se defina explícitamente en el ciclo de vida."
+      },
+      "respuesta_correcta": "c",
+      "explicacion": "La fase de configuración (el código directamente en el closure de la tarea) se ejecuta siempre [2]. Ejemplo:\n```gradle\ntask testTask {\n    println 'Configurando...' // Esto sale siempre\n    doLast { println 'Ejecutando' }\n}\n```"
+    },
+    {
+      "id": 3,
+      "pregunta": "En un build multi-proyecto, ¿qué diferencia técnica hay entre 'allprojects' y 'subprojects' en el build.gradle raíz?",
+      "opciones": {
+        "a": "Subprojects se aplica a los módulos hijos y al raíz; Allprojects solo a los hijos.",
+        "b": "Allprojects incluye al proyecto raíz en la configuración; Subprojects solo se aplica a los proyectos hijos.",
+        "c": "Allprojects es para dependencias de compilación y Subprojects para dependencias de runtime.",
+        "d": "No existe diferencia técnica; son alias utilizados para mejorar la legibilidad del script."
+      },
+      "respuesta_correcta": "b",
+      "explicacion": "En el root_project `allprojects` aplica a todos (incluyendo el raíz) y `subprojects` solo a los subordinados [3]. Ejemplo:\n```gradle\nallprojects { group = 'com.myapp' }\nsubprojects { apply plugin: 'java' }\n```"
+    },
+    {
+      "id": 4,
+      "pregunta": "¿Cómo evalúa Gradle los proyectos en una jerarquía multi-módulo?",
+      "opciones": {
+        "a": "En orden de profundidad (depth-first), terminando en el raíz.",
+        "b": "En orden de anchura (breadth-wise), evaluando el padre antes que los hijos.",
+        "c": "De forma paralela y asíncrona por defecto para optimizar tiempo.",
+        "d": "Siguiendo el orden alfabético de los nombres de los módulos definidos en settings.gradle."
+      },
+      "respuesta_correcta": "b",
+      "explicacion": "Gradle evalúa cada Project ejecutando su build.gradle en orden de anchura, de modo que un proyecto se evalúa antes que sus hijos [1]."
+    },
+    {
+      "id": 5,
+      "pregunta": "¿Qué sucede si ejecutas el comando 'gradle init' sin parámetros adicionales?",
+      "opciones": {
+        "a": "Lanza un error solicitando obligatoriamente el parámetro --type.",
+        "b": "Crea un proyecto de tipo 'java-library' por defecto.",
+        "c": "Crea un proyecto básico con los archivos del wrapper, build.gradle y settings.gradle.",
+        "d": "Analiza el directorio actual para intentar convertir un pom.xml automáticamente."
+      },
+      "respuesta_correcta": "c",
+      "explicacion": "Sin parámetros adicionales, la tarea `init` crea la estructura básica (wrapper, build.gradle y settings.gradle) [4]."
+    },
+    {
+      "id": 6,
+      "pregunta": "Para configurar que un JAR sea ejecutable especificando la Main-Class, ¿en qué sección del build.gradle debe hacerse?",
+      "opciones": {
+        "a": "Dentro del bloque 'dependencies' usando el atributo 'mainClass'.",
+        "b": "En el bloque 'jar' dentro de 'manifest' y 'attributes'.",
+        "c": "En la propiedad global 'sourceCompatibility' del proyecto.",
+        "d": "Directamente en el archivo gradle.properties usando una clave reservada."
+      },
+      "respuesta_correcta": "b",
+      "explicacion": "Se configura en la tarea jar [5]. Ejemplo:\n```gradle\njar {\n    manifest {\n        attributes 'Main-Class': 'com.org.Main'\n    }\n}\n```"
+    },
+    {
+      "id": 7,
+      "pregunta": "¿Cuál es la función exacta de 'resolutionStrategy.force' en la configuración de dependencias?",
+      "opciones": {
+        "a": "Obligar a descargar la dependencia aunque ya exista en el repositorio local.",
+        "b": "Forzar una versión específica de una dependencia incluso si existen conflictos transitivos.",
+        "c": "Ignorar las exclusiones de dependencias realizadas en otros módulos.",
+        "d": "Actualizar automáticamente la versión de la librería a la última disponible en Maven Central."
+      },
+      "respuesta_correcta": "b",
+      "explicacion": "Se utiliza para la gestión explícita de dependencias transitivas, forzando una versión concreta [6]. Ejemplo:\n```gradle\nconfigurations.all {\n    resolutionStrategy.force 'gson:2.8.1'\n}\n```"
+    },
+    {
+      "id": 8,
+      "pregunta": "En Gradle, ¿qué es un 'SourceSet' y para qué se utiliza?",
+      "opciones": {
+        "a": "Un plugin que permite usar lenguajes distintos a Java como Groovy o Scala.",
+        "b": "Un comando para descargar el código fuente de las dependencias externas.",
+        "c": "Una forma de especificar una estructura de carpetas distinta a la estándar (ej. src/main/java).",
+        "d": "Un objeto que almacena las credenciales de acceso a repositorios privados."
+      },
+      "respuesta_correcta": "c",
+      "explicacion": "Permite definir dónde se guardan los fuentes si no siguen el estándar de Maven [4]. Ejemplo:\n```gradle\nsourceSets {\n    main { java { srcDir 'src' } }\n}\n```"
+    },
+    {
+      "id": 9,
+      "pregunta": "Al definir una tarea con 'onlyIf', ¿en qué fase se evalúa el predicado contenido?",
+      "opciones": {
+        "a": "Durante la fase de inicialización de Settings.",
+        "b": "Durante la fase de configuración de la tarea.",
+        "c": "Justo antes de la ejecución de la tarea si esta ha sido invocada.",
+        "d": "Después de ejecutar doLast para validar el resultado."
+      },
+      "respuesta_correcta": "c",
+      "explicacion": "Permite omitir la ejecución basándose en una condición lógica evaluada en runtime [7]. Ejemplo:\n```gradle\nhello.onlyIf { project.hasProperty('sayHello') }\n```"
+    },
+    {
+      "id": 10,
+      "pregunta": "¿Qué ocurre si una tarea personalizada define 'dependsOn' hacia otra tarea?",
+      "opciones": {
+        "a": "La tarea dependiente se ejecuta siempre después de la tarea referenciada.",
+        "b": "Ambas tareas se ejecutan en paralelo para ahorrar tiempo.",
+        "c": "La tarea referenciada solo se ejecuta si la tarea principal falla.",
+        "d": "La tarea dependiente se convierte en una sub-tarea de la principal."
+      },
+      "respuesta_correcta": "a",
+      "explicacion": "Define una relación de dependencia; la tarea 'hello' se ejecutará antes que 'other' [7]. Ejemplo:\n```gradle\ntask other(dependsOn: 'hello')\n```"
+    },
+    {
+      "id": 11,
+      "pregunta": "¿Para qué se utiliza específicamente el comando 'gradle dependencyInsight'?",
+      "opciones": {
+        "a": "Para ver una lista plana de todas las dependencias del proyecto.",
+        "b": "Para mostrar detalles específicos y el origen de una dependencia concreta.",
+        "c": "Para analizar vulnerabilidades de seguridad en las librerías JAR.",
+        "d": "Para verificar la compatibilidad de las dependencias con la versión de Java."
+      },
+      "respuesta_correcta": "b",
+      "explicacion": "A diferencia de `dependencies`, `dependencyInsight` profundiza en una dependencia específica para entender por qué fue seleccionada [8]."
+    },
+    {
+      "id": 12,
+      "pregunta": "Si aplicas el plugin 'gretty', ¿qué tarea debes usar para desplegar la aplicación en el contenedor predeterminado?",
+      "opciones": {
+        "a": "gradle buildDeploy",
+        "b": "gradle appRun",
+        "c": "gradle jettyRun",
+        "d": "gradle warDeploy"
+      },
+      "respuesta_correcta": "b",
+      "explicacion": "El plugin `gretty` permite construir y desplegar la aplicación en Jetty/Tomcat usando la tarea `appRun` [9]."
+    },
+    {
+      "id": 13,
+      "pregunta": "¿Qué archivo es indispensable para definir un proyecto como multi-módulo en Gradle?",
+      "opciones": {
+        "a": "build.gradle en la carpeta raíz.",
+        "b": "gradle.properties con la propiedad 'multi=true'.",
+        "c": "settings.gradle conteniendo la instrucción 'include'.",
+        "d": "pom.xml para mantener compatibilidad con Maven."
+      },
+      "respuesta_correcta": "c",
+      "explicacion": "Se usa `settings.gradle` para especificar qué subproyectos pertenecen al build [10]. Ejemplo: `include 'core', 'ui'`."
+    },
+    {
+      "id": 14,
+      "pregunta": "¿Cuál es la forma correcta de definir una dependencia a otro proyecto local dentro del mismo build?",
+      "opciones": {
+        "a": "compile 'groupId:artifactId:version'",
+        "b": "compile project(':nombre-del-proyecto')",
+        "c": "dependencies { include project('path') }",
+        "d": "implementation fileTree('dir': '../core')"
+      },
+      "respuesta_correcta": "b",
+      "explicacion": "En proyectos multi-módulo, un proyecto puede depender de otro usando la sintaxis `project(':nombre')` [11]."
+    },
+    {
+      "id": 15,
+      "pregunta": "Al configurar el Gradle Wrapper, ¿cuál es la ventaja de definirlo como una tarea en build.gradle en lugar de solo por línea de comandos?",
+      "opciones": {
+        "a": "Permite encriptar la versión de Gradle para mayor seguridad.",
+        "b": "Permite especificar la versión exacta de Gradle que se descargará y usará en el proyecto de forma declarativa.",
+        "c": "Hace que el build sea compatible con Maven automáticamente.",
+        "d": "Elimina la necesidad de descargar archivos .jar de internet."
+      },
+      "respuesta_correcta": "b",
+      "explicacion": "Definirlo como tarea permite fijar la versión para todos los desarrolladores [12]. Ejemplo:\n```gradle\nwrapper { gradleVersion = '4.9' }\n```"
+    },
+    {
+      "id": 16,
+      "pregunta": "¿Cómo identifica Gradle una librería de Java para su descarga automática?",
+      "opciones": {
+        "a": "Únicamente por el nombre del archivo JAR.",
+        "b": "Por la URL completa del servidor donde se aloja.",
+        "c": "Mediante el GAV (groupId:artifactId:version).",
+        "d": "A través de un hash SHA-256 verificado en Maven Central."
+      },
+      "respuesta_correcta": "c",
+      "explicacion": "Gradle adopta el estilo de identificación de Maven mediante las coordenadas GAV [13]."
+    },
+    {
+      "id": 17,
+      "pregunta": "¿Qué comando usarías para intentar convertir un proyecto Maven existente que usa plugins conocidos?",
+      "opciones": {
+        "a": "gradle migrate --maven",
+        "b": "gradle init --type pom",
+        "c": "gradle convertPom",
+        "d": "mvn gradle:init"
+      },
+      "respuesta_correcta": "b",
+      "explicacion": "La tarea `init` con tipo `pom` ayuda a convertir archivos de Maven a Gradle si los plugins son conocidos [12]."
+    },
+    {
+      "id": 18,
+      "pregunta": "En el archivo 'gradle.properties', ¿qué tipo de información se suele almacenar?",
+      "opciones": {
+        "a": "El código imperativo de las tareas personalizadas.",
+        "b": "Propiedades del proyecto como versiones o compatibilidad de fuentes para evitar 'hardcoding' en el script.",
+        "c": "La lista de todos los plugins disponibles en internet.",
+        "d": "El historial de errores de las últimas compilaciones."
+      },
+      "respuesta_correcta": "b",
+      "explicacion": "Se usa para desacoplar valores de configuración del script de construcción [8, 14]. Ejemplo: `theVersion=1.0`."
+    },
+    {
+      "id": 19,
+      "pregunta": "¿Qué representa técnicamente una 'Tarea' (Task) en Gradle?",
+      "opciones": {
+        "a": "Un objeto que contiene únicamente la lista de dependencias.",
+        "b": "Una unidad básica de trabajo que el build realiza.",
+        "c": "El archivo de configuración principal build.gradle.",
+        "d": "Un repositorio donde se guardan los artefactos finales."
+      },
+      "respuesta_correcta": "b",
+      "explicacion": "Cada proyecto consiste en tareas, y cada tarea representa una pieza de trabajo como compilar o generar Javadoc [14, 15]."
+    },
+    {
+      "id": 20,
+      "pregunta": "¿Cuál es la relación entre un Objeto de Proyecto (Project) y el archivo build.gradle?",
+      "opciones": {
+        "a": "Un build.gradle puede configurar múltiples proyectos raíz.",
+        "b": "Existe una relación de uno a uno entre un Proyecto y su archivo build.gradle.",
+        "c": "Los archivos build.gradle son independientes de los objetos de Proyecto.",
+        "d": "Un objeto Project solo existe si hay un archivo pom.xml presente."
+      },
+      "respuesta_correcta": "b",
+      "explicacion": "Hay una relación de uno a uno entre un Proyecto y su archivo build.gradle [1]."
+    }
+  ]
+}

@@ -1,0 +1,246 @@
+{
+  "titulo": "TEMA 7 - PROFILING A",
+  "descripcion": "Un examen sobre análisis de rendimiento, gestión de memoria en la JVM y el uso de herramientas como Java Mission Control.",
+  "examen_automatizacion": [
+    {
+      "id": 1,
+      "pregunta": "¿Cuál es el objetivo principal del profiling?",
+      "opciones": {
+        "a": "Optimizar el código fuente manualmente",
+        "b": "Identificar cuellos de botella de rendimiento",
+        "c": "Aumentar el uso de la memoria de la JVM",
+        "d": "Simular la ejecución de instrucciones"
+      },
+      "respuesta_correcta": "b",
+      "explicacion": "El objetivo principal del profiling es asistir en la optimización de programas identificando cuellos de botella y áreas de mejora [1]. Esta técnica evalúa aspectos como el tiempo de ejecución y el uso de memoria [1]."
+    },
+    {
+      "id": 2,
+      "pregunta": "¿En qué área de la memoria se almacenan los objetos de larga duración?",
+      "opciones": {
+        "a": "Eden",
+        "b": "Nursery",
+        "c": "Old Space",
+        "d": "Survivor"
+      },
+      "respuesta_correcta": "c",
+      "explicacion": "El 'Old space' es el lugar donde residen los objetos de larga duración [2]. Cuando este espacio se llena, se activa una recolección de basura de tipo 'old collection' [2]."
+    },
+    {
+      "id": 3,
+      "pregunta": "¿Qué componente del Nursery está dedicado específicamente a la asignación de nuevos objetos?",
+      "opciones": {
+        "a": "Eden",
+        "b": "Survivor 0",
+        "c": "Survivor 1",
+        "d": "Old Space"
+      },
+      "respuesta_correcta": "a",
+      "explicacion": "El 'nursery' comprende el Eden y los espacios Survivor [2]. El Eden es la parte del heap dedicada a la asignación de nuevos objetos [2]."
+    },
+    {
+      "id": 4,
+      "pregunta": "¿Dónde se asignan directamente los objetos grandes que exceden el límite de los TLA?",
+      "opciones": {
+        "a": "Eden",
+        "b": "Survivor",
+        "c": "Nursery",
+        "d": "Old Space"
+      },
+      "respuesta_correcta": "d",
+      "explicacion": "Los objetos grandes que superan el límite de tamaño para las áreas locales de hilos (TLA) se asignan directamente en el 'old space' [3]. Los objetos pequeños, por el contrario, suelen reservarse en el 'nursery' [3]."
+    },
+    {
+      "id": 5,
+      "pregunta": "¿Qué tecnología permite recolectar información de bajo nivel con un impacto mínimo, siendo apta para producción?",
+      "opciones": {
+        "a": "JProfiler",
+        "b": "Java Mission Control (JMC)",
+        "c": "Valgrind",
+        "d": "IBM Purify"
+      },
+      "respuesta_correcta": "b",
+      "explicacion": "Java Mission Control (JMC) recolecta datos detallados del runtime con un impacto mínimo en el sistema [4]. Esto lo hace adecuado para su uso en entornos de producción, a diferencia de otras tecnologías intrusivas [4]."
+    },
+    {
+      "id": 6,
+      "pregunta": "¿Qué marco de trabajo se encarga específicamente de capturar eventos detallados sobre el comportamiento de las aplicaciones Java?",
+      "opciones": {
+        "a": "Java VisualVM",
+        "b": "Java Flight Recorder (JFR)",
+        "c": "Eclipse MAT",
+        "d": "JConsole"
+      },
+      "respuesta_correcta": "b",
+      "explicacion": "Java Flight Recorder (JFR) es un marco de trabajo para la recolección de eventos y profiling [4]. Captura información detallada y de bajo nivel sobre la JVM y la aplicación [4]."
+    },
+    {
+      "id": 7,
+      "pregunta": "¿Qué problema común en la gestión manual de memoria previene el Garbage Collector?",
+      "opciones": {
+        "a": "Fugas de memoria en el stack",
+        "b": "Referencias colgantes (dangling references)",
+        "c": "Fragmentación excesiva del Metaspace",
+        "d": "Uso excesivo de registros de CPU"
+      },
+      "respuesta_correcta": "b",
+      "explicacion": "La recolección de basura previene el problema de las referencias colgantes al asegurar que los objetos referenciados no se liberen incorrectamente [5]. También aborda las fugas de espacio al reclamar memoria no utilizada [6]."
+    },
+    {
+      "id": 8,
+      "pregunta": "¿Qué vista de JFR permite identificar qué métodos estuvieron más activos durante la grabación?",
+      "opciones": {
+        "a": "Thread view",
+        "b": "Memory view",
+        "c": "I/O view",
+        "d": "Code view"
+      },
+      "respuesta_correcta": "d",
+      "explicacion": "La vista de código ('Code view') proporciona información importante sobre qué partes del código causan problemas de rendimiento [7]. Dentro de esta, los 'Hot methods' muestran qué métodos fueron más activos [7]."
+    },
+    {
+      "id": 9,
+      "pregunta": "¿En qué área de la JVM se almacenan los métodos y los thread stacks?",
+      "opciones": {
+        "a": "Heap",
+        "b": "Nursery",
+        "c": "Metaspace / PermGen",
+        "d": "Survivor"
+      },
+      "respuesta_correcta": "c",
+      "explicacion": "Recursos como métodos y pilas de hilos se asignan en áreas separadas del heap, como PermGen o Metaspace [8]. Los objetos, por otro lado, se almacenan específicamente en el heap [8]."
+    },
+    {
+      "id": 10,
+      "pregunta": "¿Qué sección del nursery evita la promoción prematura de objetos recién asignados?",
+      "opciones": {
+        "a": "Eden",
+        "b": "Keep area",
+        "c": "Survivor 0",
+        "d": "Survivor 1"
+      },
+      "respuesta_correcta": "b",
+      "explicacion": "La 'keep area' mantiene los objetos más recientemente asignados [2]. Estos no se recolectan hasta la siguiente 'young collection', evitando que se promocionen prematuramente [2]."
+    },
+    {
+      "id": 11,
+      "pregunta": "¿Qué vista de JMC permite interactuar con los atributos y operaciones de los Managed Beans?",
+      "opciones": {
+        "a": "Runtime view",
+        "b": "MBeans view",
+        "c": "Triggers view",
+        "d": "General view"
+      },
+      "respuesta_correcta": "b",
+      "explicacion": "La vista de MBeans proporciona acceso a los diferentes MBeans del proyecto [9]. Permite ver sus atributos, realizar operaciones y consultar notificaciones [9, 10]."
+    },
+    {
+      "id": 12,
+      "pregunta": "¿Qué vista de JFR es ideal para analizar problemas de sincronización entre hilos?",
+      "opciones": {
+        "a": "Hot Threads",
+        "b": "Latencies view",
+        "c": "I/O view",
+        "d": "Memory view"
+      },
+      "respuesta_correcta": "b",
+      "explicacion": "Para problemas de sincronización de hilos, la vista de latencias ('Latencies view') puede ser de gran ayuda [11]. Los hilos activos también se pueden observar en la pestaña de 'Hot Threads' [11]."
+    },
+    {
+      "id": 13,
+      "pregunta": "¿Cómo se denominan las áreas del heap reservadas para el uso exclusivo de un solo hilo?",
+      "opciones": {
+        "a": "Survivors",
+        "b": "Metaspace",
+        "c": "Thread-local areas (TLAs)",
+        "d": "Memory Pools"
+      },
+      "respuesta_correcta": "c",
+      "explicacion": "Las TLAs son pequeños fragmentos del heap reservados para el uso exclusivo de un solo hilo [3]. Generalmente se reservan del 'nursery' [3]."
+    },
+    {
+      "id": 14,
+      "pregunta": "¿Qué ocurre cuando la memoria 'Old space' se llena?",
+      "opciones": {
+        "a": "Se activa una 'Young collection'",
+        "b": "Se activa una 'Old collection'",
+        "c": "Se duplica el tamaño del Eden",
+        "d": "Se mueven los objetos al Survivor"
+      },
+      "respuesta_correcta": "b",
+      "explicacion": "Cuando el 'old space' se llena, se dispara una 'old collection' para eliminar objetos innecesarios y liberar espacio [2]. Este espacio es donde residen los objetos de vida larga [2]."
+    },
+    {
+      "id": 15,
+      "pregunta": "¿Qué funcionalidad de JMC permite visualizar la actividad de los hilos en puntos específicos del tiempo?",
+      "opciones": {
+        "a": "Graph View",
+        "b": "Log tab",
+        "c": "Events view",
+        "d": "Dashboard"
+      },
+      "respuesta_correcta": "a",
+      "explicacion": "En la 'Graph View', es posible visualizar cómo los diferentes hilos manejaron actividades y eventos en momentos específicos [12]. Para detalles textuales de cada evento, se utiliza la pestaña 'Log' [13]."
+    },
+    {
+      "id": 16,
+      "pregunta": "¿Qué vista de JFR muestra información sobre lecturas y escrituras de archivos y sockets?",
+      "opciones": {
+        "a": "System View",
+        "b": "Code View",
+        "c": "I/O View",
+        "d": "Memory View"
+      },
+      "respuesta_correcta": "c",
+      "explicacion": "La vista de I/O proporciona datos sobre las actividades de lectura y escritura en archivos y sockets [13]. Es fundamental para aplicaciones que dependen fuertemente de la entrada/salida [13]."
+    },
+    {
+      "id": 17,
+      "pregunta": "¿Cuál es la consecuencia de ignorar potenciales fugas de memoria por confiar solo en el Garbage Collector?",
+      "opciones": {
+        "a": "Aumento de la velocidad de CPU",
+        "b": "Excepciones OutOfMemoryError",
+        "c": "Reducción del intercambio de disco",
+        "d": "Optimización del Nursery"
+      },
+      "respuesta_correcta": "b",
+      "explicacion": "La negligencia respecto a las fugas de memoria puede causar que el heap se llene, provocando excepciones 'OutOfMemoryError' [6]. También puede causar un intercambio de disco excesivo que degrada el rendimiento [6]."
+    },
+    {
+      "id": 18,
+      "pregunta": "¿Qué herramienta de JMC permite ver qué métodos llamaron a los 'hot methods'?",
+      "opciones": {
+        "a": "Exception tab",
+        "b": "Call Trees",
+        "c": "Thread Dumps",
+        "d": "MBeans view"
+      },
+      "respuesta_correcta": "b",
+      "explicacion": "Los 'Call Trees' (árboles de llamadas) permiten ver qué métodos invocaron a los métodos identificados como activos o 'hot methods' [11]. Esto ayuda a entender la jerarquía de ejecución [11]."
+    },
+    {
+      "id": 19,
+      "pregunta": "¿En qué pestaña de JMC se pueden configurar alertas como volcados (dumps) o correos electrónicos?",
+      "opciones": {
+        "a": "Runtime",
+        "b": "Triggers",
+        "c": "General",
+        "d": "Events"
+      },
+      "respuesta_correcta": "b",
+      "explicacion": "En la pestaña de 'Triggers', se pueden configurar alertas (como dumps, emails o logs) activadas por comportamientos específicos en el proceso [9]."
+    },
+    {
+      "id": 20,
+      "pregunta": "¿Qué vista de JFR muestra las variables de entorno del sistema?",
+      "opciones": {
+        "a": "Memory View",
+        "b": "Thread View",
+        "c": "System View",
+        "d": "I/O View"
+      },
+      "respuesta_correcta": "c",
+      "explicacion": "La información general del sistema, como las variables de entorno, está disponible en la vista del sistema ('System View') [13]. También existe una vista general para propiedades del sistema en el inicio [14]."
+    }
+  ]
+}

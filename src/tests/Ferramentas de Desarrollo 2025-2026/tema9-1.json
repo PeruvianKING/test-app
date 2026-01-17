@@ -1,0 +1,246 @@
+{
+    "titulo": "TEMA 9 - PRUEBAS FUNCIONALES A",
+    "descripcion": "Un test exhaustivo de 20 preguntas que cubre el ciclo de vida de pruebas, herramientas de Java (JUnit, Mockito, JaCoCo), automatización (Selenium, Cargo), frameworks de JS (Jest, React Testing Library) y gestión de datos de prueba.",
+    "examen_automatizacion": [
+        {
+            "id": 1,
+            "pregunta": "¿Cuál es el objetivo principal de las pruebas funcionales según las especificaciones del sistema?",
+            "opciones": {
+                "a": "Evaluar el rendimiento y la fiabilidad bajo carga extrema.",
+                "b": "Verificar que una característica específica funcione comparando su salida con los resultados esperados.",
+                "c": "Medir la facilidad de uso y la experiencia del usuario final.",
+                "d": "Analizar la estructura interna del código para optimizar el uso de memoria."
+            },
+            "respuesta_correcta": "b",
+            "explicacion": "Las pruebas funcionales verifican características comparando salidas contra resultados esperados basándose en especificaciones [1]."
+        },
+        {
+            "id": 2,
+            "pregunta": "En la jerarquía de pruebas, ¿qué diferencia sustancial existe entre el enfoque de las pruebas unitarias y las de integración?",
+            "opciones": {
+                "a": "Las unitarias son holísticas; las de integración son reduccionistas.",
+                "b": "Las unitarias usan dependencias reales; las de integración usan objetos simulados (mocks).",
+                "c": "Las unitarias son reduccionistas (evalúan subcomponentes); las de integración son holísticas (evalúan el sistema unificado).",
+                "d": "Las unitarias se enfocan en hilos y bases de datos; las de integración en funciones individuales."
+            },
+            "respuesta_correcta": "c",
+            "explicacion": "Se definen las pruebas unitarias como reduccionistas y las de integración como holísticas [2]."
+        },
+        {
+            "id": 3,
+            "pregunta": "¿Para qué se utilizan los 'mock objects' en el contexto de las pruebas unitarias?",
+            "opciones": {
+                "a": "Para aumentar el tiempo de ejecución y simular latencia de red real.",
+                "b": "Para reemplazar dependencias y aislar el comportamiento del objeto bajo prueba.",
+                "c": "Para verificar la interacción con la base de datos de producción.",
+                "d": "Para asegurar que el código no tenga ninguna línea sin ejecutar."
+            },
+            "respuesta_correcta": "b",
+            "explicacion": "Los mocks son objetos simulados que imitan comportamientos reales para aislar la unidad que se desea testear [3]."
+        },
+        {
+            "id": 4,
+            "pregunta": "¿Cuál es la perspectiva principal desde la que se deben diseñar las pruebas de aceptación?",
+            "opciones": {
+                "a": "La perspectiva del desarrollador de backend.",
+                "b": "La perspectiva de la cobertura de líneas de código.",
+                "c": "La perspectiva del cliente o stakeholders.",
+                "d": "La perspectiva del administrador de sistemas."
+            },
+            "respuesta_correcta": "c",
+            "explicacion": "A diferencia de las unitarias/integración (perspectiva del desarrollador), las de aceptación se crean desde el punto de vista del cliente [4]."
+        },
+        {
+            "id": 5,
+            "pregunta": "¿Qué riesgo conlleva confiar exclusivamente en una cobertura de código del 100%?",
+            "opciones": {
+                "a": "Que los tests tarden demasiado tiempo en ejecutarse.",
+                "b": "Que el código sea imposible de refactorizar en el futuro.",
+                "c": "Que se alcancen todas las líneas pero no se verifique la corrección si faltan aserciones.",
+                "d": "Que JaCoCo no pueda generar informes en formato HTML."
+            },
+            "respuesta_correcta": "c",
+            "explicacion": "Es posible lograr un 100% de cobertura sin aserciones, lo cual no garantiza que el sistema funcione correctamente [5]."
+        },
+        {
+            "id": 6,
+            "pregunta": "Para que JaCoCo incluya números de línea o resaltado de sintaxis en sus informes, ¿qué requisito debe cumplirse?",
+            "opciones": {
+                "a": "Ejecutar Maven con el perfil 'release'.",
+                "b": "Compilar las clases objetivo con información de depuración (debug information).",
+                "c": "Utilizar exclusivamente JUnit 5.",
+                "d": "Instalar el agente de JaCoCo en el sistema operativo."
+            },
+            "respuesta_correcta": "b",
+            "explicacion": "Para habilitar estas funciones de reporte, las clases deben compilarse con información de depuración [6]."
+        },
+        {
+            "id": 7,
+            "pregunta": "En la configuración específica de este curso, ¿dónde se ejecutan las pruebas unitarias y de integración en Maven?",
+            "opciones": {
+                "a": "Ambas en la fase 'test'.",
+                "b": "Unitarias en 'test' e Integración en 'integration-test'.",
+                "c": "Ambas en la fase 'verify'.",
+                "d": "Unitarias en 'compile' e Integración en 'package'."
+            },
+            "respuesta_correcta": "a",
+            "explicacion": "Debido a diferencias de definición, el curso ejecuta unitarias e integración en 'test', y aceptación en 'integration-test' [7]."
+        },
+        {
+            "id": 8,
+            "pregunta": "¿Por qué el Maven Failsafe Plugin es preferible al Surefire Plugin para pruebas de integración/aceptación?",
+            "opciones": {
+                "a": "Failsafe es compatible con Mockito y Surefire no.",
+                "b": "Failsafe permite llegar a la fase 'post-integration-test' para limpiar el entorno aunque fallen los tests.",
+                "c": "Surefire solo puede ejecutar una prueba a la vez.",
+                "d": "Failsafe genera automáticamente los mocks de la base de datos."
+            },
+            "respuesta_correcta": "b",
+            "explicacion": "Failsafe asegura que el proceso continúe hasta la fase de limpieza (teardown), evitando que el entorno quede mal cerrado tras un fallo [8, 9]."
+        },
+        {
+            "id": 9,
+            "pregunta": "¿Qué comando de Maven debe ejecutarse para asegurar que se realicen las fases de pre-integración, test y post-integración?",
+            "opciones": {
+                "a": "mvn test",
+                "b": "mvn compile",
+                "c": "mvn verify",
+                "d": "mvn clean"
+            },
+            "respuesta_correcta": "c",
+            "explicacion": "Se debe usar 'mvn verify' para garantizar que la fase 'post-integration-test' se ejecute [9]."
+        },
+        {
+            "id": 10,
+            "pregunta": "¿Cuál es la función principal de la herramienta 'Cargo' en el flujo de pruebas de aceptación?",
+            "opciones": {
+                "a": "Analizar la cobertura de código de JavaScript.",
+                "b": "Gestionar contenedores de aplicaciones (como Tomcat) de forma estándar.",
+                "c": "Simular clics de ratón en el navegador Firefox.",
+                "d": "Generar datos aleatorios para la base de datos."
+            },
+            "respuesta_correcta": "b",
+            "explicacion": "Cargo es una herramienta ligera para gestionar contenedores de aplicaciones, permitiendo iniciarlos y detenerlos mediante una API [9]."
+        },
+        {
+            "id": 11,
+            "pregunta": "Para realizar pruebas automatizadas basadas en navegador con Selenium y Firefox, ¿qué componente adicional es necesario?",
+            "opciones": {
+                "a": "ChromeDriver",
+                "b": "JaCoCo Agent",
+                "c": "geckodriver",
+                "d": "Babel-plugin"
+            },
+            "respuesta_correcta": "c",
+            "explicacion": "Para usar Firefox con Selenium en el curso, se utiliza el componente 'geckodriver' [10, 11]."
+        },
+        {
+            "id": 12,
+            "pregunta": "¿Qué característica de Jest permite rastrear cambios en objetos grandes comparando la salida actual con una previa grabada?",
+            "opciones": {
+                "a": "Mocking automático.",
+                "b": "Snapshot testing (pruebas de instantáneas).",
+                "c": "Assertion Fixtures.",
+                "d": "Integration suites."
+            },
+            "respuesta_correcta": "b",
+            "explicacion": "El 'snapshot testing' es útil para rastrear cambios en objetos complejos a través de diferentes ejecuciones [12]."
+        },
+        {
+            "id": 13,
+            "pregunta": "¿Cómo verifica React Testing Library el comportamiento de un componente?",
+            "opciones": {
+                "a": "Accediendo directamente a la variable de estado 'state' de React.",
+                "b": "Disparando eventos (firing events) y comprobando la respuesta de la página.",
+                "c": "Contando el número de veces que se llama al renderizador de React.",
+                "d": "Utilizando solo aserciones de tipo 'assertNotNull' sobre el código fuente."
+            },
+            "respuesta_correcta": "b",
+            "explicacion": "La biblioteca prueba comportamientos disparando eventos y verificando la respuesta visible en la página [13]."
+        },
+        {
+            "id": 14,
+            "pregunta": "En el contexto de 'Mock Data', ¿a qué se refiere el término 'población de datos' (data population)?",
+            "opciones": {
+                "a": "Al número total de usuarios que acceden simultáneamente al sistema.",
+                "b": "A asegurar que la estructura y las relaciones entre datos reflejen la realidad de producción.",
+                "c": "A la velocidad con la que se insertan registros en la base de datos.",
+                "d": "Al proceso de eliminar datos obsoletos antes de un test."
+            },
+            "respuesta_correcta": "b",
+            "explicacion": "La población de datos garantiza que las estructuras y relaciones de los datos simulados coincidan con lo que la aplicación manejará realmente [14]."
+        },
+        {
+            "id": 15,
+            "pregunta": "¿Cuál de las siguientes es una herramienta recomendada para automatizar la generación de datos simulados?",
+            "opciones": {
+                "a": "JUnit Runner",
+                "b": "Faker.js",
+                "c": "Selenium Grid",
+                "d": "Maven Archiver"
+            },
+            "respuesta_correcta": "b",
+            "explicacion": "Faker.js es mencionada como una biblioteca ampliamente usada para generar datos aleatorios [14]."
+        },
+        {
+            "id": 16,
+            "pregunta": "¿Qué función cumplen las 'Test Fixtures' en JUnit?",
+            "opciones": {
+                "a": "Controlar el orden alfabético de ejecución de los tests.",
+                "b": "Permitir la configuración de datos de prueba comunes para ser reutilizados.",
+                "c": "Generar informes de errores en formato XML.",
+                "d": "Simular fallos de red de forma aleatoria."
+            },
+            "respuesta_correcta": "b",
+            "explicacion": "Las fixtures permiten configurar datos comunes que pueden ser usados en múltiples pruebas [15]."
+        },
+        {
+            "id": 17,
+            "pregunta": "Al configurar Cargo con JaCoCo para pruebas de aceptación, ¿dónde se suele inyectar el agente de JaCoCo?",
+            "opciones": {
+                "a": "En el navegador Firefox mediante un plugin.",
+                "b": "En los argumentos de la JVM del contenedor (cargo.jvmargs).",
+                "c": "En la base de datos mediante un script SQL.",
+                "d": "Directamente en el código fuente de los controladores de Spring."
+            },
+            "respuesta_correcta": "b",
+            "explicacion": "La configuración muestra que el agente de JaCoCo se pasa a través de 'cargo.jvmargs' en el archivo pom.xml [16]."
+        },
+        {
+            "id": 18,
+            "pregunta": "En las pruebas de integración, ¿qué aspecto se busca validar específicamente más allá de las unidades individuales?",
+            "opciones": {
+                "a": "La sintaxis de los comentarios en el código.",
+                "b": "Las interacciones entre los componentes del sistema.",
+                "c": "El tiempo de carga de las imágenes en el frontend.",
+                "d": "El cumplimiento de la normativa legal de protección de datos."
+            },
+            "respuesta_correcta": "b",
+            "explicacion": "Las pruebas de integración evalúan el comportamiento con dependencias reales para verificar las interacciones entre componentes [2]."
+        },
+        {
+            "id": 19,
+            "pregunta": "¿Qué ventaja ofrece el uso de Mockito en cuanto al mantenimiento de los tests?",
+            "opciones": {
+                "a": "Hace los tests altamente legibles y genera mensajes de error claros.",
+                "b": "Elimina la necesidad de usar aserciones de JUnit.",
+                "c": "Permite ejecutar tests de Java en un navegador web.",
+                "d": "Reduce automáticamente el tamaño de los archivos .jar."
+            },
+            "respuesta_correcta": "a",
+            "explicacion": "Mockito mejora la claridad de los tests y proporciona mensajes de error claros cuando fallan las verificaciones [17]."
+        },
+        {
+            "id": 20,
+            "pregunta": "¿Cuál es la diferencia clave entre las fases 'test' e 'integration-test' en el ciclo de vida estándar de Maven?",
+            "opciones": {
+                "a": "La fase 'test' requiere que el código esté empaquetado; 'integration-test' no.",
+                "b": "La fase 'test' no requiere empaquetado ni despliegue; 'integration-test' sí puede desplegar el paquete.",
+                "c": "La fase 'test' solo admite JUnit 4; 'integration-test' solo JUnit 5.",
+                "d": "No existe diferencia; son sinónimos en las versiones modernas de Maven."
+            },
+            "respuesta_correcta": "b",
+            "explicacion": "Según Maven, 'test' no requiere empaquetado, mientras que 'integration-test' procesa y despliega el paquete en un entorno adecuado [7]."
+        }
+    ]
+}

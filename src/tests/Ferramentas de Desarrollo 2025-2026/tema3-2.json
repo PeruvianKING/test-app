@@ -1,0 +1,246 @@
+{
+    "titulo": "TEMA 3 - ITS B",
+    "descripcion": "Una evaluación detallada sobre las funcionalidades específicas, integraciones y mejores prácticas en la gestión de proyectos con Redmine.",
+    "examen_automatizacion": [
+        {
+            "id": 1,
+            "pregunta": "¿Por qué es beneficioso mostrar información en el 'punto de decisión'?",
+            "opciones": {
+                "a": "Porque aumenta la productividad al mostrar detalles relevantes directamente en el IDE del desarrollador.",
+                "b": "Porque reduce la productividad al saturar el IDE del desarrollador con detalles técnicos.",
+                "c": "Porque limita el acceso a la información únicamente al entorno de desarrollo del IDE.",
+                "d": "Porque permite al desarrollador ignorar los detalles irrelevantes fuera de su IDE."
+            },
+            "respuesta_correcta": "a",
+            "explicacion": "Mostrar detalles relevantes directamente en el IDE del desarrollador impulsa la productividad al tener la información donde se toman las decisiones técnicas [1]."
+        },
+        {
+            "id": 2,
+            "pregunta": "¿Qué acción se recomienda realizar específicamente antes de reportar un error?",
+            "opciones": {
+                "a": "Verificar si existen problemas ya reportados para evitar la duplicación.",
+                "b": "Verificar si existen problemas ya resueltos para evitar la reapertura.",
+                "c": "Verificar si existen problemas ya asignados para evitar conflictos de recursos.",
+                "d": "Verificar si existen problemas ya archivados para evitar redundancia histórica."
+            },
+            "respuesta_correcta": "a",
+            "explicacion": "Especialmente al rastrear errores, es fundamental comprobar los problemas existentes para no crear duplicados en el sistema [2]."
+        },
+        {
+            "id": 3,
+            "pregunta": "¿Cuál es la función del campo 'Target version' (Versión objetivo) en Redmine?",
+            "opciones": {
+                "a": "Indicar la versión para la cual el problema debe estar resuelto o cerrado.",
+                "b": "Indicar la versión en la cual se detectó originalmente el problema.",
+                "c": "Indicar la versión que será reemplazada por la resolución del problema.",
+                "d": "Indicar la versión de Redmine que se utiliza para gestionar el problema."
+            },
+            "respuesta_correcta": "a",
+            "explicacion": "El campo 'Target version' define la versión específica del proyecto en la que se espera que la petición esté finalizada [3]."
+        },
+        {
+            "id": 4,
+            "pregunta": "¿Para qué sirve la pestaña 'Actividad' (Activity) en un proyecto de Redmine?",
+            "opciones": {
+                "a": "Proporciona una visión general de las actualizaciones y actividades recientes del proyecto.",
+                "b": "Proporciona una visión general de los costes y actividades financieras recientes del proyecto.",
+                "c": "Proporciona una visión general de los commits y actividades del repositorio exclusivamente.",
+                "d": "Proporciona una visión general de las altas y bajas de los miembros del equipo recientemente."
+            },
+            "respuesta_correcta": "a",
+            "explicacion": "La pestaña 'Activity' ofrece un resumen cronológico de las últimas novedades y movimientos realizados dentro del proyecto [4]."
+        },
+        {
+            "id": 5,
+            "pregunta": "En Redmine, ¿qué permite la pestaña 'Noticias' (News)?",
+            "opciones": {
+                "a": "Publicar anuncios del proyecto y actualizaciones importantes para el equipo.",
+                "b": "Publicar artículos de opinión sobre el desarrollo de software externo.",
+                "c": "Publicar automáticamente los mensajes de commit del sistema de control de versiones.",
+                "d": "Publicar los registros de tiempo de todos los desarrolladores del proyecto."
+            },
+            "respuesta_correcta": "a",
+            "explicacion": "La pestaña 'News' se utiliza para comunicar anuncios relevantes y mantener informado al equipo sobre hitos importantes [4, 5]."
+        },
+        {
+            "id": 6,
+            "pregunta": "¿Cómo ayuda Redmine a descomponer grandes proyectos?",
+            "opciones": {
+                "a": "Facilitando la división de grandes proyectos en tareas más pequeñas y manejables.",
+                "b": "Facilitando la división de grandes proyectos en múltiples repositorios independientes.",
+                "c": "Facilitando la división de grandes proyectos en bases de datos separadas por versión.",
+                "d": "Facilitando la división de grandes proyectos en documentos físicos de requerimientos."
+            },
+            "respuesta_correcta": "a",
+            "explicacion": "Redmine facilita la gestión al permitir romper un proyecto complejo en tareas accionables individuales [4, 6]."
+        },
+        {
+            "id": 7,
+            "pregunta": "¿Qué información se puede incluir en los 'Detalles de la Petición' (Issue Details)?",
+            "opciones": {
+                "a": "Fechas de inicio/vencimiento, tiempo estimado y porcentaje de realización.",
+                "b": "Fechas de inicio/vencimiento, tiempo de compilación y porcentaje de líneas de código.",
+                "c": "Fechas de contratación/despido, tiempo de descanso y porcentaje de salario.",
+                "d": "Fechas de reunión, tiempo de discusión y porcentaje de acuerdos alcanzados."
+            },
+            "respuesta_correcta": "a",
+            "explicacion": "Los detalles de una petición abarcan desde la planificación temporal hasta el progreso porcentual y la estimación de horas [7]."
+        },
+        {
+            "id": 8,
+            "pregunta": "¿Cuál es la utilidad de los 'Observadores' (Watchers) en una tarea?",
+            "opciones": {
+                "a": "Recibir notificaciones por correo electrónico sobre las actividades de la petición.",
+                "b": "Supervisar visualmente el escritorio del desarrollador asignado a la tarea.",
+                "c": "Aprobar obligatoriamente cada cambio realizado en el código de la petición.",
+                "d": "Bloquear la petición para que nadie más pueda editarla mientras observan."
+            },
+            "respuesta_correcta": "a",
+            "explicacion": "Redmine puede notificar a los miembros del equipo, incluyendo a los 'watchers', sobre las actividades del proyecto vía email [7, 8]."
+        },
+        {
+            "id": 9,
+            "pregunta": "¿Qué tipos de actividades de registro de tiempo vienen por defecto?",
+            "opciones": {
+                "a": "Diseño, Desarrollo, Análisis y Prototipado, entre otros.",
+                "b": "Diseño, Implementación, Testing y Despliegue, únicamente.",
+                "c": "Diseño, Ventas, Marketing y Atención al Cliente, por defecto.",
+                "d": "Diseño, Compilación, Ejecución y Depuración, exclusivamente."
+            },
+            "respuesta_correcta": "a",
+            "explicacion": "Los tipos de actividad predeterminados incluyen diseño, desarrollo, análisis y prototipado, aunque son personalizables [9]."
+        },
+        {
+            "id": 10,
+            "pregunta": "¿Qué funcionalidad ofrece la pestaña 'Mi página' (My Page)?",
+            "opciones": {
+                "a": "Centralizar la información sobre todas las peticiones relevantes para el usuario actual.",
+                "b": "Centralizar la información sobre el perfil público y biografía del usuario actual.",
+                "c": "Centralizar la información sobre las contraseñas y claves API del usuario actual.",
+                "d": "Centralizar la información sobre el historial de navegación web del usuario actual."
+            },
+            "respuesta_correcta": "a",
+            "explicacion": "La pestaña 'My Page' sirve como un panel personal que reúne las peticiones asignadas o reportadas por el usuario [10]."
+        },
+        {
+            "id": 11,
+            "pregunta": "¿Qué proporciona el plugin de la pestaña 'Visión general' (Overview) a nivel de equipo?",
+            "opciones": {
+                "a": "Un análisis de alto nivel del trabajo en curso tanto del equipo como del proyecto.",
+                "b": "Un análisis de bajo nivel de las líneas de código escritas por cada miembro del equipo.",
+                "c": "Un análisis de alto nivel de las redes sociales conectadas al equipo de trabajo.",
+                "d": "Un análisis de bajo nivel de las llamadas telefónicas realizadas por el equipo."
+            },
+            "respuesta_correcta": "a",
+            "explicacion": "Esta pestaña (plugin) ofrece un análisis detallado del progreso y la salud del trabajo tanto a nivel global como individual del equipo [10]."
+        },
+        {
+            "id": 12,
+            "pregunta": "¿Qué permite visualizar la vista 'Calendario' en Redmine?",
+            "opciones": {
+                "a": "El cronograma diario de las tareas y hitos del proyecto.",
+                "b": "El calendario de vacaciones y festivos de la empresa.",
+                "c": "El calendario de pagos y facturación mensual del proyecto.",
+                "d": "El cronograma de backups y mantenimiento del servidor Redmine."
+            },
+            "respuesta_correcta": "a",
+            "explicacion": "La vista de calendario muestra la planificación diaria de las peticiones en curso y sus fechas límite [5]."
+        },
+        {
+            "id": 13,
+            "pregunta": "¿Cuál es la principal diferencia entre la pestaña 'Documentos' y 'Archivos'?",
+            "opciones": {
+                "a": "Documentos organiza documentación técnica en categorías; Archivos es un repositorio general.",
+                "b": "Documentos guarda el código fuente; Archivos guarda los manuales de usuario.",
+                "c": "Documentos es para archivos privados; Archivos es para archivos públicos del equipo.",
+                "d": "Documentos es para archivos PDF; Archivos es para cualquier otro formato binario."
+            },
+            "respuesta_correcta": "a",
+            "explicacion": "La pestaña 'Documentos' permite organizar la documentación por categorías, mientras que 'Archivos' funciona como un repositorio para parches, imágenes y archivos comunes [11, 12]."
+        },
+        {
+            "id": 14,
+            "pregunta": "Al integrar Git, ¿qué estadísticas básicas ofrece la vista de 'Repositorio'?",
+            "opciones": {
+                "a": "Información sobre los cambios de código a lo largo del tiempo.",
+                "b": "Información sobre el consumo de ancho de banda del repositorio Git.",
+                "c": "Información sobre la cantidad de comentarios por línea de código.",
+                "d": "Información sobre el tiempo de respuesta del servidor Git remoto."
+            },
+            "respuesta_correcta": "a",
+            "explicacion": "La pestaña de estadísticas en la vista del repositorio permite observar la evolución de los commits y cambios realizados [13]."
+        },
+        {
+            "id": 15,
+            "pregunta": "¿Qué permite hacer el comando de commit 'implements feature #5 @3h15m'?",
+            "opciones": {
+                "a": "Implementar una característica y registrar 3 horas y 15 minutos de tiempo automáticamente.",
+                "b": "Implementar una característica y programar una reunión para dentro de 3 horas y 15 minutos.",
+                "c": "Implementar una característica y avisar a 3 usuarios tras 15 minutos de espera.",
+                "d": "Implementar una característica y borrar la petición #5 después de 3 horas y 15 minutos."
+            },
+            "respuesta_correcta": "a",
+            "explicacion": "Mediante mensajes de commit específicos, se puede interactuar con Redmine para registrar tiempo dedicado a una tarea directamente [14]."
+        },
+        {
+            "id": 16,
+            "pregunta": "¿Qué significa el término 'Revision comparison side-by-side'?",
+            "opciones": {
+                "a": "Comparar dos versiones de código mostrando las diferencias en columnas paralelas.",
+                "b": "Comparar dos versiones de código mostrando las diferencias una debajo de otra.",
+                "c": "Comparar dos versiones de código enviando una copia a cada lado del equipo de QA.",
+                "d": "Comparar dos versiones de código alternando la visualización cada 30 segundos."
+            },
+            "respuesta_correcta": "a",
+            "explicacion": "Redmine permite comparar revisiones de código en paralelo (side-by-side) para identificar cambios más fácilmente [15]."
+        },
+        {
+            "id": 17,
+            "pregunta": "¿Cómo se define una categoría de petición en la configuración del proyecto?",
+            "opciones": {
+                "a": "Se definen en los ajustes del proyecto para organizar tareas por componentes.",
+                "b": "Se definen automáticamente mediante inteligencia artificial según el título.",
+                "c": "Se definen en el archivo de configuración del servidor Redmine globalmente.",
+                "d": "Se definen únicamente a través de la API de integración de VS Code."
+            },
+            "respuesta_correcta": "a",
+            "explicacion": "Las categorías se establecen en la configuración (Settings) para permitir una mejor organización, por ejemplo, dividiendo por componentes del sistema [7, 16]."
+        },
+        {
+            "id": 18,
+            "pregunta": "¿Qué ventaja ofrece la integración de Redmine con Visual Studio Code?",
+            "opciones": {
+                "a": "Actualizar el estado de las peticiones sin salir del editor de código.",
+                "b": "Sincronizar el historial de navegación del navegador con las tareas.",
+                "c": "Editar directamente los archivos CSS del servidor de Redmine.",
+                "d": "Traducir automáticamente los comentarios de las peticiones a otros idiomas."
+            },
+            "respuesta_correcta": "a",
+            "explicacion": "La extensión de VS Code permite gestionar peticiones, ver tareas activas y cambiar estados sin cambiar de aplicación [14, 17]."
+        },
+        {
+            "id": 19,
+            "pregunta": "¿Qué constituye un 'recurso de documentación centrado en problemas'?",
+            "opciones": {
+                "a": "La Wiki, comentarios, mensajes de commit, archivos y documentos juntos.",
+                "b": "Únicamente el manual de usuario almacenado en la pestaña de Documentos.",
+                "c": "Los archivos de código fuente y sus comentarios Javadoc exclusivamente.",
+                "d": "Los correos electrónicos privados intercambiados entre los programadores."
+            },
+            "respuesta_correcta": "a",
+            "explicacion": "La combinación de todas las herramientas de Redmine (Wiki, commits, archivos, etc.) mejora la productividad como un ecosistema de documentación integrado [18]."
+        },
+        {
+            "id": 20,
+            "pregunta": "¿Qué sucede al hacer clic en un ID de revisión específico en la vista del Repositorio?",
+            "opciones": {
+                "a": "Se muestran los detalles de los cambios realizados en ese commit particular.",
+                "b": "Se descarga automáticamente el código completo de esa versión en formato ZIP.",
+                "c": "Se abre un chat directo con el autor de ese commit para discutir los cambios.",
+                "d": "Se revierte automáticamente el repositorio a ese estado anterior."
+            },
+            "respuesta_correcta": "a",
+            "explicacion": "Al seleccionar el ID de una revisión, el sistema despliega el detalle de qué archivos fueron añadidos, modificados o eliminados en ese cambio [13]."
+        }
+    ]
+}

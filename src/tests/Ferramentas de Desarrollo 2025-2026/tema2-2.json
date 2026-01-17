@@ -1,0 +1,246 @@
+{
+    "titulo": "TEMA 2 - SCM B",
+    "descripcion": "Examen técnico sobre el ciclo de vida de Git, estrategias de ramificación y revisiones de código.",
+    "examen_automatizacion": [
+        {
+            "id": 1,
+            "pregunta": "¿Qué comando se utiliza para configurar el editor predeterminado de Git de forma global?",
+            "opciones": {
+                "a": "git config --global user.editor nano",
+                "b": "git config --global core.editor nano",
+                "c": "git config --system core.editor nano",
+                "d": "git config --local default.editor nano"
+            },
+            "respuesta_correcta": "b",
+            "explicacion": "Para establecer el editor de texto globalmente, se utiliza la propiedad 'core.editor' dentro del comando git config."
+        },
+        {
+            "id": 2,
+            "pregunta": "Si desea clonar un repositorio en una carpeta local con un nombre específico distinto al del repositorio, ¿qué comando debe usar?",
+            "opciones": {
+                "a": "git clone <url> --name <nombre_carpeta>",
+                "b": "git clone <url> <nombre_carpeta>",
+                "c": "git clone <url> -o <nombre_carpeta>",
+                "d": "git clone <url> --directory <nombre_carpeta>"
+            },
+            "respuesta_correcta": "b",
+            "explicacion": "Git permite especificar un nombre de carpeta de destino simplemente añadiendo el nombre deseado después de la URL del repositorio en el comando clone."
+        },
+        {
+            "id": 3,
+            "pregunta": "Dentro del ciclo de vida de archivos, ¿en qué estados puede encontrarse un archivo 'Tracked' (rastreado)?",
+            "opciones": {
+                "a": "Solo modificado o sin modificar.",
+                "b": "Solo preparado (staged) o sin modificar.",
+                "c": "Sin modificar, modificado o preparado.",
+                "d": "Rastreado, ignorado o eliminado."
+            },
+            "respuesta_correcta": "c",
+            "explicacion": "Los archivos rastreados son aquellos que formaban parte del último commit y pueden estar en estado 'unmodified', 'modified' o 'staged'."
+        },
+        {
+            "id": 4,
+            "pregunta": "¿A qué comandos es equivalente la ejecución de 'git mv <origen> <destino>'?",
+            "opciones": {
+                "a": "mv <origen> <destino>; git add <destino>",
+                "b": "mv <origen> <destino>; git rm <origen>; git add <destino>",
+                "c": "cp <origen> <destino>; git rm <origen>",
+                "d": "mv <origen> <destino>; git commit -m 'move'"
+            },
+            "respuesta_correcta": "b",
+            "explicacion": "El comando 'git mv' realiza el movimiento físico del archivo, elimina el rastro del nombre antiguo y añade el nuevo al área de preparación."
+        },
+        {
+            "id": 5,
+            "pregunta": "Si ha añadido archivos por error al área de preparación (staging) usando 'git add ', ¿cómo puede quitarlos sin perder sus cambios?",
+            "opciones": {
+                "a": "git rm --cached ",
+                "b": "git checkout -- ",
+                "c": "git reset HEAD ",
+                "d": "git revert HEAD "
+            },
+            "respuesta_correcta": "c",
+            "explicacion": "El comando 'git reset HEAD ' permite des-preparar (unstage) cambios que han sido añadidos al índice accidentalmente."
+        },
+        {
+            "id": 6,
+            "pregunta": "¿Cuál es el comportamiento por defecto de un 'Mixed Reset' (git reset HEAD1)?",
+            "opciones": {
+                "a": "Deshace el commit y deja los archivos modificados pero sin preparar (unstaged).",
+                "b": "Deshace el commit y deja los archivos modificados y ya preparados (staged).",
+                "c": "Deshace el commit y elimina físicamente los cambios de la carpeta.",
+                "d": "Borra el historial de commits pero mantiene el puntero HEAD en el mismo sitio."
+            },
+            "respuesta_correcta": "a",
+            "explicacion": "El 'Mixed Reset' es el modo por defecto de Git; deshace el commit y mantiene los cambios en el directorio de trabajo, pero fuera del área de preparación."
+        },
+        {
+            "id": 7,
+            "pregunta": "¿Qué sucede al ejecutar un 'Hard Reset' (git reset --hard HEAD1)?",
+            "opciones": {
+                "a": "Los cambios del último commit se mueven al área de preparación.",
+                "b": "Se crea un nuevo commit que revierte los cambios del anterior.",
+                "c": "Se descartan permanentemente los cambios del último commit tanto del índice como del directorio.",
+                "d": "Se eliminan los archivos untracked del directorio de trabajo."
+            },
+            "respuesta_correcta": "c",
+            "explicacion": "Un 'Hard Reset' descarta permanentemente los cambios introducidos en el último commit, por lo que no permanecen en el directorio de trabajo."
+        },
+        {
+            "id": 8,
+            "pregunta": "Para visualizar la configuración detallada de un servidor remoto específico y el estado de sus ramas, ¿qué comando se usa?",
+            "opciones": {
+                "a": "git remote -v",
+                "b": "git remote show ",
+                "c": "git remote list ",
+                "d": "git branch -r"
+            },
+            "respuesta_correcta": "b",
+            "explicacion": "El comando 'git remote show' ofrece información detallada sobre las URLs, la rama HEAD y la configuración de ramas locales frente a remotas."
+        },
+        {
+            "id": 9,
+            "pregunta": "Si necesita realizar un 'pull' pero tiene cambios locales sin confirmar, ¿cuál es el flujo recomendado?",
+            "opciones": {
+                "a": "git commit; git pull; git reset",
+                "b": "git stash; git pull; git stash pop",
+                "c": "git pull --force; git stash",
+                "d": "git checkout .; git pull; git merge"
+            },
+            "respuesta_correcta": "b",
+            "explicacion": "Se recomienda usar 'stash' para guardar temporalmente los cambios locales, realizar el 'pull' y luego reaplicar los cambios guardados."
+        },
+        {
+            "id": 10,
+            "pregunta": "¿Cómo se envían todas las etiquetas (tags) locales al repositorio remoto de una sola vez?",
+            "opciones": {
+                "a": "git push origin v",
+                "b": "git push origin --all-tags",
+                "c": "git push origin --tags",
+                "d": "git push origin master --tags"
+            },
+            "respuesta_correcta": "c",
+            "explicacion": "El flag '--tags' en el comando push indica a Git que transfiera todas las etiquetas locales que aún no están en el servidor remoto."
+        },
+        {
+            "id": 11,
+            "pregunta": "Técnicamente, ¿qué es una rama en Git a nivel de archivos del sistema?",
+            "opciones": {
+                "a": "Un subdirectorio oculto dentro de .git/objects.",
+                "b": "Un archivo simple que contiene el checksum SHA-1 de 40 caracteres del commit al que apunta.",
+                "c": "Una base de datos comprimida de todos los blobs del proyecto.",
+                "d": "Un puntero virtual almacenado exclusivamente en la memoria RAM."
+            },
+            "respuesta_correcta": "b",
+            "explicacion": "En Git, una rama se representa como un archivo simple que almacena el SHA-1 del commit al que apunta actualmente."
+        },
+        {
+            "id": 12,
+            "pregunta": "¿Qué comando se utiliza para eliminar una rama en el servidor remoto?",
+            "opciones": {
+                "a": "git branch -rd <nombre_rama>",
+                "b": "git push origin --delete <nombre_rama>",
+                "c": "git push origin :<nombre_rama>",
+                "d": "Las opciones b y c son correctas."
+            },
+            "respuesta_correcta": "d",
+            "explicacion": "Ambos comandos, el flag '--delete' o la sintaxis de dos puntos antes del nombre de la rama, sirven para borrar una rama en el remoto."
+        },
+        {
+            "id": 13,
+            "pregunta": "¿Qué elementos utiliza Git para realizar un 'Three-way merge'?",
+            "opciones": {
+                "a": "Los dos últimos commits de la rama actual y la rama master.",
+                "b": "Las puntas (tips) de las dos ramas y su ancestro común.",
+                "c": "Los archivos modificados, el índice y el directorio de trabajo.",
+                "d": "El commit inicial del proyecto, el commit actual y el remoto."
+            },
+            "respuesta_correcta": "b",
+            "explicacion": "Git realiza la fusión de tres vías utilizando las instantáneas de las puntas de ambas ramas y la instantánea de su ancestro común."
+        },
+        {
+            "id": 14,
+            "pregunta": "Según las estrategias de ramificación, ¿cuál es la recomendación al crear una 'Release Branch'?",
+            "opciones": {
+                "a": "Crearla al inicio del desarrollo para ir añadiendo funciones.",
+                "b": "Crearla lo más cerca posible de la fecha real de lanzamiento.",
+                "c": "Mantenerla abierta permanentemente para correcciones futuras.",
+                "d": "Fusionarla solo en la rama develop para evitar inestabilidad."
+            },
+            "respuesta_correcta": "b",
+            "explicacion": "Se recomienda crear la rama de lanzamiento lo más cerca posible de la fecha de publicación para minimizar la gestión de ramas paralelas."
+        },
+        {
+            "id": 15,
+            "pregunta": "En el modelo 'Feature Branching', ¿qué ventaja ofrecen los 'feature flags'?",
+            "opciones": {
+                "a": "Permiten que el código esté en el build pero permanezca inactivo durante el desarrollo.",
+                "b": "Aceleran la velocidad de la red al hacer 'push' de ramas grandes.",
+                "c": "Eliminan la necesidad de realizar pruebas unitarias antes del merge.",
+                "d": "Garantizan que no habrá conflictos de fusión con la rama master."
+            },
+            "respuesta_correcta": "a",
+            "explicacion": "Los 'feature flags' o interruptores permiten que el código nuevo forme parte de la construcción pero se mantenga inactivo hasta que se decida su activación."
+        },
+        {
+            "id": 16,
+            "pregunta": "¿Desde dónde se debe crear una rama 'Hotfix' en una emergencia de producción?",
+            "opciones": {
+                "a": "Desde el último commit de la rama 'develop'.",
+                "b": "Desde la etiqueta (tag) en la rama 'master' que marca la versión de producción actual.",
+                "c": "Desde la rama de la última funcionalidad terminada.",
+                "d": "Desde un commit vacío para asegurar la limpieza del código."
+            },
+            "respuesta_correcta": "b",
+            "explicacion": "Las ramas de corrección urgente (hotfixes) deben originarse desde el tag de producción en la rama master para no arrastrar código en desarrollo."
+        },
+        {
+            "id": 17,
+            "pregunta": "¿Cuál de las siguientes se considera una 'Peor Práctica' (Worst Practice) en SCM?",
+            "opciones": {
+                "a": "Usar 'git clean' sin la opción -n (dry run) primero.",
+                "b": "Reescribir la historia pública del repositorio.",
+                "c": "Confirmar archivos binarios grandes siempre que sea posible.",
+                "d": "Todas las anteriores son peores prácticas."
+            },
+            "respuesta_correcta": "d",
+            "explicacion": "Limpiar sin previsualizar, reescribir historia compartida y subir archivos binarios grandes o generados son prácticas desaconsejadas en SCM."
+        },
+        {
+            "id": 18,
+            "pregunta": "¿Qué funcionalidad NO es propia de los Merge Requests (MR)?",
+            "opciones": {
+                "a": "Comparación de cambios entre dos ramas.",
+                "b": "Discusión en línea de las modificaciones propuestas.",
+                "c": "Eliminar automáticamente conflictos de fusión sin intervención humana.",
+                "d": "Prevención de la fusión hasta que la solicitud esté lista y aprobada."
+            },
+            "respuesta_correcta": "c",
+            "explicacion": "Aunque los MR facilitan la revisión, los conflictos de fusión deben ser resueltos manualmente por los desarrolladores."
+        },
+        {
+            "id": 19,
+            "pregunta": "Como autor de un Merge Request, ¿qué debe hacer para minimizar las iteraciones innecesarias?",
+            "opciones": {
+                "a": "Asegurar que la pipeline de CI pase y añadir una lista de tareas completadas en la descripción.",
+                "b": "Asignar el MR a múltiples revisores simultáneamente sin aviso previo.",
+                "c": "Subir el código lo más rápido posible sin revisar el 'diff' local.",
+                "d": "Fusionar los cambios primero y pedir revisión después."
+            },
+            "respuesta_correcta": "a",
+            "explicacion": "El autor debe responsabilizarse de verificar que la CI pase y documentar su solución para facilitar el trabajo del revisor."
+        },
+        {
+            "id": 20,
+            "pregunta": "Si un Merge Request implica el uso de funciones criptográficas, ¿quién debe aprobarlo obligatoriamente?",
+            "opciones": {
+                "a": "Un Backend Maintainer.",
+                "b": "Un Security Engineer.",
+                "c": "El Líder de UX.",
+                "d": "Un miembro del equipo de Distribución."
+            },
+            "respuesta_correcta": "b",
+            "explicacion": "Cualquier cambio que involucre funciones criptográficas, autenticación o manejo de datos confidenciales requiere la aprobación de un Ingeniero de Seguridad."
+        }
+    ]
+}

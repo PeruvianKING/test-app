@@ -1,0 +1,246 @@
+{
+    "titulo": "TEMA 1 - INTRODUCCIÓN",
+    "descripcion": "Un test de alta dificultad diseñado para evaluar el dominio técnico sobre la terminología, jerarquías de trabajo, fases del SDLC y la evolución histórica del desarrollo de software basándose estrictamente en las fuentes.",
+    "examen_automatizacion": [
+        {
+            "id": 1,
+            "pregunta": "¿Cuál es la distinción conceptual entre 'Metodología' y 'Método' según las fuentes lingüísticas consultadas?",
+            "opciones": {
+                "a": "El método es el estudio científico de las reglas, mientras que la metodología es el hábito individual de actuar.",
+                "b": "La metodología es el conjunto de métodos o la ciencia que los estudia; el método es el modo ordenado de obrar para alcanzar un fin.",
+                "c": "La metodología se refiere exclusivamente a la investigación científica y el método a los procesos industriales de fabricación.",
+                "d": "Ambos términos son sinónimos técnicos intercambiables que describen el conjunto de pasos en un algoritmo."
+            },
+            "respuesta_correcta": "b",
+            "explicacion": "Según la RAE y la RAG, la metodología es la ciencia del método o el conjunto de métodos de una investigación, mientras que el método es la manera razonada y ordenada de hacer algo [1-3]."
+        },
+        {
+            "id": 2,
+            "pregunta": "En la jerarquía operativa del desarrollo, ¿cómo se define técnicamente una 'Actividad' frente a una 'Tarea'?",
+            "opciones": {
+                "a": "La actividad es la unidad mínima indivisible y la tarea es el conjunto de procedimientos administrativos.",
+                "b": "La actividad es una unidad compleja funcionalmente consistente para organizar el trabajo; la tarea es la unidad elemental efectuada por un actor singular.",
+                "c": "La tarea es el objetivo estratégico del proyecto y la actividad es la ejecución física del código en el entorno de pruebas.",
+                "d": "No existe diferencia jerárquica; la actividad se usa en metodologías ágiles y la tarea en metodologías en cascada."
+            },
+            "respuesta_correcta": "b",
+            "explicacion": "Las fuentes definen 'Actividad' como una unidad compleja consistente para facilitar la organización y asignación, mientras que la 'Tarea' es la unidad elemental realizada por un agente o actor concreto [4-6]."
+        },
+        {
+            "id": 3,
+            "pregunta": "¿Qué diferencia fundamental existe entre un 'Proceso' y un 'Procedimiento' en el contexto del desarrollo de software?",
+            "opciones": {
+                "a": "El proceso es una secuencia detallada de pasos técnicos, mientras que el procedimiento es el marco legal del contrato.",
+                "b": "El procedimiento es el conjunto de fases naturales de un fenómeno; el proceso es la instrucción escrita para el usuario final.",
+                "c": "El proceso es un conjunto de actividades interrelacionadas para alcanzar un objetivo; el procedimiento es la secuencia detallada de pasos para realizar una actividad específica.",
+                "d": "El proceso define el coste económico del desarrollo y el procedimiento define el lenguaje de programación utilizado."
+            },
+            "respuesta_correcta": "c",
+            "explicacion": "Un proceso es más amplio y engloba actividades para un objetivo (ej. contratación), mientras que el procedimiento especifica el 'cómo' detallado de una tarea o actividad particular (ej. cómo entrevistar) [7, 8]."
+        },
+        {
+            "id": 4,
+            "pregunta": "De acuerdo con la definición de la IEEE, ¿qué elementos integran la Ingeniería del Software?",
+            "opciones": {
+                "a": "Únicamente la programación y depuración de errores en sistemas operativos críticos.",
+                "b": "La aplicación sistemática de conocimientos técnicos, científicos, metodologías y experiencia al ciclo de vida completo del producto.",
+                "c": "La gestión financiera y de marketing aplicada exclusivamente a productos de software comercial.",
+                "d": "El diseño de hardware compatible para ejecutar aplicaciones de alta disponibilidad."
+            },
+            "respuesta_correcta": "b",
+            "explicacion": "La IEEE define la Ingeniería del Software como la aplicación sistemática de conocimientos técnicos, científicos, metodologías y experiencia al diseño, implementación, pruebas, mantenimiento y documentación [9]."
+        },
+        {
+            "id": 5,
+            "pregunta": "¿Cuál es la función principal del Ciclo de Vida del Desarrollo de Software (SDLC) como marco conceptual?",
+            "opciones": {
+                "a": "Determinar el salario de los desarrolladores según la fase en la que se encuentren.",
+                "b": "Definir las pautas de qué hay que obtener en cada fase, sirviendo como herramienta de gestión y marco de referencia técnico.",
+                "c": "Sustituir la necesidad de documentar el código mediante el uso de diagramas de flujo automáticos.",
+                "d": "Garantizar que el software no necesite mantenimiento una vez desplegado en producción."
+            },
+            "respuesta_correcta": "b",
+            "explicacion": "El SDLC indica las pautas del proceso (lo que hay que obtener) y proporciona un marco de referencia para seleccionar y comparar metodologías [10, 11]."
+        },
+        {
+            "id": 6,
+            "pregunta": "En las metodologías de desarrollo, ¿qué asegura la existencia de un conjunto ordenado de elementos como procesos, fases y reglas?",
+            "opciones": {
+                "a": "La eliminación de los stakeholders durante la fase de implementación.",
+                "b": "La realización oportuna de un software de calidad adecuado a las necesidades detectadas.",
+                "c": "Que el código se escriba de forma aleatoria siguiendo la intuición del programador senior.",
+                "d": "El cumplimiento estricto de las normas de hardware dictadas por los fabricantes de microprocesadores."
+            },
+            "respuesta_correcta": "b",
+            "explicacion": "La metodología asegura a los desarrolladores la realización oportuna y en tiempo y forma de un software de calidad adecuado a las necesidades [9]."
+        },
+        {
+            "id": 7,
+            "pregunta": "¿Cuál es la importancia de los 'entregables' al finalizar cada fase del SDLC?",
+            "opciones": {
+                "a": "Sirven como productos software válidos y utilizables que preparan el terreno para la siguiente fase y validan requisitos.",
+                "b": "Son opcionales y solo se generan si el cliente los solicita explícitamente al final del proyecto.",
+                "c": "Tienen como única función justificar el retraso en la entrega del código final.",
+                "d": "Son documentos puramente administrativos que no guardan relación con la parte técnica del sistema."
+            },
+            "respuesta_correcta": "a",
+            "explicacion": "Cada fase resulta en entregables tangibles que guían la siguiente etapa, aseguran el cumplimiento de requisitos y son puntos clave de interacción con los interesados [8, 12, 13]."
+        },
+        {
+            "id": 8,
+            "pregunta": "Dentro de la evolución de perfiles profesionales, ¿qué función distingue al Analista de Aplicaciones del Analista de Sistemas?",
+            "opciones": {
+                "a": "El Analista de Aplicaciones realiza el análisis previo y el de Sistemas el análisis conceptual.",
+                "b": "El Analista de Aplicaciones se encarga del Análisis Orgánico, mientras que el de Sistemas realiza el Análisis Funcional.",
+                "c": "El de Aplicaciones gestiona bases de datos y el de Sistemas diseña la interfaz de usuario.",
+                "d": "No existe distinción; el nombre depende de si la empresa es pública o privada."
+            },
+            "respuesta_correcta": "b",
+            "explicacion": "Las fuentes asocian el Análisis Orgánico con el Analista de Aplicaciones y el Análisis Funcional con el Analista de Sistemas [14]."
+        },
+        {
+            "id": 9,
+            "pregunta": "¿Qué aspecto abordaban específicamente las metodologías estructuradas en sus capas superiores?",
+            "opciones": {
+                "a": "La captura manual de datos en cintas magnéticas.",
+                "b": "Aspectos previos de análisis, estudio de la organización y la oportunidad del desarrollo.",
+                "c": "La planificación de la jubilación de los programadores de sistemas.",
+                "d": "Únicamente la optimización de algoritmos de búsqueda binaria."
+            },
+            "respuesta_correcta": "b",
+            "explicacion": "Las metodologías estructuradas enfocaban aspectos previos de análisis, estudio de la organización y la oportunidad, además de capas de programación y explotación [15]."
+        },
+        {
+            "id": 10,
+            "pregunta": "Según la evolución del dominio, ¿cuál es el enfoque del método HIPO adoptado por IBM?",
+            "opciones": {
+                "a": "Orientación a bases de datos relacionales sin estructura jerárquica.",
+                "b": "Organización jerarquizada para el flujo de información dentro del sistema.",
+                "c": "Desarrollo basado exclusivamente en inteligencia artificial generativa.",
+                "d": "Uso de lenguajes de programación no estructurados para mayor flexibilidad."
+            },
+            "respuesta_correcta": "b",
+            "explicacion": "El método HIPO se define como una metodología jerarquizada para el flujo de información [16]."
+        },
+        {
+            "id": 11,
+            "pregunta": "¿Cuál fue la consecuencia directa de la 'Crisis del Software' en la industria según las fuentes?",
+            "opciones": {
+                "a": "El abandono total de la programación para volver a sistemas analógicos.",
+                "b": "La búsqueda de enfoques más disciplinados y sistemáticos, dando origen a las metodologías formales.",
+                "c": "La reducción drástica de la complejidad de todos los sistemas informáticos.",
+                "d": "La prohibición de usar hardware fabricado antes de la década de los 70."
+            },
+            "respuesta_correcta": "b",
+            "explicacion": "La crisis reveló deficiencias en enfoques ad hoc, lo que impulsó el desarrollo de metodologías estructuradas para estandarizar procesos y garantizar calidad [15, 17]."
+        },
+        {
+            "id": 12,
+            "pregunta": "En el contexto de proyectos fallidos, ¿qué problema destacó el proyecto IBM OS/360?",
+            "opciones": {
+                "a": "La falta de energía eléctrica en los centros de datos.",
+                "b": "La importancia crítica de la gestión de requisitos y el control de versiones ante problemas de integración.",
+                "c": "Que el software de gestión no era necesario para las empresas modernas.",
+                "d": "La superioridad de los microservicios sobre la arquitectura monolítica de la época."
+            },
+            "respuesta_correcta": "b",
+            "explicacion": "El IBM OS/360 sufrió problemas de integración y sobrecostes, subrayando la necesidad de gestionar requisitos y versiones [18]."
+        },
+        {
+            "id": 13,
+            "pregunta": "¿Qué necesidad impulsó el surgimiento del Agile Manifesto y las metodologías iterativas?",
+            "opciones": {
+                "a": "La necesidad de mayor flexibilidad, adaptación al cambio y colaboración continua con el cliente.",
+                "b": "El deseo de eliminar por completo la fase de pruebas del ciclo de vida.",
+                "c": "La obligación legal de utilizar diagramas de flujo en todos los proyectos.",
+                "d": "La falta de memoria RAM en los ordenadores personales de los usuarios."
+            },
+            "respuesta_correcta": "a",
+            "explicacion": "El enfoque ágil surgió para permitir una mejor respuesta a los cambios y necesidades del mercado mediante la colaboración y adaptación [19-21]."
+        },
+        {
+            "id": 14,
+            "pregunta": "Según el informe de la NAO (2011) sobre el programa del NHS, ¿cuál fue una causa clave del fracaso tras gastar 12 mil millones de libras?",
+            "opciones": {
+                "a": "Un ataque cibernético que destruyó todos los servidores.",
+                "b": "Mala gestión de requisitos y falta de flexibilidad en el proyecto.",
+                "c": "El uso de metodologías demasiado modernas para la época.",
+                "d": "La falta de interés de los pacientes en usar sistemas digitales."
+            },
+            "respuesta_correcta": "b",
+            "explicacion": "El informe señaló explícitamente la mala gestión de requisitos y la falta de flexibilidad como causas del fracaso [22, 23]."
+        },
+        {
+            "id": 15,
+            "pregunta": "¿Qué factor se menciona como un reto persistente incluso para las metodologías actuales?",
+            "opciones": {
+                "a": "La imposibilidad de programar en lenguajes orientados a objetos.",
+                "b": "El tratamiento de sistemas heredados (legacy) y la integración de sistemas de datos antiguos.",
+                "c": "La falta de interés de los jóvenes por las carreras tecnológicas.",
+                "d": "La escasez mundial de teclados ergonómicos."
+            },
+            "respuesta_correcta": "b",
+            "explicacion": "La necesidad de considerar el legado (legacy) y tratar la integración de sistemas de datos es todavía un reto para cualquier metodología [20, 24]."
+        },
+        {
+            "id": 16,
+            "pregunta": "En cuanto a la gestión de riesgos en el SDLC, ¿cuál es la recomendación de las fuentes para mitigar sorpresas?",
+            "opciones": {
+                "a": "Ocultar los riesgos al cliente para no generar pánico innecesario.",
+                "b": "Involucrar a todos los stakeholders en la identificación temprana de riesgos en cada fase.",
+                "c": "Identificar riesgos solo al final del mantenimiento del software.",
+                "d": "Delegar la responsabilidad de los riesgos exclusivamente en el equipo de captura de datos."
+            },
+            "respuesta_correcta": "b",
+            "explicacion": "Involucrar a todos los interesados reduce sorpresas y permite una mitigación temprana, siendo parte integral de cada fase del SDLC [25]."
+        },
+        {
+            "id": 17,
+            "pregunta": "Respecto al incidente de 2024 que afectó a aerolíneas y bancos, ¿cuál fue la causa técnica identificada?",
+            "opciones": {
+                "a": "Un fallo masivo en el hardware de los routers globales.",
+                "b": "Una actualización defectuosa de software distribuida en servicios de Microsoft.",
+                "c": "La desconexión deliberada de internet por parte de organismos reguladores.",
+                "d": "Una incompatibilidad irreversible entre Agile y DevOps."
+            },
+            "respuesta_correcta": "b",
+            "explicacion": "El incidente se debió a una actualización defectuosa que provocó interrupciones significativas a nivel global [23]."
+        },
+        {
+            "id": 18,
+            "pregunta": "¿Qué frena la adopción de la nube en empresas tradicionales según Gartner (2019)?",
+            "opciones": {
+                "a": "La falta de cables de fibra óptica en las oficinas antiguas.",
+                "b": "Preocupaciones sobre seguridad, privacidad y la complejidad migratoria.",
+                "c": "Que los servicios en la nube son más lentos que los disquetes.",
+                "d": "La preferencia por el modelo Code&Fix de los años 50."
+            },
+            "respuesta_correcta": "b",
+            "explicacion": "Gartner indica que la seguridad, privacidad y complejidad de migración de sistemas heredados son las barreras principales [26]."
+        },
+        {
+            "id": 19,
+            "pregunta": "¿En qué consiste la tendencia moderna denominada 'DevOps'?",
+            "opciones": {
+                "a": "En separar drásticamente a los programadores de los administradores de sistemas.",
+                "b": "En la fusión de desarrollo y operaciones para mejorar la entrega continua y la calidad.",
+                "c": "En un nuevo lenguaje de programación que sustituye a C++ y Java.",
+                "d": "En la externalización total de la fase de diseño a empresas de marketing."
+            },
+            "respuesta_correcta": "b",
+            "explicacion": "DevOps se define como la fusión de desarrollo y operaciones para mejorar la entrega y calidad del software [26]."
+        },
+        {
+            "id": 20,
+            "pregunta": "¿Hacia dónde se dirige el futuro de las metodologías según el cierre del temario?",
+            "opciones": {
+                "a": "Hacia la eliminación del SDLC para permitir el caos creativo.",
+                "b": "Hacia la integración de inteligencia artificial y automatización para mejorar eficiencia y calidad.",
+                "c": "Hacia el regreso exclusivo al modelo en cascada por su mayor rigor formal.",
+                "d": "Hacia la prohibición de las interfaces gráficas en favor de la línea de comandos."
+            },
+            "respuesta_correcta": "b",
+            "explicacion": "El futuro se centra en integrar IA y automatización para mejorar la eficiencia, pruebas y gestión del desarrollo [26, 27]."
+        }
+    ]
+}

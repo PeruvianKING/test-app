@@ -5,8 +5,7 @@ import { Link } from 'react-router-dom';
 const FolderView = ({
     cargando,
     errorCarga,
-    subcarpetas,
-    todosLosTests
+    folders
 }) => {
     return (
         <div className="fixed inset-0 bg-gradient-to-br from-blue-50 to-indigo-100 p-6 overflow-auto">
@@ -40,23 +39,21 @@ const FolderView = ({
                 ) : errorCarga ? (
                     <div className="bg-white rounded-xl shadow-lg p-12 text-center">
                         <AlertCircle className="w-20 h-20 text-red-500 mx-auto mb-4" />
-                        <h3 className="text-2xl font-bold text-gray-700 mb-2">Error al cargar tests</h3>
+                        <h3 className="text-2xl font-bold text-gray-700 mb-2">Error al cargar</h3>
                         <p className="text-gray-500 mb-6">{errorCarga}</p>
                         <button onClick={() => window.location.reload()} className="bg-indigo-500 text-white px-6 py-3 rounded-lg hover:bg-indigo-600 transition">
                             Recargar página
                         </button>
                     </div>
-                ) : subcarpetas.length === 0 ? (
+                ) : Object.keys(folders).length === 0 ? (
                     <div className="bg-white rounded-xl shadow-lg p-12 text-center">
                         <h3 className="text-2xl font-bold text-gray-700 mb-2">No hay carpetas disponibles</h3>
                         <p className="text-gray-500 mb-4">No se encontraron tests</p>
                     </div>
                 ) : (
                     <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
-                        {subcarpetas.map((carpeta) => {
-                            const testsEnCarpeta = todosLosTests.filter(t => t.carpeta === carpeta);
-                            const totalPreguntas = testsEnCarpeta.reduce((sum, t) => sum + t.numeroPreguntas, 0);
-
+                        {Object.entries(folders).map(([carpeta, info]) => {
+                            // Ahora usamos 'info.fileCount' para mostrar la cantidad
                             return (
                                 <Link
                                     key={carpeta}
@@ -81,13 +78,13 @@ const FolderView = ({
                                     </div>
                                     <div className="space-y-2 mb-4">
                                         <div className="flex items-center gap-2 text-sm text-gray-600">
-                                            <span className="font-semibold">{testsEnCarpeta.length}</span>
+                                            <span className="font-semibold">{info.fileCount}</span>
                                             <span>tests disponibles</span>
                                         </div>
-                                        <div className="flex items-center gap-2 text-sm text-gray-600">
-                                            <span className="font-semibold">{totalPreguntas}</span>
-                                            <span>preguntas en total</span>
-                                        </div>
+                                        {/* info.tests solo existe si ya se cargó, 
+                                            pero en la vista principal no obligamos a cargarlo.
+                                            Omitimos el contador de preguntas total para mantener el lazy loading.
+                                        */}
                                     </div>
                                     <div className="w-full bg-gradient-to-r from-blue-500 to-indigo-600 text-white py-3 rounded-lg font-semibold hover:from-blue-600 hover:to-indigo-700 transition flex items-center justify-center gap-2">
                                         <Play className="w-5 h-5" />

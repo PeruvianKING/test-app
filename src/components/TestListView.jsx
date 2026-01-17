@@ -3,7 +3,7 @@ import { BookOpen, ArrowLeft, Plus, Search, X, Play } from 'lucide-react';
 import { Link, useParams } from 'react-router-dom';
 
 const TestListView = ({
-    tests,
+    tests = [],
 }) => {
     const { folderName } = useParams();
     const [busqueda, setBusqueda] = useState('');
@@ -11,9 +11,8 @@ const TestListView = ({
     // Decodificar el nombre de la carpeta de la URL
     const carpetaActual = decodeURIComponent(folderName);
 
-    const testsEnCarpeta = tests.filter(t => t.carpeta === carpetaActual);
-
-    const testsFiltrados = testsEnCarpeta.filter(test => {
+    // Tests ya vienen filtrados por carpeta desde el padre (FolderLoader)
+    const testsFiltrados = tests.filter(test => {
         const t = busqueda.toLowerCase();
         return test.titulo.toLowerCase().includes(t) ||
             test.descripcion.toLowerCase().includes(t) ||
@@ -68,7 +67,7 @@ const TestListView = ({
                     </Link>
                 </div>
 
-                {testsEnCarpeta.length > 0 && (
+                {tests.length > 0 && (
                     <div className="mb-6 max-w-2xl mx-auto">
                         <div className="relative">
                             <Search className="absolute left-4 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
@@ -82,7 +81,7 @@ const TestListView = ({
                     </div>
                 )}
 
-                {testsEnCarpeta.length === 0 ? (
+                {tests.length === 0 ? (
                     <div className="bg-white rounded-xl shadow-lg p-12 text-center">
                         <BookOpen className="w-20 h-20 text-gray-300 mx-auto mb-4" />
                         <h3 className="text-2xl font-bold text-gray-700 mb-2">No hay tests disponibles</h3>

@@ -50,9 +50,6 @@ const QuizSystem = () => {
             .filter(Boolean)
             .filter((v, i, a) => a.indexOf(v) === i);
 
-          // Generar un ID único basado en la ruta o nombre
-          // Usamos btoa para codificar la ruta y hacerlo seguro para URL, aunque ruta tiene caracteres feos
-          // Mejor usar algo determinista simple si es posible, o slugify
           return {
             id: ruta,
             carpeta: carpeta,

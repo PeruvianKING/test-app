@@ -1,0 +1,906 @@
+{
+    "titulo": "TEMA 3 - Agile B",
+    "descripcion": "Test exhaustivo de 75 preguntas diseñado para evaluar el conocimiento técnico profundo sobre IID, el Manifiesto Ágil y prácticas de ingeniería de software, basado estrictamente en la documentación proporcionada.",
+    "examen_automatizacion": [
+        {
+            "id": 1,
+            "pregunta": "¿Cuál es la definición técnica de desarrollo iterativo según las fuentes?",
+            "opciones": {
+                "a": "Un proceso lineal que divide el software en fases de entrega fijas.",
+                "b": "Un enfoque que fragmenta el ciclo de vida en múltiples mini-proyectos.",
+                "c": "Un método de diseño que prioriza la documentación antes que el código.",
+                "d": "Una técnica de gestión enfocada en la reducción de costes de personal."
+            },
+            "respuesta_correcta": "b",
+            "explicacion": "El desarrollo iterativo divide el ciclo de vida en múltiples iteraciones, siendo cada una un mini-proyecto completo."
+        },
+        {
+            "id": 2,
+            "pregunta": "¿Qué objetivo se persigue al finalizar cada iteración individual?",
+            "opciones": {
+                "a": "Entregar una versión funcional con incremento en calidad y utilidad.",
+                "b": "Completar la totalidad de los requisitos definidos al inicio del año.",
+                "c": "Generar un prototipo no funcional para la validación visual del jefe.",
+                "d": "Finalizar la documentación técnica de todos los módulos del sistema."
+            },
+            "respuesta_correcta": "a",
+            "explicacion": "El objetivo es entregar una versión funcional del software con un incremento constante en funcionalidad y calidad."
+        },
+        {
+            "id": 3,
+            "pregunta": "¿Cuál es la principal ventaja del IID frente a los enfoques secuenciales?",
+            "opciones": {
+                "a": "La capacidad de mantener un plan rígido sin importar las variaciones.",
+                "b": "La posibilidad de adaptar el desarrollo a cambios y retroalimentación.",
+                "c": "La eliminación total de las fases de pruebas al final de cada ciclo.",
+                "d": "La reducción del tiempo de diseño mediante la programación inmediata."
+            },
+            "respuesta_correcta": "b",
+            "explicacion": "A diferencia de los enfoques secuenciales, permite una adaptación continua a los cambios y retroalimentación."
+        },
+        {
+            "id": 4,
+            "pregunta": "¿Qué actividades componen el ciclo de desarrollo dentro de una iteración?",
+            "opciones": {
+                "a": "Únicamente codificación y pruebas unitarias rápidas por el equipo.",
+                "b": "Requisitos, diseño, codificación y pruebas en un ciclo completo.",
+                "c": "Análisis de costes, gestión de riesgos y contratación de personal.",
+                "d": "Diseño de interfaces, manuales de usuario y formación al cliente."
+            },
+            "respuesta_correcta": "b",
+            "explicacion": "Cada iteración se planifica como un mini-proyecto con requisitos, diseño, codificación y pruebas."
+        },
+        {
+            "id": 5,
+            "pregunta": "¿Cómo se define técnicamente el concepto de 'release' en este contexto?",
+            "opciones": {
+                "a": "Un conjunto de documentos que describen el funcionamiento futuro.",
+                "b": "Una versión parcial, estable e integrada del sistema en desarrollo.",
+                "c": "Un prototipo desechable utilizado para capturar requisitos visuales.",
+                "d": "La entrega final del producto una vez se han agotado los recursos."
+            },
+            "respuesta_correcta": "b",
+            "explicacion": "El resultado de cada iteración es una versión parcial, estable e integrada del sistema, conocida como release."
+        },
+        {
+            "id": 6,
+            "pregunta": "¿Qué diferencia a una release de un prototipo convencional?",
+            "opciones": {
+                "a": "La release es un subconjunto real y operativo del sistema final.",
+                "b": "El prototipo incluye todas las funcionalidades de la base de datos.",
+                "c": "La release se enfoca solo en la interfaz sin lógica de negocio real.",
+                "d": "El prototipo es siempre estable mientras que la release es volátil."
+            },
+            "respuesta_correcta": "a",
+            "explicacion": "A diferencia de un prototipo, cada release es un subconjunto real y operativo del sistema final."
+        },
+        {
+            "id": 7,
+            "pregunta": "¿Qué sucede con la funcionalidad en las iteraciones posteriores?",
+            "opciones": {
+                "a": "Se eliminan las funciones antiguas para dar paso a las nuevas.",
+                "b": "Se construye sobre versiones previas aumentando la funcionalidad.",
+                "c": "Se mantiene el mismo nivel funcional pero se cambia el lenguaje.",
+                "d": "Se simplifica el sistema eliminando los módulos de mayor riesgo."
+            },
+            "respuesta_correcta": "b",
+            "explicacion": "Las iteraciones posteriores construyen sobre las versiones anteriores, aumentando la funcionalidad."
+        },
+        {
+            "id": 8,
+            "pregunta": "¿Qué importancia tiene el IID en las metodologías ágiles modernas?",
+            "opciones": {
+                "a": "Es un componente opcional que rara vez se aplica en Scrum o XP.",
+                "b": "Constituye el núcleo fundamental de procesos como Scrum y XP.",
+                "c": "Sirve únicamente para proyectos de mantenimiento de bajo impacto.",
+                "d": "Es un reemplazo para la colaboración directa con los implicados."
+            },
+            "respuesta_correcta": "b",
+            "explicacion": "El IID está en el núcleo de las metodologías ágiles, incluyendo el Proceso Unificado, Scrum y XP."
+        },
+        {
+            "id": 9,
+            "pregunta": "¿Cuál es la duración recomendada para las iteraciones en proyectos ágiles?",
+            "opciones": {
+                "a": "Un periodo variable de entre tres meses y un año de desarrollo.",
+                "b": "Ciclos cortos de entre una y seis semanas de trabajo efectivo.",
+                "c": "Exactamente quince días sin posibilidad de prórroga o cambio.",
+                "d": "El tiempo que el desarrollador principal considere oportuno hoy."
+            },
+            "respuesta_correcta": "b",
+            "explicacion": "Las iteraciones suelen durar entre 1 y 6 semanas, con tendencia a ciclos más cortos."
+        },
+        {
+            "id": 10,
+            "pregunta": "¿Por qué se prefiere actualmente el uso de iteraciones más cortas?",
+            "opciones": {
+                "a": "Para evitar que los desarrolladores se aburran con el proyecto.",
+                "b": "Para maximizar la retroalimentación y la adaptabilidad técnica.",
+                "c": "Para poder cobrar al cliente de forma más frecuente y regular.",
+                "d": "Para reducir el número de personas necesarias en cada reunión."
+            },
+            "respuesta_correcta": "b",
+            "explicacion": "Se tiende a ciclos más cortos para maximizar la retroalimentación y la adaptabilidad."
+        },
+        {
+            "id": 11,
+            "pregunta": "¿Qué riesgo se minimiza al emplear ciclos de evaluación frecuentes?",
+            "opciones": {
+                "a": "El riesgo de que el equipo de desarrollo pida aumentos de sueldo.",
+                "b": "El riesgo de sufrir desviaciones importantes en el plan inicial.",
+                "c": "El riesgo de que el cliente entienda demasiado bien el producto.",
+                "d": "El riesgo de agotar la memoria del servidor durante las pruebas."
+            },
+            "respuesta_correcta": "b",
+            "explicacion": "Iteraciones cortas permiten evaluaciones frecuentes, reduciendo el riesgo de desviaciones importantes."
+        },
+        {
+            "id": 12,
+            "pregunta": "¿Qué equilibrio debe buscarse en la duración de una iteración?",
+            "opciones": {
+                "a": "Ser muy extensa para que el cliente no pueda opinar demasiado.",
+                "b": "Ser breve para ser flexible pero permitir progreso significativo.",
+                "c": "Ser lo más corta posible incluso si no se llega a programar nada.",
+                "d": "Ser idéntica a la duración del contrato legal firmado al inicio."
+            },
+            "respuesta_correcta": "b",
+            "explicacion": "Debe ser breve para permitir flexibilidad, sin impedir un progreso significativo."
+        },
+        {
+            "id": 13,
+            "pregunta": "¿Cuál es el enfoque de la planificación al inicio de cada iteración?",
+            "opciones": {
+                "a": "Definir todas las tareas de los próximos doce meses del proyecto.",
+                "b": "Determinar qué funcionalidades se abordarán en el próximo ciclo.",
+                "c": "Asignar culpables para los errores detectados en la fase previa.",
+                "d": "Escribir el manual de usuario antes de empezar a picar código."
+            },
+            "respuesta_correcta": "b",
+            "explicacion": "Se enfoca en determinar qué funcionalidades y tareas se abordarán en el próximo ciclo de trabajo."
+        },
+        {
+            "id": 14,
+            "pregunta": "¿Qué dos esquemas de prioridad se combinan en el desarrollo iterativo?",
+            "opciones": {
+                "a": "Prioridad basada en el coste y prioridad basada en el hardware.",
+                "b": "Prioridad basada en riesgo y prioridad basada en el cliente.",
+                "c": "Prioridad basada en la antigüedad y prioridad basada en moda.",
+                "d": "Prioridad basada en el diseño y prioridad basada en el marketing."
+            },
+            "respuesta_correcta": "b",
+            "explicacion": "Se combinan dos enfoques: basado en riesgo (técnico) y basado en el cliente (valor de negocio)."
+        },
+        {
+            "id": 15,
+            "pregunta": "¿Cuál es el motivo para aplicar el enfoque basado en riesgo técnico?",
+            "opciones": {
+                "a": "Asegurar que el cliente pague los hitos más difíciles primero.",
+                "b": "Evitar que problemas de diseño afecten a todo el sistema futuro.",
+                "c": "Demostrar que el equipo tiene habilidades de programación altas.",
+                "d": "Reducir el tiempo de las reuniones diarias eliminando discusiones."
+            },
+            "respuesta_correcta": "b",
+            "explicacion": "Si partes críticas no se diseñan bien desde el principio, podrían afectar a todas las demás funcionalidades."
+        },
+        {
+            "id": 16,
+            "pregunta": "¿Qué representa el 'valor para el cliente' en la priorización?",
+            "opciones": {
+                "a": "Las tareas que son más fáciles de realizar para el programador.",
+                "b": "Las funciones que generan satisfacción y utilidad directa al usuario.",
+                "c": "El precio total que el cliente está dispuesto a pagar por el software.",
+                "d": "La cantidad de documentos que el cliente recibe tras cada entrega."
+            },
+            "respuesta_correcta": "b",
+            "explicacion": "El valor está en lo que genera el core del producto y la mayor satisfacción del usuario."
+        },
+        {
+            "id": 17,
+            "pregunta": "¿Por qué los desarrolladores y clientes deben colaborar en la prioridad?",
+            "opciones": {
+                "a": "Porque ambos tienen perspectivas distintas sobre riesgo y valor.",
+                "b": "Porque la ley exige que el cliente firme cada línea de código nueva.",
+                "c": "Porque así se divide la responsabilidad en caso de fracaso total.",
+                "d": "Porque los desarrolladores no saben qué es técnicamente complejo."
+            },
+            "respuesta_correcta": "a",
+            "explicacion": "El cliente no siempre aprecia la complejidad técnica y los desarrolladores no siempre ven el valor de negocio."
+        },
+        {
+            "id": 18,
+            "pregunta": "¿Qué define la práctica de 'Timeboxing' en una iteración?",
+            "opciones": {
+                "a": "Aumentar el tiempo de trabajo diario hasta acabar las tareas.",
+                "b": "Fijar la fecha de finalización de forma inamovible por ciclo.",
+                "c": "Meter todas las tareas en una caja física para su posterior uso.",
+                "d": "Pagar a los empleados según las horas de reloj que han fichado."
+            },
+            "respuesta_correcta": "b",
+            "explicacion": "Timeboxing es la práctica de fijar la duración de cada iteración, sin permitir que se modifique la fecha de finalización."
+        },
+        {
+            "id": 19,
+            "pregunta": "¿Qué medida se toma si las tareas no se terminarán en el timebox?",
+            "opciones": {
+                "a": "Se retrasa la entrega final dos semanas para poder terminar todo.",
+                "b": "Se ajusta el alcance de la iteración priorizando lo importante.",
+                "c": "Se obliga al equipo a trabajar fines de semana sin descanso extra.",
+                "d": "Se cancela el proyecto por falta de capacidad técnica del equipo."
+            },
+            "respuesta_correcta": "b",
+            "explicacion": "Si no se cumplirán todas las tareas, se ajusta el alcance, priorizando lo más importante."
+        },
+        {
+            "id": 20,
+            "pregunta": "¿Qué recomiendan Scrum y XP respecto al uso de timeboxing?",
+            "opciones": {
+                "a": "Evitarlo para permitir que la creatividad fluya sin presiones.",
+                "b": "Usarlo para mantener un ritmo de trabajo sostenible y predecible.",
+                "c": "Aplicarlo solo cuando el proyecto está a punto de fracasar hoy.",
+                "d": "Sustituirlo por reuniones de planificación anuales y estáticas."
+            },
+            "respuesta_correcta": "b",
+            "explicacion": "Scrum y XP recomiendan timeboxing para mantener un ritmo sostenible y predecible."
+        },
+        {
+            "id": 21,
+            "pregunta": "¿Cómo debe gestionarse la carga de trabajo bajo timeboxing?",
+            "opciones": {
+                "a": "Aumentando la presión si se detectan retrasos en el cronograma.",
+                "b": "Reduciendo el alcance en lugar de aumentar la carga de trabajo.",
+                "c": "Haciendo que todas las iteraciones duren exactamente lo mismo.",
+                "d": "Eliminando las fases de pruebas para ganar tiempo de desarrollo."
+            },
+            "respuesta_correcta": "b",
+            "explicacion": "Si se detecta que no se alcanzará el objetivo, se debe reducir el alcance en lugar de aumentar la carga."
+        },
+        {
+            "id": 22,
+            "pregunta": "¿Qué política se sigue ante cambios externos en una iteración activa?",
+            "opciones": {
+                "a": "Se aceptan todos los cambios para demostrar que somos ágiles.",
+                "b": "Bajo ninguna circunstancia se permite cambiar el trabajo definido.",
+                "c": "Se permite el cambio si el implicado externo paga una multa hoy.",
+                "d": "Se aceptan cambios solo si afectan a la parte visual del sistema."
+            },
+            "respuesta_correcta": "b",
+            "explicacion": "Una vez definidas las solicitudes para una iteración, bajo ninguna circunstancia un externo puede cambiar el trabajo."
+        },
+        {
+            "id": 23,
+            "pregunta": "¿Cuál es la filosofía ágil respecto al cambio y el caos?",
+            "opciones": {
+                "a": "Las metodologías ágiles rechazan el cambio y prefieren el orden.",
+                "b": "Las metodologías ágiles abrazan el cambio, pero no el caos total.",
+                "c": "El caos es necesario para que el desarrollo evolutivo sea eficaz.",
+                "d": "No hay distinción entre cambio y caos en entornos de desarrollo."
+            },
+            "respuesta_correcta": "b",
+            "explicacion": "Las metodologías ágiles e iterativas abrazan el cambio, pero no el caos."
+        },
+        {
+            "id": 24,
+            "pregunta": "¿Qué asume el desarrollo adaptativo sobre los requisitos iniciales?",
+            "opciones": {
+                "a": "Que pueden y deben definirse al 100% antes de empezar a programar.",
+                "b": "Que no pueden ser completamente definidos al inicio del proyecto.",
+                "c": "Que son irrelevantes si el equipo tiene mucha experiencia previa.",
+                "d": "Que deben ser grabados en piedra para evitar costes innecesarios."
+            },
+            "respuesta_correcta": "b",
+            "explicacion": "A diferencia del enfoque secuencial, se asume que los requisitos no pueden ser completamente definidos al inicio."
+        },
+        {
+            "id": 25,
+            "pregunta": "¿Qué elemento es fundamental para ajustar el rumbo en el desarrollo adaptativo?",
+            "opciones": {
+                "a": "El cumplimiento estricto de las normas ISO de calidad de software.",
+                "b": "El feedback continuo de usuarios, testers y desarrolladores hoy.",
+                "c": "La opinión del directivo con el salario más alto de la compañía.",
+                "d": "La cantidad de líneas de código producidas por cada programador."
+            },
+            "respuesta_correcta": "b",
+            "explicacion": "El desarrollo adaptativo enfatiza la importancia del feedback continuo para ajustar el rumbo."
+        },
+        {
+            "id": 26,
+            "pregunta": "¿Cuándo se definen la mayoría de los requisitos en metodologías ágiles?",
+            "opciones": {
+                "a": "Todos los requisitos se definen antes de la primera iteración.",
+                "b": "La mayoría de los requisitos se definen en las primeras iteraciones.",
+                "c": "Los requisitos se definen solo cuando el software está terminado.",
+                "d": "No se definen requisitos nunca; se programa según la intuición."
+            },
+            "respuesta_correcta": "b",
+            "explicacion": "La mayoría de los requisitos son definidos en las primeras iteraciones."
+        },
+        {
+            "id": 27,
+            "pregunta": "¿Qué recomendación dan algunas metodologías sobre talleres de requisitos?",
+            "opciones": {
+                "a": "Realizar un taller de un mes al principio del año de trabajo.",
+                "b": "Realizar talleres de uno o dos días en cada nueva iteración.",
+                "c": "Evitar los talleres porque consumen tiempo de programación real.",
+                "d": "Hacer talleres solo con los clientes que no saben lo que quieren."
+            },
+            "respuesta_correcta": "b",
+            "explicacion": "Ciertas metodologías iterativas recomiendan talleres de requisitos de uno o dos días en cada iteración."
+        },
+        {
+            "id": 28,
+            "pregunta": "¿Qué es el 'Top Ten' de requisitos funcionales?",
+            "opciones": {
+                "a": "Los diez errores más comunes que cometen los nuevos programadores.",
+                "b": "La identificación de los diez requisitos de alto nivel esenciales.",
+                "c": "Los diez clientes que más dinero aportan al desarrollo del producto.",
+                "d": "Las diez herramientas de software más caras del mercado actual hoy."
+            },
+            "respuesta_correcta": "b",
+            "explicacion": "Se destaca la importancia de identificar el Top Ten de los requisitos de alto nivel para comenzar."
+        },
+        {
+            "id": 29,
+            "pregunta": "¿Cuál es la respuesta iterativa ante la incertidumbre en los planes?",
+            "opciones": {
+                "a": "Mentir al cliente con fechas optimistas para asegurar el contrato.",
+                "b": "Retrasar la estimación de coste hasta tras unas pocas iteraciones.",
+                "c": "Aumentar el presupuesto inicial un 500% para cubrir los riesgos.",
+                "d": "Utilizar herramientas de planificación predictiva de alta precisión."
+            },
+            "respuesta_correcta": "b",
+            "explicacion": "La respuesta iterativa es retrasar la expectativa de estimación hasta que han transcurrido unas pocas iteraciones."
+        },
+        {
+            "id": 30,
+            "pregunta": "¿Qué tipo de planificación se prefiere en entornos cambiantes?",
+            "opciones": {
+                "a": "La planificación predictiva basada en gráficos de Gantt fijos.",
+                "b": "La planificación adaptativa que ajusta el plan con información.",
+                "c": "La ausencia total de planificación para ahorrar costes de gestión.",
+                "d": "La planificación jerárquica dictada por el departamento de ventas."
+            },
+            "respuesta_correcta": "b",
+            "explicacion": "Se recomienda la planificación adaptativa sobre la planificación predictiva."
+        },
+        {
+            "id": 31,
+            "pregunta": "¿Qué problema surge al usar contratos fijos en metodologías ágiles?",
+            "opciones": {
+                "a": "La falta de flexibilidad para gestionar cambios de alcance y costes.",
+                "b": "Que el cliente siempre acaba pagando menos de lo que se acordó.",
+                "c": "Que los desarrolladores se niegan a trabajar si el precio es fijo.",
+                "d": "La imposibilidad de usar lenguajes de programación modernos hoy."
+            },
+            "respuesta_correcta": "a",
+            "explicacion": "Los contratos fijos presentan problemas por la falta de flexibilidad para gestionar cambios en alcance, costos y cronogramas."
+        },
+        {
+            "id": 32,
+            "pregunta": "¿Qué describe el 'Cono de Incertidumbre'?",
+            "opciones": {
+                "a": "Cómo el coste del proyecto aumenta exponencialmente con el tiempo.",
+                "b": "Cómo la incertidumbre se reduce con cada iteración del proyecto.",
+                "c": "Cómo el número de errores en el código crece si no hay jefe fijo.",
+                "d": "Cómo la motivación del equipo baja al acercarse a la fecha final."
+            },
+            "respuesta_correcta": "b",
+            "explicacion": "El Cono de Incertidumbre describe cómo la incertidumbre en los planes se reduce con cada iteración."
+        },
+        {
+            "id": 33,
+            "pregunta": "¿Qué permite la reducción de la incertidumbre a medida que avanza el desarrollo?",
+            "opciones": {
+                "a": "Poder despedir a los analistas porque ya no hay nada que pensar.",
+                "b": "Realizar estimaciones mucho más precisas sobre el futuro cercano.",
+                "c": "Cambiar de tecnología sin riesgo de perder el trabajo realizado.",
+                "d": "Aumentar el número de funcionalidades sin consultar con el usuario."
+            },
+            "respuesta_correcta": "b",
+            "explicacion": "La reducción de incertidumbre permite estimaciones más precisas a medida que avanza el desarrollo."
+        },
+        {
+            "id": 34,
+            "pregunta": "¿Cuál es la diferencia entre entrega incremental y desarrollo iterativo?",
+            "opciones": {
+                "a": "No hay diferencia técnica alguna; son términos para lo mismo.",
+                "b": "La entrega incremental supone poner versiones en producción real.",
+                "c": "El desarrollo iterativo solo se aplica si se usa el lenguaje Java.",
+                "d": "La entrega incremental es obligatoria en cascada y opcional en ágil."
+            },
+            "respuesta_correcta": "b",
+            "explicacion": "La entrega incremental supone la puesta en producción de versiones en el tiempo."
+        },
+        {
+            "id": 35,
+            "pregunta": "¿En qué se centra la entrega evolutiva-adaptativa?",
+            "opciones": {
+                "a": "En usar el feedback de producción para definir metas futuras.",
+                "b": "En cambiar el equipo de desarrollo cada vez que sale una versión.",
+                "c": "En asegurar que el software no necesite mantenimiento nunca más.",
+                "d": "En evolucionar el hardware antes de actualizar cualquier software."
+            },
+            "respuesta_correcta": "a",
+            "explicacion": "Resalta la importancia de usar el feedback de las versiones en producción para definir las metas futuras."
+        },
+        {
+            "id": 36,
+            "pregunta": "¿Cómo se define la agilidad según los conceptos presentados?",
+            "opciones": {
+                "a": "La velocidad para escribir código sin importar los errores cometidos.",
+                "b": "La capacidad de responder rápida y flexiblemente al cambio hoy.",
+                "c": "El uso de herramientas de software que automatizan todo el proceso.",
+                "d": "La habilidad para terminar el proyecto antes de la fecha pactada."
+            },
+            "respuesta_correcta": "b",
+            "explicacion": "Agilidad: Capacidad de responder rápida y flexiblemente al cambio en cualquier etapa."
+        },
+        {
+            "id": 37,
+            "pregunta": "¿Cuál es el lema central de los métodos ágiles?",
+            "opciones": {
+                "a": "Planificar el trabajo y trabajar el plan sin ninguna desviación.",
+                "b": "Abrazar el cambio aceptando que es una ventaja competitiva hoy.",
+                "c": "Documentar primero, programar después y probar al final de todo.",
+                "d": "Minimizar la interacción con el cliente para evitar retrasos extra."
+            },
+            "respuesta_correcta": "b",
+            "explicacion": "El lema de los métodos ágiles es 'abrazar el cambio' (embrace change)."
+        },
+        {
+            "id": 38,
+            "pregunta": "¿Qué conjunto de prácticas aplican los métodos de desarrollo ágil?",
+            "opciones": {
+                "a": "IID, timeboxing, planificación adaptativa y entregas evolutivas.",
+                "b": "Cascada, contratos fijos, documentación masiva y diseño previo.",
+                "c": "Programación individual, reuniones mensuales y planes rígidos.",
+                "d": "Subcontratación, estimación cerrada y penalizaciones por cambio."
+            },
+            "respuesta_correcta": "a",
+            "explicacion": "Los métodos ágiles aplican desarrollo iterativo, timeboxing, planificación adaptativa y entregas evolutivas."
+        },
+        {
+            "id": 39,
+            "pregunta": "¿Qué característica define a la 'sala de proyectos compartida' en Scrum?",
+            "opciones": {
+                "a": "Un lugar donde se guardan los servidores bajo llave por seguridad.",
+                "b": "Un espacio donde todo el equipo trabaja junto para colaborar hoy.",
+                "c": "Una oficina virtual donde nadie se ve las caras para evitar roces.",
+                "d": "Un auditorio para presentar el producto a los grandes inversores."
+            },
+            "respuesta_correcta": "b",
+            "explicacion": "Es un espacio donde todo el equipo trabaja junto, facilitando comunicación y colaboración."
+        },
+        {
+            "id": 40,
+            "pregunta": "¿Qué define a un equipo 'auto-organizado'?",
+            "opciones": {
+                "a": "Un grupo que recibe órdenes directas de un jefe de proyecto externo.",
+                "b": "Un equipo que gestiona su propio trabajo sin dirección central.",
+                "c": "Un conjunto de personas que trabajan solas sin hablar con nadie.",
+                "d": "Una empresa externa que se encarga de organizar las reuniones hoy."
+            },
+            "respuesta_correcta": "b",
+            "explicacion": "Equipos auto-organizados: Equipos que gestionan su propio trabajo sin una dirección centralizada."
+        },
+        {
+            "id": 41,
+            "pregunta": "¿Cuál es el propósito de las reuniones diarias de pie (Scrum meetings)?",
+            "opciones": {
+                "a": "Discutir el presupuesto del proyecto y los salarios de los juniors.",
+                "b": "Sincronizar el trabajo del equipo y resolver problemas rápido.",
+                "c": "Castigar públicamente a quienes no han terminado sus tareas ayer.",
+                "d": "Leer la documentación técnica en voz alta para todo el grupo hoy."
+            },
+            "respuesta_correcta": "b",
+            "explicacion": "Reuniones cortas para sincronizar el trabajo del equipo y resolver problemas rápidamente."
+        },
+        {
+            "id": 42,
+            "pregunta": "¿Qué son las 'tarjetas de historia' en XP?",
+            "opciones": {
+                "a": "Tarjetas de crédito que usa el cliente para pagar los sprints hoy.",
+                "b": "Tarjetas para resumir los requisitos de manera sencilla y clara.",
+                "c": "Documentos legales que narran la historia de éxito de la empresa.",
+                "d": "Fichas de empleados donde se anota su historial de errores técnicos."
+            },
+            "respuesta_correcta": "b",
+            "explicacion": "Uso de tarjetas para resumir los requisitos de manera sencilla y accesible."
+        },
+        {
+            "id": 43,
+            "pregunta": "¿En qué consiste la práctica de 'Pair programming'?",
+            "opciones": {
+                "a": "Dos equipos diferentes programando la misma aplicación a la vez.",
+                "b": "Dos desarrolladores trabajando juntos en una misma tarea técnica.",
+                "c": "Un programador trabajando con dos teclados y dos pantallas hoy.",
+                "d": "Programar dos versiones del software para diferentes sistemas."
+            },
+            "respuesta_correcta": "b",
+            "explicacion": "Pair programming: Dos desarrolladores trabajan juntos en una misma tarea, mejorando la calidad."
+        },
+        {
+            "id": 44,
+            "pregunta": "¿Cómo debe ser la participación del cliente en XP?",
+            "opciones": {
+                "a": "Inexistente hasta que el producto esté totalmente terminado hoy.",
+                "b": "Activa y continua proporcionando retroalimentación directa.",
+                "c": "Limitada al pago de facturas y firma de contratos trimestrales.",
+                "d": "A través de un representante legal que no conoce el producto."
+            },
+            "respuesta_correcta": "b",
+            "explicacion": "Participación activa del cliente: El cliente está involucrado de manera continua."
+        },
+        {
+            "id": 45,
+            "pregunta": "¿Por qué surge el Manifiesto Ágil según las fuentes?",
+            "opciones": {
+                "a": "Como respuesta a los enfoques rígidos y burocráticos previos.",
+                "b": "Para promocionar nuevas herramientas de software muy costosas.",
+                "c": "Para obligar a los programadores a trabajar más horas al día hoy.",
+                "d": "Debido a una ley internacional sobre el desarrollo de sistemas."
+            },
+            "respuesta_correcta": "a",
+            "explicacion": "En respuesta a los enfoques rígidos y burocráticos en los proyectos de desarrollo."
+        },
+        {
+            "id": 46,
+            "pregunta": "¿Qué valoran los autores sobre los procesos y herramientas?",
+            "opciones": {
+                "a": "Consideran que los procesos son lo más importante del proyecto.",
+                "b": "Valoran más a los individuos y sus interacciones mutuas hoy.",
+                "c": "Creen que las herramientas de pago garantizan el éxito total.",
+                "d": "Piensan que sin procesos rígidos no se puede desarrollar nada."
+            },
+            "respuesta_correcta": "b",
+            "explicacion": "Individuos e interacciones sobre procesos y herramientas."
+        },
+        {
+            "id": 47,
+            "pregunta": "¿Qué se valora más que la documentación exhaustiva?",
+            "opciones": {
+                "a": "Un plan de marketing bien diseñado para vender el producto.",
+                "b": "El software funcionando correctamente para el usuario final.",
+                "c": "La cantidad de folios escritos sobre la arquitectura interna.",
+                "d": "Tener un archivo con todos los correos electrónicos guardados."
+            },
+            "respuesta_correcta": "b",
+            "explicacion": "Software funcionando sobre documentación exhaustiva."
+        },
+        {
+            "id": 48,
+            "pregunta": "¿Qué es preferible frente a la negociación contractual rígida?",
+            "opciones": {
+                "a": "La colaboración constante con el cliente durante el proceso.",
+                "b": "Ignorar las peticiones del cliente para no cambiar el precio.",
+                "c": "Contratar más abogados para proteger los intereses de la empresa.",
+                "d": "Aceptar solo proyectos que no tengan ningún riesgo técnico hoy."
+            },
+            "respuesta_correcta": "a",
+            "explicacion": "Colaboración con el cliente sobre negociación contractual."
+        },
+        {
+            "id": 49,
+            "pregunta": "¿Cuál es la postura ágil sobre el seguimiento de un plan?",
+            "opciones": {
+                "a": "Seguir el plan original es la única forma de no perder dinero.",
+                "b": "Responder al cambio es más valioso que seguir un plan fijo.",
+                "c": "Los planes son inútiles y no deben realizarse nunca en ágil.",
+                "d": "Un buen plan debe ser tan detallado que no permita cambios hoy."
+            },
+            "respuesta_correcta": "b",
+            "explicacion": "Responder al cambio sobre seguir un plan."
+        },
+        {
+            "id": 50,
+            "pregunta": "¿Significa el manifiesto que los valores de la derecha no tienen valor?",
+            "opciones": {
+                "a": "Sí, el manifiesto dice que hay que eliminar procesos y planes.",
+                "b": "No, hay valor en ellos, pero se valoran más los de la izquierda.",
+                "c": "El manifiesto no menciona los elementos de la derecha en absoluto.",
+                "d": "Solo tienen valor si el cliente paga un extra por incluirlos hoy."
+            },
+            "respuesta_correcta": "b",
+            "explicacion": "Es decir, aunque hay valor en los elementos de la derecha, valoramos más los de la izquierda."
+        },
+        {
+            "id": 51,
+            "pregunta": "¿Cuál es la mayor prioridad según los principios del Manifiesto Ágil?",
+            "opciones": {
+                "a": "Terminar el software antes de que se acabe el presupuesto total.",
+                "b": "Satisfacer al cliente mediante la entrega temprana y continua.",
+                "c": "Asegurar que el código no tenga ninguna errata ortográfica hoy.",
+                "d": "Usar la tecnología más moderna aunque no sea necesaria aquí."
+            },
+            "respuesta_correcta": "b",
+            "explicacion": "Nuestra mayor prioridad es satisfacer al cliente mediante la entrega temprana y continua de software con valor."
+        },
+        {
+            "id": 52,
+            "pregunta": "¿Cómo ven los procesos ágiles los cambios en los requisitos?",
+            "opciones": {
+                "a": "Como una molestia que debe evitarse mediante multas al cliente.",
+                "b": "Como una ventaja competitiva para el cliente, incluso al final.",
+                "c": "Como un error de análisis que no debería haber ocurrido nunca.",
+                "d": "Como algo que solo se permite si no afecta al diseño original."
+            },
+            "respuesta_correcta": "b",
+            "explicacion": "Los procesos ágiles aprovechan el cambio para proporcionar ventaja competitiva al cliente."
+        },
+        {
+            "id": 53,
+            "pregunta": "¿Cuál es la frecuencia preferida para entregar software funcional?",
+            "opciones": {
+                "a": "Cada año, para asegurar que el sistema sea totalmente robusto.",
+                "b": "Entre dos semanas y dos meses, priorizando el tiempo corto.",
+                "c": "Cada día a las ocho de la mañana sin falta y sin excepciones.",
+                "d": "Solo cuando el cliente solicite ver el progreso del trabajo hoy."
+            },
+            "respuesta_correcta": "b",
+            "explicacion": "Entregamos software funcional frecuentemente, entre dos semanas y dos meses, con preferencia al período más corto."
+        },
+        {
+            "id": 54,
+            "pregunta": "¿Quiénes deben trabajar juntos a diario durante el proyecto?",
+            "opciones": {
+                "a": "Los desarrolladores y los responsables de negocio del proyecto.",
+                "b": "Los programadores y sus familiares para mantener la motivación.",
+                "c": "Los comerciales y los abogados para evitar problemas de firma.",
+                "d": "Solo los desarrolladores seniors entre ellos sin hablar con juniors."
+            },
+            "respuesta_correcta": "a",
+            "explicacion": "Los responsables de negocio y los desarrolladores trabajamos juntos a diario durante todo el proyecto."
+        },
+        {
+            "id": 55,
+            "pregunta": "¿En qué tipo de individuos deben basarse los proyectos?",
+            "opciones": {
+                "a": "En individuos motivados a los que se les da el apoyo necesario.",
+                "b": "En individuos que acepten trabajar bajo presión constante hoy.",
+                "c": "En expertos externos que solo vienen a la oficina una vez al mes.",
+                "d": "En personas que no cuestionen nunca las órdenes de sus jefes."
+            },
+            "respuesta_correcta": "a",
+            "explicacion": "Los proyectos se desarrollan en torno a individuos motivados. Es necesario darles entorno, apoyo y confianza."
+        },
+        {
+            "id": 56,
+            "pregunta": "¿Cuál es el método más eficiente para comunicar información al equipo?",
+            "opciones": {
+                "a": "Enviar correos electrónicos detallados con archivos adjuntos.",
+                "b": "Tener una conversación cara a cara entre los miembros hoy.",
+                "c": "Escribir mensajes en una pizarra gigante en el centro de la sala.",
+                "d": "Usar una aplicación de chat para dejar constancia de todo hoy."
+            },
+            "respuesta_correcta": "b",
+            "explicacion": "El método más eficiente y efectivo de comunicar información al equipo es una conversación cara a cara."
+        },
+        {
+            "id": 57,
+            "pregunta": "¿Qué constituye la medida principal de progreso en ágil?",
+            "opciones": {
+                "a": "El porcentaje de presupuesto consumido hasta la fecha actual.",
+                "b": "El software funcionando correctamente para el cliente final.",
+                "c": "El número de horas que el equipo ha pasado en la oficina hoy.",
+                "d": "La cantidad de tareas que aparecen como terminadas en el plan."
+            },
+            "respuesta_correcta": "b",
+            "explicacion": "El software funcionando es la medida principal de progreso."
+        },
+        {
+            "id": 58,
+            "pregunta": "¿Qué promueve el principio de desarrollo sostenible?",
+            "opciones": {
+                "a": "Trabajar muchas horas al inicio para descansar al final de todo.",
+                "b": "Mantener un ritmo constante de forma indefinida para todos.",
+                "c": "Usar solo materiales reciclados en la oficina de desarrollo.",
+                "d": "Finalizar el proyecto lo antes posible para ahorrar recursos hoy."
+            },
+            "respuesta_correcta": "b",
+            "explicacion": "Los promotores, desarrolladores y usuarios deben ser capaces de mantener un ritmo constante de forma indefinida."
+        },
+        {
+            "id": 59,
+            "pregunta": "¿Qué mejora la agilidad según el principio número nueve?",
+            "opciones": {
+                "a": "La atención continua a la excelencia técnica y al buen diseño.",
+                "b": "Tener los ordenadores más rápidos y caros que existan hoy.",
+                "c": "Contratar a más gente cada vez que el proyecto se retrasa hoy.",
+                "d": "Ignorar los errores técnicos para centrarse solo en la visual."
+            },
+            "respuesta_correcta": "a",
+            "explicacion": "La atención continua a la excelencia técnica y al buen diseño mejora la agilidad."
+        },
+        {
+            "id": 60,
+            "pregunta": "¿Cómo se define la simplicidad en el Manifiesto Ágil?",
+            "opciones": {
+                "a": "Hacer lo mínimo posible para que el cliente no se queje hoy.",
+                "b": "Maximizar la cantidad de trabajo no realizado con valor alto.",
+                "c": "Escribir código que cualquier persona sin estudios entienda.",
+                "d": "Eliminar todas las funciones que sean difíciles de programar."
+            },
+            "respuesta_correcta": "b",
+            "explicacion": "La simplicidad, elegir la opción que aporte más valor empleando el menor esfuerzo posible, es esencial."
+        },
+        {
+            "id": 61,
+            "pregunta": "¿De dónde emergen las mejores arquitecturas y diseños?",
+            "opciones": {
+                "a": "De la mente de un arquitecto jefe con veinte años de carrera.",
+                "b": "De equipos auto-organizados que colaboran estrechamente hoy.",
+                "c": "De manuales técnicos estandarizados a nivel internacional hoy.",
+                "d": "De las sugerencias que los usuarios finales envían por email."
+            },
+            "respuesta_correcta": "b",
+            "explicacion": "Las mejores arquitecturas, requisitos y diseños emergen de equipos auto-organizados."
+        },
+        {
+            "id": 62,
+            "pregunta": "¿Qué hace el equipo a intervalos regulares para ser más efectivo?",
+            "opciones": {
+                "a": "Pide vacaciones pagadas para recuperar la energía perdida hoy.",
+                "b": "Reflexiona sobre su comportamiento para ajustar y perfeccionar.",
+                "c": "Cambia de jefe de proyecto para probar nuevos estilos de mando.",
+                "d": "Reescribe todo el código desde cero para eliminar los fallos."
+            },
+            "respuesta_correcta": "b",
+            "explicacion": "A intervalos regulares el equipo reflexiona sobre cómo ser más efectivo para luego ajustar su comportamiento."
+        },
+        {
+            "id": 63,
+            "pregunta": "¿Cuál es la consecuencia de la reflexión regular del equipo?",
+            "opciones": {
+                "a": "Un informe de cien páginas para el departamento de calidad hoy.",
+                "b": "El ajuste y perfeccionamiento del comportamiento del grupo.",
+                "c": "La detección de quién es el miembro más lento del equipo hoy.",
+                "d": "Un aumento inmediato del presupuesto para comprar hardware."
+            },
+            "respuesta_correcta": "b",
+            "explicacion": "El equipo reflexiona... para luego ajustar y perfeccionar su comportamiento en consecuencia."
+        },
+        {
+            "id": 64,
+            "pregunta": "¿Qué asume el IID sobre el crecimiento de los sistemas?",
+            "opciones": {
+                "a": "Que los sistemas deben ser perfectos desde el primer día hoy.",
+                "b": "Que los sistemas crecen en funcionalidades entre iteraciones.",
+                "c": "Que el tamaño del código debe reducirse en cada nueva versión.",
+                "d": "Que el hardware debe actualizarse antes que el propio sistema."
+            },
+            "respuesta_correcta": "b",
+            "explicacion": "Normalmente, los sistemas crecen en funcionalidades entre iteración e iteración."
+        },
+        {
+            "id": 65,
+            "pregunta": "¿Cuál es el número mínimo de iteraciones antes de una versión final?",
+            "opciones": {
+                "a": "Solo una iteración larga es suficiente para cualquier sistema.",
+                "b": "Al menos tres iteraciones antes de entregar la versión final.",
+                "c": "Exactamente diez iteraciones sin importar el tamaño del código.",
+                "d": "Cincuenta iteraciones para asegurar que no existan errores hoy."
+            },
+            "respuesta_correcta": "b",
+            "explicacion": "La mayoría de los proyectos incluyen al menos 3 iteraciones antes de una versión final."
+        },
+        {
+            "id": 66,
+            "pregunta": "¿Qué se busca evitar con la planificación adaptativa?",
+            "opciones": {
+                "a": "Que el cliente pueda cambiar de opinión durante el proyecto.",
+                "b": "La rigidez de intentar predecir el futuro a largo plazo hoy.",
+                "c": "Tener que hablar con los desarrolladores sobre sus tareas hoy.",
+                "d": "El uso de pizarras blancas en las oficinas de programación hoy."
+            },
+            "respuesta_correcta": "b",
+            "explicacion": "La planificación adaptativa es preferible a la predictiva, especialmente en entornos cambiantes."
+        },
+        {
+            "id": 67,
+            "pregunta": "¿Cuál es el 'core' de un producto según el ejemplo dado?",
+            "opciones": {
+                "a": "La parte que genera valor directo y satisfacción al usuario.",
+                "b": "El código que gestiona la seguridad y el inicio de sesión hoy.",
+                "c": "La interfaz gráfica con colores llamativos para el cliente hoy.",
+                "d": "El manual de instalación para los técnicos de sistemas hoy."
+            },
+            "respuesta_correcta": "a",
+            "explicacion": "Este es el 'core' del producto, lo que genera el valor directo y la mayor satisfacción."
+        },
+        {
+            "id": 68,
+            "pregunta": "¿Qué relación hay entre Scrum, XP y el desarrollo iterativo?",
+            "opciones": {
+                "a": "Scrum y XP son alternativas que prohíben el uso de IID hoy.",
+                "b": "El IID es el componente central de metodologías como Scrum.",
+                "c": "Scrum usa IID pero XP prefiere el modelo de cascada clásico.",
+                "d": "Solo se usa IID si el cliente no conoce las metodologías hoy."
+            },
+            "respuesta_correcta": "b",
+            "explicacion": "IID está en el núcleo de las metodologías ágiles, incluyendo Scrum y XP."
+        },
+        {
+            "id": 69,
+            "pregunta": "¿Qué se debe asegurar al final de cada ciclo de Timeboxing?",
+            "opciones": {
+                "a": "Que todos los trabajadores hayan cobrado sus horas extra hoy.",
+                "b": "Entregar una versión estable y probada del software actual.",
+                "c": "Haber gastado exactamente el 10% del presupuesto asignado.",
+                "d": "Tener una lista de culpables por si algo sale mal mañana hoy."
+            },
+            "respuesta_correcta": "b",
+            "explicacion": "El objetivo es entregar una versión estable y probada al final de cada iteración."
+        },
+        {
+            "id": 70,
+            "pregunta": "¿Cuál es el riesgo de no priorizar por complejidad técnica?",
+            "opciones": {
+                "a": "Que el sistema sea demasiado fácil de usar para el usuario.",
+                "b": "Que un mal diseño inicial afecte a todo el proyecto futuro.",
+                "c": "Que los programadores terminen su trabajo demasiado pronto.",
+                "d": "Que el cliente no quiera pagar por las partes que no se ven."
+            },
+            "respuesta_correcta": "b",
+            "explicacion": "Si esta parte no está bien diseñada desde el principio, podría afectar a todas las demás funcionalidades."
+        },
+        {
+            "id": 71,
+            "pregunta": "¿Qué se asume sobre la definición de requisitos en agile?",
+            "opciones": {
+                "a": "No es cierto que no se puedan definir requisitos definidos.",
+                "b": "Los requisitos son una pérdida de tiempo y deben omitirse.",
+                "c": "Deben ser definidos por un consultor externo al proyecto hoy.",
+                "d": "Solo se definen requisitos si el software es muy complejo."
+            },
+            "respuesta_correcta": "a",
+            "explicacion": "No es cierto que no se puedan definir unos requisitos definidos o que siempre estén cambiando."
+        },
+        {
+            "id": 72,
+            "pregunta": "¿Qué ventaja tiene retrasar la estimación de costes?",
+            "opciones": {
+                "a": "Poder engañar al cliente durante más tiempo sobre el precio.",
+                "b": "Tener datos reales de iteraciones previas para estimar mejor.",
+                "c": "Evitar tener que hacer presupuestos legales antes de acabar.",
+                "d": "Hacer que el equipo trabaje sin preocuparse por el dinero hoy."
+            },
+            "respuesta_correcta": "b",
+            "explicacion": "La respuesta iterativa es retrasar la expectativa... hasta que han transcurrido unas pocas iteraciones."
+        },
+        {
+            "id": 73,
+            "pregunta": "¿Qué significa 'abrazar el cambio' en la práctica real?",
+            "opciones": {
+                "a": "Aceptar que el cambio es inevitable y puede ser beneficioso.",
+                "b": "Cambiar de lenguaje de programación cada dos semanas de sprint.",
+                "c": "Permitir que el cliente modifique las tareas hoy mismo si quiere.",
+                "d": "No tener nunca un plan para poder hacer lo que uno quiera hoy."
+            },
+            "respuesta_correcta": "a",
+            "explicacion": "Aceptando que el cambio es inevitable y puede ser una ventaja competitiva."
+        },
+        {
+            "id": 74,
+            "pregunta": "¿Cómo contribuyen los equipos auto-organizados al diseño?",
+            "opciones": {
+                "a": "Ellos no contribuyen; solo siguen las órdenes del arquitecto.",
+                "b": "De ellos emergen las mejores arquitecturas y requisitos hoy.",
+                "c": "Su función es solo votar qué colores les gustan más para hoy.",
+                "d": "Se encargan de la documentación mientras otros diseñan todo."
+            },
+            "respuesta_correcta": "b",
+            "explicacion": "Las mejores arquitecturas, requisitos y diseños emergen de equipos auto-organizados."
+        },
+        {
+            "id": 75,
+            "pregunta": "¿Cuál es la política de XP sobre la simplicidad técnica?",
+            "opciones": {
+                "a": "Se debe elegir siempre la opción de más valor y menos esfuerzo.",
+                "b": "Se debe programar todo lo que el cliente pueda pedir mañana.",
+                "c": "Hay que usar los patrones de diseño más complejos por defecto.",
+                "d": "La simplicidad consiste en no probar el código para ir rápido."
+            },
+            "respuesta_correcta": "a",
+            "explicacion": "La simplicidad, elegir la opción que aporte más valor empleando el menor esfuerzo posible, es esencial."
+        }
+    ]
+}

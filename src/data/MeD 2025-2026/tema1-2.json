@@ -1,0 +1,906 @@
+{
+    "titulo": "TEMA 1 - Introducción B",
+    "descripcion": "Un examen exhaustivo de 75 preguntas de alta dificultad que cubre terminología, el Ciclo de Vida del Software (SDLC), evolución histórica de procesos, roles profesionales y desafíos contemporáneos, basado estrictamente en las fuentes.",
+    "examen_automatizacion": [
+        {
+            "id": 1,
+            "pregunta": "¿Qué define a la metodología como disciplina académica según la lógica de la investigación?",
+            "opciones": {
+                "a": "El estudio de los principios fundamentales en los que se basan las prácticas científicas.",
+                "b": "El conjunto de reglas particulares para aprender un arte u oficio de manera sistemática.",
+                "c": "La manera razonada de actuar siguiendo un orden establecido por la costumbre habitual.",
+                "d": "La aplicación de técnicas experimentales para validar el diseño de productos informáticos."
+            },
+            "respuesta_correcta": "a",
+            "explicacion": "La metodología se define como la parte de la lógica que se ocupa del estudio de los métodos de investigación y los principios que los fundamentan."
+        },
+        {
+            "id": 2,
+            "pregunta": "¿Cuál es la característica principal de un 'método' como modo de obrar?",
+            "opciones": {
+                "a": "Representar la ciencia que analiza los procedimientos de consulta en un campo académico.",
+                "b": "Seguir un orden y una manera razonada de realizar acciones para alcanzar un fin dado.",
+                "c": "Constituir el conjunto de postulados empleados por una disciplina técnica profesional.",
+                "d": "Establecer la estructura jerárquica de los elementos que forman un proceso industrial."
+            },
+            "respuesta_correcta": "b",
+            "explicacion": "El método es la manera de hacer algo razonando y siguiendo un orden, o un modo de decir o hacer con orden."
+        },
+        {
+            "id": 3,
+            "pregunta": "¿Cómo se define técnicamente un 'proceso' en el ámbito industrial y natural?",
+            "opciones": {
+                "a": "Como la secuencia detallada de instrucciones prescriptivas para ejecutar tareas mínimas.",
+                "b": "Como el conjunto de las fases sucesivas de un fenómeno o de una operación artificial.",
+                "c": "Como la unidad elemental de trabajo realizada por un único agente en un entorno dado.",
+                "d": "Como la regulación del comportamiento para lograr una organización eficiente de trámites."
+            },
+            "respuesta_correcta": "b",
+            "explicacion": "Un proceso es el conjunto de fases sucesivas de un fenómeno natural o de una operación artificial."
+        },
+        {
+            "id": 4,
+            "pregunta": "En la Ingeniería del Software, ¿qué implica la aplicación sistemática según la IEEE?",
+            "opciones": {
+                "a": "El uso exclusivo de herramientas de automatización para la fase de pruebas unitarias.",
+                "b": "La integración de conocimientos científicos y metodologías al ciclo de vida del software.",
+                "c": "La división del trabajo en subproyectos independientes sin relación funcional entre sí.",
+                "d": "El diseño de interfaces gráficas basadas en el comportamiento intuitivo de los usuarios."
+            },
+            "respuesta_correcta": "b",
+            "explicacion": "La IEEE define la Ingeniería del Software como la aplicación sistemática de conocimientos técnicos, científicos, metodologías y experiencia."
+        },
+        {
+            "id": 5,
+            "pregunta": "¿Qué asegura una metodología de desarrollo bien estructurada a los desarrolladores?",
+            "opciones": {
+                "a": "La eliminación de cualquier tipo de riesgo técnico durante la implementación del código.",
+                "b": "La obtención de un software de calidad adecuado a las necesidades en tiempo y forma.",
+                "c": "El uso obligatorio de lenguajes de programación de bajo nivel para optimizar recursos.",
+                "d": "La automatización completa de la toma de decisiones estratégicas del equipo de gestión."
+            },
+            "respuesta_correcta": "b",
+            "explicacion": "La metodología asegura la realización oportuna y en tiempo y forma de un software de calidad adecuado a las necesidades."
+        },
+        {
+            "id": 6,
+            "pregunta": "¿Cuál es el objetivo primordial de dividir el desarrollo en fases o etapas?",
+            "opciones": {
+                "a": "Reducir el número de profesionales implicados en la toma de requisitos del producto.",
+                "b": "Conseguir una mejor planificación, ejecución y gestión general del proyecto técnico.",
+                "c": "Facilitar la venta del producto antes de que se hayan completado las pruebas de carga.",
+                "d": "Evitar la interacción directa con los clientes finales durante el diseño del sistema."
+            },
+            "respuesta_correcta": "b",
+            "explicacion": "Dividir el desarrollo en etapas busca conseguir una mejor planificación, ejecución y gestión del proyecto."
+        },
+        {
+            "id": 7,
+            "pregunta": "¿Qué define a un 'procedimiento' en contraste con un proceso general?",
+            "opciones": {
+                "a": "La ejecución de una serie de acciones continuas que no conducen a un fin determinado.",
+                "b": "La secuencia detallada de pasos o instrucciones para realizar una actividad específica.",
+                "c": "La ciencia que estudia los principios de la investigación en un campo científico dado.",
+                "d": "El conjunto de objetivos estratégicos que una organización pretende alcanzar a largo plazo."
+            },
+            "respuesta_correcta": "b",
+            "explicacion": "Un procedimiento es un conjunto detallado de pasos o instrucciones que deben seguirse para realizar una tarea o actividad."
+        },
+        {
+            "id": 8,
+            "pregunta": "¿Cuál es la función de la prescriptividad en los procedimientos técnicos?",
+            "opciones": {
+                "a": "Permitir que cada desarrollador elija libremente su propia forma de codificar funciones.",
+                "b": "Garantizar la repetibilidad y la consistencia en la ejecución de una tarea concreta.",
+                "c": "Aumentar la complejidad de los procesos de comunicación entre los distintos agentes.",
+                "d": "Sustituir la necesidad de realizar pruebas de integración al final de cada iteración."
+            },
+            "respuesta_correcta": "b",
+            "explicacion": "Los procedimientos suelen ser prescriptivos para garantizar la repetibilidad y consistencia en la ejecución."
+        },
+        {
+            "id": 9,
+            "pregunta": "¿Qué es una 'actividad' en la jerarquía de organización del trabajo?",
+            "opciones": {
+                "a": "La unidad mínima indivisible que solo puede ser ejecutada por un sistema automático.",
+                "b": "Una unidad compleja funcionalmente consistente en la que se dividen procedimientos.",
+                "c": "El resultado final utilizable de un proyecto desarrollado mediante métodos informales.",
+                "d": "La recopilación de datos estadísticos sobre el rendimiento de los servidores en la nube."
+            },
+            "respuesta_correcta": "b",
+            "explicacion": "Una actividad es una unidad compleja funcionalmente consistente en las que se dividen los procedimientos para facilitar la organización."
+        },
+        {
+            "id": 10,
+            "pregunta": "Dentro de una actividad, ¿cómo se conceptualiza la 'tarea'?",
+            "opciones": {
+                "a": "Como el marco de referencia que define qué fases se deben seguir en todo el ciclo de vida.",
+                "b": "Como la unidad elemental de trabajo que suele ser efectuada por un actor o agente singular.",
+                "c": "Como el documento de especificación que recoge los requisitos funcionales de un sistema.",
+                "d": "Como la integración de múltiples módulos de software para formar una solución operativa."
+            },
+            "respuesta_correcta": "b",
+            "explicacion": "La tarea es la 'unidad elemental' en la que se dividen las actividades, efectuada por un agente o actor singular."
+        },
+        {
+            "id": 11,
+            "pregunta": "¿Cuál es un ejemplo de tarea dentro de la actividad de desarrollo?",
+            "opciones": {
+                "a": "La planificación total de los costes financieros y recursos humanos de toda la empresa.",
+                "b": "Escribir una función específica de inicio de sesión dentro de un módulo de seguridad.",
+                "c": "La decisión estratégica de migrar todos los servicios a una arquitectura distribuida.",
+                "d": "El estudio de mercado para determinar la oportunidad de crear una nueva aplicación web."
+            },
+            "respuesta_correcta": "b",
+            "explicacion": "Un ejemplo de tarea es escribir la función de inicio de sesión dentro de la actividad mayor de codificación/desarrollo."
+        },
+        {
+            "id": 12,
+            "pregunta": "¿Qué caracteriza a un 'producto' o 'entregable' en el desarrollo metódico?",
+            "opciones": {
+                "a": "Es un resultado software válido y utilizable obtenido al final de una fase o etapa.",
+                "b": "Es cualquier idea preliminar que surge de manera espontánea durante una reunión informal.",
+                "c": "Es el código fuente que no ha sido sometido a ningún proceso de validación o prueba.",
+                "d": "Es la lista de errores encontrados por los usuarios finales tras el abandono del sistema."
+            },
+            "respuesta_correcta": "a",
+            "explicacion": "Un entregable es un resultado software válido y utilizable de cada etapa, fase o iteración, obtenido por evolución o versiones."
+        },
+        {
+            "id": 13,
+            "pregunta": "¿Cuándo comienza y cuándo termina el ciclo de vida de un software (SDLC)?",
+            "opciones": {
+                "a": "Comienza con la primera línea de código y termina con la entrega del manual de usuario.",
+                "b": "Comienza con la idea inicial y termina cuando el software deja de ser utilizado por completo.",
+                "c": "Comienza al firmar el contrato y termina al finalizar la fase de pruebas unitarias locales.",
+                "d": "Comienza con el diseño de la base de datos y termina al realizar el primer despliegue web."
+            },
+            "respuesta_correcta": "b",
+            "explicacion": "El SDLC comienza con la idea inicial y termina cuando el software deja de utilizarse."
+        },
+        {
+            "id": 14,
+            "pregunta": "¿Por qué es importante detectar errores en etapas tempranas del SDLC?",
+            "opciones": {
+                "a": "Porque permite aumentar el tiempo dedicado a la documentación técnica de los procesos.",
+                "b": "Porque ayuda a reducir significativamente los costes y los retrabajos en etapas posteriores.",
+                "c": "Porque evita que los desarrolladores tengan que interactuar con los gestores de proyectos.",
+                "d": "Porque asegura que el hardware utilizado sea siempre compatible con las nuevas versiones."
+            },
+            "respuesta_correcta": "b",
+            "explicacion": "Detectar errores tempranamente reduce costes y retrabajos, siendo una de las ventajas de las fases estructuradas."
+        },
+        {
+            "id": 15,
+            "pregunta": "¿Qué pregunta fundamental se intenta responder en la fase de Análisis de Requisitos?",
+            "opciones": {
+                "a": "¿Cómo vamos a construir técnicamente el software para que sea altamente escalable?",
+                "b": "¿Qué necesita exactamente el software hacer para satisfacer las demandas del cliente?",
+                "c": "¿Qué lenguaje de programación es el más adecuado para optimizar el uso de la memoria?",
+                "d": "¿Cuántas horas de mantenimiento serán necesarias tras el primer año de funcionamiento?"
+            },
+            "respuesta_correcta": "b",
+            "explicacion": "El análisis de requisitos se centra en identificar '¿Qué necesita el software hacer?'."
+        },
+        {
+            "id": 16,
+            "pregunta": "¿En qué se diferencia el enfoque de la fase de Diseño de la de Implementación?",
+            "opciones": {
+                "a": "El diseño define el 'cómo' se construirá el sistema y la implementación es la programación.",
+                "b": "El diseño es la entrega final al cliente y la implementación es el estudio previo del mercado.",
+                "c": "El diseño se ocupa de encontrar errores y la implementación de definir las necesidades reales.",
+                "d": "No existe diferencia alguna; ambos términos se refieren al acto de escribir código en Git."
+            },
+            "respuesta_correcta": "a",
+            "explicacion": "Diseño responde a '¿Cómo vamos a construir el software?' e Implementación es 'Programar el software'."
+        },
+        {
+            "id": 17,
+            "pregunta": "¿Qué caracteriza al modelo de desarrollo 'Code&Fix'?",
+            "opciones": {
+                "a": "Una estructura rígida de fases que impide cualquier cambio una vez iniciado el desarrollo.",
+                "b": "La escritura directa de código y su posterior depuración en un ciclo repetitivo informal.",
+                "c": "El uso de análisis de riesgos matemáticos antes de escribir la primera línea de código fuente.",
+                "d": "La colaboración continua con el cliente mediante entregas incrementales cada dos semanas."
+            },
+            "respuesta_correcta": "b",
+            "explicacion": "Code&Fix (codifica y arregla) consiste en escribir código y depurar repetidamente."
+        },
+        {
+            "id": 18,
+            "pregunta": "¿Cuál es la característica distintiva del Modelo en Espiral?",
+            "opciones": {
+                "a": "La prohibición de volver a una fase anterior una vez que se ha generado un entregable técnico.",
+                "b": "El enfoque central en la determinación de objetivos y la resolución proactiva de riesgos.",
+                "c": "La entrega de todo el sistema completo en una única versión final sin prototipos previos.",
+                "d": "La eliminación de la fase de mantenimiento para centrarse exclusivamente en la codificación."
+            },
+            "respuesta_correcta": "b",
+            "explicacion": "El modelo en espiral se define por objetivos, resolver riesgos, desarrollo y pruebas en ciclos repetitivos."
+        },
+        {
+            "id": 19,
+            "pregunta": "¿Cómo funciona el modelo de 'Prototipado' en relación a los requisitos?",
+            "opciones": {
+                "a": "Requiere la definición absoluta y final de todos los requisitos antes de empezar a trabajar.",
+                "b": "Inicia con requisitos reducidos para evolucionarlos junto al código según la demanda real.",
+                "c": "Ignora por completo los requisitos del cliente para basarse en estándares técnicos internos.",
+                "d": "Delega la definición de requisitos a un sistema de inteligencia artificial sin intervención humana."
+            },
+            "respuesta_correcta": "b",
+            "explicacion": "El prototipado utiliza requisitos reducidos, desarrolla, y evoluciona requisitos y código bajo demanda."
+        },
+        {
+            "id": 20,
+            "pregunta": "En el desarrollo ágil, ¿cuál es el motor de la mejora del producto?",
+            "opciones": {
+                "a": "La documentación exhaustiva de cada paso técnico antes de realizar cualquier cambio físico.",
+                "b": "La mejora incremental mediante iteraciones cortas y equipos que se auto-organizan solos.",
+                "c": "El cumplimiento estricto de un cronograma lineal definido al inicio del proyecto de software.",
+                "d": "La supervisión constante de un único jefe que toma todas las decisiones de diseño y código."
+            },
+            "respuesta_correcta": "b",
+            "explicacion": "El desarrollo ágil es iterativo, adaptativo y busca la mejora incremental en equipos auto-organizados."
+        },
+        {
+            "id": 21,
+            "pregunta": "¿Qué diferencia al SDLC de las metodologías de desarrollo?",
+            "opciones": {
+                "a": "El SDLC es el marco conceptual de fases y las metodologías son las prácticas de ejecución.",
+                "b": "El SDLC determina el coste total del proyecto y las metodologías determinan los beneficios.",
+                "c": "El SDLC se aplica solo a proyectos pequeños y las metodologías a grandes organizaciones.",
+                "d": "El SDLC es una herramienta de marketing y las metodologías son manuales de programación."
+            },
+            "respuesta_correcta": "a",
+            "explicacion": "El SDLC define 'qué' fases se siguen (marco conceptual) y las metodologías determinan el 'cómo' (aplicación práctica)."
+        },
+        {
+            "id": 22,
+            "pregunta": "¿Puede una misma metodología aplicarse a distintos modelos de ciclos de vida?",
+            "opciones": {
+                "a": "No, cada metodología está ligada de forma permanente y exclusiva a un único modelo lineal.",
+                "b": "Sí, las metodologías pueden adaptarse y aplicarse a diferentes modelos según el contexto dado.",
+                "c": "Solo si el proyecto no requiere la intervención de analistas de sistemas o administradores.",
+                "d": "Únicamente en el caso de que se utilicen servicios en la nube de un único proveedor técnico."
+            },
+            "respuesta_correcta": "b",
+            "explicacion": "Las fuentes indican que una metodología puede aplicarse a distintos modelos de ciclos de vida."
+        },
+        {
+            "id": 23,
+            "pregunta": "Dentro de los stakeholders, ¿cuál es el rol principal de los Gestores de Proyectos?",
+            "opciones": {
+                "a": "Escribir el código fuente y diseñar la arquitectura de microservicios de la aplicación web.",
+                "b": "Asegurar que el SDLC se siga efectivamente gestionando recursos, tiempos y objetivos claros.",
+                "c": "Utilizar el software diariamente para validar si cumple con sus necesidades de trabajo real.",
+                "d": "Definir los colores de la interfaz gráfica basándose únicamente en sus preferencias personales."
+            },
+            "respuesta_correcta": "b",
+            "explicacion": "Los gestores aseguran que el SDLC se siga, gestionan recursos, cronogramas y cumplimiento de objetivos."
+        },
+        {
+            "id": 24,
+            "pregunta": "¿Cómo afecta un SDLC bien definido a la comunicación del proyecto?",
+            "opciones": {
+                "a": "Impide que los desarrolladores hablen directamente con los clientes para evitar confusiones.",
+                "b": "Facilita la comunicación clara al establecer entregables como puntos clave de interacción.",
+                "c": "Reduce la necesidad de reuniones al automatizar todos los informes de estado del proyecto.",
+                "d": "Obliga a que toda la comunicación sea exclusivamente a través de documentos legales firmados."
+            },
+            "respuesta_correcta": "b",
+            "explicacion": "Un SDLC bien definido facilita la comunicación clara; cada fase tiene entregables que son puntos de interacción."
+        },
+        {
+            "id": 25,
+            "pregunta": "¿Qué implica la 'gestión de riesgos' como parte integral de cada fase del SDLC?",
+            "opciones": {
+                "a": "Ignorar los problemas técnicos menores para no retrasar la fecha de entrega del producto final.",
+                "b": "Involucrar a los interesados para identificar riesgos temprano y permitir su mitigación oportuna.",
+                "c": "Asignar la responsabilidad de todos los fallos posibles a un solo miembro del equipo técnico.",
+                "d": "Contratar un seguro externo que cubra las pérdidas económicas por retrasos en el desarrollo."
+            },
+            "respuesta_correcta": "b",
+            "explicacion": "Identificar riesgos en cada fase e involucrar a los stakeholders reduce sorpresas y permite mitigación temprana."
+        },
+        {
+            "id": 26,
+            "pregunta": "¿Cuál es un riesgo común mencionado en el desarrollo de aplicaciones de liga fantasy?",
+            "opciones": {
+                "a": "La falta de interés de los usuarios por los deportes de equipo en entornos virtuales modernos.",
+                "b": "Tener requisitos mal definidos, código de mala calidad o falta de conocimiento de arquitectura.",
+                "c": "La imposibilidad física de conectar servidores de bases de datos con interfaces de usuario.",
+                "d": "El exceso de presupuesto que impide la toma de decisiones críticas por parte de la dirección."
+            },
+            "respuesta_correcta": "b",
+            "explicacion": "Entre los riesgos citados están los requisitos mal definidos, errores de diseño, mala calidad de código y falta de conocimiento."
+        },
+        {
+            "id": 27,
+            "pregunta": "¿Qué necesidad motiva la estandarización de procedimientos organizativos?",
+            "opciones": {
+                "a": "Aumentar el tiempo necesario para completar cada tarea técnica individual del programador.",
+                "b": "Mejorar la eficiencia del desarrollo y conseguir aplicaciones más robustas y de mayor calidad.",
+                "c": "Permitir que cada departamento trabaje de forma aislada sin compartir información con el resto.",
+                "d": "Eliminar la necesidad de contratar analistas especializados en organización y métodos de trabajo."
+            },
+            "respuesta_correcta": "b",
+            "explicacion": "Se busca mejorar la eficiencia, estandarizar procesos y conseguir mejores aplicaciones, más robustas y de calidad."
+        },
+        {
+            "id": 28,
+            "pregunta": "¿Qué objetivo persigue la documentación adecuada del sistema mediante estándares?",
+            "opciones": {
+                "a": "Garantizar la comprensión, validez en producción, evolución y el fácil mantenimiento futuro.",
+                "b": "Cumplir con un requisito puramente estético que no tiene impacto real en la calidad del software.",
+                "c": "Asegurar que solo los creadores originales del código puedan realizar cambios en el sistema.",
+                "d": "Dificultad la labor de los auditores externos al presentar información demasiado técnica y compleja."
+            },
+            "respuesta_correcta": "a",
+            "explicacion": "Documentar garantiza la comprensión, validez, actualizaciones por evolución y el fácil mantenimiento."
+        },
+        {
+            "id": 29,
+            "pregunta": "¿En qué consiste el 'control de cambios' dentro de los objetivos del SDLC?",
+            "opciones": {
+                "a": "En prohibir cualquier modificación del software una vez que este ha sido desplegado en producción.",
+                "b": "En identificar cambios prontamente y plantear sus implicaciones sobre todos los componentes.",
+                "c": "En permitir que los usuarios finales modifiquen el código fuente directamente según sus gustos.",
+                "d": "En cambiar de metodología de desarrollo cada vez que un programador abandona el equipo de trabajo."
+            },
+            "respuesta_correcta": "b",
+            "explicacion": "El control de cambios busca determinar cambios con prontitud e identificar implicaciones sobre componentes afectados."
+        },
+        {
+            "id": 30,
+            "pregunta": "¿Qué diferencia sustancial hay entre lo que aporta el SDLC y la Metodología?",
+            "opciones": {
+                "a": "El SDLC indica 'qué' hay que obtener y la Metodología regula el 'cómo' conseguir los resultados.",
+                "b": "El SDLC es un conjunto de herramientas físicas y la Metodología es un concepto puramente teórico.",
+                "c": "El SDLC se ocupa del hardware y la Metodología se ocupa exclusivamente de la parte lógica del software.",
+                "d": "No existe ninguna diferencia; son dos formas distintas de llamar al mismo proceso de programación."
+            },
+            "respuesta_correcta": "a",
+            "explicacion": "SDLC es la indicación de las pautas (qué obtener) y Metodología es la regulación del orden y forma (cómo obtener)."
+        },
+        {
+            "id": 31,
+            "pregunta": "En las metodologías estructuradas, ¿sobre qué se basaba casi la totalidad de su análisis?",
+            "opciones": {
+                "a": "En el estudio de las redes neuronales y el procesamiento de lenguaje natural avanzado.",
+                "b": "En el análisis de las organizaciones y el estudio de la oportunidad de los desarrollos.",
+                "c": "En la captura automática de errores mediante sistemas de inteligencia artificial predictiva.",
+                "d": "En el diseño de interfaces de usuario basadas en la experiencia de juego de los adolescentes."
+            },
+            "respuesta_correcta": "b",
+            "explicacion": "Casi la totalidad de las metodologías iniciales estaban basadas en el análisis de organizaciones y estudio de oportunidad."
+        },
+        {
+            "id": 32,
+            "pregunta": "¿Qué problema presentaban las primeras metodologías estructuradas respecto a sus capas?",
+            "opciones": {
+                "a": "Que los conceptos y diagramas entre capas no se basaban en lenguajes únicos, perdiendo semántica.",
+                "b": "Que obligaban a los programadores a trabajar únicamente en las capas superiores del sistema.",
+                "c": "Que eliminaban la capa de análisis para centrarse exclusivamente en la explotación de datos físicos.",
+                "d": "Que no permitían el uso de bases de datos relacionales en ninguno de sus niveles jerárquicos."
+            },
+            "respuesta_correcta": "a",
+            "explicacion": "La falta de lenguajes únicos dificultaba la transmisión de especificaciones entre capas y suponía pérdida de semántica."
+        },
+        {
+            "id": 33,
+            "pregunta": "¿Por qué surgieron las metodologías estructuradas como respuesta histórica?",
+            "opciones": {
+                "a": "Debido al éxito total de los métodos informales que no necesitaban ningún tipo de control técnico.",
+                "b": "Como respuesta a la crisis del software que reveló deficiencias en los enfoques ad hoc de desarrollo.",
+                "c": "Para permitir que los fabricantes de hardware vendieran más equipos sin necesidad de software útil.",
+                "d": "Debido a una ley internacional que prohibía programar sin utilizar diagramas de flujo circulares."
+            },
+            "respuesta_correcta": "b",
+            "explicacion": "Surgen como respuesta a la crisis del software que reveló deficiencias en enfoques ad hoc."
+        },
+        {
+            "id": 34,
+            "pregunta": "¿Qué aspectos enfocaban específicamente las capas de las metodologías estructuradas?",
+            "opciones": {
+                "a": "Análisis previo, organización, oportunidad, programación y planificación de trabajos de explotación.",
+                "b": "Marketing digital, ventas directas, soporte al cliente telefónico y gestión de redes sociales corporativas.",
+                "c": "Reparación física de componentes electrónicos, soldadura de circuitos y diseño de carcasas de plástico.",
+                "d": "Traducción de manuales a múltiples idiomas y gestión de los derechos de autor a nivel internacional."
+            },
+            "respuesta_correcta": "a",
+            "explicacion": "Contemplaban aspectos de análisis, estudio de organización, oportunidad, programación y explotación."
+        },
+        {
+            "id": 35,
+            "pregunta": "¿Cuál fue un síntoma clave de la 'Crisis del Software' en los años sesenta?",
+            "opciones": {
+                "a": "La falta de interés de las empresas en utilizar ordenadores para sus gestiones administrativas básicas.",
+                "b": "Proyectos con sobrecostes, retrasos masivos y software con fallos graves que no cumplía requisitos.",
+                "c": "La excesiva sencillez de los programas que hacía que los desarrolladores se aburrieran en sus puestos.",
+                "d": "La reducción drástica del precio del hardware que hizo que el software pareciera demasiado costoso."
+            },
+            "respuesta_correcta": "b",
+            "explicacion": "Los síntomas incluían sobrecostes, retrasos, fallos graves e incumplimiento de requisitos."
+        },
+        {
+            "id": 36,
+            "pregunta": "¿Qué importancia tuvo el proyecto IBM OS/360 para la Ingeniería del Software?",
+            "opciones": {
+                "a": "Demostró que la gestión de requisitos y el control de versiones eran irrelevantes para el éxito técnico.",
+                "b": "Llevó a reconocer la importancia crítica de gestionar requisitos y versiones ante fallos de integración.",
+                "c": "Fue el primer sistema operativo que se desarrolló sin errores gracias al uso de metodologías ágiles.",
+                "d": "Permitió eliminar la figura del analista de sistemas para sustituirla por programadores sin formación."
+            },
+            "respuesta_correcta": "b",
+            "explicacion": "Sus problemas de integración y sobrecostes llevaron a reconocer la importancia de la gestión de requisitos y control de versiones."
+        },
+        {
+            "id": 37,
+            "pregunta": "¿Qué perfil profesional realiza específicamente el 'Análisis Orgánico'?",
+            "opciones": {
+                "a": "El Programador de Sistemas especializado en protocolos de comunicación de bajo nivel técnico.",
+                "b": "El Analista de Aplicaciones, según la jerarquía profesional derivada de las metodologías.",
+                "c": "El Administrador de Datos encargado de la integridad referencial de las tablas de bases de datos.",
+                "d": "El Técnico de Operación que supervisa la ejecución de los trabajos en el centro de datos principal."
+            },
+            "respuesta_correcta": "b",
+            "explicacion": "Las fuentes asocian el Análisis Orgánico con el perfil de Analista de Aplicaciones."
+        },
+        {
+            "id": 38,
+            "pregunta": "¿De qué se ocupa el Analista de Sistemas según las fuentes?",
+            "opciones": {
+                "a": "Del Análisis Funcional dentro del proceso de desarrollo de nuevas soluciones informáticas.",
+                "b": "De la captura manual de datos en los departamentos de entrada de información de la empresa.",
+                "c": "De la reparación física de los terminales y periféricos conectados a la red local del edificio.",
+                "d": "Del diseño de campañas publicitarias para vender el software a clientes del sector público nacional."
+            },
+            "respuesta_correcta": "a",
+            "explicacion": "El Analista de Sistemas se encarga del Análisis Funcional."
+        },
+        {
+            "id": 39,
+            "pregunta": "¿Qué analistas se encargan del Análisis Previo y el Estudio de Oportunidad?",
+            "opciones": {
+                "a": "Los Programadores de Aplicaciones junior bajo la supervisión directa de los jefes de operación.",
+                "b": "Los Analistas de Organización y Métodos, que estudian la organización y la viabilidad del proyecto.",
+                "c": "Los Técnicos de Sistemas responsables de la instalación de los sistemas operativos en los servidores.",
+                "d": "Los Jefes de Operación que coordinan los turnos de trabajo de los capturistas de datos manuales."
+            },
+            "respuesta_correcta": "b",
+            "explicacion": "El análisis previo y estudio de oportunidad son tareas de los Analistas de Organización y Métodos."
+        },
+        {
+            "id": 40,
+            "pregunta": "Con el avance de la tecnología, ¿qué nuevos perfiles surgieron complementariamente?",
+            "opciones": {
+                "a": "Técnicos de Sistemas, Administradores de Datos, Planificadores y Departamentos de captura de datos.",
+                "b": "Escritores de novelas técnicas, traductores de latín y especialistas en decoración de centros de datos.",
+                "c": "Vendedores de hardware por catálogo, repartidores de componentes y fabricantes de muebles de oficina.",
+                "d": "Psicólogos industriales enfocados exclusivamente en la ergonomía de las sillas de los programadores."
+            },
+            "respuesta_correcta": "a",
+            "explicacion": "Surgieron Técnicos de Sistemas, Administradores de Datos, Planificadores, Operadores y departamentos de captura."
+        },
+        {
+            "id": 41,
+            "pregunta": "¿Qué tipo de estándares de modelado surgieron con las metodologías estructuradas?",
+            "opciones": {
+                "a": "Plantillas de símbolos, diagramas de procesos, diagramas de bloques y cuadernos de carga.",
+                "b": "Fotografías artísticas del código fuente, grabaciones de audio de las reuniones y dibujos a mano alzada.",
+                "c": "Uso exclusivo de lenguaje natural sin ningún tipo de representación gráfica o simbólica estandarizada.",
+                "d": "Sistemas de señales luminosas para indicar el estado de avance de cada fase del ciclo de vida."
+            },
+            "respuesta_correcta": "a",
+            "explicacion": "Surgieron plantillas de símbolos (IBM), diagramas de procesos, diagramas de bloques y cuadernos de carga."
+        },
+        {
+            "id": 42,
+            "pregunta": "¿Qué enfoque caracteriza a la metodología SSADM?",
+            "opciones": {
+                "a": "Un enfoque orientado fundamentalmente a los procesos dentro del desarrollo de sistemas.",
+                "b": "Un enfoque orientado exclusivamente a la estética de las interfaces de usuario finales.",
+                "c": "La eliminación de cualquier tipo de diagrama de flujo de datos para usar solo texto plano.",
+                "d": "La gestión de proyectos basada en la intuición de los administradores de bases de datos."
+            },
+            "respuesta_correcta": "a",
+            "explicacion": "SSADM se cita como una metodología orientada a procesos."
+        },
+        {
+            "id": 43,
+            "pregunta": "¿Cuál es la característica principal del método HIPO de IBM?",
+            "opciones": {
+                "a": "Es una metodología jerarquizada para el flujo de información dentro de un sistema informático.",
+                "b": "Es un sistema de codificación automática que no requiere la intervención de programadores humanos.",
+                "c": "Es una técnica de marketing para vender grandes ordenadores centrales a instituciones financieras.",
+                "d": "Es un protocolo de comunicaciones inalámbricas para conectar dispositivos periféricos antiguos."
+            },
+            "respuesta_correcta": "a",
+            "explicacion": "El método HIPO se define como jerarquizado para el flujo de información."
+        },
+        {
+            "id": 44,
+            "pregunta": "¿A qué se refiere el término 'legacy' en las metodologías actuales?",
+            "opciones": {
+                "a": "A los nuevos sistemas desarrollados íntegramente con inteligencia artificial de última generación.",
+                "b": "A los sistemas heredados y la necesidad de tratar la integración de sus datos antiguos.",
+                "c": "Al conjunto de leyes que regulan el uso de software libre en las administraciones públicas.",
+                "d": "Al legado económico que dejan los fundadores de las grandes empresas tecnológicas mundiales."
+            },
+            "respuesta_correcta": "b",
+            "explicacion": "Legacy se refiere a los sistemas heredados y el reto de integrar sus sistemas de datos."
+        },
+        {
+            "id": 45,
+            "pregunta": "¿Qué necesidad impulsó la evolución hacia metodologías ágiles en los años noventa?",
+            "opciones": {
+                "a": "La necesidad de un enfoque más flexible y adaptativo ante los cambios constantes en los requisitos.",
+                "b": "La obligación legal de entregar toda la documentación en papel antes de empezar a programar.",
+                "c": "El deseo de los desarrolladores de trabajar menos horas manteniendo el mismo nivel de producción.",
+                "d": "El fracaso absoluto de los servicios en la nube que obligó a volver a los ordenadores locales."
+            },
+            "respuesta_correcta": "a",
+            "explicacion": "La industria reconoció la necesidad de un enfoque más flexible y adaptativo, lo que llevó al Agile Manifesto."
+        },
+        {
+            "id": 46,
+            "pregunta": "¿Qué supuso la formalización del 'Agile Manifesto'?",
+            "opciones": {
+                "a": "El establecimiento de principios como la colaboración con el cliente y la adaptación continua al cambio.",
+                "b": "La creación de un lenguaje de programación único que sustituyera a todos los lenguajes existentes.",
+                "c": "La prohibición de realizar cambios en los requisitos una vez que el proyecto ha superado el primer mes.",
+                "d": "La obligación de que todos los miembros del equipo tengan exactamente el mismo perfil profesional."
+            },
+            "respuesta_correcta": "a",
+            "explicacion": "El Manifiesto Ágil formalizó principios de colaboración con el cliente y adaptación continua."
+        },
+        {
+            "id": 47,
+            "pregunta": "¿Es la 'Crisis del Software' algo que ha desaparecido totalmente en la actualidad?",
+            "opciones": {
+                "a": "Sí, gracias a las metodologías ágiles todos los proyectos se entregan ahora sin errores ni sobrecostes.",
+                "b": "No, se ha transformado pero persiste el desafío de desarrollar software de alta calidad y a tiempo.",
+                "c": "Sí, el uso masivo de inteligencia artificial ha eliminado cualquier tipo de fallo en la programación.",
+                "d": "No, pero solo afecta a las pequeñas empresas que no pueden pagar licencias de software propietario."
+            },
+            "respuesta_correcta": "b",
+            "explicacion": "Las fuentes indican que la crisis se ha transformado pero no ha desaparecido; los desafíos siguen vigentes."
+        },
+        {
+            "id": 48,
+            "pregunta": "¿Cuál fue una causa clave del fracaso del proyecto del NHS según el informe de 2011?",
+            "opciones": {
+                "a": "La mala gestión de requisitos y la falta de flexibilidad durante la ejecución del programa de TI.",
+                "b": "El uso excesivo de metodologías ágiles que impidió tener un control centralizado del presupuesto.",
+                "c": "La falta de hardware suficientemente potente para ejecutar bases de datos de pacientes nacionales.",
+                "d": "La decisión de los médicos de no utilizar ordenadores y seguir usando exclusivamente papel y lápiz."
+            },
+            "respuesta_correcta": "a",
+            "explicacion": "El informe de la NAO señaló la mala gestión de requisitos y la falta de flexibilidad como problemas clave."
+        },
+        {
+            "id": 49,
+            "pregunta": "¿Qué causó interrupciones globales masivas en aerolíneas y bancos en el año 2024?",
+            "opciones": {
+                "a": "Una actualización defectuosa de software en servicios críticos que afectó a múltiples sistemas.",
+                "b": "Un ataque coordinado de piratas informáticos que borró las bases de datos de todos los aeropuertos.",
+                "c": "La decisión de Microsoft de cerrar todos sus servicios en la nube para realizar tareas de limpieza.",
+                "d": "Una incompatibilidad física repentina entre los nuevos microprocesadores y los cables de red."
+            },
+            "respuesta_correcta": "a",
+            "explicacion": "El incidente de 2024 se debió a una actualización defectuosa de software (CrowdStrike) en servicios de Microsoft."
+        },
+        {
+            "id": 50,
+            "pregunta": "¿Qué frena a las empresas tradicionales para adoptar la nube según Gartner?",
+            "opciones": {
+                "a": "Preocupaciones sobre seguridad, privacidad y la complejidad de migrar sus sistemas heredados.",
+                "b": "La falta de interés de sus clientes en utilizar aplicaciones que no estén instaladas físicamente.",
+                "c": "Que los servicios en la nube son mucho más caros que mantener sus propios centros de datos antiguos.",
+                "d": "La inexistencia de manuales técnicos en su idioma original que expliquen cómo funciona la nube."
+            },
+            "respuesta_correcta": "a",
+            "explicacion": "Gartner señala la seguridad, privacidad y complejidad migratoria como barreras principales."
+        },
+        {
+            "id": 51,
+            "pregunta": "¿Qué es 'DevOps' en el contexto de la evolución metodológica?",
+            "opciones": {
+                "a": "La fusión de desarrollo y operaciones para mejorar la entrega continua y la calidad del producto.",
+                "b": "Un nuevo rol profesional que sustituye a todos los programadores y administradores de sistemas.",
+                "c": "Una técnica de diseño gráfico enfocada en los iconos y colores de las aplicaciones móviles.",
+                "d": "El proceso de devolver todos los equipos informáticos antiguos a los fabricantes para su reciclaje."
+            },
+            "respuesta_correcta": "a",
+            "explicacion": "DevOps es la fusión de desarrollo y operaciones para mejorar la entrega y calidad."
+        },
+        {
+            "id": 52,
+            "pregunta": "¿Hacia dónde se enfoca el futuro de las metodologías según las tendencias recientes?",
+            "opciones": {
+                "a": "Hacia la integración de inteligencia artificial y automatización para mejorar eficiencia y calidad.",
+                "b": "Hacia la vuelta a los métodos manuales de escritura de código en papel para evitar errores digitales.",
+                "c": "Hacia la eliminación total de las fases de prueba para acelerar la entrega de productos al mercado.",
+                "d": "Hacia la especialización de cada programador en un único y exclusivo comando del sistema operativo."
+            },
+            "respuesta_correcta": "a",
+            "explicacion": "El futuro se centra en integrar IA y automatización para mejorar eficiencia, pruebas y gestión de riesgos."
+        },
+        {
+            "id": 53,
+            "pregunta": "En un proyecto universitario, ¿qué entregables se esperan de la fase de Análisis de Requisitos?",
+            "opciones": {
+                "a": "Un documento de especificación que incluya funcionalidades como inscripciones y gestión de notas.",
+                "b": "El código fuente completo de la aplicación listo para ser instalado en los servidores finales.",
+                "c": "Un manual de usuario de 500 páginas que explique cómo encender el ordenador paso a paso.",
+                "d": "La lista de los nombres y apellidos de todos los estudiantes que utilizarán el sistema algún día."
+            },
+            "respuesta_correcta": "a",
+            "explicacion": "El resultado del análisis son documentos de especificación que incluyen las funcionalidades requeridas."
+        },
+        {
+            "id": 54,
+            "pregunta": "¿Qué resultados se obtienen de la fase de Diseño en una aplicación de e-commerce?",
+            "opciones": {
+                "a": "Especificaciones técnicas detalladas, diagramas UML y prototipos de la interfaz de usuario.",
+                "b": "La base de datos llena de productos reales listos para ser comprados por los usuarios finales.",
+                "c": "El contrato firmado con los proveedores de logística para el envío de paquetes internacionales.",
+                "d": "Una campaña de marketing en redes sociales para atraer a los primeros mil clientes potenciales."
+            },
+            "respuesta_correcta": "a",
+            "explicacion": "El diseño resulta en especificaciones técnicas, diagramas (UML) y prototipos (wireframes)."
+        },
+        {
+            "id": 55,
+            "pregunta": "¿Qué actividad se realiza durante la fase de 'Pruebas' en una aplicación de salud?",
+            "opciones": {
+                "a": "Verificación de funciones individuales y asegurar que los módulos funcionen juntos sin errores.",
+                "b": "Compra de los servidores físicos necesarios para alojar los datos de todos los pacientes del país.",
+                "c": "Contratación de nuevos programadores para sustituir a los que diseñaron el sistema originalmente.",
+                "d": "Cambio total de los requisitos del cliente para adaptarlos a las nuevas leyes de salud vigentes."
+            },
+            "respuesta_correcta": "a",
+            "explicacion": "Las pruebas incluyen verificación de funciones (unitarias) e integración de módulos."
+        },
+        {
+            "id": 1,
+            "pregunta": "¿Por qué el SDLC se considera una herramienta de gestión y no solo una guía técnica?",
+            "opciones": {
+                "a": "Porque ayuda a cumplir con las expectativas del cliente y proporciona un marco de referencia claro.",
+                "b": "Porque permite calcular automáticamente el beneficio económico neto de cada línea de código escrita.",
+                "c": "Porque sustituye la necesidad de tener un director de proyecto al automatizar todas las tareas.",
+                "d": "Porque obliga a que todos los empleados sigan el mismo horario de trabajo de manera estricta."
+            },
+            "respuesta_correcta": "a",
+            "explicacion": "El SDLC ayuda a cumplir expectativas y ofrece un marco para comparar y seleccionar metodologías."
+        },
+        {
+            "id": 57,
+            "pregunta": "¿Cuál es la función de los 'subproyectos y etapas' en la estructuración de un proyecto?",
+            "opciones": {
+                "a": "Aplicar el principio de 'divide y vencerás' para organizar el alcance y planificar trabajos.",
+                "b": "Aumentar la burocracia interna para justificar la contratación de más personal administrativo.",
+                "c": "Evitar que los distintos equipos de desarrollo tengan que comunicarse entre ellos durante el año.",
+                "d": "Permitir que el proyecto dure el mayor tiempo posible para facturar más horas al cliente final."
+            },
+            "respuesta_correcta": "a",
+            "explicacion": "Estructurar en subproyectos y etapas permite aplicar 'divide y vencerás', organizando el alcance y la planificación."
+        },
+        {
+            "id": 58,
+            "pregunta": "¿Qué permite el SDLC en relación con los cambios necesarios de cualquier origen?",
+            "opciones": {
+                "a": "Que se determinen e identifiquen con prontitud y se planteen con todas sus implicaciones reales.",
+                "b": "Que se ignoren sistemáticamente para evitar que el presupuesto original se vea afectado negativamente.",
+                "c": "Que se cobren como servicios adicionales fuera del contrato principal sin previo aviso al cliente.",
+                "d": "Que se deleguen a los usuarios finales para que ellos mismos realicen las modificaciones técnicas."
+            },
+            "respuesta_correcta": "a",
+            "explicacion": "Uno de los objetivos es permitir que los cambios se determinen con prontitud y se analicen sus implicaciones."
+        },
+        {
+            "id": 59,
+            "pregunta": "En las metodologías estructuradas, ¿qué buscaba profundizar cada capa sucesiva?",
+            "opciones": {
+                "a": "En la estructuración, iniciándose con programación, siguiendo con diseño y terminando en análisis.",
+                "b": "En la simplicidad, eliminando fases de control para centrarse solo en la entrega rápida de código.",
+                "c": "En la diversidad de lenguajes de programación incompatibles entre sí para evitar el espionaje.",
+                "d": "En el uso de herramientas manuales de dibujo para sustituir a los ordenadores en la fase de diseño."
+            },
+            "respuesta_correcta": "a",
+            "explicacion": "Las capas profundizaban en la estructuración: primero en programación, luego diseño y finalmente análisis."
+        },
+        {
+            "id": 60,
+            "pregunta": "¿Qué implica que se dispusiera de normas metodológicas primero en las capas inferiores?",
+            "opciones": {
+                "a": "Que la programación estructurada fue la primera en recibir una regulación metódica clara.",
+                "b": "Que los directivos de las empresas fueron los primeros en recibir formación sobre metodologías.",
+                "c": "Que el análisis previo de la organización nunca llegó a considerarse una parte importante del proceso.",
+                "d": "Que las fases de mantenimiento fueron las únicas que tuvieron estándares internacionales de calidad."
+            },
+            "respuesta_correcta": "a",
+            "explicacion": "Se dispuso de normas primero en las capas inferiores (programación), luego diseño y análisis."
+        },
+        {
+            "id": 61,
+            "pregunta": "¿Cuál es un problema común que persiste a pesar de los avances en metodologías?",
+            "opciones": {
+                "a": "Sobrecostes, retrasos e incapacidad para cumplir con los requisitos originales del proyecto.",
+                "b": "La excesiva velocidad de desarrollo que hace que el software se termine antes de lo previsto.",
+                "c": "La falta de herramientas informáticas para escribir código, obligando a usar máquinas de escribir.",
+                "d": "El desinterés total de la sociedad moderna por el uso de aplicaciones móviles y servicios web."
+            },
+            "respuesta_correcta": "a",
+            "explicacion": "Problemas persistentes incluyen sobrecostes, retrasos e incapacidad para cumplir requisitos."
+        },
+        {
+            "id": 62,
+            "pregunta": "¿Qué motivó la necesidad de una planificación más rigurosa en los años cincuenta?",
+            "opciones": {
+                "a": "Los sobrecostes masivos y problemas técnicos de proyectos complejos de gran escala inicial.",
+                "b": "La invención de los primeros videojuegos que distraían a los programadores en sus horas de trabajo.",
+                "c": "El bajo coste del hardware que hacía que las empresas no valoraran el trabajo de los técnicos.",
+                "d": "La falta de ingenieros titulados que obligó a contratar a personas sin ningún tipo de formación."
+            },
+            "respuesta_correcta": "a",
+            "explicacion": "Proyectos como SAGE motivaron la necesidad de una planificación más rigurosa debido a su complejidad y costes."
+        },
+        {
+            "id": 63,
+            "pregunta": "¿Qué factor de la evolución del dominio lleva al enfoque de artefactos y control de versiones?",
+            "opciones": {
+                "a": "La evolución de la arquitectura de los sistemas y la creciente complejidad de sus componentes.",
+                "b": "La desaparición de las bases de datos relacionales en favor de los ficheros de texto plano simples.",
+                "c": "La decisión de los fabricantes de hardware de no actualizar más sus procesadores centrales antiguos.",
+                "d": "El uso masivo de redes sociales para compartir el código fuente de manera informal y sin control."
+            },
+            "respuesta_correcta": "a",
+            "explicacion": "La evolución de la arquitectura lleva al enfoque de artefactos y métodos para control de revisiones y versiones."
+        },
+        {
+            "id": 64,
+            "pregunta": "Según las fuentes, ¿qué abre los horizontes de los servicios en la nube?",
+            "opciones": {
+                "a": "La combinación de la tecnología emergente y el fenómeno de la globalización a nivel mundial.",
+                "b": "El fracaso de los sistemas distribuidos que obligó a centralizar todos los datos en un solo lugar.",
+                "c": "La prohibición de utilizar servidores físicos dentro de las oficinas de las empresas privadas.",
+                "d": "El abaratamiento de los costes de electricidad que permite tener servidores encendidos siempre."
+            },
+            "respuesta_correcta": "a",
+            "explicacion": "La tecnología emergente y la globalización abren los horizontes de los servicios en la nube."
+        },
+        {
+            "id": 65,
+            "pregunta": "¿Qué desafío persiste para cualquier metodología en relación con los datos?",
+            "opciones": {
+                "a": "La necesidad de considerar el legado y tratar la integración de sistemas de datos antiguos.",
+                "b": "La falta de espacio físico en los discos duros modernos para almacenar información textual básica.",
+                "c": "La dificultad de enviar correos electrónicos con archivos adjuntos de más de cinco megabytes.",
+                "d": "La imposibilidad de utilizar caracteres alfabéticos en las bases de datos de gestión de clientes."
+            },
+            "respuesta_correcta": "a",
+            "explicacion": "Tratar la integración de sistemas de datos y el legacy es todavía un reto para cualquier metodología."
+        },
+        {
+            "id": 66,
+            "pregunta": "¿Qué se entiende por 'Mantenimiento' en el contexto del SDLC?",
+            "opciones": {
+                "a": "La entrega y soporte continuo del software tras su despliegue inicial en el entorno de producción.",
+                "b": "La limpieza física de los ventiladores y componentes internos de los ordenadores del cliente.",
+                "c": "El pago de las facturas de internet para asegurar que el servidor esté siempre conectado a la red.",
+                "d": "La redacción de nuevos contratos legales cada vez que el usuario final cambia su contraseña de acceso."
+            },
+            "respuesta_correcta": "a",
+            "explicacion": "El mantenimiento es la entrega y mantenimiento continuo del software tras las fases iniciales."
+        },
+        {
+            "id": 67,
+            "pregunta": "¿Cuál es el riesgo de tener 'requisitos mal definidos' en un proyecto?",
+            "opciones": {
+                "a": "Que el producto final no sea útil para el cliente, independientemente de su calidad técnica.",
+                "b": "Que los programadores terminen su trabajo demasiado rápido y no tengan nada que hacer luego.",
+                "c": "Que el color de fondo de la aplicación sea ligeramente diferente al que el cliente imaginaba.",
+                "d": "Que los manuales de usuario tengan algunas faltas de ortografía en los capítulos secundarios."
+            },
+            "respuesta_correcta": "a",
+            "explicacion": "Requisitos mal definidos es un riesgo de alto impacto que puede invalidar la utilidad del proyecto."
+        },
+        {
+            "id": 68,
+            "pregunta": "¿Qué técnica de modelado se asocia con el Análisis Funcional en las metodologías?",
+            "opciones": {
+                "a": "Los diagramas de bloques, utilizados para representar la estructura lógica de las funciones.",
+                "b": "La pintura al óleo para retratar la disposición física de los servidores en el centro de datos.",
+                "c": "El uso de señales de humo para comunicar el estado de las variables entre distintas subrutinas.",
+                "d": "La escritura de poemas épicos que narren la historia del desarrollo de cada módulo de software."
+            },
+            "respuesta_correcta": "a",
+            "explicacion": "Los diagramas de bloques se mencionan como estándares en el Análisis Funcional."
+        },
+        {
+            "id": 69,
+            "pregunta": "¿A qué se refiere el término 'Análisis de Organización' en las capas superiores?",
+            "opciones": {
+                "a": "Al estudio previo de la estructura de la empresa para determinar la viabilidad del software.",
+                "b": "A la limpieza de las mesas de trabajo de los programadores antes de empezar la jornada diaria.",
+                "c": "A la clasificación de los lenguajes de programación según el año en que fueron inventados.",
+                "d": "A la ordenación de los cables de red en el armario de comunicaciones principal del edificio."
+            },
+            "respuesta_correcta": "a",
+            "explicacion": "Las capas superiores enfocaban aspectos previos de análisis y estudio de la organización."
+        },
+        {
+            "id": 70,
+            "pregunta": "¿Qué es la 'Programación Estructurada' en el contexto de la evolución de métodos?",
+            "opciones": {
+                "a": "El punto de inicio de la evolución de los métodos, seguido por el diseño y el análisis técnico.",
+                "b": "Un sistema para obligar a los programadores a trabajar sentados en una posición específica.",
+                "c": "La fase final del ciclo de vida que ocurre justo antes de que el software deje de utilizarse.",
+                "d": "Un método para organizar las carpetas físicas donde se guardan los discos originales del sistema."
+            },
+            "respuesta_correcta": "a",
+            "explicacion": "Los métodos evolucionaron iniciándose con la Programación Estructurada."
+        },
+        {
+            "id": 71,
+            "pregunta": "En el modelo Royce, ¿cuál es la fase que precede inmediatamente a las 'Operaciones'?",
+            "opciones": {
+                "a": "La fase de 'Testing' o pruebas, donde se asegura que el sistema funcione correctamente antes.",
+                "b": "La fase de 'Análisis de Requisitos' donde se decide qué es lo que el sistema debe hacer realmente.",
+                "c": "La fase de 'Diseño del Programa' donde se crea la estructura lógica de toda la aplicación técnica.",
+                "d": "La fase de 'Codificación' donde los programadores escriben las líneas de código fuente del sistema."
+            },
+            "respuesta_correcta": "a",
+            "explicacion": "Según el diagrama de Royce (Cascada), el 'Testing' precede a las 'Operations'."
+        },
+        {
+            "id": 72,
+            "pregunta": "¿Qué componente del software se relaciona lógicamente en la definición de 'Proceso'?",
+            "opciones": {
+                "a": "Uno o varios componentes cuya ejecución coordinada permite alcanzar un objetivo de trabajo.",
+                "b": "Exclusivamente el monitor y el teclado que permiten la interacción física con el usuario final.",
+                "c": "Los cables de alimentación que proporcionan energía eléctrica a todos los servidores del centro.",
+                "d": "Los muebles de oficina donde se sientan los analistas de sistemas para realizar su trabajo diario."
+            },
+            "respuesta_correcta": "a",
+            "explicacion": "Un proceso es el trabajo realizado por uno o varios componentes del software lógicamente relacionados."
+        },
+        {
+            "id": 73,
+            "pregunta": "¿Qué se busca maximizar al disponer de un método sistematizado de desarrollo?",
+            "opciones": {
+                "a": "La eficiencia de los medios aplicados al proceso de creación y mantenimiento de los sistemas.",
+                "b": "El número de páginas de los manuales técnicos para que parezcan más profesionales ante el cliente.",
+                "c": "La cantidad de errores encontrados por los usuarios para justificar un contrato de soporte eterno.",
+                "d": "El tiempo de espera de los clientes para generar una sensación de alta demanda del producto final."
+            },
+            "respuesta_correcta": "a",
+            "explicacion": "Se busca disponer de un método sistematizado para maximizar la eficiencia de los medios aplicados."
+        },
+        {
+            "id": 74,
+            "pregunta": "¿Qué implica la 'oportunidad y buena economía' de un proyecto según los objetivos?",
+            "opciones": {
+                "a": "Asegurar el cumplimiento estricto de los plazos de entrega y los costes presupuestados inicialmente.",
+                "b": "Garantizar que el proyecto sea el más caro del mercado para demostrar su supuesta alta calidad.",
+                "c": "Entregar el software solo cuando el equipo de desarrollo considere que tiene ganas de hacerlo.",
+                "d": "Gastar todo el presupuesto en marketing antes de haber escrito la primera línea de código fuente."
+            },
+            "respuesta_correcta": "a",
+            "explicacion": "Asegurar el cumplimiento de plazos y costes se define como oportunidad y buena economía del proyecto."
+        },
+        {
+            "id": 75,
+            "pregunta": "¿Qué papel juegan los 'auditores' como stakeholders del SDLC?",
+            "opciones": {
+                "a": "Son personas relacionadas con el sistema que necesitan que su implantación sea eficiente y clara.",
+                "b": "Son los encargados de escribir el código en lenguajes antiguos para probar la compatibilidad legacy.",
+                "c": "Son los usuarios finales que compran el software para su uso personal en dispositivos móviles locales.",
+                "d": "Son los técnicos de sistemas que instalan los cables de red en las oficinas de los nuevos clientes."
+            },
+            "respuesta_correcta": "a",
+            "explicacion": "Los auditores forman parte de los stakeholders para quienes la implantación debe ser eficiente."
+        }
+    ]
+}

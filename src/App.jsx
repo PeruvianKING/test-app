@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { Routes, Route, Navigate, useNavigate, useParams } from 'react-router-dom';
+import { Routes, Route, Navigate, useNavigate, useParams, useSearchParams } from 'react-router-dom';
 import FolderView from './components/FolderView';
 import TestListView from './components/TestListView';
 import AddTestView from './components/AddTestView';
@@ -53,17 +53,46 @@ const QuizSystem = () => {
   }, []);
 
   // Función para cargar tests de una carpeta específica
-  const cargarTestsDeCarpeta = async (nombreCarpeta) => {
-    if (!folders[nombreCarpeta] || folders[nombreCarpeta].loaded) {
-      return; // Ya cargado o no existe
+  const cargarTestsDeCarpeta = async (nombreCarpeta, page = 1) => {
+    if (!folders[nombreCarpeta]) {
+      return;
     }
 
     const carpetaInfo = folders[nombreCarpeta];
-    const nuevosTests = [];
+    let testsNeedLoading = [];
+
+    // Si page es 'all', cargamos TODO lo que falte
+    if (page === 'all') {
+      carpetaInfo.filePaths.forEach((path, i) => {
+        if (!carpetaInfo.tests[i]) {
+          testsNeedLoading.push({ index: i, path });
+        }
+      });
+    } else {
+      // Carga paginada normal
+      const pageSize = 6;
+      const startIndex = (page - 1) * pageSize;
+      const endIndex = Math.min(startIndex + pageSize, carpetaInfo.filePaths.length);
+
+      for (let i = startIndex; i < endIndex; i++) {
+        if (!carpetaInfo.tests[i]) {
+          testsNeedLoading.push({ index: i, path: carpetaInfo.filePaths[i] });
+        }
+      }
+    }
+
+    if (testsNeedLoading.length === 0) {
+      if (!carpetaInfo.loaded) {
+        setFolders(prev => ({ ...prev, [nombreCarpeta]: { ...prev[nombreCarpeta], loaded: true } }));
+      }
+      return;
+    }
 
     try {
-      await Promise.all(carpetaInfo.filePaths.map(async (ruta) => {
-        const importFn = rawTestModules[ruta];
+      const nuevosTestsMap = {};
+
+      await Promise.all(testsNeedLoading.map(async ({ index, path }) => {
+        const importFn = rawTestModules[path];
         if (importFn) {
           const modulo = await importFn();
           const datos = modulo.default;
@@ -73,10 +102,10 @@ const QuizSystem = () => {
             .filter(Boolean)
             .filter((v, i, a) => a.indexOf(v) === i);
 
-          nuevosTests.push({
-            id: ruta,
+          nuevosTestsMap[index] = {
+            id: path,
             carpeta: nombreCarpeta,
-            titulo: datos.titulo || ruta,
+            titulo: datos.titulo || path,
             descripcion: datos.descripcion || 'Test cargado automáticamente',
             numeroPreguntas: datos.examen_automatizacion.length,
             temas: temas,
@@ -87,19 +116,26 @@ const QuizSystem = () => {
               respuesta_correcta: p.respuesta_correcta,
               explicacion: p.explicacion || ''
             }))
-          });
+          };
         }
       }));
 
-      // Actualizar estado solo para esta carpeta
-      setFolders(prev => ({
-        ...prev,
-        [nombreCarpeta]: {
-          ...prev[nombreCarpeta],
-          loaded: true,
-          tests: nuevosTests
-        }
-      }));
+      // Actualizar estado solo para esta carpeta, fusionando con lo existente
+      setFolders(prev => {
+        const prevTests = [...(prev[nombreCarpeta].tests || [])];
+        Object.entries(nuevosTestsMap).forEach(([idx, test]) => {
+          prevTests[parseInt(idx)] = test;
+        });
+
+        return {
+          ...prev,
+          [nombreCarpeta]: {
+            ...prev[nombreCarpeta],
+            loaded: true,
+            tests: prevTests
+          }
+        };
+      });
 
     } catch (error) {
       console.error(`Error cargando tests de ${nombreCarpeta}:`, error);
@@ -171,23 +207,29 @@ const QuizSystem = () => {
 // Componente Wrapper para manejar la carga Lazy
 const FolderLoader = ({ folders, cargarTests, children }) => {
   const { folderName } = useParams();
+  const [searchParams] = useSearchParams();
+  const page = parseInt(searchParams.get('page') || '1', 10);
+
   const folderDecoded = decodeURIComponent(folderName);
   const folderData = folders[folderDecoded];
   const [cargando, setCargando] = useState(false);
 
   useEffect(() => {
-    if (folderData && !folderData.loaded) {
+    if (folderData) {
+      // Determinar si necesitamos cargar datos para esta página
+      // Simplemente llamamos a cargarTests
       setCargando(true);
-      cargarTests(folderDecoded).finally(() => setCargando(false));
+      cargarTests(folderDecoded, page).finally(() => setCargando(false));
     }
-  }, [folderDecoded, folderData]);
+  }, [folderDecoded, folderData?.fileCount, page]); // Dependencia en page para recargar al cambiar
 
   if (!folderData && !cargando) {
     if (Object.keys(folders).length === 0) return <div className="p-10 text-center">Cargando aplicación...</div>;
     return <div className="p-10 text-center text-red-500">Carpeta no encontrada</div>;
   }
 
-  if (cargando || (folderData && !folderData.loaded)) {
+
+  if (cargando && (!folderData || !folderData.loaded)) {
     return (
       <div className="fixed inset-0 bg-white bg-opacity-90 z-50 flex items-center justify-center">
         <div className="flex flex-col items-center">
@@ -198,8 +240,18 @@ const FolderLoader = ({ folders, cargarTests, children }) => {
     );
   }
 
-  // Clonamos el elemento hijo para pasarle los tests cargados
-  return React.cloneElement(children, { tests: folderData.tests });
+  const loadAllTests = () => {
+    // Retornamos la promesa para que el hijo pueda mostrar estado de carga si quiere
+    return cargarTests(folderDecoded, 'all');
+  };
+
+  // Clonamos el elemento hijo para pasarle los tests y totalCount
+  // Pasamos TODO el array de tests (con huecos), el hijo se encargará de slice
+  return React.cloneElement(children, {
+    tests: folderData?.tests || [],
+    totalFiles: folderData?.fileCount || 0,
+    loadAllTests: loadAllTests
+  });
 };
 
 const QuizLoadedWrapper = ({ tests }) => {

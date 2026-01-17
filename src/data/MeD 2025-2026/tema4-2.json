@@ -1,0 +1,966 @@
+{
+    "titulo": "TEMA 4 - Scrum B",
+    "descripcion": "Examen exhaustivo de 80 preguntas que abarca la totalidad del temario técnico, operativo y de escalado de Scrum, diseñado con distractores de alta complejidad y longitud equilibrada.",
+    "examen_automatizacion": [
+        {
+            "id": 1,
+            "pregunta": "¿Qué define mejor el estilo 'rugby' frente a la 'carrera de relevos'?",
+            "opciones": {
+                "a": "Un avance por etapas cerradas con entregas parciales.",
+                "b": "Un avance de equipo unido que pasa el balón hacia atrás.",
+                "c": "Un avance de equipo unido que pasa el balón hacia delante.",
+                "d": "Un avance por tareas aisladas con gran velocidad técnica."
+            },
+            "respuesta_correcta": "c",
+            "explicacion": "El estilo rugby implica que el equipo intente correr como una unidad, pasando la pelota hacia adelante y hacia atrás para servir mejor a los requisitos competitivos."
+        },
+        {
+            "id": 2,
+            "pregunta": "¿Cuál es la premisa fundamental de Scrum según su definición breve?",
+            "opciones": {
+                "a": "Garantizar el cumplimiento de todas las normas de ingeniería.",
+                "b": "Fomentar la jerarquía técnica para asegurar la arquitectura.",
+                "c": "Ofrecer el mayor valor posible al negocio en el menor tiempo.",
+                "d": "Establecer procesos rígidos para la inspección de resultados."
+            },
+            "respuesta_correcta": "c",
+            "explicacion": "Scrum permite centrarse en ofrecer el mayor valor posible al negocio en el menor tiempo posible."
+        },
+        {
+            "id": 3,
+            "pregunta": "¿Qué indica el uso de Scrum en relación con la escala de Cockburn?",
+            "opciones": {
+                "a": "Que solo es apto para proyectos pequeños de baja criticidad.",
+                "b": "Que solo es aplicable en sistemas de criticidad vital o de vida.",
+                "c": "Que cubre toda la escala tanto en personas como en criticidad.",
+                "d": "Que está limitado a equipos de máximo veinte desarrolladores."
+            },
+            "respuesta_correcta": "c",
+            "explicacion": "Las fuentes afirman explícitamente que Scrum cubre toda la escala de Cockburn."
+        },
+        {
+            "id": 4,
+            "pregunta": "¿Qué sucede con las prácticas de ingeniería dentro del marco Scrum?",
+            "opciones": {
+                "a": "Son obligatorias y deben seguir el estándar del manifiesto ágil.",
+                "b": "Son opcionales pero el Scrum Master las prescribe inicialmente.",
+                "c": "No existen prácticas de ingeniería prescritas dentro del marco.",
+                "d": "Deben ser definidas por el cliente antes de comenzar el proyecto."
+            },
+            "respuesta_correcta": "c",
+            "explicacion": "Una de las características principales es que no existen prácticas de ingeniería prescritas."
+        },
+        {
+            "id": 5,
+            "pregunta": "¿Cómo se define la participación en la metáfora de gallinas y cerdos?",
+            "opciones": {
+                "a": "Las gallinas están comprometidas y los cerdos involucrados.",
+                "b": "Las gallinas están involucradas y los cerdos comprometidos.",
+                "c": "Los cerdos son externos y las gallinas son los desarrolladores.",
+                "d": "Los cerdos deciden la visión y las gallinas ejecutan las tareas."
+            },
+            "respuesta_correcta": "b",
+            "explicacion": "Los cerdos están comprometidos (su éxito depende de ellos) y las gallinas están involucradas."
+        },
+        {
+            "id": 6,
+            "pregunta": "¿Cuál es la responsabilidad principal del rol de Product Owner?",
+            "opciones": {
+                "a": "Asegurar que el equipo trabaje en condiciones ideales de tiempo.",
+                "b": "Garantizar el valor del producto y tomar las decisiones finales.",
+                "c": "Gestionar las dinámicas de grupo y moderar todas las reuniones.",
+                "d": "Asignar las tareas diarias basándose en la habilidad del equipo."
+            },
+            "respuesta_correcta": "b",
+            "explicacion": "La responsabilidad del Product Owner es el valor del producto y la toma de decisiones del cliente."
+        },
+        {
+            "id": 7,
+            "pregunta": "¿Por qué el rol de Product Owner debe recaer en una sola persona?",
+            "opciones": {
+                "a": "Para evitar que el Scrum Master tenga que consultar a varios.",
+                "b": "Para simplificar la comunicación y la toma de decisiones finales.",
+                "c": "Para cumplir con la normativa de auditoría interna de la empresa.",
+                "d": "Para asegurar que el equipo no sea distraído por varios clientes."
+            },
+            "respuesta_correcta": "b",
+            "explicacion": "Es necesario que sea una sola persona para simplificar la comunicación y la toma de decisiones."
+        },
+        {
+            "id": 8,
+            "pregunta": "¿Qué información debe conocer el PO sobre el plan del producto?",
+            "opciones": {
+                "a": "La lógica interna del código y el diseño de la base de datos.",
+                "b": "El plan de inversión y el retorno esperado a la inversión hecha.",
+                "c": "La velocidad individual de cada uno de los desarrolladores Java.",
+                "d": "El tiempo exacto de cada pausa técnica realizada por el equipo."
+            },
+            "respuesta_correcta": "b",
+            "explicacion": "El PO conoce el plan de inversión y el retorno esperado a la inversión realizada."
+        },
+        {
+            "id": 9,
+            "pregunta": "¿Qué se recomienda sobre el tamaño del equipo de desarrollo?",
+            "opciones": {
+                "a": "Que tenga entre dos y cinco personas para máxima visibilidad.",
+                "b": "Que tenga entre cuatro y ocho personas para comunicación directa.",
+                "c": "Que tenga exactamente diez personas incluyendo los tres roles.",
+                "d": "Que no supere las quince personas para evitar la sobrecarga."
+            },
+            "respuesta_correcta": "b",
+            "explicacion": "Se recomienda que un equipo Scrum tenga entre 4 y 8 personas."
+        },
+        {
+            "id": 10,
+            "pregunta": "¿A quién se incluye en el conteo de miembros del equipo de desarrollo?",
+            "opciones": {
+                "a": "Al Scrum Master y al Product Owner si están muy involucrados.",
+                "b": "Solo a los profesionales que realizan el incremento del Sprint.",
+                "c": "A todos los cerdos y gallinas que participen en la diaria Scrum.",
+                "d": "Al líder técnico, al analista de negocio y a los programadores."
+            },
+            "respuesta_correcta": "b",
+            "explicacion": "En el cómputo de miembros del equipo de desarrollo no se consideran ni el SM ni el PO."
+        },
+        {
+            "id": 11,
+            "pregunta": "¿Qué caracteriza a un equipo multifuncional en Scrum?",
+            "opciones": {
+                "a": "Que cada miembro responde exclusivamente por su tarea asignada.",
+                "b": "Que los miembros trabajan de forma solidaria con responsabilidad.",
+                "c": "Que todos los miembros deben saber programar en todos los lenguajes.",
+                "d": "Que el arquitecto de software debe validar el trabajo de los demás."
+            },
+            "respuesta_correcta": "b",
+            "explicacion": "Es un equipo multifuncional en el que todos los miembros trabajan de forma solidaria con responsabilidad compartida."
+        },
+        {
+            "id": 12,
+            "pregunta": "¿Cuál es una ventaja de los equipos pequeños (Two-Pizza Team)?",
+            "opciones": {
+                "a": "Se invierte más tiempo en la coordinación detallada de tareas.",
+                "b": "Fomenta que los miembros se oculten más fácilmente en el grupo.",
+                "c": "Se evita la sobreespecialización y se asumen múltiples roles.",
+                "d": "Permite que el Product Owner controle mejor el avance individual."
+            },
+            "respuesta_correcta": "c",
+            "explicacion": "En equipos pequeños se evita la sobreespecialización y todos tienden a asumir múltiples roles."
+        },
+        {
+            "id": 13,
+            "pregunta": "¿Qué diferencia a un grupo de trabajo de un equipo Scrum?",
+            "opciones": {
+                "a": "El grupo tiene un jefe y el equipo no tiene ningún tipo de líder.",
+                "b": "El grupo tiene tareas específicas y cada uno responde por lo suyo.",
+                "c": "El equipo se asigna tareas individualmente siguiendo al gestor.",
+                "d": "No existe diferencia práctica más allá de la terminología usada."
+            },
+            "respuesta_correcta": "b",
+            "explicacion": "En el grupo de trabajo cada uno responde por su trabajo; en el equipo se responde en conjunto."
+        },
+        {
+            "id": 14,
+            "pregunta": "¿Cómo se define el modelo de liderazgo del Scrum Master?",
+            "opciones": {
+                "a": "Liderazgo autoritario centrado en el cumplimiento de plazos.",
+                "b": "Liderazgo servil al servicio del equipo y del Product Owner.",
+                "c": "Liderazgo técnico responsable de la calidad final del código.",
+                "d": "Liderazgo de marketing para vender el producto a los clientes."
+            },
+            "respuesta_correcta": "b",
+            "explicacion": "El Scrum Master realiza su trabajo con un modelo de liderazgo servil."
+        },
+        {
+            "id": 15,
+            "pregunta": "¿Qué puede pasar con el rol de SM en organizaciones maduras?",
+            "opciones": {
+                "a": "Debe absorber las responsabilidades de negocio del Product Owner.",
+                "b": "Debe convertirse en un desarrollador senior a tiempo completo.",
+                "c": "Puede eliminarse el rol si las funciones están institucionalizadas.",
+                "d": "Debe pasar a supervisar obligatoriamente a más de tres equipos."
+            },
+            "respuesta_correcta": "c",
+            "explicacion": "Al crecer la fluidez de la organización, puede eliminarse el rol de SM si sus responsabilidades ya están institucionalizadas."
+        },
+        {
+            "id": 16,
+            "pregunta": "¿Cuál es la función del SM respecto a los impedimentos?",
+            "opciones": {
+                "a": "Anotarlos en la pila del producto para que el PO los priorice.",
+                "b": "Resolver los obstáculos que entorpecen la ejecución de las tareas.",
+                "c": "Delegar su resolución en el miembro del equipo que causó el error.",
+                "d": "Informar al cliente sobre los retrasos causados por los problemas."
+            },
+            "respuesta_correcta": "b",
+            "explicacion": "El SM se encarga de la resolución de impedimentos que pueden entorpecer la ejecución."
+        },
+        {
+            "id": 17,
+            "pregunta": "¿Qué es la Pila del Producto (Product Backlog)?",
+            "opciones": {
+                "a": "Un documento estático con los requisitos firmados al inicio.",
+                "b": "Una lista de requisitos que evoluciona durante el desarrollo.",
+                "c": "Un inventario de todas las horas trabajadas por el equipo Scrum.",
+                "d": "Un informe de errores detectados en la fase de pruebas finales."
+            },
+            "respuesta_correcta": "b",
+            "explicacion": "Es la lista de requisitos priorizada que crece y evoluciona durante el desarrollo."
+        },
+        {
+            "id": 18,
+            "pregunta": "¿Qué genera el pulso de avance en tiempos prefijados?",
+            "opciones": {
+                "a": "El Product Backlog mediante la refinación constante de tareas.",
+                "b": "El Sprint mediante la técnica de administración de Timeboxing.",
+                "c": "La Daily Scrum mediante la respuesta a las tres preguntas clave.",
+                "d": "El Incremento mediante la entrega continua de funcionalidades."
+            },
+            "respuesta_correcta": "b",
+            "explicacion": "El Sprint es el núcleo central que genera el pulso de avance por tiempos prefijados (Timeboxing)."
+        },
+        {
+            "id": 19,
+            "pregunta": "¿Qué se debe encontrar en el incremento al final del Sprint?",
+            "opciones": {
+                "a": "Módulos pendientes de integración para el siguiente periodo.",
+                "b": "Un producto funcional, terminado, operativo y muy bien probado.",
+                "c": "Prototipos de baja fidelidad para validar las ideas con el PO.",
+                "d": "Documentación técnica extensa sin necesidad de código operativo."
+            },
+            "respuesta_correcta": "b",
+            "explicacion": "El incremento debe estar completamente terminado y operativo, producto real realizado en un sprint."
+        },
+        {
+            "id": 20,
+            "pregunta": "¿Qué define la 'Definition of Done' (Definición de Hecho)?",
+            "opciones": {
+                "a": "Los criterios que definen cuándo un trabajo está terminado.",
+                "b": "La lista de funcionalidades que el PO desea para el futuro.",
+                "c": "El momento exacto en el que el cliente paga por el producto.",
+                "d": "La aprobación de la arquitectura por parte del líder técnico."
+            },
+            "respuesta_correcta": "a",
+            "explicacion": "Es una lista de criterios que define cuándo un trabajo está completamente terminado."
+        },
+        {
+            "id": 21,
+            "pregunta": "¿Qué requisitos debe cumplir la Pila del Producto?",
+            "opciones": {
+                "a": "Ser inmutable, estar firmada y contener detalles técnicos.",
+                "b": "Ser simple, estar estimada y estar debidamente priorizada.",
+                "c": "Contener solo tareas técnicas asignadas a cada programador.",
+                "d": "Estar escrita exclusivamente en formato de casos de uso UML."
+            },
+            "respuesta_correcta": "b",
+            "explicacion": "La pila debe ser simple (expresada clara y concisamente), estimada y priorizada."
+        },
+        {
+            "id": 22,
+            "pregunta": "¿Desde qué perspectiva se captura una Historia de Usuario?",
+            "opciones": {
+                "a": "Desde la visión del arquitecto de sistemas y el programador.",
+                "b": "Desde la perspectiva del usuario final y sus necesidades reales.",
+                "c": "Desde los requisitos de hardware necesarios para la aplicación.",
+                "d": "Desde la visión económica del departamento de marketing y ventas."
+            },
+            "respuesta_correcta": "b",
+            "explicacion": "Es una técnica usada para capturar requisitos desde la perspectiva del usuario final."
+        },
+        {
+            "id": 23,
+            "pregunta": "¿Cuál es el formato típico de una Historia de Usuario?",
+            "opciones": {
+                "a": "Como [beneficio], quiero [rol del usuario] para [la acción].",
+                "b": "Como [rol del usuario], quiero [acción] para [el beneficio].",
+                "c": "Quiero [la acción] siendo un [rol] para obtener un [valor].",
+                "d": "El sistema debe [acción] cuando el [rol] realice la [tarea]."
+            },
+            "respuesta_correcta": "b",
+            "explicacion": "El formato es 'Como [rol], quiero [acción] para [beneficio]'."
+        },
+        {
+            "id": 24,
+            "pregunta": "¿Qué significa que una historia de usuario sea 'negociable'?",
+            "opciones": {
+                "a": "Que el precio de desarrollo se puede discutir con el equipo.",
+                "b": "Que no es un contrato cerrado y puede cambiar con feedback.",
+                "c": "Que el equipo puede decidir no hacerla si es muy compleja.",
+                "d": "Que el Product Owner puede eliminarla sin avisar al equipo."
+            },
+            "respuesta_correcta": "b",
+            "explicacion": "No es un contrato cerrado, puede cambiar con retroalimentación."
+        },
+        {
+            "id": 25,
+            "pregunta": "¿Qué debe reflejar obligatoriamente la Pila del Producto?",
+            "opciones": {
+                "a": "Solo los requisitos de alto nivel definidos en la visión inicial.",
+                "b": "Todo trabajo que deba realizar el equipo en el desarrollo.",
+                "c": "Únicamente las historias de usuario que tengan más de 8 puntos.",
+                "d": "Solo las correcciones de errores detectadas por los usuarios."
+            },
+            "respuesta_correcta": "b",
+            "explicacion": "Todo lo que suponga un trabajo que debe realizar el equipo debe estar reflejado en esta pila."
+        },
+        {
+            "id": 26,
+            "pregunta": "¿Cómo debe ser el detalle de los requisitos en la pila?",
+            "opciones": {
+                "a": "Igual para todos los elementos independientemente de su orden.",
+                "b": "Proporcional a la prioridad de los elementos de dicha pila.",
+                "c": "Mínimo para los elementos prioritarios para ganar velocidad.",
+                "d": "Máximo para los elementos del final para planificar el futuro."
+            },
+            "respuesta_correcta": "b",
+            "explicacion": "El detalle debe ser proporcional a la prioridad: mayor detalle para los más prioritarios."
+        },
+        {
+            "id": 27,
+            "pregunta": "¿Qué se entiende por elementos 'preparados' (ready)?",
+            "opciones": {
+                "a": "Aquellos que ya han sido programados y están en producción.",
+                "b": "Aquellos que pueden seleccionarse en la planificación del sprint.",
+                "c": "Aquellos que el cliente ya ha validado mediante una demo técnica.",
+                "d": "Aquellos que tienen asignado un responsable técnico del equipo."
+            },
+            "respuesta_correcta": "b",
+            "explicacion": "Los elementos preparados o accionables son los que pueden seleccionarse en la reunión de planificación."
+        },
+        {
+            "id": 28,
+            "pregunta": "¿En qué consiste la preparación o 'grooming' de la pila?",
+            "opciones": {
+                "a": "En una reunión semanal obligatoria de cuatro horas con el cliente.",
+                "b": "En actividades de priorización, detalle y estimación de elementos.",
+                "c": "En la limpieza del código fuente para eliminar funciones obsoletas.",
+                "d": "En la revisión de los costes salariales del equipo de desarrollo."
+            },
+            "respuesta_correcta": "b",
+            "explicacion": "El grooming son las actividades de priorización, detalle y estimación de los elementos."
+        },
+        {
+            "id": 29,
+            "pregunta": "¿Cuánto tiempo debe consumir el grooming de la pila?",
+            "opciones": {
+                "a": "Al menos el veinte por ciento de la capacidad total del equipo.",
+                "b": "No más del diez por ciento de la capacidad de trabajo del equipo.",
+                "c": "Todo el tiempo necesario hasta que no queden dudas técnicas.",
+                "d": "Exactamente dos horas por cada semana de duración del sprint."
+            },
+            "respuesta_correcta": "b",
+            "explicacion": "No debe consumir más del 10% de la capacidad de trabajo del equipo."
+        },
+        {
+            "id": 30,
+            "pregunta": "¿Quién es responsable de estimar el esfuerzo de la pila?",
+            "opciones": {
+                "a": "El Product Owner puesto que conoce el valor para el negocio.",
+                "b": "Las personas del equipo que previsiblemente harán el trabajo.",
+                "c": "El Scrum Master basado en su experiencia en proyectos previos.",
+                "d": "El cliente externo en conjunto con el departamento de ventas."
+            },
+            "respuesta_correcta": "b",
+            "explicacion": "La responsabilidad es de las personas del equipo que previsiblemente harán el trabajo."
+        },
+        {
+            "id": 31,
+            "pregunta": "¿Qué información se recomienda incluir en una lista de pila?",
+            "opciones": {
+                "a": "ID, descripción, sistema de priorización y estimación de esfuerzo.",
+                "b": "Nombre del programador, fecha de inicio y coste por hora de tarea.",
+                "c": "Diagrama de flujo, código de la función y resultados de las pruebas.",
+                "d": "Firma del cliente, presupuesto asignado y penalizaciones por retraso."
+            },
+            "respuesta_correcta": "a",
+            "explicacion": "Se recomienda incluir ID único, descripción (HU), priorización y estimación del esfuerzo."
+        },
+        {
+            "id": 32,
+            "pregunta": "¿Qué es un Epic dentro del contexto de Scrum?",
+            "opciones": {
+                "a": "Una historia de usuario que se ha completado en tiempo récord.",
+                "b": "Una historia de usuario que se descompone por su gran tamaño.",
+                "c": "Un Sprint que ha durado más de un mes por su gran complejidad.",
+                "d": "El documento que contiene la visión estratégica del producto final."
+            },
+            "respuesta_correcta": "b",
+            "explicacion": "Se llama Epic a una historia de usuario que por su gran tamaño el equipo descompone."
+        },
+        {
+            "id": 33,
+            "pregunta": "¿Qué información se registra para cada tarea de la Pila del Sprint?",
+            "opciones": {
+                "a": "Descripción breve, persona asignada y el esfuerzo pendiente.",
+                "b": "Código de la tarea, fecha de entrega y coste total en euros.",
+                "c": "Firma del desarrollador, horas trabajadas y errores detectados.",
+                "d": "Nivel de importancia, dificultad técnica y lenguaje de programación."
+            },
+            "respuesta_correcta": "a",
+            "explicacion": "Se registra una descripción breve, la persona asignada y el esfuerzo pendiente para terminarla."
+        },
+        {
+            "id": 34,
+            "pregunta": "¿Cuándo se añaden tareas a la Pila del Sprint (Sprint Backlog)?",
+            "opciones": {
+                "a": "Solo al inicio del proyecto para planificar todos los sprints futuros.",
+                "b": "Para mejorar el seguimiento, facilitar estimación y transparencia.",
+                "c": "Cuando el Product Owner detecta que el equipo tiene tiempo libre.",
+                "d": "Cada vez que un cliente externo solicita un cambio de última hora."
+            },
+            "respuesta_correcta": "b",
+            "explicacion": "Se añaden para mejor seguimiento del trabajo, facilitar la estimación y por transparencia."
+        },
+        {
+            "id": 35,
+            "pregunta": "¿Quién tiene permiso para modificar la Pila del Sprint?",
+            "opciones": {
+                "a": "El Product Owner si las prioridades del negocio cambian de repente.",
+                "b": "Solo el equipo de desarrollo puede modificarla durante el sprint.",
+                "c": "El Scrum Master para ajustar los tiempos al gráfico de burn-down.",
+                "d": "Cualquier interesado que detecte un error crítico en la aplicación."
+            },
+            "respuesta_correcta": "b",
+            "explicacion": "Solo el equipo la puede modificar durante el sprint."
+        },
+        {
+            "id": 36,
+            "pregunta": "¿Qué debe ocurrir con tareas que superan un día de trabajo?",
+            "opciones": {
+                "a": "Deben ser asignadas a dos personas para terminarlas con rapidez.",
+                "b": "Deben descomponerse inmediatamente en otras tareas más pequeñas.",
+                "c": "Deben marcarse como bloqueadas hasta que el SM las revise bien.",
+                "d": "Deben ser movidas al siguiente sprint para no retrasar el actual."
+            },
+            "respuesta_correcta": "b",
+            "explicacion": "Las tareas demasiado grandes (más de un día) deben descomponerse en otras más pequeñas."
+        },
+        {
+            "id": 37,
+            "pregunta": "¿Cuál es la utilidad principal de la Pila del Sprint?",
+            "opciones": {
+                "a": "Servir como contrato legal entre el equipo y el Product Owner.",
+                "b": "Facilitar la consulta y la comunicación diaria y directa del equipo.",
+                "c": "Registrar el salario variable de los desarrolladores del proyecto.",
+                "d": "Controlar que nadie trabaje menos de las ocho horas reglamentarias."
+            },
+            "respuesta_correcta": "b",
+            "explicacion": "Debe servir de medio para facilitar la consulta y la comunicación diaria y directa del equipo."
+        },
+        {
+            "id": 38,
+            "pregunta": "¿Qué caracteriza al incremento producido en cada iteración?",
+            "opciones": {
+                "a": "Ser un boceto funcional que requiere de pruebas en el futuro.",
+                "b": "Estar completamente terminado, operativo y listo para entrega.",
+                "c": "Ser una lista de diseños de arquitectura y diagramas de flujo.",
+                "d": "Estar formado por módulos aislados que no necesitan integración."
+            },
+            "respuesta_correcta": "b",
+            "explicacion": "El incremento tiene como característica el estar completamente terminado y operativo."
+        },
+        {
+            "id": 39,
+            "pregunta": "¿Qué objetivo puede haber exclusivamente en el primer sprint?",
+            "opciones": {
+                "a": "Finalizar toda la documentación de usuario del producto completo.",
+                "b": "Contrastar la plataforma tecnológica y el diseño mediante prototipos.",
+                "c": "Contratar a nuevos miembros para el equipo de desarrollo técnico.",
+                "d": "Vender las primeras licencias del software a los clientes finales."
+            },
+            "respuesta_correcta": "b",
+            "explicacion": "Como excepción en el primer sprint puede haber objetivos del tipo contrastar la plataforma y el diseño."
+        },
+        {
+            "id": 40,
+            "pregunta": "¿Qué establece la conocida como Ley de Parkinson?",
+            "opciones": {
+                "a": "La velocidad del equipo es inversamente proporcional al tiempo.",
+                "b": "El trabajo se expande para llenar todo el tiempo que esté disponible.",
+                "c": "El esfuerzo necesario para una tarea es siempre una constante fija.",
+                "d": "La calidad del código disminuye si se aumenta la presión del tiempo."
+            },
+            "respuesta_correcta": "b",
+            "explicacion": "La Ley de Parkinson dice que el trabajo tiende a expandirse para llenar todo el tiempo disponible."
+        },
+        {
+            "id": 41,
+            "pregunta": "¿Qué se requiere para trabajar con la técnica de Timeboxing?",
+            "opciones": {
+                "a": "Presupuesto ilimitado, equipo grande y herramientas de vanguardia.",
+                "b": "Objetivos claros, reducción de interrupciones y feedback constante.",
+                "c": "Reuniones de larga duración, jerarquía rígida y procesos escritos.",
+                "d": "Cronómetros digitales, oficinas abiertas y supervisión del gestor."
+            },
+            "respuesta_correcta": "b",
+            "explicacion": "Requiere objetivos claros, reducción de interrupciones y retroalimentación constante."
+        },
+        {
+            "id": 42,
+            "pregunta": "¿Qué mide el gráfico de avance o 'Burn-down chart'?",
+            "opciones": {
+                "a": "La cantidad de dinero gastada desde el inicio de la iteración.",
+                "b": "El esfuerzo que todavía queda pendiente a lo largo del sprint.",
+                "c": "El número de líneas de código que se escriben cada día laboral.",
+                "d": "La satisfacción del cliente con las funcionalidades entregadas."
+            },
+            "respuesta_correcta": "b",
+            "explicacion": "Mide el esfuerzo pendiente a lo largo del sprint."
+        },
+        {
+            "id": 43,
+            "pregunta": "¿Qué representan los ejes Y y X en un gráfico Burn-down?",
+            "opciones": {
+                "a": "Eje Y el trabajo realizado y eje X el coste total del proyecto.",
+                "b": "Eje Y el trabajo que falta y eje X los días totales del sprint.",
+                "c": "Eje Y los miembros del equipo y eje X las horas de oficina diarias.",
+                "d": "Eje Y los puntos de historia y eje X el valor de negocio ganado."
+            },
+            "respuesta_correcta": "b",
+            "explicacion": "En el eje Y se registra el trabajo que falta por realizar y en el eje X los días del sprint."
+        },
+        {
+            "id": 44,
+            "pregunta": "¿Qué información ofrece el Project Burn Down Chart?",
+            "opciones": {
+                "a": "El progreso detallado de las tareas técnicas de un solo desarrollador.",
+                "b": "El progreso acumulado de todos los sprints realizados hasta la fecha.",
+                "c": "La comparación entre los salarios del equipo y el beneficio neto.",
+                "d": "La cantidad de errores corregidos en relación a los detectados hoy."
+            },
+            "respuesta_correcta": "b",
+            "explicacion": "Refleja el progreso acumulado de todos los sprints hasta la fecha a nivel de proyecto."
+        },
+        {
+            "id": 45,
+            "pregunta": "¿Qué diferencia al gráfico Burn-up del gráfico Burn-down?",
+            "opciones": {
+                "a": "El Burn-up muestra lo que falta y el Burn-down lo que ya se hizo.",
+                "b": "El Burn-up muestra el trabajo completado en lugar de lo que queda.",
+                "c": "El Burn-up es para el equipo y el Burn-down para el Product Owner.",
+                "d": "No existe ninguna diferencia técnica, son términos intercambiables."
+            },
+            "respuesta_correcta": "b",
+            "explicacion": "El burn-up refleja el trabajo completado en lugar de mostrar lo que queda por hacer."
+        },
+        {
+            "id": 46,
+            "pregunta": "¿Cómo se define formalmente la 'Velocidad' en Scrum?",
+            "opciones": {
+                "a": "La rapidez con la que se corrigen los bugs críticos en producción.",
+                "b": "La cantidad de trabajo que se realiza en un sprint o ciclo de tiempo.",
+                "c": "El número de reuniones diarias que se pueden realizar en una mañana.",
+                "d": "La diferencia entre el tiempo real de trabajo y el tiempo de pausas."
+            },
+            "respuesta_correcta": "b",
+            "explicacion": "La velocidad se define como la cantidad de trabajo realizada en un sprint o ciclo de tiempo."
+        },
+        {
+            "id": 47,
+            "pregunta": "¿Cuál es la diferencia entre Tiempo Real y Tiempo Ideal?",
+            "opciones": {
+                "a": "El tiempo real incluye interrupciones y el ideal supone un flujo perfecto.",
+                "b": "El tiempo ideal es el que el cliente paga y el real el que se gasta.",
+                "c": "El tiempo real es para estimaciones y el ideal para medir ejecuciones.",
+                "d": "No hay diferencia real, ambos se miden siempre en horas de reloj exactas."
+            },
+            "respuesta_correcta": "a",
+            "explicacion": "El tiempo real es la jornada laboral; el ideal elimina todo lo que no es estrictamente trabajo."
+        },
+        {
+            "id": 48,
+            "pregunta": "¿Para qué se utiliza normalmente el Tiempo Ideal en Scrum?",
+            "opciones": {
+                "a": "Para fichar la entrada y salida de los trabajadores de la oficina.",
+                "b": "Para realizar estimaciones como unidad de trabajo o esfuerzo necesario.",
+                "c": "Para castigar al equipo si no se cumplen las expectativas del cliente.",
+                "d": "Para calcular el precio final que se le cobrará al cliente externo."
+            },
+            "respuesta_correcta": "b",
+            "explicacion": "Normalmente se usa en estimaciones, como unidad de trabajo o esfuerzo necesario."
+        },
+        {
+            "id": 49,
+            "pregunta": "¿Qué miden básicamente los Puntos de Historia?",
+            "opciones": {
+                "a": "El número de líneas de código que tendrá la funcionalidad final.",
+                "b": "La complejidad y el esfuerzo asociado con completar una tarea dada.",
+                "c": "La importancia estratégica para el departamento de ventas de la empresa.",
+                "d": "El coste exacto en euros basado en el salario de los programadores."
+            },
+            "respuesta_correcta": "b",
+            "explicacion": "Se basan en la complejidad y esfuerzo asociado con una tarea."
+        },
+        {
+            "id": 50,
+            "pregunta": "¿Cómo se asignan inicialmente los Puntos de Historia?",
+            "opciones": {
+                "a": "Mediante una fórmula matemática compleja definida por la gerencia.",
+                "b": "Tomando una tarea sencilla como referencia y comparando las demás.",
+                "c": "Basándose en el tiempo que tardó el equipo de la competencia en hacerlo.",
+                "d": "Asignando siempre cinco puntos a cada historia para mantener equilibrio."
+            },
+            "respuesta_correcta": "b",
+            "explicacion": "Un equipo puede tomar una tarea sencilla y asignarle un punto, luego compara las demás."
+        },
+        {
+            "id": 51,
+            "pregunta": "¿Qué es el modelo COCOMO II mencionado en las fuentes?",
+            "opciones": {
+                "a": "Una técnica de retrospectiva basada en el uso de sombreros de colores.",
+                "b": "Un modelo matemático para la estimación de costes de software antiguo.",
+                "c": "El estándar oficial para la creación de historias de usuario en Java.",
+                "d": "Un framework de escalado para empresas con más de mil trabajadores."
+            },
+            "respuesta_correcta": "b",
+            "explicacion": "COCOMO II es un modelo matemático de base empírica para estimación de costes de software."
+        },
+        {
+            "id": 52,
+            "pregunta": "¿Qué factores se cuentan para calcular los Puntos de Función?",
+            "opciones": {
+                "a": "Días de vacaciones, horas extra, pausas de café y bajas laborales.",
+                "b": "Entradas, salidas, consultas, ficheros e interfaces externas del usuario.",
+                "c": "Reuniones diarias, reviews, retros y planificaciones realizadas al mes.",
+                "d": "Servidores, bases de datos, redes, terminales y cables de conexión."
+            },
+            "respuesta_correcta": "b",
+            "explicacion": "Hay que contar entradas, salidas, consultas, ficheros e interfaces externas."
+        },
+        {
+            "id": 53,
+            "pregunta": "¿Qué es el Planning Poker en la metodología Scrum?",
+            "opciones": {
+                "a": "Un juego de azar para decidir quién trabaja el próximo fin de semana.",
+                "b": "Una técnica para calcular una estimación basada en el consenso grupal.",
+                "c": "Una reunión de revisión donde el PO apuesta por las mejores historias.",
+                "d": "Una herramienta para despedir a los miembros menos productivos del equipo."
+            },
+            "respuesta_correcta": "b",
+            "explicacion": "Es una técnica para calcular una estimación basada en el consenso."
+        },
+        {
+            "id": 54,
+            "pregunta": "¿Por qué se utiliza la secuencia de Fibonacci en el póker?",
+            "opciones": {
+                "a": "Porque es la serie numérica más fácil de recordar para los expertos.",
+                "b": "Porque refleja la incertidumbre inherente al estimar tareas grandes.",
+                "c": "Porque así lo exigen los estándares de calidad internacionales de ISO.",
+                "d": "Porque permite que el Product Owner sume los puntos más rápidamente."
+            },
+            "respuesta_correcta": "b",
+            "explicacion": "La razón de utilizar la secuencia de Fibonacci es reflejar la incertidumbre inherente en la estimación."
+        },
+        {
+            "id": 55,
+            "pregunta": "¿Para qué sirve la carta con el signo de interrogación (?)?",
+            "opciones": {
+                "a": "Para indicar que el desarrollador quiere una pausa para descansar.",
+                "b": "Para declarar completa incertidumbre o desconocimiento de la tarea.",
+                "c": "Para preguntar al Product Owner si el presupuesto es suficiente ahora.",
+                "d": "Para señalar que el equipo de desarrollo necesita una nueva oficina."
+            },
+            "respuesta_correcta": "b",
+            "explicacion": "Se usa para declarar completa incertidumbre o desconocimiento de la característica."
+        },
+        {
+            "id": 56,
+            "pregunta": "¿Cómo se procede en el Planning Poker si hay disparidad?",
+            "opciones": {
+                "a": "Se elige siempre la carta más alta para asegurar que sobre tiempo.",
+                "b": "Se permite que los valores extremos justifiquen su postura y se repite.",
+                "c": "El Scrum Master elige la media aritmética de todos los valores mostrados.",
+                "d": "Se descarta la historia de usuario y se pasa a la siguiente de la lista."
+            },
+            "respuesta_correcta": "b",
+            "explicacion": "A las personas con estimaciones altas y bajas se les da un tiempo para justificar y se repite."
+        },
+        {
+            "id": 57,
+            "pregunta": "¿Qué se discute en la primera parte del Sprint Planning?",
+            "opciones": {
+                "a": "Cómo se va a programar cada una de las funciones de la aplicación.",
+                "b": "Qué se puede entregar al final del sprint y el objetivo del mismo.",
+                "c": "Quién va a ser el responsable de realizar las pruebas de integración.",
+                "d": "Cuántos puntos de historia se han completado en el año natural actual."
+            },
+            "respuesta_correcta": "b",
+            "explicacion": "Se trata de qué se entregará al terminar el sprint y definir el objetivo del mismo."
+        },
+        {
+            "id": 58,
+            "pregunta": "¿Cuál es un resultado obligatorio del Sprint Planning?",
+            "opciones": {
+                "a": "El código fuente de las dos primeras historias de usuario estimadas.",
+                "b": "La pila del sprint, el objetivo del sprint y la fecha de revisión.",
+                "c": "Un manual de usuario detallado de todas las funciones que se harán.",
+                "d": "El contrato de mantenimiento firmado por el cliente y el departamento."
+            },
+            "respuesta_correcta": "b",
+            "explicacion": "Los resultados son la Pila del sprint, fecha de revisión y objetivo del sprint."
+        },
+        {
+            "id": 59,
+            "pregunta": "¿Cuál es la duración máxima recomendada de la Daily Scrum?",
+            "opciones": {
+                "a": "Cinco minutos por cada miembro que forme parte del equipo Scrum.",
+                "b": "Quince minutos para asegurar la brevedad y agilidad del encuentro.",
+                "c": "Treinta minutos si el equipo es grande y hay muchos problemas técnicos.",
+                "d": "Una hora para que el Product Owner pueda dar órdenes a los demás."
+            },
+            "respuesta_correcta": "b",
+            "explicacion": "La Daily Scrum es un evento de corta duración, máximo 15 minutos."
+        },
+        {
+            "id": 60,
+            "pregunta": "¿Qué pregunta NO es estándar en una Daily Scrum típica?",
+            "opciones": {
+                "a": "¿Qué hice ayer para contribuir al objetivo que tiene este sprint?",
+                "b": "¿Qué haré hoy para ayudar al equipo a cumplir con su objetivo?",
+                "c": "¿Cuánto dinero nos estamos ahorrando al usar esta tecnología libre?",
+                "d": "¿Hay algún obstáculo o impedimento que me esté impidiendo avanzar?"
+            },
+            "respuesta_correcta": "c",
+            "explicacion": "Las preguntas son: qué hice ayer, qué haré hoy y si hay obstáculos. El dinero no es estándar."
+        },
+        {
+            "id": 61,
+            "pregunta": "¿Por qué se recomienda hacer la Daily Scrum de pie?",
+            "opciones": {
+                "a": "Porque en las oficinas modernas ya no se suelen utilizar sillas.",
+                "b": "Para asegurar que la reunión se mantenga realmente breve y ágil.",
+                "c": "Para que el Scrum Master pueda ver mejor a todos los participantes.",
+                "d": "Porque así lo indica el reglamento de salud laboral de la empresa."
+            },
+            "respuesta_correcta": "b",
+            "explicacion": "Se recomienda hacer la reunión de pie para asegurar que se mantenga breve y ágil."
+        },
+        {
+            "id": 62,
+            "pregunta": "¿Cuál es el propósito fundamental de la Sprint Review?",
+            "opciones": {
+                "a": "Criticar el trabajo del equipo y buscar culpables de los errores.",
+                "b": "Demostrar el incremento, recoger feedback y revisar el backlog.",
+                "c": "Planificar las tareas técnicas que se realizarán el próximo lunes.",
+                "d": "Entregar el manual de usuario impreso al departamento de soporte."
+            },
+            "respuesta_correcta": "b",
+            "explicacion": "Objetivos: demostrar incremento, recoger feedback y revisar el Product Backlog."
+        },
+        {
+            "id": 63,
+            "pregunta": "¿Qué está prohibido explícitamente en la Sprint Review?",
+            "opciones": {
+                "a": "La presencia de clientes externos o usuarios finales del sistema.",
+                "b": "El uso de presentaciones gráficas formales tipo diapositivas.",
+                "c": "Que los desarrolladores hablen directamente con el Product Owner.",
+                "d": "Realizar preguntas técnicas sobre el funcionamiento del código."
+            },
+            "respuesta_correcta": "b",
+            "explicacion": "La reunión es informal y están prohibidas las presentaciones gráficas."
+        },
+        {
+            "id": 64,
+            "pregunta": "¿Cuándo se celebra la Sprint Retrospective?",
+            "opciones": {
+                "a": "Justo antes de la revisión del sprint con el cliente externo.",
+                "b": "Al final del sprint, después de haber realizado la Sprint Review.",
+                "c": "Cada mañana después de la Daily Scrum para ajustar el proceso.",
+                "d": "Solo cuando el equipo ha fracasado en el cumplimiento del sprint."
+            },
+            "respuesta_correcta": "b",
+            "explicacion": "Se lleva a cabo al final del sprint, después de la Sprint Review."
+        },
+        {
+            "id": 65,
+            "pregunta": "¿Cuál es el objetivo de la técnica 'Estrella de Mar'?",
+            "opciones": {
+                "a": "Dibujar el diseño de la interfaz de usuario de la nueva aplicación.",
+                "b": "Identificar qué comenzar, dejar, hacer más, hacer menos o seguir.",
+                "c": "Puntuar a los miembros del equipo según su rendimiento individual.",
+                "d": "Decidir qué funcionalidades son las más bonitas para los usuarios."
+            },
+            "respuesta_correcta": "b",
+            "explicacion": "Ayuda a identificar: Start Doing, Stop Doing, More Of, Less Of, Keep Doing."
+        },
+        {
+            "id": 66,
+            "pregunta": "¿Qué representan las 'anclas' en la técnica del Barco?",
+            "opciones": {
+                "a": "Los factores positivos que aceleran el avance del equipo unido.",
+                "b": "Los obstáculos o problemas que ralentizan el progreso del sprint.",
+                "c": "La meta final o producto que el equipo quiere alcanzar al fin.",
+                "d": "Las herramientas técnicas que ayudan a automatizar los procesos."
+            },
+            "respuesta_correcta": "b",
+            "explicacion": "Las anclas representan los blockers: obstáculos o problemas que ralentizan el progreso."
+        },
+        {
+            "id": 67,
+            "pregunta": "¿Qué representa el 'sombrero negro' en los Seis Sombreros?",
+            "opciones": {
+                "a": "Los hechos objetivos y la información que el equipo ya conoce.",
+                "b": "Los aspectos negativos ocurridos o los posibles riesgos futuros.",
+                "c": "Las propuestas creativas para solucionar los problemas del grupo.",
+                "d": "Los sentimientos y las intuiciones de los miembros del equipo."
+            },
+            "respuesta_correcta": "b",
+            "explicacion": "El sombrero negro se usa para aspectos negativos ocurridos o posibles riesgos."
+        },
+        {
+            "id": 68,
+            "pregunta": "¿Qué framework organiza equipos en 'Agile Release Trains'?",
+            "opciones": {
+                "a": "Nexus para la coordinación de hasta nueve equipos de desarrollo.",
+                "b": "SAFe mediante la sincronización hacia un gran objetivo común.",
+                "c": "LeSS para mantener la simplicidad con un único backlog de producto.",
+                "d": "Scrum técnico básico para equipos de entre cuatro y ocho personas."
+            },
+            "respuesta_correcta": "b",
+            "explicacion": "SAFe organiza múltiples equipos en grandes grupos llamados Agile Release Trains."
+        },
+        {
+            "id": 69,
+            "pregunta": "¿Qué caracteriza fundamentalmente a LeSS (Large-Scale Scrum)?",
+            "opciones": {
+                "a": "La creación de muchos nuevos roles y procesos burocráticos.",
+                "b": "El uso de un único backlog compartido para todos los equipos.",
+                "c": "La eliminación de la reunión diaria por ser poco eficiente a escala.",
+                "d": "Que cada equipo tenga su propio Product Owner independiente."
+            },
+            "respuesta_correcta": "b",
+            "explicacion": "LeSS utiliza un único backlog compartido y un único Product Owner para todos los equipos."
+        },
+        {
+            "id": 70,
+            "pregunta": "¿Para cuántos equipos está diseñado el framework Nexus?",
+            "opciones": {
+                "a": "Para empresas enormes con más de cien equipos trabajando a la vez.",
+                "b": "Para coordinar el trabajo de entre tres y nueve equipos Scrum.",
+                "c": "Para proyectos pequeños donde solo trabaja un único equipo Scrum.",
+                "d": "Para departamentos que no usan Scrum pero quieren ser ágiles hoy."
+            },
+            "respuesta_correcta": "b",
+            "explicacion": "Nexus es un marco para escalar Scrum cuando trabajan entre 3 y 9 equipos."
+        },
+        {
+            "id": 71,
+            "pregunta": "¿Cuál es la misión del Nexus Integration Team (NIT)?",
+            "opciones": {
+                "a": "Ejercer autoridad y mandar sobre los demás equipos de desarrollo.",
+                "b": "Asegurar que los incrementos se integran de manera correcta.",
+                "c": "Programar todas las tareas difíciles que los equipos no saben hacer.",
+                "d": "Sustituir a los Scrum Masters de cada equipo para ahorrar costes."
+            },
+            "respuesta_correcta": "b",
+            "explicacion": "El NIT es responsable de asegurar que todos los incrementos se integren correctamente."
+        },
+        {
+            "id": 72,
+            "pregunta": "¿Qué es el 'Integrated Increment' en el framework Nexus?",
+            "opciones": {
+                "a": "Una lista de todas las dependencias detectadas durante el sprint.",
+                "b": "Un único entregable integrado de todos los equipos del Nexus.",
+                "c": "El código fuente de cada equipo guardado en carpetas diferentes.",
+                "d": "La suma de todos los puntos de historia de todos los equipos."
+            },
+            "respuesta_correcta": "b",
+            "explicacion": "Al final del sprint debe existir un único entregable integrado, no varios independientes."
+        },
+        {
+            "id": 73,
+            "pregunta": "¿En qué se centra la Nexus Daily Scrum?",
+            "opciones": {
+                "a": "En el progreso individual de cada desarrollador de cada equipo.",
+                "b": "En los bloqueos de integración y dependencias entre equipos.",
+                "c": "En revisar el presupuesto gastado por cada equipo de desarrollo.",
+                "d": "En elegir qué equipo ha trabajado mejor durante la jornada de hoy."
+            },
+            "respuesta_correcta": "b",
+            "explicacion": "El foco está en bloqueos de integración y dependencias, no en el trabajo individual."
+        },
+        {
+            "id": 74,
+            "pregunta": "¿Cómo se estructuran las retrospectivas en Nexus?",
+            "opciones": {
+                "a": "Solo se realiza una única retrospectiva común para ganar tiempo.",
+                "b": "Se realiza una reflexión a nivel Nexus y luego las individuales.",
+                "c": "Cada equipo hace la suya y luego se envían actas por correo electrónico.",
+                "d": "No se realizan retrospectivas para no añadir más reuniones al grupo."
+            },
+            "respuesta_correcta": "b",
+            "explicacion": "Primero reflexión a nivel Nexus y después cada equipo realiza su retrospectiva individual."
+        },
+        {
+            "id": 75,
+            "pregunta": "¿Qué concepto clave resume la filosofía de Nexus?",
+            "opciones": {
+                "a": "Priorizar la coordinación sobre la integración del producto final.",
+                "b": "Priorizar la integración del producto sobre la coordinación grupal.",
+                "c": "Garantizar que la velocidad sea siempre superior a la calidad dada.",
+                "d": "Sustituir la comunicación directa por informes de estado escritos."
+            },
+            "respuesta_correcta": "b",
+            "explicacion": "Nexus se centra en un concepto clave: “Integration over coordination”."
+        },
+        {
+            "id": 76,
+            "pregunta": "¿Qué es un Epic según la definición técnica de Scrum?",
+            "opciones": {
+                "a": "Un error técnico masivo que afecta a toda la base de datos hoy.",
+                "b": "Una historia de usuario grande que abarca varios sprints de tiempo.",
+                "c": "El incremento final que se entrega al cliente al acabar el proyecto.",
+                "d": "Una reunión de planificación que dura más de ocho horas seguidas."
+            },
+            "respuesta_correcta": "b",
+            "explicacion": "Un epic es una gran historia de usuario, que generalmente abarca múltiples sprints."
+        },
+        {
+            "id": 77,
+            "pregunta": "¿Qué aporta la descomposición de un Epic en historias?",
+            "opciones": {
+                "a": "Perder el tiempo en reuniones que no aportan valor real al código.",
+                "b": "Obtener unidades de trabajo manejables que ofrecen valor propio.",
+                "c": "Permitir que el Scrum Master asigne tareas individualmente a cada uno.",
+                "d": "Aumentar el número de puntos de historia para parecer más veloces."
+            },
+            "respuesta_correcta": "b",
+            "explicacion": "Las historias más pequeñas ofrecen valor por sí mismas y se completan en un sprint."
+        },
+        {
+            "id": 78,
+            "pregunta": "¿Cuál es un beneficio estratégico de usar Epics?",
+            "opciones": {
+                "a": "Poder ignorar los detalles pequeños hasta el final del proyecto.",
+                "b": "Gestionar grandes funciones sin perder la visión del panorama total.",
+                "c": "Asegurar que el cliente no pueda cambiar de opinión sobre el producto.",
+                "d": "Evitar que el equipo de desarrollo tenga que estimar el esfuerzo real."
+            },
+            "respuesta_correcta": "b",
+            "explicacion": "Los épicos permiten gestionar grandes funcionalidades sin perder de vista el panorama general."
+        },
+        {
+            "id": 79,
+            "pregunta": "¿Qué indica el término 'Sprint Goal' u 'Objetivo del Sprint'?",
+            "opciones": {
+                "a": "La fecha exacta en la que el equipo debe entregar todo el proyecto.",
+                "b": "Una frase que sintetiza el valor que se le va a entregar al cliente.",
+                "c": "El número total de horas que el equipo debe trabajar en el ciclo.",
+                "d": "La lista completa de todas las tareas técnicas que se han hecho."
+            },
+            "respuesta_correcta": "b",
+            "explicacion": "El equipo define el objetivo del sprint: una frase que sintetiza el valor que se le entrega al cliente."
+        },
+        {
+            "id": 80,
+            "pregunta": "¿Qué rol facilita el entorno seguro en la Retrospectiva?",
+            "opciones": {
+                "a": "El Product Owner para asegurar que todos digan la verdad al cliente.",
+                "b": "El Scrum Master mediante la moderación de la sesión de feedback.",
+                "c": "El desarrollador más antiguo del equipo debido a su gran autoridad.",
+                "d": "El cliente externo puesto que es quien paga por el tiempo del equipo."
+            },
+            "respuesta_correcta": "b",
+            "explicacion": "El Scrum Master facilita la sesión, asegurándose de que sea un entorno seguro."
+        }
+    ]
+}

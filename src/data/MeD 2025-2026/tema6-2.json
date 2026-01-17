@@ -1,0 +1,906 @@
+{
+    "titulo": "TEMA 6 - XP B",
+    "descripcion": "Test de alta dificultad diseñado para evaluar el dominio total sobre los valores, principios, prácticas y roles de XP, basándose exclusivamente en la documentación técnica proporcionada.",
+    "examen_automatizacion": [
+        {
+            "id": 1,
+            "pregunta": "¿Qué define fundamentalmente a XP como un cambio social en el entorno de desarrollo?",
+            "opciones": {
+                "a": "El abandono de patrones antiguos para exponer capacidades y permitir que otros hagan lo mismo.",
+                "b": "La adopción de jerarquías horizontales que eliminan la necesidad de un líder técnico definido.",
+                "c": "El uso de herramientas de comunicación digital para sustituir las reuniones presenciales diarias.",
+                "d": "La implementación de contratos legales que protegen al equipo ante cambios imprevistos de diseño."
+            },
+            "respuesta_correcta": "a",
+            "explicacion": "XP se describe como un cambio social que implica dejar atrás hábitos defensivos del pasado para ser abiertos sobre nuestras capacidades reales."
+        },
+        {
+            "id": 2,
+            "pregunta": "Según la filosofía de la metodología, ¿cuál es la actitud recomendada frente a la posibilidad de éxito?",
+            "opciones": {
+                "a": "Reservar un porcentaje de esfuerzo estratégico para mitigar el impacto emocional de un posible fallo.",
+                "b": "Actuar dando el máximo esfuerzo posible y aceptar las consecuencias derivadas de dicha actuación.",
+                "c": "Planificar detalladamente cada fase para garantizar que el éxito no dependa de factores externos.",
+                "d": "Delegar la responsabilidad del éxito a los gestores para que el equipo se centre solo en el código."
+            },
+            "respuesta_correcta": "b",
+            "explicacion": "XP propone no contenerse por miedo y dar el 100%, asumiendo que el comportamiento extremo es dar lo mejor de uno mismo."
+        },
+        {
+            "id": 3,
+            "pregunta": "¿Qué beneficio se atribuye a actuar bajo la mentalidad de que los recursos disponibles son suficientes?",
+            "opciones": {
+                "a": "Asegura que el presupuesto asignado se utilice de forma íntegra antes de finalizar cada iteración.",
+                "b": "Fomenta la creatividad, el trabajo en equipo y el diseño evolutivo dentro del grupo de trabajo.",
+                "c": "Permite ignorar las restricciones temporales para enfocarse únicamente en la calidad del software.",
+                "d": "Garantiza que el cliente no solicite más funcionalidades de las que el equipo puede implementar hoy."
+            },
+            "respuesta_correcta": "b",
+            "explicacion": "Actuar como si los recursos fueran suficientes, independientemente de la realidad, estimula soluciones creativas y cooperación."
+        },
+        {
+            "id": 4,
+            "pregunta": "En un entorno de alta presión, ¿qué es lo único que el equipo puede controlar realmente según XP?",
+            "opciones": {
+                "a": "El nivel de satisfacción del cliente respecto a las funcionalidades entregadas en cada lanzamiento.",
+                "b": "Su propio comportamiento y el nivel de productividad que logran mantener durante el desarrollo.",
+                "c": "Las expectativas de los stakeholders externos mediante informes de progreso detallados y técnicos.",
+                "d": "La calidad final de los requisitos que son entregados por el cliente antes de empezar el ciclo."
+            },
+            "respuesta_correcta": "b",
+            "explicacion": "XP enseña que no podemos controlar las expectativas ajenas, solo nuestra conducta y productividad en el tiempo disponible."
+        },
+        {
+            "id": 5,
+            "pregunta": "Bajo la metáfora de la conducción, ¿qué responsabilidad específica recae sobre el equipo de desarrollo?",
+            "opciones": {
+                "a": "Dirigir el contenido funcional del sistema para asegurar que sea técnicamente viable y escalable.",
+                "b": "Conducir el proceso de desarrollo realizando correcciones pequeñas y frecuentes hacia el objetivo.",
+                "c": "Decidir la dirección del negocio para que el software se adapte a las tendencias actuales del mercado.",
+                "d": "Gestionar el mantenimiento preventivo de la infraestructura para evitar fallos durante el despliegue."
+            },
+            "respuesta_correcta": "b",
+            "explicacion": "En la metáfora, los clientes conducen el contenido y el equipo conduce el proceso mediante adaptaciones constantes."
+        },
+        {
+            "id": 6,
+            "pregunta": "¿Cuál es la principal distinción técnica entre XP y Scrum respecto a la ingeniería de software?",
+            "opciones": {
+                "a": "XP exige roles rígidos como el Scrum Master, mientras que Scrum permite una mayor flexibilidad de tareas.",
+                "b": "XP prescribe prácticas de ingeniería como TDD y refactorización, las cuales no están definidas en Scrum.",
+                "c": "Scrum se centra exclusivamente en la calidad del código, mientras que XP prioriza la gestión de equipos.",
+                "d": "XP prohíbe el uso de marcos de trabajo externos, obligando al equipo a desarrollar sus propias librerías."
+            },
+            "respuesta_correcta": "b",
+            "explicacion": "XP pone un fuerte énfasis en prácticas técnicas concretas, mientras que Scrum es un marco de gestión sin prescripciones técnicas."
+        },
+        {
+            "id": 7,
+            "pregunta": "¿Qué postura adopta XP ante los cambios en los requisitos en comparación con otros marcos ágiles?",
+            "opciones": {
+                "a": "Los cambios se aceptan únicamente durante la reunión de planificación al inicio de cada trimestre laboral.",
+                "b": "Se aceptan cambios en cualquier momento del ciclo, manteniendo una flexibilidad total ante el negocio.",
+                "c": "El cliente debe pagar una penalización económica por cada cambio solicitado después de la primera semana.",
+                "d": "Los cambios se rechazan si afectan a más del diez por ciento del código fuente escrito hasta la fecha."
+            },
+            "respuesta_correcta": "b",
+            "explicacion": "XP se caracteriza por aceptar cambios en cualquier momento, a diferencia de marcos que los limitan entre iteraciones."
+        },
+        {
+            "id": 8,
+            "pregunta": "¿Qué implica que XP sea considerada una metodología 'ligera' en su aplicación práctica?",
+            "opciones": {
+                "a": "Que el equipo solo debe realizar las tareas estrictamente necesarias para aportar valor real al cliente.",
+                "b": "Que la documentación técnica se reduce a un esquema básico que se descarta tras finalizar el proyecto.",
+                "c": "Que el esfuerzo físico y mental requerido por los programadores es menor que en metodologías clásicas.",
+                "d": "Que el número de miembros del equipo no puede exceder de tres personas para evitar la burocracia interna."
+            },
+            "respuesta_correcta": "a",
+            "explicacion": "La ligereza en XP significa eliminar procesos innecesarios y enfocarse exclusivamente en actividades que generen valor."
+        },
+        {
+            "id": 9,
+            "pregunta": "¿Cómo se define el valor de la Sencillez dentro del marco intelectual de esta metodología?",
+            "opciones": {
+                "a": "Como la capacidad de diseñar sistemas genéricos que puedan adaptarse a cualquier necesidad futura previsible.",
+                "b": "Como el esfuerzo mental para resolver únicamente el problema actual sin añadir complejidad innecesaria.",
+                "c": "Como la eliminación de todas las pruebas unitarias que no sean críticas para el funcionamiento del sistema.",
+                "d": "Como la elección sistemática de las tecnologías más básicas disponibles en el mercado para evitar riesgos."
+            },
+            "respuesta_correcta": "b",
+            "explicacion": "La sencillez es el valor más intensivo porque requiere disciplina para no sobre-diseñar y centrarse en el hoy."
+        },
+        {
+            "id": 10,
+            "pregunta": "¿Cuál es la función del valor 'Feedback' cuando un proceso no produce los resultados esperados?",
+            "opciones": {
+                "a": "Justificar los retrasos ante el cliente basándose en la falta de precisión de los requisitos iniciales.",
+                "b": "Utilizar la información obtenida de la experiencia para realizar correcciones y acercarse a los objetivos.",
+                "c": "Reiniciar el ciclo de desarrollo desde cero para asegurar que no se arrastren errores de diseño previos.",
+                "d": "Incrementar el número de horas de trabajo hasta que los resultados encajen con la planificación original."
+            },
+            "respuesta_correcta": "b",
+            "explicacion": "El feedback es la herramienta de navegación que permite ajustar el rumbo del proyecto basándose en datos reales."
+        },
+        {
+            "id": 11,
+            "pregunta": "¿Qué utilidad tiene el 'Coraje' cuando el equipo detecta que una solución técnica es errónea?",
+            "opciones": {
+                "a": "Mantener la solución actual para no desperdiciar el tiempo invertido y cumplir con los plazos de entrega.",
+                "b": "Tener la valentía de descartar el código incorrecto y buscar una alternativa más simple y efectiva.",
+                "c": "Delegar la decisión final al cliente para que sea él quien asuma el riesgo de mantener o cambiar la solución.",
+                "d": "Ocultar el error mediante parches temporales hasta que el sistema sea sustituido por una versión nueva."
+            },
+            "respuesta_correcta": "b",
+            "explicacion": "El coraje implica actuar sobre lo que sabemos, incluso si eso significa admitir un error y rehacer el trabajo."
+        },
+        {
+            "id": 12,
+            "pregunta": "¿Por qué se afirma que el 'Respeto' es el valor que sustenta a todos los demás en XP?",
+            "opciones": {
+                "a": "Porque obliga a todos los miembros a aceptar las decisiones del arquitecto sin cuestionar su validez técnica.",
+                "b": "Porque sin el cuidado mutuo por el equipo y el proyecto, ninguna práctica técnica puede salvar el desarrollo.",
+                "c": "Porque garantiza que el cliente no interfiera en las decisiones internas del equipo durante las iteraciones.",
+                "d": "Porque establece una jerarquía clara basada en la experiencia que evita conflictos de opinión entre pares."
+            },
+            "respuesta_correcta": "b",
+            "explicacion": "Sin respeto, la comunicación falla, el coraje se ve como agresión y las prácticas pierden su sentido colaborativo."
+        },
+        {
+            "id": 13,
+            "pregunta": "Dentro del principio de 'Humanidad', ¿qué aspecto es crítico para mantener la seguridad básica?",
+            "opciones": {
+                "a": "La garantía de que el equipo tendrá acceso a las herramientas tecnológicas más modernas de la industria.",
+                "b": "La ausencia de amenazas físicas, hambre o miedo constante a la pérdida del empleo por errores técnicos.",
+                "c": "La posibilidad de elegir libremente el horario de entrada y salida de la oficina sin supervisión directa.",
+                "d": "El acceso a un fondo de bonificaciones económicas individuales basadas en el número de líneas escritas."
+            },
+            "respuesta_correcta": "b",
+            "explicacion": "El principio de humanidad reconoce necesidades básicas como la seguridad psicológica y física para la productividad."
+        },
+        {
+            "id": 14,
+            "pregunta": "Según el principio de 'Economía', ¿cuándo tiene el software su mayor valor financiero?",
+            "opciones": {
+                "a": "Cuando el coste de desarrollo inicial es lo suficientemente alto como para justificar su precio de venta.",
+                "b": "Cuando genera ingresos de forma temprana en el tiempo y retrasa sus gastos de mantenimiento futuro.",
+                "c": "Cuando se invierte gran cantidad de recursos en flexibilidad especulativa para necesidades del próximo año.",
+                "d": "Cuando el cliente paga la totalidad del contrato antes de que se inicie la primera fase de codificación."
+            },
+            "respuesta_correcta": "b",
+            "explicacion": "Debido al valor del dinero en el tiempo, es preferible ingresar pronto y gastar tarde (diseño incremental)."
+        },
+        {
+            "id": 15,
+            "pregunta": "¿Qué propone el principio de 'Beneficio Mutuo' respecto a la comunicación con futuros programadores?",
+            "opciones": {
+                "a": "Escribir manuales de usuario extensos que detallen cada posible fallo del sistema para evitar consultas.",
+                "b": "Realizar actividades que ayuden hoy al equipo y faciliten simultáneamente el mantenimiento en el futuro.",
+                "c": "Prohibir el cambio de nombres de variables para que el código se mantenga idéntico durante diez años.",
+                "d": "Cobrar un canon adicional por cada sesión de transferencia de conocimiento a los nuevos integrantes."
+            },
+            "respuesta_correcta": "b",
+            "explicacion": "Acciones como TDD y refactorización benefician al programador actual y al que vendrá después."
+        },
+        {
+            "id": 16,
+            "pregunta": "¿Cuál es la advertencia principal de XP sobre el principio de 'Similitud Propia'?",
+            "opciones": {
+                "a": "Que siempre se debe utilizar la misma estructura de base de datos en todos los proyectos de la empresa.",
+                "b": "Que copiar una estructura que funcionó en un contexto no garantiza su éxito en un entorno diferente.",
+                "c": "Que todos los miembros del equipo deben vestir de forma similar para fomentar el sentimiento de grupo.",
+                "d": "Que las pruebas unitarias deben tener exactamente la misma longitud que el código de producción probado."
+            },
+            "respuesta_correcta": "b",
+            "explicacion": "Aunque los patrones pueden ser similares, su efectividad depende de la validación en el contexto específico."
+        },
+        {
+            "id": 17,
+            "pregunta": "Bajo el principio de 'Mejora', ¿qué significado tiene la cita 'Lo perfecto es enemigo de lo bueno'?",
+            "opciones": {
+                "a": "Que es preferible entregar un software mediocre y con fallos antes que retrasar la fecha de lanzamiento.",
+                "b": "Que la excelencia se alcanza mediante el perfeccionamiento continuo y no esperando a tener el plan ideal.",
+                "c": "Que el equipo debe conformarse con los estándares mínimos de calidad para maximizar el margen de beneficio.",
+                "d": "Que el diseño de la arquitectura debe ser realizado por personal externo para evitar el apego emocional."
+            },
+            "respuesta_correcta": "b",
+            "explicacion": "XP prioriza la acción y la mejora incremental sobre el análisis parálisis de buscar la perfección inicial."
+        },
+        {
+            "id": 18,
+            "pregunta": "¿Por qué es esencial la 'Diversidad' en un equipo XP de alto rendimiento?",
+            "opciones": {
+                "a": "Para asegurar que haya suficientes opiniones contradictorias que retrasen las decisiones técnicas críticas.",
+                "b": "Para contar con variedad de perspectivas que permitan identificar problemas que un grupo homogéneo ignoraría.",
+                "c": "Para cumplir con las normativas legales de contratación inclusiva que exigen las grandes organizaciones.",
+                "d": "Para permitir que cada miembro se especialice en una única tecnología y no tenga que aprender otras áreas."
+            },
+            "respuesta_correcta": "b",
+            "explicacion": "Equipos con perfiles diversos son más eficientes resolviendo problemas complejos al evitar puntos ciegos comunes."
+        },
+        {
+            "id": 19,
+            "pregunta": "En la práctica de 'Reflexión', ¿qué indican emociones como el miedo o la ansiedad?",
+            "opciones": {
+                "a": "Que el programador no tiene la madurez necesaria para trabajar bajo las condiciones extremas de XP.",
+                "b": "Que existe una probabilidad alta de que algo negativo esté sucediendo en el proceso o en el código.",
+                "c": "Que el equipo necesita aumentar el consumo de cafeína para mantener el ritmo de entrega de la semana.",
+                "d": "Que el cliente no está satisfecho con el trato personal recibido durante la última reunión trimestral."
+            },
+            "respuesta_correcta": "b",
+            "explicacion": "XP valora las emociones como sensores tempranos de problemas técnicos o de dinámicas de equipo incorrectas."
+        },
+        {
+            "id": 20,
+            "pregunta": "¿Cómo interpreta XP el 'Fallo' cuando se prueban diferentes formas de implementar una historia?",
+            "opciones": {
+                "a": "Como una señal de incompetencia técnica que debe ser sancionada para evitar que se repita en el futuro.",
+                "b": "Como una oportunidad para adquirir conocimiento y descartar caminos incorrectos de forma rápida y segura.",
+                "c": "Como un gasto innecesario que debe evitarse mediante fases de análisis de diseño más largas y detalladas.",
+                "d": "Como una razón válida para solicitar al cliente una ampliación del presupuesto y del tiempo de entrega."
+            },
+            "respuesta_correcta": "b",
+            "explicacion": "Arriesgarse y fallar en entornos controlados es a menudo la forma más rápida de encontrar la solución correcta."
+        },
+        {
+            "id": 21,
+            "pregunta": "¿Cuál es la relación entre 'Calidad' y velocidad de entrega según este marco de trabajo?",
+            "opciones": {
+                "a": "Aumentar la calidad siempre ralentiza la entrega debido al tiempo extra dedicado a las pruebas unitarias.",
+                "b": "Mantener una calidad alta suele derivar en entregas más rápidas al reducir el retrabajo y los defectos.",
+                "c": "La calidad es una variable de control que puede reducirse voluntariamente para acelerar un lanzamiento.",
+                "d": "La calidad solo afecta al coste final del producto, pero no tiene impacto medible en los tiempos de desarrollo."
+            },
+            "respuesta_correcta": "b",
+            "explicacion": "La alta calidad previene el desperdicio de tiempo en correcciones posteriores, lo que acelera el flujo de valor."
+        },
+        {
+            "id": 22,
+            "pregunta": "¿Qué implica el principio de 'Aceptación de Responsabilidad' en la estimación de tareas?",
+            "opciones": {
+                "a": "Que el gestor de proyecto asigna la responsabilidad y el tiempo de ejecución de forma innegociable.",
+                "b": "Que la persona que acepta realizar el trabajo es la única autorizada para estimar el esfuerzo requerido.",
+                "c": "Que el equipo completo debe votar el tiempo de cada tarea y el resultado es obligatorio para el individuo.",
+                "d": "Que el cliente decide la duración de las tareas basándose en el valor de negocio que cada una representa."
+            },
+            "respuesta_correcta": "b",
+            "explicacion": "XP alinea autoridad con responsabilidad: quien hace el trabajo lo estima y se compromete con su calidad."
+        },
+        {
+            "id": 23,
+            "pregunta": "En la práctica de 'Sentarse Juntos', ¿qué se recomienda si el espacio físico abierto no es posible?",
+            "opciones": {
+                "a": "Cancelar el proyecto hasta que la empresa proporcione las instalaciones adecuadas para el equipo.",
+                "b": "Acordar horas específicas en áreas comunes para fomentar el tiempo cara a cara y la interacción humana.",
+                "c": "Utilizar herramientas de videoconferencia permanentes para simular la presencia física de los compañeros.",
+                "d": "Trabajar de forma aislada y compensar la falta de contacto con una documentación mucho más detallada."
+            },
+            "respuesta_correcta": "b",
+            "explicacion": "XP prioriza la interacción directa; ante limitaciones físicas, se deben buscar alternativas que maximicen el contacto."
+        },
+        {
+            "id": 24,
+            "pregunta": "¿Qué sugiere la práctica de 'Equipo Completo' sobre las personas con dedicación a tiempo parcial?",
+            "opciones": {
+                "a": "Que son ideales para proyectos cortos porque aportan una visión externa que no está viciada por el grupo.",
+                "b": "Que suponen un riesgo por el cambio de contexto y la falta de alineación con los objetivos del equipo.",
+                "c": "Que deben ser tratadas como consultores externos y no participar en las reuniones de planificación semanal.",
+                "d": "Que su productividad es superior al no verse afectados por las dinámicas sociales internas del equipo fijo."
+            },
+            "respuesta_correcta": "b",
+            "explicacion": "XP prefiere equipos cohesionados; la dedicación parcial rompe la dinámica y genera costes de cambio de contexto."
+        },
+        {
+            "id": 25,
+            "pregunta": "Según la práctica del 'Espacio de Trabajo Informativo', ¿qué debe ser evidente en 15 segundos?",
+            "opciones": {
+                "a": "La lista de cumpleaños y eventos sociales previstos por el equipo para el presente trimestre laboral.",
+                "b": "Una idea clara de cómo va el proyecto y cuáles son los problemas reales a los que se enfrenta el equipo.",
+                "c": "El organigrama detallado de la empresa y la posición jerárquica de cada persona presente en la sala.",
+                "d": "El manual de normas de seguridad y salud laboral que debe seguirse en caso de emergencia o incendio."
+            },
+            "respuesta_correcta": "b",
+            "explicacion": "El espacio debe ser un radiador de información del trabajo: estados, progresos y bloqueos visibles para todos."
+        },
+        {
+            "id": 26,
+            "pregunta": "¿Cuál es la consecuencia de ignorar la práctica de 'Trabajo con Energía'?",
+            "opciones": {
+                "a": "Un aumento inmediato de la velocidad de desarrollo al dedicar más horas nocturnas a la codificación.",
+                "b": "La desaprovechamiento de los días siguientes debido al agotamiento y la pérdida de capacidad de percepción.",
+                "c": "Un reconocimiento formal por parte de la dirección de la empresa debido al compromiso extremo mostrado.",
+                "d": "La eliminación de los errores de diseño al tener más tiempo disponible para revisar el código fuente escrito."
+            },
+            "respuesta_correcta": "b",
+            "explicacion": "El desarrollo requiere 'insight'; trabajar cansado es contraproducente porque genera errores y fatiga acumulada."
+        },
+        {
+            "id": 27,
+            "pregunta": "En 'Pair Programming', ¿cuál es una de las funciones clave del miembro que no está escribiendo?",
+            "opciones": {
+                "a": "Aprovechar el tiempo para responder correos electrónicos y planificar las tareas de la siguiente semana.",
+                "b": "Mantener al compañero centrado en la tarea, discutir refinamientos y clarificar ideas estratégicas.",
+                "c": "Vigilar que el compañero no utilice atajos de teclado prohibidos por el estándar de codificación del equipo.",
+                "d": "Escribir la documentación de usuario de forma simultánea mientras observa la lógica de la programación."
+            },
+            "respuesta_correcta": "b",
+            "explicacion": "La pareja actúa como revisor táctico y estratega, asegurando el foco y la calidad en tiempo real."
+        },
+        {
+            "id": 28,
+            "pregunta": "¿Por qué XP critica el uso del término 'Requisito' para definir las funcionalidades del sistema?",
+            "opciones": {
+                "a": "Porque es una palabra demasiado técnica que los clientes no logran comprender de forma sencilla.",
+                "b": "Porque tiene una connotación de permanencia y obligatoriedad que no se ajusta al cambio constante.",
+                "c": "Porque implica que todos los elementos solicitados tienen exactamente el mismo valor para el negocio.",
+                "d": "Porque sugiere que el equipo de desarrollo no tiene autoridad para sugerir mejoras en la funcionalidad."
+            },
+            "respuesta_correcta": "b",
+            "explicacion": "Las 'Historias' abrazan el cambio; los 'Requisitos' sugieren un contrato inamovible que ignora la evolución."
+        },
+        {
+            "id": 29,
+            "pregunta": "En la práctica de 'Historias', ¿qué revela la estimación temprana de las mismas?",
+            "opciones": {
+                "a": "La fecha exacta e inamovible en la que el sistema completo será entregado al cliente final.",
+                "b": "Un puente de comunicación entre la dificultad técnica y el valor de negocio para tomar decisiones.",
+                "c": "El número de programadores que deben ser despedidos si el tiempo estimado supera el presupuesto.",
+                "d": "La cantidad de líneas de código que el arquitecto permitirá escribir para cada funcionalidad específica."
+            },
+            "respuesta_correcta": "b",
+            "explicacion": "La estimación permite al negocio priorizar o descartar opciones basándose en el coste real de implementación."
+        },
+        {
+            "id": 30,
+            "pregunta": "¿Qué sucede en el 'Ciclo Semanal' si el miércoles es evidente que no se terminarán todas las historias?",
+            "opciones": {
+                "a": "Se cancelan los descansos y se trabaja el fin de semana para garantizar que se entrega el cien por cien.",
+                "b": "Se eligen las historias más importantes para completarlas totalmente y se descartan o aplazan las otras.",
+                "c": "Se entregan todas las historias a medio terminar indicando al cliente que se completarán la semana próxima.",
+                "d": "Se eliminan las pruebas automáticas que fallan para que el estado del proyecto aparezca como correcto."
+            },
+            "respuesta_correcta": "b",
+            "explicacion": "XP prioriza la terminación real y de calidad de lo más valioso frente a la entrega parcial de todo."
+        },
+        {
+            "id": 31,
+            "pregunta": "Dentro del 'Ciclo Trimestral', ¿cuál es uno de los objetivos principales de la planificación?",
+            "opciones": {
+                "a": "Asignar de forma individual todas las tareas que cada programador realizará durante los próximos noventa días.",
+                "b": "Identificar elementos limitadores externos al equipo y alinear el proyecto con los objetivos de la empresa.",
+                "c": "Fijar el diseño de la interfaz de usuario para que no pueda ser modificado hasta el final del trimestre actual.",
+                "d": "Calcular el número de errores que el equipo tiene permitido cometer antes de que se reduzca su salario anual."
+            },
+            "respuesta_correcta": "b",
+            "explicacion": "El ciclo trimestral busca la 'imagen global', corrigiendo desalineaciones con la organización y proveedores."
+        },
+        {
+            "id": 32,
+            "pregunta": "¿En qué consiste la práctica de 'Distensión' o 'Margen' (Slack) dentro de un plan?",
+            "opciones": {
+                "a": "En permitir que los programadores dediquen la mitad de su jornada laboral a proyectos personales no relacionados.",
+                "b": "En incluir tareas menores que pueden eliminarse si el tiempo es insuficiente para cumplir los compromisos.",
+                "c": "En alargar los plazos de entrega comunicados al cliente para trabajar con una presión mucho menor.",
+                "d": "En ignorar sistemáticamente las fechas de entrega acordadas en el contrato para priorizar la salud mental."
+            },
+            "respuesta_correcta": "b",
+            "explicacion": "El margen protege el compromiso del equipo ante imprevistos, asegurando que siempre se entregue lo prometido."
+        },
+        {
+            "id": 33,
+            "pregunta": "¿Qué se busca con la práctica de 'Construcción en 10 minutos'?",
+            "opciones": {
+                "a": "Obligar a los programadores a escribir código de forma más rápida para no superar el tiempo de compilación.",
+                "b": "Garantizar que el feedback sobre la integración sea frecuente al tener un proceso automatizado y ágil.",
+                "c": "Reducir el consumo eléctrico de los servidores al limitar el tiempo que pueden estar procesando datos.",
+                "d": "Asegurar que el cliente pueda ver una versión nueva del sistema cada diez minutos durante la jornada."
+            },
+            "respuesta_correcta": "b",
+            "explicacion": "Si la construcción es lenta, se hace menos; si es rápida, el equipo puede validar cambios continuamente."
+        },
+        {
+            "id": 34,
+            "pregunta": "Según la 'Integración Continua', ¿qué problema intenta resolver el enfoque 'Divide, Vence e Integra'?",
+            "opciones": {
+                "a": "La dificultad de gestionar equipos de más de cien personas trabajando en una misma base de código fuente.",
+                "b": "El riesgo de que la fase de integración sea impredecible y consuma más tiempo que la propia programación.",
+                "c": "La necesidad de dividir el presupuesto entre diferentes departamentos para evitar conflictos de intereses.",
+                "d": "El problema de que los programadores no quieran compartir sus algoritmos con el resto de sus compañeros."
+            },
+            "respuesta_correcta": "b",
+            "explicacion": "La integración tardía es un riesgo mayor; integrando cada pocas horas se minimizan los conflictos complejos."
+        },
+        {
+            "id": 35,
+            "pregunta": "¿Cuál es un beneficio directo de la práctica 'Test Primero' (TDD) respecto al diseño?",
+            "opciones": {
+                "a": "Que elimina la necesidad de contar con un arquitecto en el equipo al ser el código quien dicta el diseño.",
+                "b": "Que actúa como sensor: si una funcionalidad es difícil de probar, probablemente tiene un fallo de diseño.",
+                "c": "Que garantiza que el cien por cien de los requisitos del cliente se cumplan sin necesidad de reuniones.",
+                "d": "Que reduce el tamaño del código fuente al obligar a escribir solo las líneas que pasan la prueba actual."
+            },
+            "respuesta_correcta": "b",
+            "explicacion": "Un código acoplado o poco cohesionado es difícil de testear, alertando sobre la necesidad de refactorizar."
+        },
+        {
+            "id": 36,
+            "pregunta": "¿Qué política propone el 'Diseño Incremental' sobre la inversión diaria en arquitectura?",
+            "opciones": {
+                "a": "Realizar toda la inversión en diseño al inicio para evitar tener que modificar el sistema en el futuro.",
+                "b": "Mantener una inversión constante y proporcional a las necesidades reales que el sistema tiene cada día.",
+                "c": "Minimizar la inversión en diseño para maximizar el número de funcionalidades entregadas cada semana.",
+                "d": "Delegar el diseño a un equipo externo que no esté involucrado en la codificación diaria del proyecto."
+            },
+            "respuesta_correcta": "b",
+            "explicacion": "XP busca un diseño excelente para las necesidades de hoy, evolucionando mediante refactorización constante."
+        },
+        {
+            "id": 37,
+            "pregunta": "¿Por qué el 'Cliente Real Involucrado' es una práctica corolario y no primaria?",
+            "opciones": {
+                "a": "Porque los clientes reales suelen entorpecer el trabajo técnico de los programadores durante el ciclo semanal.",
+                "b": "Porque requiere que el equipo ya tenga madurez en prácticas de comunicación y entrega para ser efectiva.",
+                "c": "Porque no todos los proyectos disponen de un presupuesto suficiente para pagar la estancia del cliente.",
+                "d": "Porque el valor que aporta el cliente es secundario comparado con la calidad del código fuente escrito."
+            },
+            "respuesta_correcta": "b",
+            "explicacion": "Para que la involucración del cliente sea útil, el equipo debe ser capaz de procesar su feedback de forma ágil."
+        },
+        {
+            "id": 38,
+            "pregunta": "Ante la crítica de que un sistema adaptado a un cliente real no servirá para otros, ¿qué responde XP?",
+            "opciones": {
+                "a": "Que el software debe ser diseñado de forma tan abstracta que no resuelva el problema de nadie inicialmente.",
+                "b": "Que es mucho más sencillo generalizar un sistema exitoso que especializar uno que no funciona para nadie.",
+                "c": "Que la empresa debe cobrar un suplemento por generalizar el software una vez que el primer cliente esté satisfecho.",
+                "d": "Que los clientes reales siempre tienen las mismas necesidades independientemente del sector de su negocio."
+            },
+            "respuesta_correcta": "b",
+            "explicacion": "Un éxito real es una base sólida; un diseño genérico 'teórico' a menudo falla para todos los usuarios."
+        },
+        {
+            "id": 39,
+            "pregunta": "Según la práctica de 'Despliegue Incremental', ¿cuál es el riesgo de un despliegue abrupto?",
+            "opciones": {
+                "a": "Que el equipo se sienta demasiado relajado al terminar el proyecto y no quiera empezar el siguiente de inmediato.",
+                "b": "Que los fallos críticos del sistema nuevo detengan por completo la operación del negocio sin margen de maniobra.",
+                "c": "Que el cliente no aprecie el esfuerzo realizado al ver todas las funcionalidades entregadas de una sola vez.",
+                "d": "Que el coste de formación de los usuarios sea menor al no tener que aprender el sistema de forma gradual."
+            },
+            "respuesta_correcta": "b",
+            "explicacion": "Los despliegues de 'un día para otro' en sistemas grandes son extremadamente arriesgados y propensos al desastre."
+        },
+        {
+            "id": 40,
+            "pregunta": "¿Qué se entiende por 'Falsa Micro-eficiencia' en la gestión de equipos de programación?",
+            "opciones": {
+                "a": "Optimizar el uso de procesadores de los servidores para que nunca estén por debajo del noventa por ciento.",
+                "b": "Intentar que cada persona esté ocupada siempre, ignorando los costes de adaptación y pérdida de contexto.",
+                "c": "Reducir el tamaño de las pantallas de los ordenadores para ahorrar espacio físico en la sala de trabajo.",
+                "d": "Utilizar herramientas de seguimiento que miden el rendimiento de los programadores por pulsaciones de teclado."
+            },
+            "respuesta_correcta": "b",
+            "explicacion": "Tratar a personas como 'recursos' intercambiables ignora el valor de las relaciones y el conocimiento acumulado."
+        },
+        {
+            "id": 41,
+            "pregunta": "¿Cuál es el objetivo de la práctica de 'Reducción de Equipos' cuando la competencia mejora?",
+            "opciones": {
+                "a": "Reducir los costes salariales de la empresa despidiendo a los miembros que se han vuelto más eficientes.",
+                "b": "Liberar personas capacitadas para formar nuevos equipos y crear más valor global en la organización.",
+                "c": "Aumentar la carga de trabajo del equipo restante hasta que su nivel de estrés vuelva a ser el inicial.",
+                "d": "Evitar que los programadores tengan tiempo libre que puedan dedicar a mejorar sus habilidades personales."
+            },
+            "respuesta_correcta": "b",
+            "explicacion": "Un equipo maduro puede hacer lo mismo con menos gente, permitiendo que la organización crezca orgánicamente."
+        },
+        {
+            "id": 42,
+            "pregunta": "En el 'Análisis de Causas Raíz', ¿cuál es el segundo paso tras reproducir el fallo a nivel de sistema?",
+            "opciones": {
+                "a": "Identificar al programador responsable del error para que realice la corrección de forma individual e inmediata.",
+                "b": "Escribir una prueba de unidad con el alcance más pequeño posible que logre reproducir el defecto detectado.",
+                "c": "Pedir al cliente que redacte un nuevo documento de requisitos que aclare el comportamiento esperado del sistema.",
+                "d": "Reiniciar todos los servicios del servidor de producción para asegurar que no se trata de un error de memoria."
+            },
+            "respuesta_correcta": "b",
+            "explicacion": "XP busca localizar el error en la unidad más pequeña posible antes de proceder a la corrección y aprendizaje."
+        },
+        {
+            "id": 43,
+            "pregunta": "¿Qué técnica de gestión propone XP para encontrar la raíz de un problema humano o de proceso?",
+            "opciones": {
+                "a": "La técnica de los cinco porqués para profundizar más allá del síntoma técnico inicial del defecto.",
+                "b": "La evaluación de rendimiento trimestral basada en el número de bugs introducidos por cada desarrollador.",
+                "c": "La realización de una auditoría externa que revise todos los correos electrónicos enviados durante la semana.",
+                "d": "El uso de diagramas de flujo que detallen cada movimiento realizado por el equipo durante la iteración."
+            },
+            "respuesta_correcta": "a",
+            "explicacion": "Preguntar sucesivamente 'por qué' permite llegar a causas organizativas o de hábito que causaron el fallo técnico."
+        },
+        {
+            "id": 44,
+            "pregunta": "¿Cuál es la premisa fundamental de la práctica de 'Código Compartido'?",
+            "opciones": {
+                "a": "Que el código fuente debe ser propiedad exclusiva de la empresa y no de los programadores que lo escriben.",
+                "b": "Que cualquier miembro del equipo tiene la autoridad para mejorar cualquier parte del sistema en cualquier momento.",
+                "c": "Que todos los desarrolladores deben utilizar la misma contraseña para acceder a los servidores de desarrollo.",
+                "d": "Que cada función del código debe ser revisada por al menos tres departamentos diferentes antes de integrarse."
+            },
+            "respuesta_correcta": "b",
+            "explicacion": "Fomenta la responsabilidad colectiva y evita silos de conocimiento que bloquean el progreso del proyecto."
+        },
+        {
+            "id": 45,
+            "pregunta": "Según XP, ¿cuáles son los únicos artefactos permanentes que realmente aportan valor?",
+            "opciones": {
+                "a": "El manual de procedimientos de la empresa y el plan de marketing detallado para el próximo año fiscal.",
+                "b": "El código fuente del sistema y las pruebas automatizadas que garantizan su correcto funcionamiento.",
+                "c": "Los informes de estado semanales y las actas de las reuniones de planificación firmadas por el cliente.",
+                "d": "El contrato legal de servicios y las facturas de compra de los equipos informáticos utilizados por el equipo."
+            },
+            "respuesta_correcta": "b",
+            "explicacion": "Solo el código que funciona y los tests que lo validan son activos reales de valor para el negocio."
+        },
+        {
+            "id": 46,
+            "pregunta": "¿Qué riesgo asume un equipo que mantiene múltiples ramas de código para diferentes versiones?",
+            "opciones": {
+                "a": "Que el servidor de base de datos se bloquee al intentar gestionar tantos archivos de configuración diferentes.",
+                "b": "Un gasto masivo de tiempo replicando correcciones de errores en todas las ramas activas del sistema.",
+                "c": "Que el cliente final se confunda al recibir actualizaciones demasiado frecuentes para su versión específica.",
+                "d": "La imposibilidad de utilizar lenguajes de programación modernos que no soportan el trabajo con ramas."
+            },
+            "respuesta_correcta": "b",
+            "explicacion": "La base de código única simplifica el mantenimiento; las ramas múltiples son costosas y propensas a errores de réplica."
+        },
+        {
+            "id": 47,
+            "pregunta": "¿Por qué XP prefiere realizar doce entregas anuales frente a una sola entrega con parches?",
+            "opciones": {
+                "a": "Porque permite cobrar doce facturas diferentes en lugar de una sola al final del año de desarrollo.",
+                "b": "Porque reduce el riesgo acumulado y proporciona feedback constante sobre la realidad de producción.",
+                "c": "Porque así los programadores pueden celebrar doce fiestas de lanzamiento y mantener alta la motivación.",
+                "d": "Porque los sistemas operativos modernos no permiten la instalación de más de un parche de seguridad al mes."
+            },
+            "respuesta_correcta": "b",
+            "explicacion": "Entregas pequeñas y frecuentes validan el proceso y el producto de forma continua, minimizando desastres."
+        },
+        {
+            "id": 48,
+            "pregunta": "¿Qué variables se fijan en un 'Contrato de Alcance Negociado' según XP?",
+            "opciones": {
+                "a": "Solo el alcance exacto de cada botón, dejando el tiempo y el coste como variables totalmente abiertas.",
+                "b": "El tiempo, el coste y la calidad, permitiendo que el alcance sea el elemento que se negocia continuamente.",
+                "c": "El lenguaje de programación y el nombre de los servidores, sin definir fechas ni presupuestos de ejecución.",
+                "d": "La identidad de los programadores y su salario horario, sin especificar qué funcionalidades serán entregadas."
+            },
+            "respuesta_correcta": "b",
+            "explicacion": "Al fijar lo demás, el alcance se prioriza para entregar siempre lo más valioso dentro de los límites."
+        },
+        {
+            "id": 49,
+            "pregunta": "En el modelo de 'Pago por Uso', ¿qué elemento se considera el feedback definitivo?",
+            "opciones": {
+                "a": "La cantidad de correos electrónicos de felicitación enviados por los usuarios finales del sistema.",
+                "b": "El flujo de dinero real que entra en el negocio cada vez que se utiliza una funcionalidad del software.",
+                "c": "El número de líneas de código que el equipo ha logrado borrar sin afectar al funcionamiento del sistema.",
+                "d": "La opinión subjetiva de los ejecutivos de la empresa durante la cena de gala de final de trimestre."
+            },
+            "respuesta_correcta": "b",
+            "explicacion": "El dinero es concreto y medible; si el cliente paga por usarlo, es la prueba última de que el software aporta valor."
+        },
+        {
+            "id": 50,
+            "pregunta": "¿Cuál es la función principal de los 'Testers' integrados en un equipo XP?",
+            "opciones": {
+                "a": "Realizar pruebas manuales de regresión durante toda la noche antes de cada lanzamiento a producción.",
+                "b": "Ayudar a los clientes a definir criterios de aceptación y escribir pruebas de sistema antes de codificar.",
+                "c": "Sancionar a los programadores que introducen fallos en el código para asegurar que no se repitan.",
+                "d": "Escribir la documentación técnica del sistema basándose en los errores que han encontrado durante el mes."
+            },
+            "respuesta_correcta": "b",
+            "explicacion": "Los testers en XP son proactivos y colaboran con el cliente para asegurar que el desarrollo cumpla objetivos."
+        },
+        {
+            "id": 51,
+            "pregunta": "¿Qué labor desempeñan los 'Diseñadores de Interacción' respecto a los usuarios finales?",
+            "opciones": {
+                "a": "Dibujar los iconos de la aplicación utilizando herramientas gráficas avanzadas de última generación.",
+                "b": "Gestionar las reticencias de los usuarios y evaluar el uso real del sistema para encontrar oportunidades.",
+                "c": "Decidir qué colores debe tener la interfaz basándose exclusivamente en sus gustos personales artísticos.",
+                "d": "Instalar el software en los equipos de los usuarios y darles un curso de formación de veinte horas."
+            },
+            "respuesta_correcta": "b",
+            "explicacion": "Se enfocan en la experiencia del usuario y en que las historias reflejen necesidades reales de interacción."
+        },
+        {
+            "id": 52,
+            "pregunta": "¿Cómo asegura un 'Arquitecto' XP que sus decisiones técnicas sean realistas?",
+            "opciones": {
+                "a": "Consultando manuales teóricos de ingeniería de software escritos por expertos externos a la organización.",
+                "b": "Participando activamente en la codificación de historias para vivir las consecuencias de sus decisiones.",
+                "c": "Obligando al equipo a utilizar únicamente las tecnologías con las que él se siente más cómodo trabajando.",
+                "d": "Evitando el contacto con el código para mantener una visión objetiva y abstracta del sistema completo."
+            },
+            "respuesta_correcta": "b",
+            "explicacion": "En XP, quien decide debe ejecutar; el arquitecto programa para alinear autoridad y responsabilidad."
+        },
+        {
+            "id": 53,
+            "pregunta": "¿Cuál es el rol del 'Gestor de Proyecto' en la comunicación del equipo?",
+            "opciones": {
+                "a": "Actuar como el único punto de contacto autorizado para evitar que los programadores hablen con el cliente.",
+                "b": "Facilitar la conexión entre las personas adecuadas en lugar de convertirse en un cuello de botella informativo.",
+                "c": "Redactar informes diarios de actividad que detallen cada minuto del tiempo trabajado por los desarrolladores.",
+                "d": "Decidir qué información se oculta al cliente para evitar que este pierda la confianza en la capacidad del equipo."
+            },
+            "respuesta_correcta": "b",
+            "explicacion": "El gestor es un facilitador que elimina obstáculos y promueve la fluidez comunicativa en el equipo."
+        },
+        {
+            "id": 54,
+            "pregunta": "¿Qué responsabilidad tienen los 'Ejecutivos' para con el equipo de trabajo?",
+            "opciones": {
+                "a": "Definir los algoritmos matemáticos que se utilizarán en las partes más críticas del sistema informático.",
+                "b": "Proveer coraje, confianza y respaldo institucional, manteniendo claros los objetivos globales del negocio.",
+                "c": "Controlar el uso de internet de los programadores para asegurar que no se distraigan durante la jornada.",
+                "d": "Elegir las marcas de los teclados y ratones que se utilizarán en la sala de desarrollo para ahorrar costes."
+            },
+            "respuesta_correcta": "b",
+            "explicacion": "Los ejecutivos dan el soporte estratégico y el entorno de seguridad necesario para que XP funcione."
+        },
+        {
+            "id": 55,
+            "pregunta": "¿Cuál es el momento ideal para que los 'Escritores Técnicos' realicen su labor?",
+            "opciones": {
+                "a": "Un año después del lanzamiento del producto para asegurar que todas las funcionalidades sean estables.",
+                "b": "Simultáneamente a la implementación de la funcionalidad para obtener feedback temprano del sistema.",
+                "c": "Únicamente si el cliente presenta una queja formal sobre la dificultad de uso de la aplicación entregada.",
+                "d": "Al inicio del proyecto, basándose en lo que ellos imaginan que será el sistema una vez terminado."
+            },
+            "respuesta_correcta": "b",
+            "explicacion": "Documentar junto al desarrollo previene la obsolescencia de los manuales y mejora la usabilidad."
+        },
+        {
+            "id": 56,
+            "pregunta": "¿Por qué XP prefiere contratar programadores con buenas habilidades sociales?",
+            "opciones": {
+                "a": "Porque así pueden convencer al cliente de que acepte fallos en el sistema sin presentar reclamaciones.",
+                "b": "Porque la metodología es intensiva en colaboración y requiere una comunicación fluida y respetuosa.",
+                "c": "Porque los programadores con habilidades sociales aceptan salarios más bajos que los genios solitarios.",
+                "d": "Porque son mejores redactando documentos de marketing y ventas para los productos que desarrollan."
+            },
+            "respuesta_correcta": "b",
+            "explicacion": "XP es un 'negocio de personas'; el talento técnico es inútil si no se puede integrar en el equipo cooperativo."
+        },
+        {
+            "id": 57,
+            "pregunta": "Respecto a RRHH, ¿qué conflicto plantean las evaluaciones de rendimiento individuales?",
+            "opciones": {
+                "a": "Que son demasiado laboriosas de realizar para los gestores que deben supervisar a muchos empleados.",
+                "b": "Que chocan con la naturaleza colectiva de prácticas como el 'pair programming' y el éxito del equipo.",
+                "c": "Que los programadores se sienten ofendidos si alguien revisa su código para ponerles una nota anual.",
+                "d": "Que no permiten comparar el rendimiento de personas que utilizan lenguajes de programación diferentes."
+            },
+            "respuesta_correcta": "b",
+            "explicacion": "XP fomenta logros compartidos; evaluar individuos desincentiva la colaboración y el apoyo mutuo."
+        },
+        {
+            "id": 58,
+            "pregunta": "¿Qué función cumplen los roles fijos cuando un equipo está empezando con XP?",
+            "opciones": {
+                "a": "Establecer una dictadura técnica que impida que los novatos cometan cualquier error durante el primer mes.",
+                "b": "Ayudar a aprender nuevos hábitos y responsabilidades antes de que la madurez permita flexibilizarlos.",
+                "c": "Garantizar que nadie aprenda las habilidades de los demás para mantener la especialización interna.",
+                "d": "Permitir que el gestor de proyecto identifique fácilmente a quién culpar en caso de retraso en la entrega."
+            },
+            "respuesta_correcta": "b",
+            "explicacion": "La estructura inicial es pedagógica; con el tiempo, los límites de los roles se vuelven más fluidos."
+        },
+        {
+            "id": 59,
+            "pregunta": "¿Qué se busca evitar con la 'Fábrica de Salchichas' en la relación con el cliente?",
+            "opciones": {
+                "a": "Que el cliente traiga comida a la oficina para evitar distracciones durante las horas de programación intensa.",
+                "b": "Ocultar el caos del desarrollo por miedo a perder la confianza, cuando la transparencia es más efectiva.",
+                "c": "Que el equipo de desarrollo pierda tiempo explicando términos técnicos complejos a personas de negocio.",
+                "d": "La fabricación de hardware dentro de una empresa que se dedica exclusivamente al desarrollo de software."
+            },
+            "respuesta_correcta": "b",
+            "explicacion": "XP apuesta por la honestidad; el cliente suele intuir el estado real y la verdad fortalece la relación."
+        },
+        {
+            "id": 60,
+            "pregunta": "Bajo la práctica de 'Despliegue Incremental', ¿qué es un 'Cimiento Temporal'?",
+            "opciones": {
+                "a": "Un contrato de alquiler de oficinas de corta duración hasta que el proyecto sea rentable para la empresa.",
+                "b": "Mecanismos técnicos o de proceso para que el sistema nuevo y el antiguo coexistan de forma segura.",
+                "c": "Un lenguaje de programación que solo se utiliza durante las primeras dos semanas de desarrollo inicial.",
+                "d": "Un equipo de programadores junior que son contratados solo para realizar las pruebas más básicas del sistema."
+            },
+            "respuesta_correcta": "b",
+            "explicacion": "Son puentes necesarios para transicionar de sistemas legacy a nuevos sin riesgos de corte abrupto."
+        },
+        {
+            "id": 61,
+            "pregunta": "¿Qué ocurre si un experto dicta cómo trabajar pero no comparte las consecuencias de sus decisiones?",
+            "opciones": {
+                "a": "El equipo se vuelve más eficiente al seguir las instrucciones de alguien con una visión externa y objetiva.",
+                "b": "Se produce un desbalance entre autoridad y responsabilidad que perjudica la motivación y la calidad final.",
+                "c": "El proyecto tiene más posibilidades de éxito al estar guiado por estándares internacionales de ingeniería.",
+                "d": "La dirección de la empresa ahorra costes al no tener que involucrar a los programadores en decisiones de diseño."
+            },
+            "respuesta_correcta": "b",
+            "explicacion": "XP exige que quien tiene la autoridad para decidir asuma la responsabilidad del resultado obtenido."
+        },
+        {
+            "id": 62,
+            "pregunta": "¿Por qué XP prefiere un programador competente con habilidades sociales frente a un genio solitario?",
+            "opciones": {
+                "a": "Porque el genio solitario suele cobrar mucho más y no es rentable para proyectos de tamaño medio.",
+                "b": "Porque la colaboración y el pair programming son esenciales para la fluidez y la calidad del sistema.",
+                "c": "Porque los programadores competentes suelen ser más jóvenes y tienen más energía para trabajar de noche.",
+                "d": "Porque las habilidades sociales permiten escribir manuales de usuario de una forma mucho más literaria."
+            },
+            "respuesta_correcta": "b",
+            "explicacion": "XP es una metodología de equipo; la genialidad individual aislada bloquea la transferencia de conocimiento."
+        },
+        {
+            "id": 63,
+            "pregunta": "¿Qué beneficio aporta el 'Análisis de Causas Raíz' a la satisfacción del cliente?",
+            "opciones": {
+                "a": "Le permite conocer el nombre exacto de la persona que cometió el error para pedir su sustitución inmediata.",
+                "b": "Demuestra que el equipo no solo corrige síntomas, sino que mejora procesos para evitar fallos futuros.",
+                "c": "Reduce el coste de la factura mensual al no cobrar las horas dedicadas a la investigación de los defectos.",
+                "d": "Garantiza que el software nunca volverá a tener ningún tipo de error técnico durante toda su vida útil."
+            },
+            "respuesta_correcta": "b",
+            "explicacion": "Un equipo que aprende de sus fallos proyecta profesionalidad y compromiso con la excelencia a largo plazo."
+        },
+        {
+            "id": 64,
+            "pregunta": "En un entorno XP, ¿quién es responsable de que una historia esté diseñada, codificada y probada?",
+            "opciones": {
+                "a": "El gestor de proyecto, que supervisa cada línea de código escrita por los diferentes pares de programadores.",
+                "b": "La persona o pareja que acepta la responsabilidad de realizar dicha historia durante el ciclo semanal.",
+                "c": "El arquitecto jefe, que debe revisar y validar cada test antes de que el código se integre en la rama principal.",
+                "d": "El cliente, ya que es él quien definió la historia y conoce mejor que nadie el resultado que espera obtener."
+            },
+            "respuesta_correcta": "b",
+            "explicacion": "La responsabilidad en XP es integral: quien acepta la tarea, se encarga de todo su ciclo de vida técnico."
+        },
+        {
+            "id": 65,
+            "pregunta": "¿Qué significa que 'Perfecto' sea un verbo y no un adjetivo en el contexto de XP?",
+            "opciones": {
+                "a": "Que no existe el diseño ideal y que el equipo debe trabajar cada día en perfeccionar lo que ya tiene.",
+                "b": "Que los programadores deben ser perfectos en su comportamiento gramatical al escribir comentarios en el código.",
+                "c": "Que el cliente tiene la obligación de perfeccionar sus requisitos antes de entregarlos al equipo de desarrollo.",
+                "d": "Que las herramientas de compilación deben estar configuradas para no permitir ningún aviso de advertencia menor."
+            },
+            "respuesta_correcta": "a",
+            "explicacion": "XP rechaza la perfección estática y abraza la mejora continua como una acción constante del equipo."
+        },
+        {
+            "id": 66,
+            "pregunta": "¿Cuál es la labor del 'Gestor de Producto' cuando el equipo está sobrecargado de tareas?",
+            "opciones": {
+                "a": "Aumentar la jornada laboral de todos los miembros para asegurar que no se retrasa ninguna funcionalidad.",
+                "b": "Priorizar las historias más valiosas y adaptar el alcance a la realidad de la capacidad actual del equipo.",
+                "c": "Contratar inmediatamente a nuevos programadores temporales para ayudar en las tareas de codificación simple.",
+                "d": "Ignorar la sobrecarga y mantener la presión sobre el equipo para que aprendan a gestionar mejor su tiempo."
+            },
+            "respuesta_correcta": "b",
+            "explicacion": "Su papel es de puente de negocio: asegurar que se hace lo más importante con los recursos que se tienen."
+        },
+        {
+            "id": 67,
+            "pregunta": "¿Qué impacto tiene la 'Reducción de Estándares de Calidad' según la metodología?",
+            "opciones": {
+                "a": "Una mejora sustancial en la moral de los programadores al tener menos presión sobre la perfección del código.",
+                "b": "Resultados menos predecibles y una pérdida de la sensación de orgullo por el trabajo bien realizado.",
+                "c": "Un ahorro económico significativo que permite a la empresa invertir más dinero en campañas publicitarias.",
+                "d": "Una aceleración técnica que permite entregar el doble de funcionalidades en la mitad del tiempo previsto."
+            },
+            "respuesta_correcta": "b",
+            "explicacion": "La baja calidad es un falso atajo que genera caos e incertidumbre, destruyendo la predictibilidad del proyecto."
+        },
+        {
+            "id": 68,
+            "pregunta": "¿Por qué se recomienda que los equipos se dividan al superar los 15 miembros?",
+            "opciones": {
+                "a": "Porque las leyes de seguridad laboral impiden que más de quince personas compartan el mismo espacio de café.",
+                "b": "Porque la cohesión y el sentimiento de equipo se diluyen, dificultando la comunicación y el apoyo mutuo.",
+                "c": "Porque el coste de las licencias del software de desarrollo se vuelve exponencial a partir de ese número.",
+                "d": "Porque los gestores de proyecto no pueden recordar los nombres de más de quince personas simultáneamente."
+            },
+            "respuesta_correcta": "b",
+            "explicacion": "Grupos demasiado grandes pierden la agilidad y las relaciones personales que sustentan los valores de XP."
+        },
+        {
+            "id": 69,
+            "pregunta": "En el contexto de la 'Semana Geek', ¿cuál es un objetivo primordial?",
+            "opciones": {
+                "a": "Organizar torneos de videojuegos para que los programadores se relajen tras un trimestre de trabajo duro.",
+                "b": "Explorar nuevas tecnologías y probar ideas innovadoras que puedan aportar valor futuro al producto.",
+                "c": "Realizar la limpieza profunda de los servidores y del equipamiento físico de la sala de desarrollo del equipo.",
+                "d": "Permitir que el departamento de marketing pruebe el software para detectar fallos estéticos en la interfaz."
+            },
+            "respuesta_correcta": "b",
+            "explicacion": "Es un tiempo de inversión en innovación y aprendizaje fuera de la presión del flujo de historias semanal."
+        },
+        {
+            "id": 70,
+            "pregunta": "¿Qué implica que la 'Responsabilidad solo pueda ser aceptada'?",
+            "opciones": {
+                "a": "Que el gestor tiene el poder de obligar a cualquier programador a ser responsable de un fallo ajeno.",
+                "b": "Que el compromiso real nace de la decisión voluntaria de la persona de hacerse cargo de una tarea.",
+                "c": "Que el cliente debe firmar un documento donde acepta la responsabilidad de los errores del programa.",
+                "d": "Que las leyes del país determinan quién es el responsable civil de los daños causados por el software."
+            },
+            "respuesta_correcta": "b",
+            "explicacion": "XP respeta la autonomía del individuo; la responsabilidad impuesta es falsa y no genera compromiso real."
+        },
+        {
+            "id": 71,
+            "pregunta": "¿Por qué el uso de 'Fichas Físicas' en una pared es más efectivo que una versión digital?",
+            "opciones": {
+                "a": "Porque el papel es mucho más barato que las licencias de software de gestión de proyectos comerciales.",
+                "b": "Porque fomenta conversaciones visuales y tangibles en un espacio de paso frecuente para todo el equipo.",
+                "c": "Porque los archivos digitales pueden borrarse por accidente y las fichas de papel son indestructibles.",
+                "d": "Porque el cliente prefiere tocar el papel para sentir que el proyecto está avanzando de forma física real."
+            },
+            "respuesta_correcta": "b",
+            "explicacion": "Lo físico es ineludible y actúa como radiador de información constante, facilitando el feedback visual."
+        },
+        {
+            "id": 72,
+            "pregunta": "En el principio de 'Humanidad', ¿qué se entiende por 'Crecimiento'?",
+            "opciones": {
+                "a": "El aumento constante del número de empleados de la empresa para dominar el mercado internacional.",
+                "b": "La oportunidad de cada miembro del equipo de mejorar sus habilidades técnicas y sus perspectivas personales.",
+                "c": "El crecimiento económico del salario base de los programadores cada vez que terminan un proyecto con éxito.",
+                "d": "La expansión del código fuente del sistema hasta alcanzar un millón de líneas de instrucciones ejecutables."
+            },
+            "respuesta_correcta": "b",
+            "explicacion": "El software es humano; si las personas no crecen y aprenden, el proyecto se estanca y pierde calidad."
+        },
+        {
+            "id": 73,
+            "pregunta": "¿Qué problema intenta evitar la práctica de 'Base de Código Única'?",
+            "opciones": {
+                "a": "Que el equipo de desarrollo utilice diferentes lenguajes de programación para una misma funcionalidad del sistema.",
+                "b": "El desaprovechamiento de tiempo replicando correcciones de errores en múltiples ramas de versiones activas.",
+                "c": "Que el cliente tenga que pagar por cada línea de código que el equipo escribe durante la iteración semanal.",
+                "d": "La necesidad de comprar más discos duros para almacenar las diferentes copias de seguridad del proyecto."
+            },
+            "respuesta_correcta": "b",
+            "explicacion": "Mantener versiones separadas es una pesadilla de mantenimiento que genera inconsistencias y errores graves."
+        },
+        {
+            "id": 74,
+            "pregunta": "¿Cuál es la actitud de un 'Equipo XP Maduro' respecto a los roles internos?",
+            "opciones": {
+                "a": "Mantener una distinción rígida y jerárquica para asegurar que nadie realice tareas que no le corresponden.",
+                "b": "Flexibilizar los roles para que todos contribuyan de la mejor forma posible según las necesidades del momento.",
+                "c": "Eliminar por completo todos los nombres de los cargos para que nadie sepa quién tiene más autoridad técnica.",
+                "d": "Contratar a un consultor externo que decida los roles nuevos del equipo cada vez que empieza un trimestre."
+            },
+            "respuesta_correcta": "b",
+            "explicacion": "La madurez permite que los límites se difuminen en favor de la eficiencia colectiva y el apoyo mutuo."
+        },
+        {
+            "id": 75,
+            "pregunta": "¿Qué se busca lograr con los 'Contratos de Corta Duración' en XP?",
+            "opciones": {
+                "a": "Poder despedir al equipo de desarrollo con mayor facilidad si el cliente decide cambiar de opinión pronto.",
+                "b": "Reducir el riesgo global al permitir evaluaciones frecuentes y ajustes en la dirección del proyecto contratado.",
+                "c": "Aumentar los costes administrativos del proyecto al tener que firmar documentos nuevos cada dos semanas.",
+                "d": "Evitar que los programadores se sientan demasiado cómodos y dejen de esforzarse al máximo en cada entrega."
+            },
+            "respuesta_correcta": "b",
+            "explicacion": "Los contratos cortos alinean los intereses de ambas partes y permiten pivotar sin costes legales catastróficos."
+        }
+    ]
+}

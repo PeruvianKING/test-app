@@ -89,7 +89,7 @@ const TestListView = ({
                         <div className="bg-blue-50 border border-blue-200 rounded-lg p-4 mb-4 text-sm text-left">
                             <p className="font-semibold text-blue-900 mb-2">📁 Para cargar tests automáticamente:</p>
                             <ol className="list-decimal list-inside space-y-1 text-blue-800">
-                                <li>Asegúrate de que tus JSON están en <code className="bg-blue-100 px-2 py-0.5 rounded">src/tests/{carpetaActual}/</code></li>
+                                <li>Asegúrate de que tus JSON están en <code className="bg-blue-100 px-2 py-0.5 rounded">src/data/{carpetaActual}/</code></li>
                             </ol>
                         </div>
                         <p className="text-sm text-gray-400">O usa el botón de arriba para añadir tests manualmente</p>

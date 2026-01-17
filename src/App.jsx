@@ -18,13 +18,13 @@ const QuizSystem = () => {
       try {
         setCargandoMeta(true);
         // Cargar solo las referencias a los archivos (lazy)
-        const archivos = import.meta.glob('./tests/**/*.json');
+        const archivos = import.meta.glob('./data/**/*.json');
         setRawTestModules(archivos);
 
         const estructuraInicial = {};
 
         Object.keys(archivos).forEach(ruta => {
-          const match = ruta.match(/\.\/tests\/([^\/]+)\//);
+          const match = ruta.match(/\.\/data\/([^\/]+)\//);
           if (match) {
             const nombreCarpeta = match[1];
             if (!estructuraInicial[nombreCarpeta]) {

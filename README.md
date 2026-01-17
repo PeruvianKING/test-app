@@ -6,7 +6,7 @@
 
 Un sistema de evaluación moderno, interactivo y dinámico diseñado para la gestión y ejecución de tests automatizados.
 
-[Visita nuestra web](https://peruvianking.com)
+[Visita la web para usar la app](https://peruvianking.com)
 
 ## Características Principales
 

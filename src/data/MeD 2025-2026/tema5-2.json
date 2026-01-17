@@ -1,0 +1,906 @@
+{
+    "titulo": "TEMA 5 - Kanban B",
+    "descripcion": "Examen exhaustivo de 75 preguntas diseñado para evaluar el conocimiento profundo sobre los principios, métricas, herramientas y prácticas del sistema Kanban basándose en el material académico proporcionado.",
+    "examen_automatizacion": [
+        {
+            "id": 1,
+            "pregunta": "¿Cuál es el significado etimológico de la palabra japonesa Kanban y su función técnica original?",
+            "opciones": {
+                "a": "Significa 'tarjeta visual' y funciona como una señal para gestionar la carga de trabajo.",
+                "b": "Significa 'flujo continuo' y funciona como un método para acelerar la entrega de software.",
+                "c": "Significa 'tablero de mando' y funciona como una herramienta de supervisión de empleados.",
+                "d": "Significa 'mejora del valor' y funciona como un estándar de calidad para la manufactura."
+            },
+            "respuesta_correcta": "a",
+            "explicacion": "El término deriva de 'kan' (visual) y 'ban' (tarjeta), utilizándose para gestionar la carga mediante señales visuales."
+        },
+        {
+            "id": 2,
+            "pregunta": "¿Cómo se define técnicamente la relación entre Kanban y el desarrollo ágil según las fuentes?",
+            "opciones": {
+                "a": "Es una metodología ágil prescriptiva que sustituye completamente a marcos como Scrum o XP.",
+                "b": "Es un enfoque de gestión de flujo compatible con los valores ágiles pero no es una metodología.",
+                "c": "Es una herramienta de visualización que contradice los principios de flexibilidad del manifiesto.",
+                "d": "Es un marco de trabajo rígido que requiere iteraciones de tiempo fijo para ser funcional y ágil."
+            },
+            "respuesta_correcta": "b",
+            "explicacion": "Kanban es un sistema visual y enfoque de gestión que se alinea con la agilidad sin ser una metodología formalizada stricto sensu."
+        },
+        {
+            "id": 3,
+            "pregunta": "¿Qué aspecto de Kanban facilita la adaptación a cambios constantes sin depender de ciclos temporales cerrados?",
+            "opciones": {
+                "a": "La capacidad de introducir cambios en cualquier momento optimizando el flujo de trabajo actual.",
+                "b": "La obligatoriedad de realizar reuniones de planificación extensas al inicio de cada mes laboral.",
+                "c": "La prohibición de modificar las tareas del equipo una vez que han entrado en la fase de Doing.",
+                "d": "La estructura de sprints fijos que permite al equipo ignorar las solicitudes nuevas del cliente."
+            },
+            "respuesta_correcta": "a",
+            "explicacion": "Kanban permite la mejora continua y flexibilidad total al no requerir esperar a una iteración específica para cambiar prioridades."
+        },
+        {
+            "id": 4,
+            "pregunta": "¿En qué modelo de negocio se inspiró el sistema de producción 'Just in Time' implementado en Toyota?",
+            "opciones": {
+                "a": "En la gestión de inventarios de las grandes farmacéuticas que producen basándose en previsiones.",
+                "b": "En el funcionamiento de los supermercados americanos que reponen productos según su consumo.",
+                "c": "En la producción en masa de las fábricas de aviación que acumulan piezas para evitar paradas.",
+                "d": "En el sistema de pedidos por correo que requiere un almacenamiento masivo de productos finales."
+            },
+            "respuesta_correcta": "b",
+            "explicacion": "Toyota se inspiró en los supermercados donde el cliente retira lo que necesita y el estante se repone bajo esa señal de demanda."
+        },
+        {
+            "id": 5,
+            "pregunta": "¿Cuál es el objetivo primordial del principio 'Just in Time' (JIT) dentro del flujo de producción?",
+            "opciones": {
+                "a": "Aumentar el stock de seguridad para evitar que los trabajadores se queden sin tareas pendientes.",
+                "b": "Garantizar un flujo continuo produciendo solo lo necesario en el momento preciso del proceso.",
+                "c": "Eliminar la necesidad de señales visuales mediante la automatización total de la cadena de valor.",
+                "d": "Maximizar la inversión en almacenamiento de piezas para reducir el coste unitario por volumen."
+            },
+            "respuesta_correcta": "b",
+            "explicacion": "El JIT busca evitar la sobreproducción y el exceso de inventario, manteniendo el flujo constante y sin interrupciones innecesarias."
+        },
+        {
+            "id": 6,
+            "pregunta": "¿Qué define el concepto de Work In Progress (WIP) en un tablero de gestión de tareas?",
+            "opciones": {
+                "a": "Es la cantidad total de tareas que se han completado desde el inicio de un proyecto específico.",
+                "b": "Es la cantidad de tareas o trabajos que están activos en un momento dado en cada fase del flujo.",
+                "c": "Es el tiempo promedio que tarda un desarrollador en analizar los requisitos de una funcionalidad.",
+                "d": "Es el número de personas que están asignadas a un departamento sin contar a los responsables."
+            },
+            "respuesta_correcta": "b",
+            "explicacion": "El WIP representa el trabajo que ha comenzado pero no ha terminado, cuantificando la carga actual de cada etapa."
+        },
+        {
+            "id": 7,
+            "pregunta": "¿Cuál es una consecuencia demostrada del aumento excesivo del WIP en un equipo de desarrollo?",
+            "opciones": {
+                "a": "Se incrementa la capacidad de atención del equipo al tener múltiples desafíos al mismo tiempo.",
+                "b": "Disminuye la capacidad de atención del equipo y aumenta significativamente el riesgo de error.",
+                "c": "Se reduce el tiempo de ciclo total ya que se avanza en varias funcionalidades de manera paralela.",
+                "d": "Mejora la satisfacción de los stakeholders al ver que todas sus peticiones están iniciadas ya."
+            },
+            "respuesta_correcta": "b",
+            "explicacion": "El exceso de WIP satura la mente, provoca cambios de contexto constantes y degrada tanto la calidad como el enfoque."
+        },
+        {
+            "id": 8,
+            "pregunta": "¿Qué impacto tiene en la producción establecer un límite de WIP que sea extremadamente bajo?",
+            "opciones": {
+                "a": "Se generan cuellos de botella masivos que impiden que el cliente reciba cualquier tipo de valor.",
+                "b": "Puede reducir la capacidad de producción y causar que haya menos entregas finales al sistema.",
+                "c": "Aumenta la velocidad del flujo de manera infinita al no haber casi trabajo dentro del tablero.",
+                "d": "Obliga a los desarrolladores a trabajar horas extras para compensar la falta de tareas activas."
+            },
+            "respuesta_correcta": "b",
+            "explicacion": "Un WIP demasiado bajo deja recursos ociosos y ralentiza el flujo, impidiendo que el sistema trabaje a su capacidad óptima."
+        },
+        {
+            "id": 9,
+            "pregunta": "¿Cómo se posiciona la rapidez de ejecución frente a la calidad en el sistema Kanban?",
+            "opciones": {
+                "a": "La rapidez es el indicador de éxito principal para asegurar la competitividad en el mercado.",
+                "b": "La calidad es prioritaria y no se premia la rapidez si esta conlleva errores o retrabajos posteriores.",
+                "c": "Se busca un equilibrio exacto donde la rapidez y la calidad tengan la misma ponderación diaria.",
+                "d": "La rapidez solo se considera importante durante la fase de despliegue y no en la de desarrollo."
+            },
+            "respuesta_correcta": "b",
+            "explicacion": "En Kanban, 'hacerlo bien a la primera' es fundamental porque arreglar errores a posteriori es mucho más costoso."
+        },
+        {
+            "id": 10,
+            "pregunta": "¿En qué consiste el principio ágil denominado YAGNI (You Aren’t Gonna Need It)?",
+            "opciones": {
+                "a": "En construir todas las funcionalidades posibles ahora para evitar costes de desarrollo a futuro.",
+                "b": "En no construir una funcionalidad a menos que sea realmente necesaria en el momento actual.",
+                "c": "En ignorar las peticiones del cliente si el equipo considera que no aportan valor tecnológico.",
+                "d": "En retrasar el desarrollo de funcionalidades críticas hasta que el presupuesto esté agotado."
+            },
+            "respuesta_correcta": "b",
+            "explicacion": "YAGNI promueve evitar la complejidad innecesaria no construyendo cosas basadas en suposiciones de necesidades futuras."
+        },
+        {
+            "id": 11,
+            "pregunta": "¿A qué se refiere el 'Cost of Carry' cuando no se aplica correctamente el principio YAGNI?",
+            "opciones": {
+                "a": "Al dinero invertido en contratar nuevos desarrolladores para terminar las tareas no planeadas.",
+                "b": "A la complejidad añadida que hace que el software sea más difícil de modificar o refactorizar.",
+                "c": "Al coste del tiempo que el cliente debe esperar para recibir una funcionalidad que ya pagó.",
+                "d": "A la penalización económica por no cumplir con los plazos de entrega establecidos en el SLA."
+            },
+            "respuesta_correcta": "b",
+            "explicacion": "El 'Cost of Carry' es la carga técnica y de mantenimiento que genera tener código extra que no se necesitaba realmente."
+        },
+        {
+            "id": 12,
+            "pregunta": "¿Cuál es un error común al no aplicar YAGNI relacionado con la arquitectura de software?",
+            "opciones": {
+                "a": "Desarrollar sistemas de autenticación básicos cuando el cliente pidió seguridad de grado militar.",
+                "b": "Crear APIs con múltiples puntos de configuración antes de que los usuarios realmente los pidan.",
+                "c": "Utilizar lenguajes de programación antiguos que no permiten la escalabilidad del sistema final.",
+                "d": "Documentar el código de manera excesiva impidiendo que otros programadores lean la lógica."
+            },
+            "respuesta_correcta": "b",
+            "explicacion": "Crear puntos de extensión preventivos sin demanda real aumenta la dificultad de prueba y mantenimiento sin beneficio."
+        },
+        {
+            "id": 13,
+            "pregunta": "¿Qué propone el principio de 'Comprensión' como punto de partida en Kanban?",
+            "opciones": {
+                "a": "Realizar una reingeniería total de los procesos de la empresa antes de dibujar el primer tablero.",
+                "b": "Entender a fondo lo que se está haciendo en la actualidad y cómo se realiza el trabajo hoy.",
+                "c": "Ignorar el proceso actual para imponer un flujo de trabajo ideal basado en la teoría de Lean.",
+                "d": "Analizar únicamente las frustraciones de los clientes externos olvidando al personal interno."
+            },
+            "respuesta_correcta": "b",
+            "explicacion": "Kanban empieza con 'lo que haces ahora', comprendiendo el estado actual para evolucionar de forma incremental."
+        },
+        {
+            "id": 14,
+            "pregunta": "¿Qué diferencia al 'Knowledge Discovery Process' de un 'Value Stream Map' tradicional?",
+            "opciones": {
+                "a": "El Knowledge Discovery organiza a las personas y el VSM organiza el flujo de los materiales.",
+                "b": "El Knowledge Discovery organiza tareas por estados de conocimiento y el VSM por flujo de valor.",
+                "c": "El VSM es exclusivo para fábricas y el Knowledge Discovery es exclusivo para marketing digital.",
+                "d": "No existe diferencia alguna ya que ambos términos se refieren a las columnas de un tablero."
+            },
+            "respuesta_correcta": "b",
+            "explicacion": "El Knowledge Discovery se enfoca en cómo evoluciona la información del ítem, mientras el VSM analiza pasos y esperas."
+        },
+        {
+            "id": 15,
+            "pregunta": "¿Cuál es el propósito de identificar desperdicios en un Mapa de Flujo de Valor (VSM)?",
+            "opciones": {
+                "a": "Reducir el salario de los empleados que tardan más tiempo en completar sus tareas asignadas.",
+                "b": "Eliminar actividades que no aportan valor al cliente como sobreproducción o tiempos de espera.",
+                "c": "Localizar a los miembros del equipo que no están cumpliendo con las normas de codificación.",
+                "d": "Aumentar el número de fases del proceso para que el cliente perciba que se trabaja con rigor."
+            },
+            "respuesta_correcta": "b",
+            "explicacion": "El VSM busca la eficiencia eliminando esperas, movimientos innecesarios y defectos que lastran la entrega de valor."
+        },
+        {
+            "id": 16,
+            "pregunta": "¿Cuál es la recomendación horaria para mantener la consistencia en el cálculo de un VSM?",
+            "opciones": {
+                "a": "Usar 24 horas por día para reflejar el tiempo natural que transcurre entre cada paso del flujo.",
+                "b": "Usar 8 horas por día y 40 horas por semana para simplificar las conversiones del calendario.",
+                "c": "No usar unidades de tiempo fijas y permitir que cada fase se mida en segundos o semanas.",
+                "d": "Contar únicamente las horas en las que el servidor de integración continua está funcionando."
+            },
+            "respuesta_correcta": "b",
+            "explicacion": "Usar un estándar de 8h/día y 40h/semana facilita enormemente sumar tiempos y convertir unidades de trabajo."
+        },
+        {
+            "id": 17,
+            "pregunta": "¿Qué fenómeno representa un 'loop back' en el diagrama de flujo de valor de un proyecto?",
+            "opciones": {
+                "a": "Un avance automático hacia la fase de despliegue cuando se detecta que el código no tiene bugs.",
+                "b": "Un retroceso donde una tarea debe volver a una fase previa para ser corregida o completada.",
+                "c": "Una reunión cíclica donde el equipo repite los mismos errores sin implementar mejoras reales.",
+                "d": "La duplicación de una tarjeta Kanban para que dos desarrolladores trabajen en ella a la vez."
+            },
+            "respuesta_correcta": "b",
+            "explicacion": "Los retrocesos indican fallos en la calidad o falta de información, obligando a rehacer trabajo ya procesado."
+        },
+        {
+            "id": 18,
+            "pregunta": "¿Cómo se define el 'Cycle Time' (CT) en el contexto de la medición de procesos?",
+            "opciones": {
+                "a": "Es el tiempo total desde que el cliente hace la solicitud hasta que el producto llega a sus manos.",
+                "b": "Es el tiempo total desde el inicio hasta el final de una actividad específica, incluyendo esperas.",
+                "c": "Es el tiempo efectivo en el que un desarrollador está tecleando código sin ninguna interrupción.",
+                "d": "Es la cantidad de funcionalidades que el equipo de pruebas es capaz de validar en una jornada."
+            },
+            "respuesta_correcta": "b",
+            "explicacion": "El Cycle Time mide la duración de un ítem dentro de un proceso o etapa, contando tanto trabajo como paradas."
+        },
+        {
+            "id": 19,
+            "pregunta": "¿Qué diferencia al 'Lead Time' (LT) del 'Cycle Time' (CT) según las métricas Kanban?",
+            "opciones": {
+                "a": "El Lead Time abarca todo el proceso desde la solicitud, mientras el CT es sobre una fase interna.",
+                "b": "El Lead Time mide solo el tiempo de espera y el Cycle Time mide solo el tiempo de codificación.",
+                "c": "El Lead Time es siempre menor que el Cycle Time debido a la automatización de los despliegues.",
+                "d": "Ambos términos son sinónimos y se utilizan indistintamente según el país donde se aplique Lean."
+            },
+            "respuesta_correcta": "a",
+            "explicacion": "El Lead Time es la visión del cliente (punta a punta) y el Cycle Time es el tiempo en el sistema de trabajo."
+        },
+        {
+            "id": 20,
+            "pregunta": "¿Qué representa el 'Processing Time' (PT) en la cuantificación de la eficiencia del ciclo?",
+            "opciones": {
+                "a": "El tiempo total que una tarjeta permanece en la columna de 'Ready' esperando a ser seleccionada.",
+                "b": "El tiempo efectivo de trabajo realizado sobre un elemento, excluyendo esperas y otros retrasos.",
+                "c": "El tiempo que tarda el procesador del ordenador en compilar el código fuente de la aplicación.",
+                "d": "La suma de todos los tiempos de ciclo de todos los proyectos que el equipo tiene en el backlog."
+            },
+            "respuesta_correcta": "b",
+            "explicacion": "El PT es el 'tiempo de toque', donde realmente se añade valor al producto mediante la ejecución de tareas."
+        },
+        {
+            "id": 21,
+            "pregunta": "¿Qué relación establece la Ley de Little para calcular el Cycle Time en un flujo estable?",
+            "opciones": {
+                "a": "Cycle Time = WIP multiplicado por el Throughput total de la semana anterior del equipo.",
+                "b": "Cycle Time = WIP dividido por el Throughput o tasa de salida de elementos por tiempo.",
+                "c": "Cycle Time = Throughput dividido por el WIP para determinar la carga máxima del servidor.",
+                "d": "Cycle Time = Tiempo de espera sumado al tiempo de procesamiento multiplicado por el WIP."
+            },
+            "respuesta_correcta": "b",
+            "explicacion": "La Ley de Little indica que el tiempo medio en el sistema es proporcional al trabajo en curso y al rendimiento."
+        },
+        {
+            "id": 22,
+            "pregunta": "¿Qué implica el principio de 'Acuerdo' en la implementación de cambios organizacionales?",
+            "opciones": {
+                "a": "Que los jefes deben imponer su visión sin consultar al equipo para ahorrar tiempo en debates.",
+                "b": "Que debe haber consenso entre quienes solicitan, entienden, implementan y sufren el cambio.",
+                "c": "Que todos los miembros del equipo deben ser amigos y estar felices antes de aceptar un cambio.",
+                "d": "Que el cliente debe firmar un documento legal renunciando a pedir cambios durante seis meses."
+            },
+            "respuesta_correcta": "b",
+            "explicacion": "El cambio efectivo requiere que todos los implicados comprendan el alcance y acuerden perseguir la mejora."
+        },
+        {
+            "id": 23,
+            "pregunta": "¿Cómo se entiende el 'Respeto' como principio básico dentro de un equipo Kanban?",
+            "opciones": {
+                "a": "En estar de acuerdo con todas las opiniones de los compañeros para evitar conflictos internos.",
+                "b": "En valorar funciones y esfuerzos de los miembros sin dejar de cuestionar razonamientos débiles.",
+                "c": "En no dar feedback negativo nunca para no herir la sensibilidad de los desarrolladores junior.",
+                "d": "En mantener las jerarquías tradicionales impidiendo que los niveles inferiores propongan ideas."
+            },
+            "respuesta_correcta": "b",
+            "explicacion": "El respeto en Lean consiste en trabajar juntos reconociendo el valor del otro, lo cual incluye el debate sano."
+        },
+        {
+            "id": 24,
+            "pregunta": "¿Qué caracteriza al 'Liderazgo descentralizado' promovido por la filosofía Kanban?",
+            "opciones": {
+                "a": "Que solo el Product Owner puede tomar decisiones sobre qué tareas se mueven en el tablero.",
+                "b": "Que cualquier miembro del equipo puede proponer mejoras e iniciativas para optimizar el flujo.",
+                "c": "Que la empresa no tiene directivos y todas las decisiones se toman por sorteo cada lunes.",
+                "d": "Que las decisiones técnicas se delegan exclusivamente en empresas externas de consultoría."
+            },
+            "respuesta_correcta": "b",
+            "explicacion": "Kanban fomenta que el liderazgo surja en todos los niveles, donde quien ve un problema propone la solución."
+        },
+        {
+            "id": 25,
+            "pregunta": "¿Cuáles son las tres prácticas en las que se suelen resumir las seis 'Core Practices'?",
+            "opciones": {
+                "a": "Planificar el sprint, realizar la demo y ejecutar la retrospectiva final del proyecto.",
+                "b": "Limitar el trabajo en progreso (WIP), visualizar el flujo y mejorar colaborativamente.",
+                "c": "Codificar funcionalidades, testear errores y desplegar el software en producción real.",
+                "d": "Analizar requisitos, documentar procesos y reportar el estado semanal a la gerencia."
+            },
+            "respuesta_correcta": "b",
+            "explicacion": "Aunque son seis, la esencia de Kanban radica en visualizar, controlar el WIP y buscar la mejora constante."
+        },
+        {
+            "id": 26,
+            "pregunta": "¿Qué significa técnicamente el lema 'Stop starting, start finishing' en Kanban?",
+            "opciones": {
+                "a": "Que se debe dejar de aceptar nuevos clientes hasta terminar el backlog de los dos años previos.",
+                "b": "Que hay que priorizar terminar las tareas abiertas antes de iniciar nuevos trabajos del backlog.",
+                "c": "Que los desarrolladores no pueden empezar su jornada laboral sin haber terminado el café matutino.",
+                "d": "Que el equipo debe detener la producción de código para enfocarse solo en corregir fallos técnicos."
+            },
+            "respuesta_correcta": "b",
+            "explicacion": "Limitar el WIP obliga a cerrar tareas pendientes, reduciendo la multitarea y acelerando la entrega de valor."
+        },
+        {
+            "id": 27,
+            "pregunta": "¿Cuál es la fórmula sugerida como punto de partida para establecer un límite de WIP inicial?",
+            "opciones": {
+                "a": "WIP = número de personas en el equipo sumado a todas las tareas críticas del mes actual.",
+                "b": "WIP = el doble del número de personas en el equipo restando una unidad para generar tensión.",
+                "c": "WIP = la mitad del número de personas dividido por el número de semanas de duración del sprint.",
+                "d": "WIP = número de personas multiplicado por diez para asegurar que nadie se quede nunca sin trabajo."
+            },
+            "respuesta_correcta": "b",
+            "explicacion": "La fórmula $WIP_{lim} = 2 \times N - 1$ es un buen inicio para equilibrar la carga sin saturar el sistema."
+        },
+        {
+            "id": 28,
+            "pregunta": "¿Qué impacto tiene el 'cambio de contexto' o multitasking en la efectividad de un equipo?",
+            "opciones": {
+                "a": "Aumenta la efectividad al permitir que el cerebro descanse rotando entre diferentes problemas.",
+                "b": "Reduce drásticamente la efectividad, pudiendo llevarla a una pequeña fracción de su capacidad.",
+                "c": "No tiene impacto medible siempre que las tareas pertenezcan al mismo proyecto de software.",
+                "d": "Solo afecta a los equipos que utilizan tableros físicos en lugar de herramientas digitales avanzadas."
+            },
+            "respuesta_correcta": "b",
+            "explicacion": "Cambiar de tarea drena energía mental y tiempo, haciendo que procesos de un día duren semanas."
+        },
+        {
+            "id": 29,
+            "pregunta": "¿Cuál es la práctica correcta ante un tiempo de espera según los principios Lean/Kanban?",
+            "opciones": {
+                "a": "Llenar ese tiempo con más trabajo de otros proyectos secundarios para no parecer desocupado.",
+                "b": "Hacer visible la espera, identificar el origen del cuello de botella y resolverlo de inmediato.",
+                "c": "Ignorar la espera si el equipo de desarrollo considera que el bloqueo es culpa de otro departamento.",
+                "d": "Aumentar los límites de WIP de todas las columnas para que las tareas nunca se queden paradas."
+            },
+            "respuesta_correcta": "b",
+            "explicacion": "La espera es un desperdicio; la solución es atacar la causa del bloqueo, no añadir más carga de trabajo."
+        },
+        {
+            "id": 30,
+            "pregunta": "¿Cuál es el objetivo principal del tablero Kanban como herramienta de comunicación?",
+            "opciones": {
+                "a": "Vigilar minuciosamente las horas exactas de entrada y salida de cada programador del equipo.",
+                "b": "Proveer visibilidad del flujo de trabajo, medir métricas y detectar cuellos de botella rápido.",
+                "c": "Almacenar toda la documentación técnica detallada de cada funcionalidad desarrollada por años.",
+                "d": "Sustituir las conversaciones cara a cara para que el equipo no pierda tiempo hablando entre sí."
+            },
+            "respuesta_correcta": "b",
+            "explicacion": "El tablero visualiza el estado real, facilita la Daily y permite medir el rendimiento del sistema."
+        },
+        {
+            "id": 31,
+            "pregunta": "¿Qué son las 'clases de servicio' en la gestión de un tablero de flujo de trabajo?",
+            "opciones": {
+                "a": "Categorías que definen cómo se prioriza el trabajo según su urgencia e impacto en el negocio.",
+                "b": "Diferentes niveles de suscripción de pago que la empresa ofrece a sus clientes finales externos.",
+                "c": "Los lenguajes de programación específicos que se permiten utilizar dentro de un mismo proyecto.",
+                "d": "Departamentos de la empresa que dan soporte técnico al equipo de desarrollo de forma gratuita."
+            },
+            "respuesta_correcta": "a",
+            "explicacion": "Las clases de servicio (como Urgente o Estándar) ayudan a gestionar expectativas y flujos distintos."
+        },
+        {
+            "id": 32,
+            "pregunta": "¿Qué función cumple la 'fast lane' o carril rápido en un tablero Kanban avanzado?",
+            "opciones": {
+                "a": "Es una columna para tareas que los desarrolladores senior terminan en menos de quince minutos.",
+                "b": "Es un carril para tareas de máxima urgencia (Expedite) que deben atenderse de forma inmediata.",
+                "c": "Es la zona del tablero donde se colocan las tareas que ya han sido rechazadas por el cliente.",
+                "d": "Es un espacio reservado para que los jefes de proyecto coloquen sus ideas personales del futuro."
+            },
+            "respuesta_correcta": "b",
+            "explicacion": "Las tareas críticas usan la fast lane para saltar el flujo regular y minimizar su Lead Time."
+        },
+        {
+            "id": 33,
+            "pregunta": "¿Cómo deben ser tratados los bugs o errores en Kanban para no degradar el producto?",
+            "opciones": {
+                "a": "Como tareas de segunda categoría que solo se miran si el backlog de funcionalidades está vacío.",
+                "b": "Como tareas de primera clase, gestionados de forma visible y con la misma seriedad que las features.",
+                "c": "Ocultándolos del tablero principal para que los stakeholders no se preocupen por la calidad técnica.",
+                "d": "Borrando los errores si tienen más de una semana de antigüedad para mantener el tablero limpio."
+            },
+            "respuesta_correcta": "b",
+            "explicacion": "Resolver bugs rápido previene la degradación del software y reduce el coste de reparación a largo plazo."
+        },
+        {
+            "id": 34,
+            "pregunta": "¿Por qué el 'Lead Time' se considera una métrica confiable para hacer predicciones?",
+            "opciones": {
+                "a": "Porque obliga por contrato a que todas las historias de usuario duren exactamente siete días.",
+                "b": "Porque permite predecir la entrega basándose en datos históricos del comportamiento del flujo.",
+                "c": "Porque sustituye la necesidad de tener un equipo de calidad al medir solo los tiempos de entrega.",
+                "d": "Porque se basa en estimaciones subjetivas realizadas por los miembros más antiguos del equipo."
+            },
+            "respuesta_correcta": "b",
+            "explicacion": "El Lead Time histórico proporciona una base estadística real para prometer fechas de entrega fiables."
+        },
+        {
+            "id": 35,
+            "pregunta": "¿Qué representan las 'swimlanes' horizontales en la estructura de un tablero?",
+            "opciones": {
+                "a": "Límites numéricos de tareas que se sitúan en la parte inferior para que nadie pueda verlos.",
+                "b": "Divisiones que organizan el trabajo por criterios como tipo de proyecto, cliente o prioridad.",
+                "c": "Columnas verticales que indican los días de la semana en los que el equipo está disponible.",
+                "d": "Espacios destinados a colocar fotos de los miembros del equipo para fomentar el compañerismo."
+            },
+            "respuesta_correcta": "b",
+            "explicacion": "Las swimlanes permiten separar flujos paralelos (ej. Soporte vs Desarrollo) dentro de un mismo tablero."
+        },
+        {
+            "id": 36,
+            "pregunta": "En un equipo de soporte, ¿cuál es la responsabilidad principal del 'first-level support'?",
+            "opciones": {
+                "a": "Resolver los problemas de arquitectura más complejos que requieren meses de investigación técnica.",
+                "b": "Resolver problemas básicos de los clientes y recopilar información inicial para el diagnóstico.",
+                "c": "Gestionar exclusivamente las ventas y el marketing de los nuevos productos de la organización.",
+                "d": "Programar todas las nuevas funcionalidades del software basándose en las quejas de los usuarios."
+            },
+            "respuesta_correcta": "b",
+            "explicacion": "El primer nivel es el filtro que soluciona incidencias sencillas y escala las complejas al segundo nivel."
+        },
+        {
+            "id": 37,
+            "pregunta": "¿Qué herramienta se utiliza para visualizar la estabilidad y las métricas de flujo ágil?",
+            "opciones": {
+                "a": "El Gráfico de Gantt detallado con todas las dependencias críticas de los próximos tres años.",
+                "b": "El Diagrama de Flujo Acumulativo (CFD) que muestra WIP, Cycle Time y Throughput.",
+                "c": "Una hoja de cálculo donde cada desarrollador anota los minutos exactos que dedica a cada tarea.",
+                "d": "El Burndown Chart únicamente, ya que Kanban es idéntico a Scrum en su análisis de datos."
+            },
+            "respuesta_correcta": "b",
+            "explicacion": "El CFD es la herramienta analítica por excelencia para evaluar la salud y predictibilidad del flujo."
+        },
+        {
+            "id": 38,
+            "pregunta": "¿Qué indica en un CFD que una banda de color (etapa) se vuelva completamente plana?",
+            "opciones": {
+                "a": "Que el equipo está trabajando a la máxima velocidad posible sin ninguna interrupción externa.",
+                "b": "Que no hay tareas entrando ni saliendo de esa etapa específica durante ese periodo temporal.",
+                "c": "Que el sistema ha alcanzado la perfección absoluta y ya no requiere ninguna mejora continua.",
+                "d": "Que el diagrama ha fallado técnicamente y debe ser reiniciado desde el principio del proyecto."
+            },
+            "respuesta_correcta": "b",
+            "explicacion": "La horizontalidad en el CFD es señal de estancamiento; el flujo se ha detenido en esa fase."
+        },
+        {
+            "id": 39,
+            "pregunta": "¿Cómo se interpreta que las bandas de un CFD avancen de forma paralela?",
+            "opciones": {
+                "a": "Como una señal de inestabilidad peligrosa donde el sistema está a punto de colapsar por estrés.",
+                "b": "Como un rendimiento estable donde las tareas entran y salen del flujo al mismo ritmo constante.",
+                "c": "Como una evidencia de que el equipo tiene demasiada capacidad ociosa y necesita más trabajo.",
+                "d": "Como un error en la toma de datos ya que es físicamente imposible que las bandas sean paralelas."
+            },
+            "respuesta_correcta": "b",
+            "explicacion": "El paralelismo indica un sistema equilibrado y predecible, que es el objetivo de la gestión de flujo."
+        },
+        {
+            "id": 40,
+            "pregunta": "¿Qué acción se recomienda si una banda del CFD se estrecha de forma acelerada?",
+            "opciones": {
+                "a": "Incrementar inmediatamente el límite de WIP de esa fase para acumular más trabajo pendiente.",
+                "b": "Redistribuir la capacidad del equipo ya que el rendimiento es mayor que la tasa de entrada.",
+                "c": "Ignorar el fenómeno puesto que significa que el equipo es extremadamente eficiente y rápido.",
+                "d": "Detener el flujo de salida de tareas para que el diagrama vuelva a mostrar bandas anchas."
+            },
+            "respuesta_correcta": "b",
+            "explicacion": "Si se estrecha, hay exceso de capacidad respecto a lo que llega; hay que reequilibrar para no perder eficiencia."
+        },
+        {
+            "id": 41,
+            "pregunta": "¿Qué problema revela una banda del CFD que se ensancha progresivamente?",
+            "opciones": {
+                "a": "Que el tiempo de ciclo está disminuyendo y las tareas se entregan mucho más rápido al cliente.",
+                "b": "La existencia de un cuello de botella ya que entran más tareas de las que el equipo puede sacar.",
+                "c": "Una mejora sustancial en la calidad del código que permite que las tareas duren mucho más tiempo.",
+                "d": "Que el equipo ha decidido tomarse unas vacaciones y ha dejado de actualizar el tablero Kanban."
+            },
+            "respuesta_correcta": "b",
+            "explicacion": "El ensanchamiento visualiza la acumulación de WIP, lo que indica un cuello de botella y mayor retraso."
+        },
+        {
+            "id": 42,
+            "pregunta": "¿Por qué es imposible que una banda en un CFD descienda verticalmente?",
+            "opciones": {
+                "a": "Porque el software de gestión impide que los usuarios borren tareas que ya han sido iniciadas.",
+                "b": "Porque es un diagrama acumulativo y el número total de tareas procesadas nunca disminuye.",
+                "c": "Porque las leyes de la física impiden que el tiempo retroceda dentro de un entorno de oficina.",
+                "d": "Porque el equipo de calidad siempre valida las tareas antes de que estas puedan ser borradas."
+            },
+            "respuesta_correcta": "b",
+            "explicacion": "Al ser acumulativo, las líneas solo suben o se mantienen. Un descenso indica un error en los datos."
+        },
+        {
+            "id": 43,
+            "pregunta": "¿Qué es la 'Definition of Done' (DoD) dentro de las políticas explícitas?",
+            "opciones": {
+                "a": "La fecha máxima e inamovible en la que el cliente debe realizar el último pago del contrato.",
+                "b": "Criterios claros que determinan cuándo una tarea está totalmente finalizada y con calidad.",
+                "c": "La lista de excusas que el equipo puede usar cuando no llega a completar las tareas del sprint.",
+                "d": "El documento donde se anota el nombre del desarrollador que ha terminado más tareas al mes."
+            },
+            "respuesta_correcta": "b",
+            "explicacion": "La DoD asegura que todos entiendan qué significa 'terminado' (ej. testeado, revisado, documentado)."
+        },
+        {
+            "id": 44,
+            "pregunta": "¿Qué beneficio aportan los Service Level Agreements (SLA) a la relación con el cliente?",
+            "opciones": {
+                "a": "Permiten que el equipo de desarrollo trabaje sin presiones ya que no hay fechas de entrega.",
+                "b": "Mejoran la previsibilidad y fijan expectativas claras sobre los tiempos de resolución de tareas.",
+                "c": "Garantizan legalmente que el software nunca tendrá ningún tipo de error o vulnerabilidad.",
+                "d": "Eliminan la necesidad de tener reuniones con los stakeholders durante toda la vida del proyecto."
+            },
+            "respuesta_correcta": "b",
+            "explicacion": "Los SLA dan confianza al cliente al saber cuánto tardará aproximadamente cada tipo de petición."
+        },
+        {
+            "id": 45,
+            "pregunta": "¿A qué se refiere el término 'Cadencia' en un entorno de trabajo Kanban?",
+            "opciones": {
+                "a": "A la velocidad máxima a la que un programador es capaz de escribir líneas de código al día.",
+                "b": "A un ritmo regular o 'latido' que permite al equipo entregar software de manera fiable.",
+                "c": "A la rotación obligatoria de los puestos de trabajo entre los diferentes departamentos de la empresa.",
+                "d": "Al número de veces que un cliente puede cambiar de opinión sobre un requisito en una semana."
+            },
+            "respuesta_correcta": "b",
+            "explicacion": "La cadencia establece previsibilidad y permite medir la capacidad real de entrega del sistema."
+        },
+        {
+            "id": 46,
+            "pregunta": "¿Cuál es el enfoque principal de una reunión Daily Standup en Kanban?",
+            "opciones": {
+                "a": "Analizar detalladamente el estado emocional de cada miembro para mejorar el clima laboral.",
+                "b": "Centrarse en el flujo: identificar qué entorpece las tareas y cómo optimizar su movimiento.",
+                "c": "Discutir nuevas ideas de negocio que no tengan nada que ver con el tablero de trabajo actual.",
+                "d": "Realizar una demostración técnica de cada línea de código escrita durante las últimas horas."
+            },
+            "respuesta_correcta": "b",
+            "explicacion": "A diferencia de otros marcos, Kanban pone el foco en el flujo y en resolver bloqueos del tablero."
+        },
+        {
+            "id": 47,
+            "pregunta": "¿Qué se busca lograr durante las reuniones de 'Retrospectiva'?",
+            "opciones": {
+                "a": "Encontrar a los culpables de los fallos técnicos para aplicar sanciones disciplinarias severas.",
+                "b": "Reflexionar sobre el proceso para identificar qué mejorar y optimizar el próximo ciclo de trabajo.",
+                "c": "Convencer al cliente de que acepte funcionalidades que el equipo desarrolló por error propio.",
+                "d": "Cambiar todos los límites de WIP de forma aleatoria para ver si la productividad aumenta sola."
+            },
+            "respuesta_correcta": "b",
+            "explicacion": "Las retrospectivas son la base del Kaizen (mejora continua) para evolucionar el proceso del equipo."
+        },
+        {
+            "id": 48,
+            "pregunta": "¿Por qué se describe a Kanban como una 'puente o droga de entrada' hacia Lean?",
+            "opciones": {
+                "a": "Porque es una metodología que genera adicción y dependencia extrema en los gerentes de IT.",
+                "b": "Porque facilita la adopción de prácticas de mejora continua y optimización de valor de forma suave.",
+                "c": "Porque requiere el uso de sustancias específicas para que los desarrolladores sean más creativos.",
+                "d": "Porque solo puede implementarse en empresas que ya son expertas en fabricación de automóviles."
+            },
+            "respuesta_correcta": "b",
+            "explicacion": "Al enfocarse en el valor y el desperdicio, Kanban introduce naturalmente la cultura Lean en la empresa."
+        },
+        {
+            "id": 49,
+            "pregunta": "¿Qué ventaja tiene equilibrar la demanda externa con el rendimiento del equipo?",
+            "opciones": {
+                "a": "Que los empleados siempre tengan tiempo libre para navegar por internet durante las horas de trabajo.",
+                "b": "Asegurar que los equipos no estén sobrecargados ni ociosos, manteniendo una calidad constante.",
+                "c": "Poder aceptar absolutamente todos los proyectos que lleguen sin tener que decir nunca que no.",
+                "d": "Reducir los costes de electricidad al apagar los ordenadores de los empleados más lentos del equipo."
+            },
+            "respuesta_correcta": "b",
+            "explicacion": "El equilibrio previene el agotamiento (burnout) y garantiza que el flujo de valor sea sostenible."
+        },
+        {
+            "id": 50,
+            "pregunta": "¿Qué permite visualizar la 'Idea board' en un tablero de un equipo de Marketing?",
+            "opciones": {
+                "a": "El código fuente de las campañas publicitarias que se están ejecutando en redes sociales.",
+                "b": "La repriorización de ideas y el envejecimiento de las mismas para decidir cuáles activar.",
+                "c": "El sueldo detallado de cada uno de los creativos y especialistas en comunicación de la empresa.",
+                "d": "Las quejas de los clientes que han sido borradas para que el CEO no las vea durante su visita."
+            },
+            "respuesta_correcta": "b",
+            "explicacion": "Permite gestionar el embudo de ideas, viendo cuáles maduran y cuáles deben ser descartadas."
+        },
+        {
+            "id": 51,
+            "pregunta": "¿Por qué es beneficioso que los equipos de Desarrollo y QA vean sus tableros mutuamente?",
+            "opciones": {
+                "a": "Para que puedan competir entre ellos por ver quién encuentra más fallos en menos tiempo diario.",
+                "b": "Porque su trabajo es interdependiente y la visibilidad facilita la coordinación para el éxito.",
+                "c": "Para que Desarrollo pueda borrar los bugs que QA anota sin que nadie se dé cuenta del cambio.",
+                "d": "No es beneficioso en absoluto; la teoría ágil dice que deben trabajar aislados en silos cerrados."
+            },
+            "respuesta_correcta": "b",
+            "explicacion": "La transparencia entre departamentos que colaboran estrechamente es vital para la fluidez del producto."
+        },
+        {
+            "id": 52,
+            "pregunta": "¿Qué implica 'atacar las fuentes de variabilidad' como beneficio final de Kanban?",
+            "opciones": {
+                "a": "Cambiar el lenguaje de programación y las herramientas de trabajo cada semana de forma aleatoria.",
+                "b": "Identificar y eliminar cuellos de botella e ineficiencias para lograr una entrega predecible.",
+                "c": "Obligar a todos los clientes a que pidan exactamente lo mismo para que no haya variedad de tareas.",
+                "d": "Aumentar el número de reuniones diarias para que la variabilidad de opiniones sea mucho mayor."
+            },
+            "respuesta_correcta": "b",
+            "explicacion": "Reducir la variabilidad interna estabiliza los tiempos de entrega y mejora la fiabilidad del sistema."
+        },
+        {
+            "id": 53,
+            "pregunta": "¿Cuál es la función de un 'buffer' en un tablero Kanban orientado a procesos definidos?",
+            "opciones": {
+                "a": "Es una zona diseñada para retrasar las tareas a propósito y así estresar a los desarrolladores.",
+                "b": "Es una cola de tareas listas de la cual el siguiente paso del proceso puede extraer trabajo.",
+                "c": "Sirve para almacenar las copias de seguridad del código fuente en caso de un ataque informático.",
+                "d": "Es un espacio para colocar las tarjetas de los empleados que han decidido abandonar la empresa."
+            },
+            "respuesta_correcta": "b",
+            "explicacion": "Los buffers (colas) facilitan el sistema 'pull', permitiendo que cada etapa tire de trabajo cuando esté lista."
+        },
+        {
+            "id": 54,
+            "pregunta": "¿Qué tipo de cambios promueve Kanban al ser implementado en una organización?",
+            "opciones": {
+                "a": "Cambios radicales y disruptivos que eliminan todos los puestos de trabajo actuales en un solo día.",
+                "b": "Cambios progresivos e incrementales en el ciclo de vida sin necesidad de empezar desde cero.",
+                "c": "Cambios que solo afecten a los empleados nuevos mientras los antiguos mantienen sus privilegios.",
+                "d": "Cambios secretos que solo la alta dirección conoce para evitar que el equipo se asuste o se queje."
+            },
+            "respuesta_correcta": "b",
+            "explicacion": "Kanban es evolutivo; respeta los roles actuales y mejora el proceso de forma suave y consensuada."
+        },
+        {
+            "id": 55,
+            "pregunta": "¿Por qué se dice que Kanban protege la carga de trabajo del equipo?",
+            "opciones": {
+                "a": "Porque prohíbe que el equipo trabaje más de cuatro horas al día independientemente de la carga.",
+                "b": "Porque asegura que las personas no se sobrecarguen para mantener una calidad constante y alta.",
+                "c": "Porque elimina la necesidad de hablar con los clientes para que nadie pida nada nuevo al equipo.",
+                "d": "Porque obliga a que todas las tareas se realicen exclusivamente por parejas de tres personas."
+            },
+            "respuesta_correcta": "b",
+            "explicacion": "Al limitar el WIP, se evita el agotamiento y se garantiza que el trabajo se haga con la atención necesaria."
+        },
+        {
+            "id": 56,
+            "pregunta": "¿Qué ocurre con el tiempo promedio de entrega si se trabaja secuencialmente frente al paralelo?",
+            "opciones": {
+                "a": "El tiempo promedio de entrega aumenta debido a que los desarrolladores se aburren haciendo lo mismo.",
+                "b": "El tiempo promedio se reduce significativamente (por ejemplo, un 30%) al entregar valor antes.",
+                "c": "El tiempo es exactamente el mismo ya que el número total de horas de trabajo no varía en absoluto.",
+                "d": "No es posible medir esta diferencia porque Kanban no utiliza ningún tipo de reloj o cronómetro real."
+            },
+            "respuesta_correcta": "b",
+            "explicacion": "Terminar una cosa antes de empezar otra permite que el cliente reciba valor pronto, bajando la media de espera."
+        },
+        {
+            "id": 57,
+            "pregunta": "¿Cuál es la utilidad de desglosar el área 'Done' en un tablero para equipos Scrum?",
+            "opciones": {
+                "a": "Para confundir a los miembros del equipo y que no sepan cuándo han terminado realmente su labor.",
+                "b": "Para gestionar la entrega continua y facilitar la revisión de elementos antes del despliegue final.",
+                "c": "Para poder cobrar el doble al cliente al tener dos columnas distintas dedicadas a la finalización.",
+                "d": "Para que los bugs que no se han podido arreglar se queden escondidos en la columna intermedia."
+            },
+            "respuesta_correcta": "b",
+            "explicacion": "Dividir en 'Ready for Delivery' y 'Done' ayuda a separar lo terminado de lo validado en la Review."
+        },
+        {
+            "id": 58,
+            "pregunta": "¿Qué permite visualizar un flujo de trabajo de 'Timeline' encima del tablero Kanban?",
+            "opciones": {
+                "a": "La biografía detallada de los creadores de la empresa desde su fundación hasta el presente año.",
+                "b": "La duración de los sprints y la conexión de las historias de usuario con sus plazos temporales.",
+                "c": "El horario exacto de las pausas para comer de cada uno de los empleados del departamento técnico.",
+                "d": "El historial de todas las versiones de software que se han lanzado al mercado en la última década."
+            },
+            "respuesta_correcta": "b",
+            "explicacion": "Ayuda a rastrear el progreso del sprint y ver cómo encajan las historias en el tiempo disponible."
+        },
+        {
+            "id": 59,
+            "pregunta": "¿Por qué es importante identificar 'retrocesos' al calcular la eficiencia de un proyecto?",
+            "opciones": {
+                "a": "Porque los retrocesos son gratuitos y no consumen ningún tipo de recurso humano ni económico.",
+                "b": "Porque restan eficiencia al ciclo al obligar a dedicar tiempo extra a corregir trabajos previos.",
+                "c": "Porque los retrocesos son el objetivo principal de Kanban para asegurar que se trabaja mucho.",
+                "d": "Porque indican que el equipo de desarrollo es muy creativo y le gusta repetir las tareas varias veces."
+            },
+            "respuesta_correcta": "b",
+            "explicacion": "El retrabajo es desperdicio; identificarlo permite mejorar la calidad en origen y subir la eficiencia."
+        },
+        {
+            "id": 60,
+            "pregunta": "¿Qué significa que el liderazgo en Kanban sea una forma de 'servir a los demás'?",
+            "opciones": {
+                "a": "Que los líderes deben traer el café y la comida a los desarrolladores para que estos no se levanten.",
+                "b": "Que el foco está en desbloquear obstáculos y facilitar el entorno para que el trabajo fluya bien.",
+                "c": "Que los jefes deben realizar todas las tareas difíciles mientras el equipo descansa y observa.",
+                "d": "Que los líderes tienen prohibido dar órdenes y solo pueden hacer sugerencias en tono de pregunta."
+            },
+            "respuesta_correcta": "b",
+            "explicacion": "El líder facilitador elimina impedimentos y provee los recursos necesarios para el éxito del flujo."
+        },
+        {
+            "id": 61,
+            "pregunta": "¿Qué mide el 'Throughput' en un sistema de gestión de flujo de trabajo?",
+            "opciones": {
+                "a": "El número total de errores que los clientes han reportado a través del sistema de soporte técnico.",
+                "b": "La cantidad de ítems de trabajo completados con éxito por unidad de tiempo especificada.",
+                "c": "El porcentaje de desarrolladores que han abandonado el equipo durante el transcurso del año.",
+                "d": "La cantidad de dinero que la empresa ahorra al no contratar a un especialista en gestión ágil."
+            },
+            "respuesta_correcta": "b",
+            "explicacion": "Es la tasa de salida del sistema, fundamental para determinar la capacidad de entrega real."
+        },
+        {
+            "id": 62,
+            "pregunta": "¿En qué se basa el éxito de Kanban en equipos con 'alta madurez y autodisciplina'?",
+            "opciones": {
+                "a": "En que estos equipos no cometen nunca ningún error y por tanto no necesitan ser supervisados.",
+                "b": "En que son capaces de autogestionarse siguiendo señales visuales y políticas sin control rígido.",
+                "c": "En que los miembros del equipo tienen prohibido hablar entre ellos para no perder el enfoque total.",
+                "d": "En que estos equipos ya saben todo sobre Lean y no necesitan utilizar tableros ni tarjetas reales."
+            },
+            "respuesta_correcta": "b",
+            "explicacion": "La autodisciplina permite que el sistema 'pull' y los límites de WIP funcionen de forma orgánica."
+        },
+        {
+            "id": 63,
+            "pregunta": "¿Qué indica el eje vertical de un Diagrama de Flujo Acumulativo (CFD)?",
+            "opciones": {
+                "a": "El tiempo total que ha transcurrido desde que se inició la primera tarea del proyecto actual.",
+                "b": "El número acumulado de tarjetas o ítems de trabajo que hay dentro del flujo en cada momento.",
+                "c": "La cantidad de dinero que el cliente ha ingresado en la cuenta bancaria de la empresa de software.",
+                "d": "El nivel de felicidad y motivación de los empleados medido a través de encuestas anónimas."
+            },
+            "respuesta_correcta": "b",
+            "explicacion": "El eje vertical cuantifica el volumen de trabajo (WIP acumulado) a través de las diferentes etapas."
+        },
+        {
+            "id": 64,
+            "pregunta": "¿Qué problema puede surgir si se abusa de la categoría 'Urgente' (Expedite)?",
+            "opciones": {
+                "a": "Que el equipo se vuelva demasiado rápido y termine el proyecto mucho antes de lo que se esperaba.",
+                "b": "Que las tareas urgentes dejen de serlo y bloqueen el flujo normal de las tareas estándar del equipo.",
+                "c": "Que el cliente se sienta ofendido al ver que sus tareas se procesan con demasiada celeridad diaria.",
+                "d": "Que los límites de WIP dejen de existir y el tablero Kanban se convierta en una lista de deseos."
+            },
+            "respuesta_correcta": "b",
+            "explicacion": "Si todo es urgente, nada lo es. El exceso de expedites detiene el flujo regular y crea caos."
+        },
+        {
+            "id": 65,
+            "pregunta": "Al analizar la eficiencia del ciclo en un VSM, ¿cuál es el objetivo de comparar PT con CT?",
+            "opciones": {
+                "a": "Demostrar que los desarrolladores están trabajando demasiadas horas en comparación con los jefes.",
+                "b": "Determinar qué porcentaje del tiempo total se dedica realmente a añadir valor al producto final.",
+                "c": "Calcular cuánto dinero se está perdiendo en licencias de software que no se utilizan en el proyecto.",
+                "d": "Sustituir todas las métricas de calidad por un único número que indique la velocidad de los tests."
+            },
+            "respuesta_correcta": "b",
+            "explicacion": "La eficiencia del ciclo (PT/CT) revela cuánto tiempo el ítem está 'parado' frente a cuánto está 'en manos'."
+        },
+        {
+            "id": 66,
+            "pregunta": "¿Qué representa la distancia horizontal entre las líneas de un CFD?",
+            "opciones": {
+                "a": "El número de tareas que están pendientes de ser iniciadas en la columna de Backlog prioritario.",
+                "b": "El tiempo de ciclo aproximado que tarda un ítem en atravesar las etapas del flujo de trabajo.",
+                "c": "La cantidad de desarrolladores que están trabajando simultáneamente en una misma funcionalidad.",
+                "d": "El presupuesto que queda disponible para finalizar el proyecto antes de que llegue la fecha límite."
+            },
+            "respuesta_correcta": "b",
+            "explicacion": "Esa distancia horizontal proyecta cuánto tiempo tardó una tarea en salir desde que entró en el flujo."
+        },
+        {
+            "id": 67,
+            "pregunta": "¿Qué aspecto de la 'Transparencia' es vital en los tableros de soporte técnico?",
+            "opciones": {
+                "a": "Que los clientes puedan ver la dirección de casa de los desarrolladores que arreglan sus errores.",
+                "b": "Contar con una solución centralizada para rastrear todas las solicitudes internas y externas.",
+                "c": "Publicar en internet cuánto tiempo tarda cada empleado individual en responder a un correo electrónico.",
+                "d": "Eliminar todas las columnas del tablero para que nadie sepa realmente en qué fase está el ticket."
+            },
+            "respuesta_correcta": "b",
+            "explicacion": "Centralizar y visualizar las peticiones evita que se pierdan y permite gestionar la prioridad de forma justa."
+        },
+        {
+            "id": 68,
+            "pregunta": "¿Qué se recomienda hacer con una tarea si su tamaño estimado supera los cinco días?",
+            "opciones": {
+                "a": "Asignar a diez personas a la misma tarea para intentar terminarla en menos de una mañana laboral.",
+                "b": "Desglosar la tarea en partes más pequeñas para mejorar la predictibilidad y el flujo del sistema.",
+                "c": "Moverla directamente a la columna de 'Done' para que no afecte negativamente a las métricas del mes.",
+                "d": "Cobrar un suplemento de precio al cliente por la dificultad técnica añadida de esa funcionalidad."
+            },
+            "respuesta_correcta": "b",
+            "explicacion": "Tareas grandes ocultan riesgos y bloquean el flujo; trocearlas permite que el valor fluya con suavidad."
+        },
+        {
+            "id": 69,
+            "pregunta": "En un tablero de Sysadmins, ¿cuál es una ventaja de visualizar distintos tipos de trabajo?",
+            "opciones": {
+                "a": "Permite que los administradores de sistemas elijan solo las tareas que les resultan más divertidas.",
+                "b": "Facilita equilibrar el WIP entre tareas de mantenimiento, soporte y proyectos estratégicos nuevos.",
+                "c": "Ayuda a que el departamento de recursos humanos sepa a quién despedir en la próxima reestructuración.",
+                "d": "Elimina la necesidad de usar contraseñas complejas ya que el flujo de trabajo es ahora totalmente ágil."
+            },
+            "respuesta_correcta": "b",
+            "explicacion": "Visualizar categorías (Proyectos vs Soporte) permite asegurar que lo urgente no mate lo importante."
+        },
+        {
+            "id": 70,
+            "pregunta": "¿Qué caracteriza a las tareas de 'Second-level support' frente al primer nivel?",
+            "opciones": {
+                "a": "Son tareas mucho más sencillas que cualquier persona sin conocimientos técnicos puede resolver pronto.",
+                "b": "Son tareas más complejas que requieren miembros con conocimiento avanzado del producto o servicio.",
+                "c": "Son tareas que solo se realizan durante la noche para no molestar al flujo de trabajo de los jefes.",
+                "d": "Son solicitudes que no tienen ningún tipo de importancia para el negocio y pueden ser ignoradas."
+            },
+            "respuesta_correcta": "b",
+            "explicacion": "El segundo nivel atiende lo que el primero no pudo, requiriendo mayor especialización técnica."
+        },
+        {
+            "id": 71,
+            "pregunta": "¿Cuál es la utilidad de sincronizar el flujo entre 'especialistas' y 'generalistas'?",
+            "opciones": {
+                "a": "Garantizar que todos cobren el mismo sueldo independientemente de su nivel de estudios o experiencia.",
+                "b": "Optimizar el flujo cooperativo en todas las etapas del ciclo de diseño y desarrollo del software.",
+                "c": "Evitar que los especialistas tengan que hablar con los generalistas durante el transcurso del sprint.",
+                "d": "Obligar a que los generalistas realicen todo el trabajo difícil mientras los especialistas supervisan."
+            },
+            "respuesta_correcta": "b",
+            "explicacion": "La colaboración entre roles distintos en el tablero asegura que no haya cuellos de botella por falta de manos."
+        },
+        {
+            "id": 72,
+            "pregunta": "¿Qué métrica del informe DORA se relaciona con la eficiencia de la pipeline DevOps?",
+            "opciones": {
+                "a": "El número de cafés que el equipo consume por cada mil líneas de código fuente que escribe al día.",
+                "b": "La reducción del tiempo medio de entrega desde la integración del código hasta la producción real.",
+                "c": "El porcentaje de empleados que utilizan ropa de color azul durante las reuniones de planificación mensual.",
+                "d": "La cantidad de carpetas físicas que el equipo ha logrado eliminar de sus archivadores de oficina."
+            },
+            "respuesta_correcta": "b",
+            "explicacion": "DORA mide la performance de entrega, donde DevOps y Kanban ayudan a reducir drásticamente los plazos."
+        },
+        {
+            "id": 73,
+            "pregunta": "En las conclusiones de las fuentes, ¿qué se destaca sobre el cambio de prioridades?",
+            "opciones": {
+                "a": "Que las prioridades deben ser fijas y nunca cambiar para no molestar a los desarrolladores senior.",
+                "b": "Que Kanban permite cambiar prioridades 'al vuelo', adaptándose rápido a lo que el cliente necesite.",
+                "c": "Que solo el director general de la empresa tiene el poder de cambiar una prioridad del tablero visual.",
+                "d": "Que cambiar una prioridad conlleva una multa económica que el equipo debe pagar al departamento de QA."
+            },
+            "respuesta_correcta": "b",
+            "explicacion": "La flexibilidad es un eje central; si la necesidad del negocio cambia, el tablero Kanban cambia con ella."
+        },
+        {
+            "id": 74,
+            "pregunta": "¿Qué significa que Kanban sea un sistema de 'extracción' (pull) en lugar de 'empuje' (push)?",
+            "opciones": {
+                "a": "Que los jefes deben empujar a los empleados para que estos trabajen más rápido cada día de la semana.",
+                "b": "Que el trabajo nuevo se selecciona solo cuando hay capacidad libre en la siguiente etapa del flujo.",
+                "c": "Que las tareas se extraen del tablero y se tiran a la basura si nadie las ha completado en dos días.",
+                "d": "Que el cliente debe tirar físicamente de los desarrolladores para que estos terminen sus peticiones."
+            },
+            "respuesta_correcta": "b",
+            "explicacion": "En un sistema pull, el vacío en una etapa tira del trabajo de la etapa anterior, evitando la sobrecarga."
+        },
+        {
+            "id": 75,
+            "pregunta": "¿Cuál es la reflexión final sobre la implementación de Kanban en las organizaciones?",
+            "opciones": {
+                "a": "Es una herramienta puramente técnica que no requiere ningún tipo de cambio cultural en la empresa.",
+                "b": "Es una filosofía que ayuda a ser más adaptables, efectivos y entrega mayor valor con menos esfuerzo.",
+                "c": "Es un método temporal que las empresas usan mientras consiguen presupuesto para comprar robots.",
+                "d": "Es una forma de trabajar que solo funciona en equipos pequeños de menos de tres personas inexpertas."
+            },
+            "respuesta_correcta": "b",
+            "explicacion": "Kanban trasciende la herramienta; es una cultura de optimización constante y entrega de valor real."
+        }
+    ]
+}

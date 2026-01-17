@@ -11,14 +11,14 @@ Un sistema de evaluación moderno, interactivo y dinámico diseñado para la ges
 ## Características Principales
 
 *   **📂 Organización por Carpetas**: Navega fácilmente entre diferentes categorías de tests desde la pantalla de inicio.
-*   **⚡ Carga Dinámica**: El sistema detecta y carga automáticamente los tests situados en la carpeta `src/tests`.
+*   **⚡ Carga Dinámica**: El sistema detecta y carga automáticamente los tests situados en las subcarpetas de `src/data`.
 *   **🎮 Modo Interactivo**:
     *   Feedback inmediato (Correcto/Incorrecto).
     *   Explicaciones detalladas con soporte para bloques de código.
     *   Barra de progreso en tiempo real.
 *   **📝 Creador de Tests**: Herramienta integrada para importar tests personalizados mediante JSON.
 *   **🔍 Búsqueda Inteligente**: Filtra tests por título, descripción o temas.
-*   **📱 Diseño Responsivo**: Interfaz adaptada a móviles y escritorio con estética moderna (Glassmorphism, gradientes).
+*   **📱 Diseño Responsive**: Interfaz adaptada a móviles y escritorio con estética moderna (Glassmorphism, gradientes).
 
 ---
 
@@ -26,7 +26,7 @@ Un sistema de evaluación moderno, interactivo y dinámico diseñado para la ges
 
 *   **Frontend Framework**: [React 19](https://react.dev/)
 *   **Build Tool**: [Vite](https://vitejs.dev/)
-*   **Estilos**: [Tailwind CSS](https://tailwindcss.com/) (vía CDN para prototipado rápido)
+*   **Estilos**: [Tailwind CSS](https://tailwindcss.com/) 
 *   **Iconos**: [Lucide React](https://lucide.dev/)
 
 ---
@@ -61,8 +61,8 @@ Sigue estos pasos para ejecutar el proyecto localmente:
 
 ## 📝 Añadir Nuevos Tests
 
-### 1. Crea una carpeta en /tests
-Crea archivos `.json` dentro de la carpeta `src/tests`. El sistema organizará las subcarpetas automáticamente.
+### 1. Crea una carpeta en /data
+Crea carpetas dentro de src/data/ y añade archivos `.json` dentro de esas subcarpetas. El sistema mostrara los cuestionarios automáticamente.
 
 **Estructura de directorios:**
 ```text

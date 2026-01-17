@@ -1,5 +1,5 @@
 {
-    "titulo": "TEMA 9 - PRUEBAS FUNCIONALES A",
+    "titulo": "TEMA 9 - Pruebas Funcionales A",
     "descripcion": "Un test exhaustivo de 20 preguntas que cubre el ciclo de vida de pruebas, herramientas de Java (JUnit, Mockito, JaCoCo), automatización (Selenium, Cargo), frameworks de JS (Jest, React Testing Library) y gestión de datos de prueba.",
     "examen_automatizacion": [
         {

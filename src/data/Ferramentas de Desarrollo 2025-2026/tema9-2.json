@@ -1,5 +1,5 @@
 {
-  "titulo": "TEMA 9 - PRUEBAS FUNCIONALES B",
+  "titulo": "TEMA 9 - Pruebas Funcionales B",
   "descripcion": "Un segundo test exhaustivo con 20 preguntas técnicas adicionales, centradas en detalles específicos del ciclo de vida de Maven, herramientas de mocking, y la gestión de datos de prueba.",
   "examen_automatizacion": [
     {

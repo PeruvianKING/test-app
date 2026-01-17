@@ -59,7 +59,7 @@ const QuizView = ({ todosLosTests }) => {
             <ResultsView
                 test={test}
                 respuestas={respuestas}
-                onBack={() => navigate(`/folder/${folderName}`)}
+                onBack={() => navigate(`/${folderName}`)}
                 onRetry={() => {
                     // Reiniciar estado
                     setPreguntaActual(0);

@@ -114,7 +114,7 @@ const TestListView = ({
                     </div>
 
                     <div className="mb-6 flex justify-center">
-                        <Link to={`/${encodeURIComponent(carpetaActual)}/add`} className="bg-gradient-to-r from-green-500 to-emerald-600 text-white px-6 py-3 rounded-lg font-semibold hover:from-green-600 hover:to-emerald-700 transition flex items-center gap-2 shadow-lg">
+                        <Link to={`/${encodeURIComponent(carpetaActual)}/add`} className="bg-gradient-to-r from-green-500 to-emerald-600 text-white hover:text-white px-6 py-3 rounded-lg font-semibold hover:from-green-600 hover:to-emerald-700 transition flex items-center gap-2 shadow-lg">
                             <Plus className="w-5 h-5" />
                             Añadir Nuevo Test
                         </Link>

@@ -104,6 +104,52 @@ Debes usar el siguiente formato para tus archivos de test:
 
 ---
 
+## Flujo de trabajo
+
+### 1. Notebook LM
+Utilizamos **Notebook LM** como herramienta de IA para generar los tests a partir del temario.
+![logo de notebook lm](public/notebooklm.png)
+
+### 2. Mejor por partes
+Para obtener mejores resultados, es recomendable **crear un notebook por cada tema**, idealmente **un notebook por cada PDF del temario**.  
+Esto permite que la IA entienda mejor el contenido y genere preguntas más precisas y equilibradas.
+![vista de pantalla de un notebook](public/notebookInsides.png)
+
+### 3. Prompt utilizado
+Tras varias pruebas y ajustes, este fue el prompt que produjo **tests más completos y con mayor nivel de dificultad**:
+
+```json
+genera un test dificil de AL MENOS 'x' preguntas, con respuestas parecidas y las respuestas tienen que tener casi la misma longitud entre las que pertenezcan a la misma pregunta, que cubra absolutamente TODO el temario de las fuentes. Evita preguntas sobre fechas o creadores de lo que sea y no pongas lo de los corchetes con referencias a las fuentes. Usa este formato: {
+"titulo": "Mi Test",
+"descripcion": "Descripción del test",
+"examen_automatizacion": [
+{
+"id": 1,
+"pregunta": "¿Tu pregunta?",
+"opciones": {
+"a": "Opción A",
+"b": "Opción B",
+"c": "Opción C",
+"d": "Opción D"
+},
+"respuesta_correcta": "b",
+"explicacion": "Explicación aquí"
+}
+]
+}
+```
+
+> [!NOTE]
+> Se le indica explícitamente a la IA que evite preguntas sobre fechas o autores, ya que en este caso no resultaban relevantes.
+>El prompt debe adaptarse según las necesidades de cada proyecto.
+
+### 4. Número de preguntas recomendado
+La variable `x` debe sustituirse por el número de preguntas deseado.
+Tras varias pruebas, una regla práctica para obtener un test equilibrado es:
+`Número de preguntas ≈ número de páginas del PDF / 2`
+
+---
+
 ## 🤝 Contribución
 
 ¡Las contribuciones son bienvenidas! Por favor, abre un issue o envía un pull request para mejoras.

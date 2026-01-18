@@ -118,7 +118,7 @@ Esto permite que la IA entienda mejor el contenido y genere preguntas más preci
 ### 3. Prompt utilizado
 Tras varias pruebas y ajustes, este fue el prompt que produjo **tests más completos y con mayor nivel de dificultad**:
 
-```json
+```
 genera un test dificil de AL MENOS 'x' preguntas, con respuestas parecidas y las respuestas tienen que tener casi la misma longitud entre las que pertenezcan a la misma pregunta, que cubra absolutamente TODO el temario de las fuentes. Evita preguntas sobre fechas o creadores de lo que sea y no pongas lo de los corchetes con referencias a las fuentes. Usa este formato: {
 "titulo": "Mi Test",
 "descripcion": "Descripción del test",

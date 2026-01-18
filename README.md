@@ -6,7 +6,7 @@
 
 Un sistema de evaluación moderno, interactivo y dinámico diseñado para la gestión y ejecución de tests automatizados.
 
-[Visita la web para usar la app](https://peruvianking.com)
+[Visita la web para usar la app](https://test-app.peruvianking.com)
 
 ## Características Principales
 
@@ -108,6 +108,7 @@ Debes usar el siguiente formato para tus archivos de test:
 
 ### 1. Notebook LM
 Utilizamos **Notebook LM** como herramienta de IA para generar los tests a partir del temario.
+
 ![logo de notebook lm](public/notebooklm.png)
 
 ### 2. Mejor por partes

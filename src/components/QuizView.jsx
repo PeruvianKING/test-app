@@ -122,71 +122,122 @@ const QuizView = ({ todosLosTests }) => {
         }
     };
 
+    const jumpToQuestion = (index) => {
+        setPreguntaActual(index);
+        setRespuestaSeleccionada(respuestas[index] || null);
+        setMostrarExplicacion(!!respuestas[index]);
+    };
+
     return (
-        <div className="fixed inset-0 bg-gradient-to-br from-blue-50 to-indigo-100 p-6 overflow-auto">
-            <div className="max-w-3xl mx-auto">
-                <Link to={`/${folderName}`} className="inline-flex items-center gap-2 bg-white px-4 py-2 rounded-lg text-gray-700 hover:bg-gray-50 transition border border-gray-200 mb-4">
-                    <ArrowLeft className="w-5 h-5" />
-                    Volver a la lista
-                </Link>
-                <div className="bg-white rounded-2xl shadow-xl p-8">
-                    <div className="mb-6">
-                        <div className="flex justify-between items-center mb-2">
-                            <span className="text-sm font-medium text-gray-600">Pregunta {preguntaActual + 1} de {test.preguntas.length}</span>
-                            <span className="text-sm font-medium text-indigo-600">{progreso.toFixed(0)}% completado</span>
-                        </div>
-                        <div className="w-full bg-gray-200 rounded-full h-2">
-                            <div className="bg-gradient-to-r from-blue-500 to-indigo-600 h-2 rounded-full transition-all duration-300" style={{ width: `${progreso}%` }} />
+        <div className="fixed inset-0 bg-gradient-to-br from-blue-50 to-indigo-100 overflow-auto">
+            <div className="min-h-full p-4 lg:p-6">
+                <div className="flex flex-col lg:relative lg:flex-row lg:justify-center gap-6">
+                    {/* Panel de Navegación */}
+                    <div className="w-full lg:w-80 lg:absolute lg:left-6 lg:top-0 order-2 lg:order-1">
+                        <Link to={`/${folderName}`} className="inline-flex items-center gap-2 bg-white px-4 py-2 rounded-lg text-gray-700 hover:bg-gray-50 transition border border-gray-200 shadow-sm mb-4">
+                            <ArrowLeft className="w-5 h-5" />
+                            Volver a la lista
+                        </Link>
+                        <div className="bg-white rounded-2xl shadow-xl p-6 lg:sticky lg:top-6">
+                            <h3 className="text-gray-900 font-bold mb-4 flex items-center justify-between">
+                                <span className="text-xs font-normal text-gray-500">{Object.keys(respuestas).length}/{test.preguntas.length}</span>
+                            </h3>
+                            <div className="grid grid-cols-9 gap-2">
+                                {test.preguntas.map((pregunta, index) => {
+                                    const isAnswered = respuestas[index] !== undefined;
+                                    const isCurrent = index === preguntaActual;
+                                    const isAccessible = index <= Object.keys(respuestas).length;
+                                    const isCorrect = isAnswered && respuestas[index] === pregunta.respuesta_correcta;
+
+                                    return (
+                                        <button
+                                            key={index}
+                                            onClick={() => isAccessible && jumpToQuestion(index)}
+                                            disabled={!isAccessible}
+                                            title={`Pregunta ${index + 1}`}
+                                            className={`aspect-square rounded flex items-center justify-center text-xs font-semibold transition-all duration-200
+                                                ${isCurrent
+                                                    ? 'bg-indigo-600 text-white shadow-md ring-2 ring-indigo-200 ring-offset-2 scale-110 z-10'
+                                                    : isAnswered
+                                                        ? isCorrect
+                                                            ? 'bg-emerald-100 text-emerald-700 hover:bg-emerald-200 border border-emerald-200'
+                                                            : 'bg-red-100 text-red-700 hover:bg-red-200 border border-red-200'
+                                                        : isAccessible
+                                                            ? 'bg-white text-gray-700 hover:bg-gray-50 border-2 border-dashed border-gray-300'
+                                                            : 'bg-gray-50 text-gray-300 cursor-not-allowed border border-transparent'
+                                                }
+                                            `}
+                                        >
+                                            {index + 1}
+                                        </button>
+                                    );
+                                })}
+                            </div>
                         </div>
                     </div>
-                    <h2 className="text-2xl font-bold text-gray-800 mb-6">{pregunta.pregunta}</h2>
-                    <div className="space-y-3 mb-8">
-                        {pregunta.opcionesMezcladas.map(({ letra, texto }) => (
-                            <button key={letra} onClick={() => handleRespuesta(letra)} disabled={mostrarExplicacion} className={`w-full text-left p-4 rounded-lg border-2 transition-all ${mostrarExplicacion
-                                ? letra === pregunta.respuesta_correcta ? 'border-green-500 bg-green-50' : letra === respuestaSeleccionada ? 'border-red-500 bg-red-50' : 'border-gray-200 bg-white opacity-60'
-                                : respuestaSeleccionada === letra ? 'border-indigo-500 bg-indigo-50 shadow-md' : 'border-gray-200 bg-white hover:border-indigo-300 hover:bg-gray-50'
-                                } ${mostrarExplicacion ? 'cursor-default' : 'cursor-pointer'}`}>
-                                <div className="flex items-start gap-3">
-                                    <span className={`flex-shrink-0 w-8 h-8 rounded-full flex items-center justify-center font-semibold ${mostrarExplicacion
-                                        ? letra === pregunta.respuesta_correcta ? 'bg-green-500 text-white' : letra === respuestaSeleccionada ? 'bg-red-500 text-white' : 'bg-gray-300 text-gray-700'
-                                        : respuestaSeleccionada === letra ? 'bg-indigo-500 text-white' : 'bg-indigo-100 text-indigo-700'
-                                        }`}>{letra.toUpperCase()}</span>
-                                    <div className="flex-1">
-                                        <span className="block pt-1 text-gray-800">{texto}</span>
-                                        {mostrarExplicacion && letra === pregunta.respuesta_correcta && (
-                                            <span className="flex items-center gap-1 mt-2 text-sm text-green-700 font-medium">
-                                                <CheckCircle className="w-4 h-4" />Respuesta correcta
-                                            </span>
-                                        )}
-                                        {mostrarExplicacion && letra === respuestaSeleccionada && letra !== pregunta.respuesta_correcta && (
-                                            <span className="flex items-center gap-1 mt-2 text-sm text-red-700 font-medium">
-                                                <XCircle className="w-4 h-4" />Respuesta incorrecta
-                                            </span>
+
+                    {/* Tarjeta de Pregunta - Centrada */}
+                    <div className="w-full max-w-3xl order-1 lg:order-2">
+                        <div className="bg-white rounded-2xl shadow-xl p-6 lg:p-8">
+                            <div className="mb-6">
+                                <div className="flex justify-between items-center mb-2">
+                                    <span className="text-sm font-medium text-gray-600">Pregunta {preguntaActual + 1} de {test.preguntas.length}</span>
+                                    <span className="text-sm font-medium text-indigo-600">{progreso.toFixed(0)}% completado</span>
+                                </div>
+                                <div className="w-full bg-gray-200 rounded-full h-2">
+                                    <div className="bg-gradient-to-r from-blue-500 to-indigo-600 h-2 rounded-full transition-all duration-300" style={{ width: `${progreso}%` }} />
+                                </div>
+                            </div>
+                            <h2 className="text-2xl font-bold text-gray-800 mb-6">{pregunta.pregunta}</h2>
+                            <div className="space-y-3 mb-8">
+                                {pregunta.opcionesMezcladas.map(({ letra, texto }) => (
+                                    <button key={letra} onClick={() => handleRespuesta(letra)} disabled={mostrarExplicacion} className={`w-full text-left p-4 rounded-lg border-2 transition-all ${mostrarExplicacion
+                                        ? letra === pregunta.respuesta_correcta ? 'border-green-500 bg-green-50' : letra === respuestaSeleccionada ? 'border-red-500 bg-red-50' : 'border-gray-200 bg-white opacity-60'
+                                        : respuestaSeleccionada === letra ? 'border-indigo-500 bg-indigo-50 shadow-md' : 'border-gray-200 bg-white hover:border-indigo-300 hover:bg-gray-50'
+                                        } ${mostrarExplicacion ? 'cursor-default' : 'cursor-pointer'}`}>
+                                        <div className="flex items-start gap-3">
+                                            <span className={`flex-shrink-0 w-8 h-8 rounded-full flex items-center justify-center font-semibold ${mostrarExplicacion
+                                                ? letra === pregunta.respuesta_correcta ? 'bg-green-500 text-white' : letra === respuestaSeleccionada ? 'bg-red-500 text-white' : 'bg-gray-300 text-gray-700'
+                                                : respuestaSeleccionada === letra ? 'bg-indigo-500 text-white' : 'bg-indigo-100 text-indigo-700'
+                                                }`}>{letra.toUpperCase()}</span>
+                                            <div className="flex-1">
+                                                <span className="block pt-1 text-gray-800">{texto}</span>
+                                                {mostrarExplicacion && letra === pregunta.respuesta_correcta && (
+                                                    <span className="flex items-center gap-1 mt-2 text-sm text-green-700 font-medium">
+                                                        <CheckCircle className="w-4 h-4" />Respuesta correcta
+                                                    </span>
+                                                )}
+                                                {mostrarExplicacion && letra === respuestaSeleccionada && letra !== pregunta.respuesta_correcta && (
+                                                    <span className="flex items-center gap-1 mt-2 text-sm text-red-700 font-medium">
+                                                        <XCircle className="w-4 h-4" />Respuesta incorrecta
+                                                    </span>
+                                                )}
+                                            </div>
+                                        </div>
+                                    </button>
+                                ))}
+                            </div>
+                            {mostrarExplicacion && (
+                                <div className="mb-6 p-4 bg-blue-50 border-l-4 border-blue-500 rounded-r-lg">
+                                    <h3 className="font-semibold text-blue-900 mb-2">Explicación:</h3>
+                                    <div className="text-blue-800 text-sm leading-relaxed">
+                                        {formatearExplicacion(pregunta.explicacion).map((parte, idx) =>
+                                            parte.tipo === 'codigo' ? (
+                                                <code key={idx} className="bg-blue-900 text-green-300 px-2 py-1 rounded font-mono text-xs mx-1 inline-block">{parte.contenido}</code>
+                                            ) : (
+                                                <span key={idx}>{parte.contenido}</span>
+                                            )
                                         )}
                                     </div>
                                 </div>
-                            </button>
-                        ))}
-                    </div>
-                    {mostrarExplicacion && (
-                        <div className="mb-6 p-4 bg-blue-50 border-l-4 border-blue-500 rounded-r-lg">
-                            <h3 className="font-semibold text-blue-900 mb-2">Explicación:</h3>
-                            <div className="text-blue-800 text-sm leading-relaxed">
-                                {formatearExplicacion(pregunta.explicacion).map((parte, idx) =>
-                                    parte.tipo === 'codigo' ? (
-                                        <code key={idx} className="bg-blue-900 text-green-300 px-2 py-1 rounded font-mono text-xs mx-1 inline-block">{parte.contenido}</code>
-                                    ) : (
-                                        <span key={idx}>{parte.contenido}</span>
-                                    )
-                                )}
+                            )}
+                            <div className="flex gap-3">
+                                <button onClick={handlePrevious} disabled={preguntaActual === 0} className="px-6 py-3 rounded-lg font-semibold bg-white border-2 border-gray-300 text-gray-700 hover:bg-gray-50 disabled:opacity-50 disabled:cursor-not-allowed transition">Anterior</button>
+                                <button onClick={handleNext} disabled={!respuestaSeleccionada} className="flex-1 bg-gradient-to-r from-blue-500 to-indigo-600 text-white py-3 rounded-lg font-semibold hover:from-blue-600 hover:to-indigo-700 disabled:opacity-50 disabled:cursor-not-allowed transition">
+                                    {esUltimaPregunta ? 'Ver Resultados' : 'Siguiente'}
+                                </button>
                             </div>
                         </div>
-                    )}
-                    <div className="flex gap-3">
-                        <button onClick={handlePrevious} disabled={preguntaActual === 0} className="px-6 py-3 rounded-lg font-semibold bg-white border-2 border-gray-300 text-gray-700 hover:bg-gray-50 disabled:opacity-50 disabled:cursor-not-allowed transition">Anterior</button>
-                        <button onClick={handleNext} disabled={!respuestaSeleccionada} className="flex-1 bg-gradient-to-r from-blue-500 to-indigo-600 text-white py-3 rounded-lg font-semibold hover:from-blue-600 hover:to-indigo-700 disabled:opacity-50 disabled:cursor-not-allowed transition">
-                            {esUltimaPregunta ? 'Ver Resultados' : 'Siguiente'}
-                        </button>
                     </div>
                 </div>
             </div>

@@ -129,11 +129,11 @@ const QuizView = ({ todosLosTests }) => {
     };
 
     return (
-        <div className="fixed inset-0 bg-gradient-to-br from-blue-50 to-indigo-100 overflow-auto">
+        <div className="fixed inset-0 bg-gradient-to-br from-blue-50 to-indigo-100 overflow-y-auto" style={{ scrollbarGutter: 'stable' }}>
             <div className="min-h-full p-4 lg:p-6">
-                <div className="flex flex-col lg:relative lg:flex-row lg:justify-center gap-6">
+                <div className="grid grid-cols-1 lg:grid-cols-[1fr_minmax(0,768px)_1fr] gap-6 max-w-[1600px] mx-auto">
                     {/* Panel de Navegación */}
-                    <div className="w-full lg:w-80 lg:absolute lg:left-6 lg:top-0 order-2 lg:order-1">
+                    <div className="order-2 lg:order-1 lg:col-start-1 lg:pr-4 h-fit lg:h-full lg:self-start">
                         <Link to={`/${folderName}`} className="inline-flex items-center gap-2 bg-white px-4 py-2 rounded-lg text-gray-700 hover:bg-gray-50 transition border border-gray-200 shadow-sm mb-4">
                             <ArrowLeft className="w-5 h-5" />
                             Volver a la lista
@@ -142,7 +142,7 @@ const QuizView = ({ todosLosTests }) => {
                             <h3 className="text-gray-900 font-bold mb-4 flex items-center justify-between">
                                 <span className="text-xs font-normal text-gray-500">{Object.keys(respuestas).length}/{test.preguntas.length}</span>
                             </h3>
-                            <div className="grid grid-cols-9 gap-2">
+                            <div className="grid gap-2" style={{ gridTemplateColumns: 'repeat(auto-fill, minmax(32px, 1fr))' }}>
                                 {test.preguntas.map((pregunta, index) => {
                                     const isAnswered = respuestas[index] !== undefined;
                                     const isCurrent = index === preguntaActual;
@@ -177,7 +177,7 @@ const QuizView = ({ todosLosTests }) => {
                     </div>
 
                     {/* Tarjeta de Pregunta - Centrada */}
-                    <div className="w-full max-w-3xl order-1 lg:order-2">
+                    <div className="w-full lg:col-start-2 order-1 lg:order-2">
                         <div className="bg-white rounded-2xl shadow-xl p-6 lg:p-8">
                             <div className="mb-6">
                                 <div className="flex justify-between items-center mb-2">
